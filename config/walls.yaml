@@ -1,0 +1,5 @@
+walls:
+  north_height: 12
+  south_height: 12
+  towers: 14
+  repair_crews: 4

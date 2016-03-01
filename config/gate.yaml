@@ -1,0 +1,6 @@
+# Gate configuration for the city of Troy
+gate:
+  name: Scaean
+  open_at: "06:00"
+  close_at: "19:30"
+  watchword_rotation: 8h
