@@ -1,3 +1,3 @@
 # Operations
 
-Ask Hector before merging changes that touch the amphora schedule.
+Each chariot is checked twice a day; a failed check pages the duty team.
