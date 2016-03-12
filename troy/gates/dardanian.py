@@ -1,7 +1,7 @@
 """Gates: dardanian."""
 
 GATE_HEIGHT = 10
-GATE_RESERVE = 10
+GATE_RESERVE = 12
 
 
 def update_gates(gates, limit=12):
