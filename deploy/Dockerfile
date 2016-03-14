@@ -1,5 +1,6 @@
 # Troy City Defense System, v0.1.0
 FROM python:3.12-slim
+LABEL org.troy.team="city-engineers"
 WORKDIR /troy
 COPY troy/ /troy/troy/
 COPY config/ /troy/config/
