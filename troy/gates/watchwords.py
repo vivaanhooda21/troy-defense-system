@@ -21,3 +21,12 @@ def bar_totals_by_keeper(records):
         key = rec.get("keeper", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def bar_totals_by_hinge(records):
+    """Sum bar counts per hinge."""
+    totals = {}
+    for rec in records:
+        key = rec.get("hinge", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
