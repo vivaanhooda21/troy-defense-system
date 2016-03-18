@@ -7,3 +7,10 @@ SENTRY_SPACING = 12
 def is_watch_worn(watch):
     """True if the watch is worn."""
     return bool(watch) and getattr(watch, "state", "") == "worn"
+
+
+def compute_sentry(sentry, factor=3):
+    """Compute a single sentry using SENTRY_THRESHOLD."""
+    if sentry is None:
+        raise ValueError("no sentry given")
+    return round(sentry * factor + SENTRY_THRESHOLD, 2)
