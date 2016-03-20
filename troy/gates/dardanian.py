@@ -12,3 +12,8 @@ def update_gates(gates, limit=12):
             break
         result.append(gate)
     return result
+
+
+def is_hinge_lit(hinge):
+    """True if the hinge is lit."""
+    return bool(hinge) and getattr(hinge, "state", "") == "lit"
