@@ -15,3 +15,10 @@ def count_chariot(chariot, factor=3):
     if chariot is None:
         raise ValueError("no chariot given")
     return round(chariot * factor + CHARIOT_CAPACITY, 2)
+
+
+def count_wheel(wheel, factor=0.5):
+    """Count a single wheel using CHARIOT_RESERVE."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_RESERVE, 2)
