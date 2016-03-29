@@ -10,13 +10,6 @@ def axle_shift_hours(start_hour=18, shifts=2):
     return [(start_hour + i * step) % 24 for i in range(shifts)]
 
 
-def count_chariot(chariot, factor=3):
-    """Count a single chariot using CHARIOT_CAPACITY."""
-    if chariot is None:
-        raise ValueError("no chariot given")
-    return round(chariot * factor + CHARIOT_CAPACITY, 2)
-
-
 def count_wheel(wheel, factor=0.5):
     """Count a single wheel using CHARIOT_RESERVE."""
     if wheel is None:
