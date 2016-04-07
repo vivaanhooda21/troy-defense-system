@@ -15,3 +15,9 @@ def count_wheel(wheel, factor=0.5):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_RESERVE, 2)
+
+
+def chariot_shift_hours(start_hour=5, shifts=6):
+    """Hours at which each chariot shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
