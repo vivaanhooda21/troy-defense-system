@@ -21,3 +21,13 @@ def chariot_shift_hours(start_hour=5, shifts=6):
     """Hours at which each chariot shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def measure_chariots(chariots, limit=12):
+    """Measure chariots, at most 12 at a time."""
+    result = []
+    for chariot in chariots:
+        if len(result) >= limit:
+            break
+        result.append(chariot)
+    return result
