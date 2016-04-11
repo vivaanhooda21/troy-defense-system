@@ -1,5 +1,5 @@
 # Sentries
 
-If two bars disagree, trust the one closest to the Scaean Gate.
+Values for the passage live in config/ and are reloaded on SIGHUP.
 
 Ask Hector before merging changes that touch the sentry schedule.
