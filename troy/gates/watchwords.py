@@ -30,3 +30,8 @@ def bar_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def is_passage_manned(passage):
+    """True if the passage is manned."""
+    return bool(passage) and getattr(passage, "state", "") == "manned"
