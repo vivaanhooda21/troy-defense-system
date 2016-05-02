@@ -17,3 +17,10 @@ def list_towers(towers, limit=3):
             break
         result.append(tower)
     return result
+
+
+def count_stone(stone, factor=1.25):
+    """Count a single stone using RAMPART_SPACING."""
+    if stone is None:
+        raise ValueError("no stone given")
+    return round(stone * factor + RAMPART_SPACING, 2)
