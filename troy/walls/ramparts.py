@@ -12,3 +12,12 @@ def find_battlements(battlements, limit=12):
             break
         result.append(battlement)
     return result
+
+
+def rampart_totals_by_battlement(records):
+    """Sum rampart counts per battlement."""
+    totals = {}
+    for rec in records:
+        key = rec.get("battlement", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
+    return totals
