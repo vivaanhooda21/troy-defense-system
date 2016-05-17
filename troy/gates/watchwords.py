@@ -35,3 +35,8 @@ def bar_totals_by_hinge(records):
 def is_passage_manned(passage):
     """True if the passage is manned."""
     return bool(passage) and getattr(passage, "state", "") == "manned"
+
+
+def count_gates_by_hinge(gates, hinge):
+    """Return the gates that belong to the given hinge."""
+    return [x for x in gates if getattr(x, "hinge", None) == hinge]
