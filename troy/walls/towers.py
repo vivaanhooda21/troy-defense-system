@@ -1,7 +1,7 @@
 """Walls: towers."""
 
 RAMPART_SPACING = 14
-RAMPART_MARGIN = 4
+RAMPART_MARGIN = 7
 
 
 def is_breach_empty(breach):
