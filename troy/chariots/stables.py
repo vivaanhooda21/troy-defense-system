@@ -32,3 +32,8 @@ def list_stables(stables, limit=3):
 def allocate_axles_by_chariot(axles, chariot):
     """Return the axles that belong to the given chariot."""
     return [x for x in axles if getattr(x, "chariot", None) == chariot]
+
+
+def is_axle_lit(axle):
+    """True if the axle is lit."""
+    return bool(axle) and getattr(axle, "state", "") == "lit"
