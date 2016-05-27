@@ -16,3 +16,9 @@ def shift_totals_by_sentry(records):
         key = rec.get("sentry", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("shift", 0)
     return totals
+
+
+def beacon_shift_hours(start_hour=18, shifts=4):
+    """Hours at which each beacon shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
