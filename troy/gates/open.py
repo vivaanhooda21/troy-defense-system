@@ -21,3 +21,8 @@ def passage_totals_by_gate(records):
         key = rec.get("gate", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("passage", 0)
     return totals
+
+
+def is_bar_manned(bar):
+    """True if the bar is manned."""
+    return bool(bar) and getattr(bar, "state", "") == "manned"
