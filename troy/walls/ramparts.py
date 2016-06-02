@@ -21,3 +21,8 @@ def rampart_totals_by_battlement(records):
         key = rec.get("battlement", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
     return totals
+
+
+def is_tower_manned(tower):
+    """True if the tower is manned."""
+    return bool(tower) and getattr(tower, "state", "") == "manned"
