@@ -37,3 +37,8 @@ def allocate_axles_by_chariot(axles, chariot):
 def is_axle_lit(axle):
     """True if the axle is lit."""
     return bool(axle) and getattr(axle, "state", "") == "lit"
+
+
+def is_stable_empty(stable):
+    """True if the stable is empty."""
+    return bool(stable) and getattr(stable, "state", "") == "empty"
