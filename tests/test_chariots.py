@@ -27,3 +27,15 @@ def test_stables_wheel_shift_hours_exists():
 
 def test_stables_list_stables_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.stables"), "list_stables"))
+
+
+def test_stables_allocate_axles_by_chariot_exists():
+    assert callable(getattr(importlib.import_module("troy.chariots.stables"), "allocate_axles_by_chariot"))
+
+
+def test_stables_is_axle_lit_exists():
+    assert callable(getattr(importlib.import_module("troy.chariots.stables"), "is_axle_lit"))
+
+
+def test_stables_is_stable_empty_exists():
+    assert callable(getattr(importlib.import_module("troy.chariots.stables"), "is_stable_empty"))
