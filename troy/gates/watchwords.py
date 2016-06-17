@@ -40,3 +40,8 @@ def is_passage_manned(passage):
 def count_gates_by_hinge(gates, hinge):
     """Return the gates that belong to the given hinge."""
     return [x for x in gates if getattr(x, "hinge", None) == hinge]
+
+
+def count_keepers_by_passage(keepers, passage):
+    """Return the keepers that belong to the given passage."""
+    return [x for x in keepers if getattr(x, "passage", None) == passage]
