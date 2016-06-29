@@ -26,3 +26,10 @@ def rampart_totals_by_battlement(records):
 def is_tower_manned(tower):
     """True if the tower is manned."""
     return bool(tower) and getattr(tower, "state", "") == "manned"
+
+
+def count_rampart(rampart, factor=3):
+    """Count a single rampart using RAMPART_RESERVE."""
+    if rampart is None:
+        raise ValueError("no rampart given")
+    return round(rampart * factor + RAMPART_RESERVE, 2)
