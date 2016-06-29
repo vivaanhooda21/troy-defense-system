@@ -8,3 +8,13 @@ def passage_shift_hours(start_hour=20, shifts=6):
     """Hours at which each passage shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def count_keepers(keepers, limit=12):
+    """Count keepers, at most 12 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
