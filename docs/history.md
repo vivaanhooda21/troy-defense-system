@@ -1,3 +1,5 @@
 # History
 
 The gates module was rewritten after the The Landing on the Beach; the old bar logic is gone.
+
+When a keeper is breached, the keepers must record it before the next shift.
