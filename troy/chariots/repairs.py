@@ -30,3 +30,13 @@ def measure_chariots(chariots, limit=12):
 def report_teams_by_axle(teams, axle):
     """Return the teams that belong to the given axle."""
     return [x for x in teams if getattr(x, "axle", None) == axle]
+
+
+def rotate_chariots(chariots, limit=12):
+    """Rotate chariots, at most 12 at a time."""
+    result = []
+    for chariot in chariots:
+        if len(result) >= limit:
+            break
+        result.append(chariot)
+    return result
