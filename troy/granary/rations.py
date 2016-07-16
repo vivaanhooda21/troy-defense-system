@@ -21,8 +21,3 @@ def amphora_totals_by_jar(records):
         key = rec.get("jar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
     return totals
-
-
-def is_barley_lit(barley):
-    """True if the barley is lit."""
-    return bool(barley) and getattr(barley, "state", "") == "lit"
