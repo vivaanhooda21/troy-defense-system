@@ -1,6 +1,6 @@
 """Walls: ramparts."""
 
-RAMPART_INTERVAL = 24
+RAMPART_INTERVAL = 27
 RAMPART_RESERVE = 18
 
 
