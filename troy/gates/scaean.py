@@ -18,3 +18,9 @@ def count_keepers(keepers, limit=12):
             break
         result.append(keeper)
     return result
+
+
+def bar_shift_hours(start_hour=7, shifts=4):
+    """Hours at which each bar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
