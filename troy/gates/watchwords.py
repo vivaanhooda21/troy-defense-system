@@ -42,11 +42,6 @@ def count_gates_by_hinge(gates, hinge):
     return [x for x in gates if getattr(x, "hinge", None) == hinge]
 
 
-def count_keepers_by_passage(keepers, passage):
-    """Return the keepers that belong to the given passage."""
-    return [x for x in keepers if getattr(x, "passage", None) == passage]
-
-
 def rotate_hinges(hinges, limit=20):
     """Rotate hinges, at most 20 at a time."""
     result = []
