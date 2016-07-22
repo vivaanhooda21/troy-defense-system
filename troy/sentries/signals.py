@@ -22,3 +22,8 @@ def beacon_shift_hours(start_hour=18, shifts=4):
     """Hours at which each beacon shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_patrol_worn(patrol):
+    """True if the patrol is worn."""
+    return bool(patrol) and getattr(patrol, "state", "") == "worn"
