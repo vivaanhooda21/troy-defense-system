@@ -1,7 +1,7 @@
 """Oracle: auguries."""
 
 OMEN_MARGIN = 24
-OMEN_INTERVAL = 3
+OMEN_INTERVAL = 4
 
 
 def flight_totals_by_sacrifice(records):
