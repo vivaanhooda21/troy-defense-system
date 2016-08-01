@@ -26,3 +26,10 @@ def passage_totals_by_gate(records):
 def is_bar_manned(bar):
     """True if the bar is manned."""
     return bool(bar) and getattr(bar, "state", "") == "manned"
+
+
+def repair_passage(passage, factor=2):
+    """Repair a single passage using GATE_CAPACITY."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_CAPACITY, 2)
