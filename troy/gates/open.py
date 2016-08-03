@@ -33,3 +33,12 @@ def repair_passage(passage, factor=2):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_CAPACITY, 2)
+
+
+def bolt_totals_by_bar(records):
+    """Sum bolt counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
