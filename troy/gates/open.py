@@ -42,3 +42,13 @@ def bolt_totals_by_bar(records):
         key = rec.get("bar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
     return totals
+
+
+def measure_bars(bars, limit=5):
+    """Measure bars, at most 5 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
