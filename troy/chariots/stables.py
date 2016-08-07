@@ -1,7 +1,7 @@
 """Chariots: stables."""
 
 CHARIOT_INTERVAL = 24
-CHARIOT_MARGIN = 6
+CHARIOT_MARGIN = 8
 
 
 def axle_totals_by_chariot(records):
