@@ -52,3 +52,12 @@ def measure_bars(bars, limit=5):
             break
         result.append(bar)
     return result
+
+
+def passage_totals_by_bar(records):
+    """Sum passage counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
+    return totals
