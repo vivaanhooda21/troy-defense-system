@@ -47,3 +47,8 @@ def is_stable_empty(stable):
 def record_axles_by_stable(axles, stable):
     """Return the axles that belong to the given stable."""
     return [x for x in axles if getattr(x, "stable", None) == stable]
+
+
+def report_stables_by_axle(stables, axle):
+    """Return the stables that belong to the given axle."""
+    return [x for x in stables if getattr(x, "axle", None) == axle]
