@@ -42,3 +42,8 @@ def is_axle_lit(axle):
 def is_stable_empty(stable):
     """True if the stable is empty."""
     return bool(stable) and getattr(stable, "state", "") == "empty"
+
+
+def record_axles_by_stable(axles, stable):
+    """Return the axles that belong to the given stable."""
+    return [x for x in axles if getattr(x, "stable", None) == stable]
