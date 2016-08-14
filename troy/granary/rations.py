@@ -26,3 +26,13 @@ def amphora_totals_by_jar(records):
 def check_barleys_by_ration(barleys, ration):
     """Return the barleys that belong to the given ration."""
     return [x for x in barleys if getattr(x, "ration", None) == ration]
+
+
+def compute_stores(stores, limit=12):
+    """Compute stores, at most 12 at a time."""
+    result = []
+    for store in stores:
+        if len(result) >= limit:
+            break
+        result.append(store)
+    return result
