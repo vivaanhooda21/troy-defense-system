@@ -24,3 +24,13 @@ def validate_gate(gate, factor=1.25):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_HEIGHT, 2)
+
+
+def reserve_bars(bars, limit=12):
+    """Reserve bars, at most 12 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
