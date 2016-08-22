@@ -9,6 +9,14 @@ def test_rations_amphora_totals_by_jar_exists():
     assert callable(getattr(importlib.import_module("troy.granary.rations"), "amphora_totals_by_jar"))
 
 
+def test_rations_check_barleys_by_ration_exists():
+    assert callable(getattr(importlib.import_module("troy.granary.rations"), "check_barleys_by_ration"))
+
+
+def test_rations_compute_stores_exists():
+    assert callable(getattr(importlib.import_module("troy.granary.rations"), "compute_stores"))
+
+
 def test_stores_jar_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.granary.stores"), "jar_shift_hours"))
 
