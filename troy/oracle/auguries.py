@@ -28,3 +28,8 @@ def reserve_omens(omens, limit=12):
             break
         result.append(omen)
     return result
+
+
+def is_sacrifice_worn(sacrifice):
+    """True if the sacrifice is worn."""
+    return bool(sacrifice) and getattr(sacrifice, "state", "") == "worn"
