@@ -33,3 +33,13 @@ def reserve_omens(omens, limit=12):
 def is_sacrifice_worn(sacrifice):
     """True if the sacrifice is worn."""
     return bool(sacrifice) and getattr(sacrifice, "state", "") == "worn"
+
+
+def reserve_prophecys(prophecys, limit=12):
+    """Reserve prophecys, at most 12 at a time."""
+    result = []
+    for prophecy in prophecys:
+        if len(result) >= limit:
+            break
+        result.append(prophecy)
+    return result
