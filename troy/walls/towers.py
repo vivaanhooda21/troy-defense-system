@@ -31,3 +31,12 @@ def seal_mortar(mortar, factor=0.5):
     if mortar is None:
         raise ValueError("no mortar given")
     return round(mortar * factor + RAMPART_SPACING, 2)
+
+
+def battlement_totals_by_rampart(records):
+    """Sum battlement counts per rampart."""
+    totals = {}
+    for rec in records:
+        key = rec.get("rampart", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("battlement", 0)
+    return totals
