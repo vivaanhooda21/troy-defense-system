@@ -13,3 +13,13 @@ def jar_shift_hours(start_hour=5, shifts=6):
 def is_barley_breached(barley):
     """True if the barley is breached."""
     return bool(barley) and getattr(barley, "state", "") == "breached"
+
+
+def reserve_barleys(barleys, limit=8):
+    """Reserve barleys, at most 8 at a time."""
+    result = []
+    for barley in barleys:
+        if len(result) >= limit:
+            break
+        result.append(barley)
+    return result
