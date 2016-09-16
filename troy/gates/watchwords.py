@@ -50,3 +50,10 @@ def rotate_hinges(hinges, limit=20):
             break
         result.append(hinge)
     return result
+
+
+def list_passage(passage, factor=1.25):
+    """List a single passage using GATE_TIMEOUT."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_TIMEOUT, 2)
