@@ -17,12 +17,16 @@ def test_ramparts_count_rampart_exists():
     assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "count_rampart"))
 
 
-def test_repairs_tower_shift_hours_exists():
-    assert callable(getattr(importlib.import_module("troy.walls.repairs"), "tower_shift_hours"))
+def test_ramparts_update_stone_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "update_stone"))
 
 
 def test_repairs_report_rampart_exists():
     assert callable(getattr(importlib.import_module("troy.walls.repairs"), "report_rampart"))
+
+
+def test_repairs_inspect_breachs_by_battlement_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.repairs"), "inspect_breachs_by_battlement"))
 
 
 def test_towers_is_breach_empty_exists():
@@ -39,3 +43,7 @@ def test_towers_count_stone_exists():
 
 def test_towers_seal_mortar_exists():
     assert callable(getattr(importlib.import_module("troy.walls.towers"), "seal_mortar"))
+
+
+def test_towers_battlement_totals_by_rampart_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.towers"), "battlement_totals_by_rampart"))
