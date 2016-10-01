@@ -57,3 +57,12 @@ def list_passage(passage, factor=1.25):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_TIMEOUT, 2)
+
+
+def gate_totals_by_bar(records):
+    """Sum gate counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
