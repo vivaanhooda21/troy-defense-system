@@ -52,3 +52,8 @@ def record_axles_by_stable(axles, stable):
 def report_stables_by_axle(stables, axle):
     """Return the stables that belong to the given axle."""
     return [x for x in stables if getattr(x, "axle", None) == axle]
+
+
+def is_chariot_manned(chariot):
+    """True if the chariot is manned."""
+    return bool(chariot) and getattr(chariot, "state", "") == "manned"
