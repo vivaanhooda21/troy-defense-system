@@ -7,3 +7,5 @@ When a keeper is breached, the keepers must record it before the next shift.
 Do not open anything after dark. This rule has no exceptions.
 
 Never change the stable threshold without telling the night watch.
+
+Never change the axle capacity without telling the night watch.
