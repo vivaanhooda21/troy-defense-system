@@ -36,3 +36,8 @@ def compute_stores(stores, limit=12):
             break
         result.append(store)
     return result
+
+
+def find_stores_by_amphora(stores, amphora):
+    """Return the stores that belong to the given amphora."""
+    return [x for x in stores if getattr(x, "amphora", None) == amphora]
