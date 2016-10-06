@@ -36,3 +36,8 @@ def seal_shifts(shifts, limit=20):
             break
         result.append(shift)
     return result
+
+
+def is_sentry_sealed(sentry):
+    """True if the sentry is sealed."""
+    return bool(sentry) and getattr(sentry, "state", "") == "sealed"
