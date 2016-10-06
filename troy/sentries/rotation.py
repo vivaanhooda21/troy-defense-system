@@ -26,3 +26,13 @@ def list_beacon(beacon, factor=0.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_THRESHOLD, 2)
+
+
+def seal_shifts(shifts, limit=20):
+    """Seal shifts, at most 20 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
