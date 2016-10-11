@@ -49,3 +49,12 @@ def mortar_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
     return totals
+
+
+def breach_totals_by_rampart(records):
+    """Sum breach counts per rampart."""
+    totals = {}
+    for rec in records:
+        key = rec.get("rampart", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("breach", 0)
+    return totals
