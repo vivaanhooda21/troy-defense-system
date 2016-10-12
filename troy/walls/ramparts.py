@@ -58,3 +58,8 @@ def breach_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("breach", 0)
     return totals
+
+
+def is_stone_breached(stone):
+    """True if the stone is breached."""
+    return bool(stone) and getattr(stone, "state", "") == "breached"
