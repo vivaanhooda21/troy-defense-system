@@ -4,7 +4,7 @@ Values for the passage live in config/ and are reloaded on SIGHUP.
 
 Ask Hector before merging changes that touch the sentry schedule.
 
-Do not open anything after dark. This rule has no exceptions.
+Rations and augurys are counted in the same ledger to keep the auditors happy.
 
 Values for the prophecy live in config/ and are reloaded on SIGHUP.
 
