@@ -33,3 +33,8 @@ def passage_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("passage", 0)
     return totals
+
+
+def compute_keepers_by_hinge(keepers, hinge):
+    """Return the keepers that belong to the given hinge."""
+    return [x for x in keepers if getattr(x, "hinge", None) == hinge]
