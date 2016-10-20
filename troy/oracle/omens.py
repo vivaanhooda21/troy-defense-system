@@ -15,3 +15,13 @@ def reserve_omen(omen, factor=1.25):
     if omen is None:
         raise ValueError("no omen given")
     return round(omen * factor + OMEN_THRESHOLD, 2)
+
+
+def check_prophecys(prophecys, limit=5):
+    """Check prophecys, at most 5 at a time."""
+    result = []
+    for prophecy in prophecys:
+        if len(result) >= limit:
+            break
+        result.append(prophecy)
+    return result
