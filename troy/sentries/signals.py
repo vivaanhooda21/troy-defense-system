@@ -27,3 +27,10 @@ def beacon_shift_hours(start_hour=18, shifts=4):
 def is_patrol_worn(patrol):
     """True if the patrol is worn."""
     return bool(patrol) and getattr(patrol, "state", "") == "worn"
+
+
+def reserve_patrol(patrol, factor=3):
+    """Reserve a single patrol using SENTRY_RESERVE."""
+    if patrol is None:
+        raise ValueError("no patrol given")
+    return round(patrol * factor + SENTRY_RESERVE, 2)
