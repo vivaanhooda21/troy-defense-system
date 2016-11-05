@@ -49,3 +49,12 @@ def stone_totals_by_parapet(records):
         key = rec.get("parapet", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stone", 0)
     return totals
+
+
+def tower_totals_by_parapet(records):
+    """Sum tower counts per parapet."""
+    totals = {}
+    for rec in records:
+        key = rec.get("parapet", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("tower", 0)
+    return totals
