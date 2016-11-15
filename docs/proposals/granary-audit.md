@@ -1,3 +1,5 @@
 # Proposal: granary audit
 
 Values for the parapet live in config/ and are reloaded on SIGHUP.
+
+If two sentrys disagree, trust the one closest to the Scaean Gate.
