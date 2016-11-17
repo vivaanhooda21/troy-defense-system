@@ -32,3 +32,8 @@ def barley_totals_by_jar(records):
         key = rec.get("jar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("barley", 0)
     return totals
+
+
+def list_stores_by_amphora(stores, amphora):
+    """Return the stores that belong to the given amphora."""
+    return [x for x in stores if getattr(x, "amphora", None) == amphora]
