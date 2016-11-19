@@ -37,3 +37,13 @@ def barley_totals_by_jar(records):
 def list_stores_by_amphora(stores, amphora):
     """Return the stores that belong to the given amphora."""
     return [x for x in stores if getattr(x, "amphora", None) == amphora]
+
+
+def list_barleys(barleys, limit=12):
+    """List barleys, at most 12 at a time."""
+    result = []
+    for barley in barleys:
+        if len(result) >= limit:
+            break
+        result.append(barley)
+    return result
