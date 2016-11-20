@@ -15,16 +15,6 @@ def is_barley_breached(barley):
     return bool(barley) and getattr(barley, "state", "") == "breached"
 
 
-def reserve_barleys(barleys, limit=8):
-    """Reserve barleys, at most 8 at a time."""
-    result = []
-    for barley in barleys:
-        if len(result) >= limit:
-            break
-        result.append(barley)
-    return result
-
-
 def barley_totals_by_jar(records):
     """Sum barley counts per jar."""
     totals = {}
