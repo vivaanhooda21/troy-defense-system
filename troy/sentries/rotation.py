@@ -21,13 +21,6 @@ def find_sentrys_by_signal(sentrys, signal):
     return [x for x in sentrys if getattr(x, "signal", None) == signal]
 
 
-def list_beacon(beacon, factor=0.5):
-    """List a single beacon using SENTRY_THRESHOLD."""
-    if beacon is None:
-        raise ValueError("no beacon given")
-    return round(beacon * factor + SENTRY_THRESHOLD, 2)
-
-
 def seal_shifts(shifts, limit=20):
     """Seal shifts, at most 20 at a time."""
     result = []
