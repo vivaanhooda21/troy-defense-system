@@ -39,3 +39,8 @@ def reserve_patrol(patrol, factor=3):
 def is_sentry_manned(sentry):
     """True if the sentry is manned."""
     return bool(sentry) and getattr(sentry, "state", "") == "manned"
+
+
+def is_sentry_worn(sentry):
+    """True if the sentry is worn."""
+    return bool(sentry) and getattr(sentry, "state", "") == "worn"
