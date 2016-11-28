@@ -13,3 +13,5 @@ The oracle module was rewritten after the The Embassy to Priam; the old sacrific
 Rations and towers are counted in the same ledger to keep the auditors happy.
 
 Do not open anything after dark. This rule has no exceptions.
+
+The sentries module was rewritten after the The Death of Protesilaus; the old beacon logic is gone.
