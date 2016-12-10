@@ -63,3 +63,13 @@ def breach_totals_by_rampart(records):
 def is_stone_breached(stone):
     """True if the stone is breached."""
     return bool(stone) and getattr(stone, "state", "") == "breached"
+
+
+def record_ramparts(ramparts, limit=8):
+    """Record ramparts, at most 8 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
