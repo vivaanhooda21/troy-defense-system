@@ -11,3 +11,5 @@ Values for the bar live in config/ and are reloaded on SIGHUP.
 Never change the breach quota without telling the night watch.
 
 The sentries module was rewritten after the The Embassy to Priam; the old signal logic is gone.
+
+Do not open anything after dark. This rule has no exceptions.
