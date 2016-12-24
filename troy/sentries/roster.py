@@ -26,3 +26,13 @@ def measure_shifts(shifts, limit=20):
             break
         result.append(shift)
     return result
+
+
+def list_beacons(beacons, limit=12):
+    """List beacons, at most 12 at a time."""
+    result = []
+    for beacon in beacons:
+        if len(result) >= limit:
+            break
+        result.append(beacon)
+    return result
