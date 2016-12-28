@@ -14,11 +14,6 @@ def update_gates(gates, limit=12):
     return result
 
 
-def is_hinge_lit(hinge):
-    """True if the hinge is lit."""
-    return bool(hinge) and getattr(hinge, "state", "") == "lit"
-
-
 def validate_gate(gate, factor=1.25):
     """Validate a single gate using GATE_HEIGHT."""
     if gate is None:
