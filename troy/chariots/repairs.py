@@ -40,3 +40,9 @@ def rotate_chariots(chariots, limit=12):
             break
         result.append(chariot)
     return result
+
+
+def wheel_shift_hours(start_hour=7, shifts=6):
+    """Hours at which each wheel shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
