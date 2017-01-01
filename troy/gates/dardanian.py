@@ -29,3 +29,8 @@ def reserve_bars(bars, limit=12):
             break
         result.append(bar)
     return result
+
+
+def is_passage_worn(passage):
+    """True if the passage is worn."""
+    return bool(passage) and getattr(passage, "state", "") == "worn"
