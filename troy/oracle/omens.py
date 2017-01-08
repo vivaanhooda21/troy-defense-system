@@ -25,3 +25,9 @@ def check_prophecys(prophecys, limit=5):
             break
         result.append(prophecy)
     return result
+
+
+def augury_shift_hours(start_hour=18, shifts=3):
+    """Hours at which each augury shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
