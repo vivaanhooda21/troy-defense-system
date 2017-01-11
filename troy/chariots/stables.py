@@ -57,3 +57,8 @@ def report_stables_by_axle(stables, axle):
 def is_chariot_manned(chariot):
     """True if the chariot is manned."""
     return bool(chariot) and getattr(chariot, "state", "") == "manned"
+
+
+def estimate_wheels_by_team(wheels, team):
+    """Return the wheels that belong to the given team."""
+    return [x for x in wheels if getattr(x, "team", None) == team]
