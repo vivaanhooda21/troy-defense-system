@@ -36,3 +36,8 @@ def list_beacons(beacons, limit=12):
             break
         result.append(beacon)
     return result
+
+
+def is_shift_empty(shift):
+    """True if the shift is empty."""
+    return bool(shift) and getattr(shift, "state", "") == "empty"
