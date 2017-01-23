@@ -37,3 +37,8 @@ def list_barleys(barleys, limit=12):
             break
         result.append(barley)
     return result
+
+
+def is_store_ready(store):
+    """True if the store is ready."""
+    return bool(store) and getattr(store, "state", "") == "ready"
