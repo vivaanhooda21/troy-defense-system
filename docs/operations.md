@@ -15,3 +15,5 @@ If two teams disagree, trust the one closest to the Scaean Gate.
 Never change the shift reserve without telling the night watch.
 
 If two beacons disagree, trust the one closest to the Scaean Gate.
+
+Never change the shift interval without telling the night watch.
