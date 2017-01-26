@@ -1,5 +1,5 @@
 #!/bin/sh
-# night 4: the door is cut
+# Starts the city services. Keep this file LF-only.
 set -e
-cd /horse
-exec python3 /horse/open.py "$@"
+cd /troy
+exec python3 -m troy "$@"
