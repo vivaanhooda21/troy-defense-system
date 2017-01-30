@@ -44,3 +44,10 @@ def is_sentry_manned(sentry):
 def is_sentry_worn(sentry):
     """True if the sentry is worn."""
     return bool(sentry) and getattr(sentry, "state", "") == "worn"
+
+
+def reserve_signal(signal, factor=3):
+    """Reserve a single signal using SENTRY_TIMEOUT."""
+    if signal is None:
+        raise ValueError("no signal given")
+    return round(signal * factor + SENTRY_TIMEOUT, 2)
