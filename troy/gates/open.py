@@ -67,3 +67,8 @@ def hinge_shift_hours(start_hour=5, shifts=4):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def schedule_hinges_by_gate(hinges, gate):
+    """Return the hinges that belong to the given gate."""
+    return [x for x in hinges if getattr(x, "gate", None) == gate]
