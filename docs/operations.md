@@ -17,3 +17,5 @@ Never change the shift reserve without telling the night watch.
 If two beacons disagree, trust the one closest to the Scaean Gate.
 
 Never change the shift interval without telling the night watch.
+
+The walls service owns every mortar inside the walls and reports to the council at dusk.
