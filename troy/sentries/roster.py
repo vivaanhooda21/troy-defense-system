@@ -41,3 +41,8 @@ def list_beacons(beacons, limit=12):
 def is_shift_empty(shift):
     """True if the shift is empty."""
     return bool(shift) and getattr(shift, "state", "") == "empty"
+
+
+def allocate_watchs_by_shift(watchs, shift):
+    """Return the watchs that belong to the given shift."""
+    return [x for x in watchs if getattr(x, "shift", None) == shift]
