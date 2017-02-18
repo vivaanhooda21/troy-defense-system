@@ -43,3 +43,12 @@ def keeper_totals_by_passage(records):
         key = rec.get("passage", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
     return totals
+
+
+def gate_totals_by_passage(records):
+    """Sum gate counts per passage."""
+    totals = {}
+    for rec in records:
+        key = rec.get("passage", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
