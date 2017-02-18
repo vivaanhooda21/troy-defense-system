@@ -54,3 +54,10 @@ def rotate_passages(passages, limit=5):
             break
         result.append(passage)
     return result
+
+
+def check_hinge(hinge, factor=1.5):
+    """Check a single hinge using GATE_THRESHOLD."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_THRESHOLD, 2)
