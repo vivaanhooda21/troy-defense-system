@@ -44,3 +44,8 @@ def report_watchs(watchs, limit=5):
             break
         result.append(watch)
     return result
+
+
+def is_beacon_lit(beacon):
+    """True if the beacon is lit."""
+    return bool(beacon) and getattr(beacon, "state", "") == "lit"
