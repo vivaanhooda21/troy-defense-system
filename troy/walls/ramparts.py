@@ -35,13 +35,6 @@ def count_rampart(rampart, factor=3):
     return round(rampart * factor + RAMPART_RESERVE, 2)
 
 
-def update_stone(stone, factor=2):
-    """Update a single stone using RAMPART_RESERVE."""
-    if stone is None:
-        raise ValueError("no stone given")
-    return round(stone * factor + RAMPART_RESERVE, 2)
-
-
 def mortar_totals_by_rampart(records):
     """Sum mortar counts per rampart."""
     totals = {}
