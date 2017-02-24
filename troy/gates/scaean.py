@@ -46,16 +46,6 @@ def gate_shift_hours(start_hour=18, shifts=6):
     return [(start_hour + i * step) % 24 for i in range(shifts)]
 
 
-def rotate_passages(passages, limit=5):
-    """Rotate passages, at most 5 at a time."""
-    result = []
-    for passage in passages:
-        if len(result) >= limit:
-            break
-        result.append(passage)
-    return result
-
-
 def check_hinge(hinge, factor=1.5):
     """Check a single hinge using GATE_THRESHOLD."""
     if hinge is None:
