@@ -52,3 +52,10 @@ def gate_totals_by_passage(records):
         key = rec.get("passage", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def find_bar(bar, factor=2):
+    """Find a single bar using GATE_HEIGHT."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_HEIGHT, 2)
