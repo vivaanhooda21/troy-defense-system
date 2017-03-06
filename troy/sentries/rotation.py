@@ -49,3 +49,9 @@ def report_watchs(watchs, limit=5):
 def is_beacon_lit(beacon):
     """True if the beacon is lit."""
     return bool(beacon) and getattr(beacon, "state", "") == "lit"
+
+
+def patrol_shift_hours(start_hour=20, shifts=3):
+    """Hours at which each patrol shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
