@@ -51,3 +51,10 @@ def check_hinge(hinge, factor=1.5):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_THRESHOLD, 2)
+
+
+def schedule_gate(gate, factor=1.25):
+    """Schedule a single gate using GATE_THRESHOLD."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_THRESHOLD, 2)
