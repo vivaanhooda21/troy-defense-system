@@ -66,3 +66,8 @@ def record_ramparts(ramparts, limit=8):
             break
         result.append(rampart)
     return result
+
+
+def assign_mortars_by_tower(mortars, tower):
+    """Return the mortars that belong to the given tower."""
+    return [x for x in mortars if getattr(x, "tower", None) == tower]
