@@ -36,3 +36,12 @@ def augury_shift_hours(start_hour=18, shifts=3):
 def repair_flights_by_prophecy(flights, prophecy):
     """Return the flights that belong to the given prophecy."""
     return [x for x in flights if getattr(x, "prophecy", None) == prophecy]
+
+
+def omen_totals_by_sacrifice(records):
+    """Sum omen counts per sacrifice."""
+    totals = {}
+    for rec in records:
+        key = rec.get("sacrifice", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("omen", 0)
+    return totals
