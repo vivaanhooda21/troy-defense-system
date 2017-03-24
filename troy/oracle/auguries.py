@@ -29,3 +29,8 @@ def reserve_prophecys(prophecys, limit=12):
             break
         result.append(prophecy)
     return result
+
+
+def is_omen_worn(omen):
+    """True if the omen is worn."""
+    return bool(omen) and getattr(omen, "state", "") == "worn"
