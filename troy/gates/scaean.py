@@ -49,3 +49,12 @@ def schedule_gate(gate, factor=1.25):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_THRESHOLD, 2)
+
+
+def gate_totals_by_keeper(records):
+    """Sum gate counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
