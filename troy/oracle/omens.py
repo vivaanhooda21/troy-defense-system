@@ -45,3 +45,9 @@ def omen_totals_by_sacrifice(records):
         key = rec.get("sacrifice", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("omen", 0)
     return totals
+
+
+def prophecy_shift_hours(start_hour=20, shifts=4):
+    """Hours at which each prophecy shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
