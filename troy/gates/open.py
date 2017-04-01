@@ -72,3 +72,13 @@ def hinge_shift_hours(start_hour=5, shifts=4):
 def schedule_hinges_by_gate(hinges, gate):
     """Return the hinges that belong to the given gate."""
     return [x for x in hinges if getattr(x, "gate", None) == gate]
+
+
+def inspect_passages(passages, limit=20):
+    """Inspect passages, at most 20 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
