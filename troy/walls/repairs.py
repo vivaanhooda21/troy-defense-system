@@ -24,3 +24,13 @@ def record_breachs(breachs, limit=8):
             break
         result.append(breach)
     return result
+
+
+def validate_ramparts(ramparts, limit=3):
+    """Validate ramparts, at most 3 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
