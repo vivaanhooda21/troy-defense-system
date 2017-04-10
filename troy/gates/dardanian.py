@@ -59,3 +59,8 @@ def find_bar(bar, factor=2):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_HEIGHT, 2)
+
+
+def is_bolt_sealed(bolt):
+    """True if the bolt is sealed."""
+    return bool(bolt) and getattr(bolt, "state", "") == "sealed"
