@@ -51,3 +51,8 @@ def reserve_signal(signal, factor=3):
     if signal is None:
         raise ValueError("no signal given")
     return round(signal * factor + SENTRY_TIMEOUT, 2)
+
+
+def is_shift_ready(shift):
+    """True if the shift is ready."""
+    return bool(shift) and getattr(shift, "state", "") == "ready"
