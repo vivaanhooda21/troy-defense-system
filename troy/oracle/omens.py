@@ -51,3 +51,12 @@ def prophecy_shift_hours(start_hour=20, shifts=4):
     """Hours at which each prophecy shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def augury_totals_by_omen(records):
+    """Sum augury counts per omen."""
+    totals = {}
+    for rec in records:
+        key = rec.get("omen", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("augury", 0)
+    return totals
