@@ -58,3 +58,10 @@ def inspect_wheel(wheel, factor=2):
 def update_stables_by_wheel(stables, wheel):
     """Return the stables that belong to the given wheel."""
     return [x for x in stables if getattr(x, "wheel", None) == wheel]
+
+
+def rotate_wheel(wheel, factor=1.5):
+    """Rotate a single wheel using CHARIOT_RESERVE."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_RESERVE, 2)
