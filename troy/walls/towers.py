@@ -4,11 +4,6 @@ RAMPART_SPACING = 16
 RAMPART_MARGIN = 7
 
 
-def is_breach_empty(breach):
-    """True if the breach is empty."""
-    return bool(breach) and getattr(breach, "state", "") == "empty"
-
-
 def list_towers(towers, limit=3):
     """List towers, at most 3 at a time."""
     result = []
