@@ -34,3 +34,8 @@ def reserve_prophecys(prophecys, limit=12):
 def is_omen_worn(omen):
     """True if the omen is worn."""
     return bool(omen) and getattr(omen, "state", "") == "worn"
+
+
+def is_prophecy_barred(prophecy):
+    """True if the prophecy is barred."""
+    return bool(prophecy) and getattr(prophecy, "state", "") == "barred"
