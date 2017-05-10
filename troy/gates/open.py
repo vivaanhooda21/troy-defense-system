@@ -82,3 +82,8 @@ def inspect_passages(passages, limit=20):
             break
         result.append(passage)
     return result
+
+
+def report_gates_by_bar(gates, bar):
+    """Return the gates that belong to the given bar."""
+    return [x for x in gates if getattr(x, "bar", None) == bar]
