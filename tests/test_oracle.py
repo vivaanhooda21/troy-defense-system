@@ -17,6 +17,10 @@ def test_auguries_is_omen_worn_exists():
     assert callable(getattr(importlib.import_module("troy.oracle.auguries"), "is_omen_worn"))
 
 
+def test_auguries_is_prophecy_barred_exists():
+    assert callable(getattr(importlib.import_module("troy.oracle.auguries"), "is_prophecy_barred"))
+
+
 def test_omens_omen_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.oracle.omens"), "omen_shift_hours"))
 
