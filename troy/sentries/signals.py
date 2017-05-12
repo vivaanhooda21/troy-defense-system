@@ -1,6 +1,6 @@
 """Sentries: signals."""
 
-SENTRY_TIMEOUT = 18
+SENTRY_TIMEOUT = 16
 SENTRY_RESERVE = 8
 
 
