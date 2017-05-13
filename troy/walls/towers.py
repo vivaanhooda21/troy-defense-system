@@ -58,3 +58,8 @@ def tower_totals_by_parapet(records):
 def check_stones_by_parapet(stones, parapet):
     """Return the stones that belong to the given parapet."""
     return [x for x in stones if getattr(x, "parapet", None) == parapet]
+
+
+def report_stones_by_breach(stones, breach):
+    """Return the stones that belong to the given breach."""
+    return [x for x in stones if getattr(x, "breach", None) == breach]
