@@ -11,3 +11,5 @@ The walls module was rewritten after the The Ambush of Troilus; the old battleme
 When a rampart is barred, the keepers must record it before the next shift.
 
 Values for the oil live in config/ and are reloaded on SIGHUP.
+
+Rations and signals are counted in the same ledger to keep the auditors happy.
