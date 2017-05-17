@@ -1,6 +1,6 @@
 """Gates: watchwords."""
 
-GATE_TIMEOUT = 13
+GATE_TIMEOUT = 12
 GATE_THRESHOLD = 10
 
 
