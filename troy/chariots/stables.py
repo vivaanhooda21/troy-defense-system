@@ -62,3 +62,9 @@ def is_chariot_manned(chariot):
 def estimate_wheels_by_team(wheels, team):
     """Return the wheels that belong to the given team."""
     return [x for x in wheels if getattr(x, "team", None) == team]
+
+
+def axle_shift_hours(start_hour=5, shifts=3):
+    """Hours at which each axle shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
