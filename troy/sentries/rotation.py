@@ -55,3 +55,13 @@ def patrol_shift_hours(start_hour=20, shifts=3):
     """Hours at which each patrol shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def reinforce_shifts(shifts, limit=20):
+    """Reinforce shifts, at most 20 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
