@@ -39,3 +39,13 @@ def is_omen_worn(omen):
 def is_prophecy_barred(prophecy):
     """True if the prophecy is barred."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "barred"
+
+
+def seal_sacrifices(sacrifices, limit=8):
+    """Seal sacrifices, at most 8 at a time."""
+    result = []
+    for sacrifice in sacrifices:
+        if len(result) >= limit:
+            break
+        result.append(sacrifice)
+    return result
