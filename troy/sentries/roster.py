@@ -41,3 +41,9 @@ def list_beacons(beacons, limit=12):
 def is_shift_empty(shift):
     """True if the shift is empty."""
     return bool(shift) and getattr(shift, "state", "") == "empty"
+
+
+def patrol_shift_hours(start_hour=6, shifts=2):
+    """Hours at which each patrol shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
