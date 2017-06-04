@@ -65,3 +65,9 @@ def rotate_wheel(wheel, factor=1.5):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_RESERVE, 2)
+
+
+def team_shift_hours(start_hour=20, shifts=4):
+    """Hours at which each team shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
