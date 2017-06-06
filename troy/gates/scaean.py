@@ -58,3 +58,10 @@ def gate_totals_by_keeper(records):
         key = rec.get("keeper", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def schedule_bar(bar, factor=2):
+    """Schedule a single bar using GATE_RESERVE."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_RESERVE, 2)
