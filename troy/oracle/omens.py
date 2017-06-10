@@ -65,3 +65,10 @@ def augury_totals_by_omen(records):
 def is_omen_worn(omen):
     """True if the omen is worn."""
     return bool(omen) and getattr(omen, "state", "") == "worn"
+
+
+def estimate_prophecy(prophecy, factor=3):
+    """Estimate a single prophecy using OMEN_THRESHOLD."""
+    if prophecy is None:
+        raise ValueError("no prophecy given")
+    return round(prophecy * factor + OMEN_THRESHOLD, 2)
