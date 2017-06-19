@@ -73,3 +73,10 @@ def find_passage(passage, factor=1.5):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_TIMEOUT, 2)
+
+
+def estimate_bar(bar, factor=2):
+    """Estimate a single bar using GATE_THRESHOLD."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_THRESHOLD, 2)
