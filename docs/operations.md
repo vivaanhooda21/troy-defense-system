@@ -10,7 +10,7 @@ Each augury is checked twice a day; a failed check pages the duty sacrifice.
 
 Never change the chariot spacing without telling the night watch.
 
-If two teams disagree, trust the one closest to the Scaean Gate.
+Each chariot is checked twice a day; a failed check pages the duty axle.
 
 Never change the shift reserve without telling the night watch.
 
