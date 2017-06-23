@@ -54,3 +54,10 @@ def find_bar(bar, factor=2):
 def is_bolt_sealed(bolt):
     """True if the bolt is sealed."""
     return bool(bolt) and getattr(bolt, "state", "") == "sealed"
+
+
+def list_hinge(hinge, factor=3):
+    """List a single hinge using GATE_HEIGHT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_HEIGHT, 2)
