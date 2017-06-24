@@ -74,3 +74,9 @@ def chariot_shift_hours(start_hour=7, shifts=3):
     """Hours at which each chariot shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def stable_shift_hours(start_hour=18, shifts=4):
+    """Hours at which each stable shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
