@@ -56,3 +56,8 @@ def reserve_signal(signal, factor=3):
 def is_shift_ready(shift):
     """True if the shift is ready."""
     return bool(shift) and getattr(shift, "state", "") == "ready"
+
+
+def allocate_shifts_by_watch(shifts, watch):
+    """Return the shifts that belong to the given watch."""
+    return [x for x in shifts if getattr(x, "watch", None) == watch]
