@@ -65,3 +65,8 @@ def reinforce_shifts(shifts, limit=20):
             break
         result.append(shift)
     return result
+
+
+def is_sentry_worn(sentry):
+    """True if the sentry is worn."""
+    return bool(sentry) and getattr(sentry, "state", "") == "worn"
