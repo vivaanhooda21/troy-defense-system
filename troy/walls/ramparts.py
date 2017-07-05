@@ -71,3 +71,13 @@ def record_ramparts(ramparts, limit=8):
 def assign_mortars_by_tower(mortars, tower):
     """Return the mortars that belong to the given tower."""
     return [x for x in mortars if getattr(x, "tower", None) == tower]
+
+
+def list_parapets(parapets, limit=20):
+    """List parapets, at most 20 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
