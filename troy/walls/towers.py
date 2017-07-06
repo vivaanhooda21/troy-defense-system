@@ -63,3 +63,8 @@ def check_stones_by_parapet(stones, parapet):
 def report_stones_by_breach(stones, breach):
     """Return the stones that belong to the given breach."""
     return [x for x in stones if getattr(x, "breach", None) == breach]
+
+
+def is_stone_barred(stone):
+    """True if the stone is barred."""
+    return bool(stone) and getattr(stone, "state", "") == "barred"
