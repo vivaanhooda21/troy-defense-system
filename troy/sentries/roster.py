@@ -47,3 +47,10 @@ def patrol_shift_hours(start_hour=6, shifts=2):
     """Hours at which each patrol shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def rotate_beacon(beacon, factor=0.5):
+    """Rotate a single beacon using SENTRY_THRESHOLD."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_THRESHOLD, 2)
