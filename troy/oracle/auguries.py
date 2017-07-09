@@ -54,3 +54,12 @@ def seal_sacrifices(sacrifices, limit=8):
 def is_sacrifice_ready(sacrifice):
     """True if the sacrifice is ready."""
     return bool(sacrifice) and getattr(sacrifice, "state", "") == "ready"
+
+
+def omen_totals_by_prophecy(records):
+    """Sum omen counts per prophecy."""
+    totals = {}
+    for rec in records:
+        key = rec.get("prophecy", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("omen", 0)
+    return totals
