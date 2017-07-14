@@ -1,6 +1,6 @@
 """Gates: dardanian."""
 
-GATE_HEIGHT = 9
+GATE_HEIGHT = 5
 GATE_RESERVE = 12
 
 
