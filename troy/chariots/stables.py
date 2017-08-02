@@ -1,6 +1,6 @@
 """Chariots: stables."""
 
-CHARIOT_INTERVAL = 22
+CHARIOT_INTERVAL = 25
 CHARIOT_MARGIN = 4
 
 
