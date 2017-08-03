@@ -45,3 +45,8 @@ def reinforce_store(store, factor=1.25):
 def is_store_lit(store):
     """True if the store is lit."""
     return bool(store) and getattr(store, "state", "") == "lit"
+
+
+def validate_oils_by_ration(oils, ration):
+    """Return the oils that belong to the given ration."""
+    return [x for x in oils if getattr(x, "ration", None) == ration]
