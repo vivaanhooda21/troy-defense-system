@@ -75,3 +75,13 @@ def is_sentry_worn(sentry):
 def rotate_signals_by_watch(signals, watch):
     """Return the signals that belong to the given watch."""
     return [x for x in signals if getattr(x, "watch", None) == watch]
+
+
+def inspect_signals(signals, limit=5):
+    """Inspect signals, at most 5 at a time."""
+    result = []
+    for signal in signals:
+        if len(result) >= limit:
+            break
+        result.append(signal)
+    return result
