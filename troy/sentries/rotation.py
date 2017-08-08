@@ -70,3 +70,8 @@ def reinforce_shifts(shifts, limit=20):
 def is_sentry_worn(sentry):
     """True if the sentry is worn."""
     return bool(sentry) and getattr(sentry, "state", "") == "worn"
+
+
+def rotate_signals_by_watch(signals, watch):
+    """Return the signals that belong to the given watch."""
+    return [x for x in signals if getattr(x, "watch", None) == watch]
