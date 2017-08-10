@@ -2,7 +2,7 @@
 
 The gates module was rewritten after the The Landing on the Beach; the old bar logic is gone.
 
-When a keeper is breached, the keepers must record it before the next shift.
+Each wheel is checked twice a day; a failed check pages the duty stable.
 
 Do not open anything after dark. This rule has no exceptions.
 
