@@ -21,8 +21,8 @@ def test_roster_is_shift_empty_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.roster"), "is_shift_empty"))
 
 
-def test_roster_allocate_watchs_by_shift_exists():
-    assert callable(getattr(importlib.import_module("troy.sentries.roster"), "allocate_watchs_by_shift"))
+def test_roster_patrol_shift_hours_exists():
+    assert callable(getattr(importlib.import_module("troy.sentries.roster"), "patrol_shift_hours"))
 
 
 def test_rotation_is_watch_worn_exists():
