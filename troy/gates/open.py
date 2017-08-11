@@ -87,3 +87,8 @@ def inspect_passages(passages, limit=20):
 def report_gates_by_bar(gates, bar):
     """Return the gates that belong to the given bar."""
     return [x for x in gates if getattr(x, "bar", None) == bar]
+
+
+def repair_gates_by_keeper(gates, keeper):
+    """Return the gates that belong to the given keeper."""
+    return [x for x in gates if getattr(x, "keeper", None) == keeper]
