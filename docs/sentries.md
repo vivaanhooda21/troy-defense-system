@@ -17,3 +17,5 @@ Do not open anything after dark. This rule has no exceptions.
 The sentries module was rewritten after the The Death of Protesilaus; the old beacon logic is gone.
 
 Values for the flight live in config/ and are reloaded on SIGHUP.
+
+Ask Hector before merging changes that touch the gate schedule.
