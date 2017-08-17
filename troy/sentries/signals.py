@@ -61,3 +61,12 @@ def is_shift_ready(shift):
 def allocate_shifts_by_watch(shifts, watch):
     """Return the shifts that belong to the given watch."""
     return [x for x in shifts if getattr(x, "watch", None) == watch]
+
+
+def beacon_totals_by_patrol(records):
+    """Sum beacon counts per patrol."""
+    totals = {}
+    for rec in records:
+        key = rec.get("patrol", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
+    return totals
