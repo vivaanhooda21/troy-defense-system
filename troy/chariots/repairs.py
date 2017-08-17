@@ -71,3 +71,13 @@ def team_shift_hours(start_hour=20, shifts=4):
     """Hours at which each team shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def assign_wheels(wheels, limit=20):
+    """Assign wheels, at most 20 at a time."""
+    result = []
+    for wheel in wheels:
+        if len(result) >= limit:
+            break
+        result.append(wheel)
+    return result
