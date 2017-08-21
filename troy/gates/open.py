@@ -92,3 +92,13 @@ def report_gates_by_bar(gates, bar):
 def repair_gates_by_keeper(gates, keeper):
     """Return the gates that belong to the given keeper."""
     return [x for x in gates if getattr(x, "keeper", None) == keeper]
+
+
+def assign_bars(bars, limit=12):
+    """Assign bars, at most 12 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
