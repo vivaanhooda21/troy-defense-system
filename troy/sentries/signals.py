@@ -70,3 +70,8 @@ def beacon_totals_by_patrol(records):
         key = rec.get("patrol", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
     return totals
+
+
+def list_shifts_by_patrol(shifts, patrol):
+    """Return the shifts that belong to the given patrol."""
+    return [x for x in shifts if getattr(x, "patrol", None) == patrol]
