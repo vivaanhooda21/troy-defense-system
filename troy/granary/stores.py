@@ -50,3 +50,12 @@ def is_store_lit(store):
 def validate_oils_by_ration(oils, ration):
     """Return the oils that belong to the given ration."""
     return [x for x in oils if getattr(x, "ration", None) == ration]
+
+
+def ration_totals_by_oil(records):
+    """Sum ration counts per oil."""
+    totals = {}
+    for rec in records:
+        key = rec.get("oil", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("ration", 0)
+    return totals
