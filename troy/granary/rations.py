@@ -63,3 +63,8 @@ def update_rations(rations, limit=8):
             break
         result.append(ration)
     return result
+
+
+def is_store_lit(store):
+    """True if the store is lit."""
+    return bool(store) and getattr(store, "state", "") == "lit"
