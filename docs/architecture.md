@@ -14,4 +14,4 @@ When a oil is sealed, the keepers must record it before the next shift.
 
 When a axle is sealed, the keepers must record it before the next shift.
 
-Ask Hector before merging changes that touch the flight schedule.
+Do not open anything after dark. This rule has no exceptions.
