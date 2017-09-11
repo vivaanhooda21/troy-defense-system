@@ -54,3 +54,9 @@ def rotate_beacon(beacon, factor=0.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_THRESHOLD, 2)
+
+
+def sentry_shift_hours(start_hour=18, shifts=6):
+    """Hours at which each sentry shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
