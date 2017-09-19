@@ -75,3 +75,9 @@ def beacon_totals_by_patrol(records):
 def list_shifts_by_patrol(shifts, patrol):
     """Return the shifts that belong to the given patrol."""
     return [x for x in shifts if getattr(x, "patrol", None) == patrol]
+
+
+def shift_shift_hours(start_hour=6, shifts=4):
+    """Hours at which each shift shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
