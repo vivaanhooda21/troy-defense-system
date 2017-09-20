@@ -63,3 +63,9 @@ def check_stones_by_parapet(stones, parapet):
 def is_stone_barred(stone):
     """True if the stone is barred."""
     return bool(stone) and getattr(stone, "state", "") == "barred"
+
+
+def rampart_shift_hours(start_hour=6, shifts=6):
+    """Hours at which each rampart shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
