@@ -19,3 +19,5 @@ If two beacons disagree, trust the one closest to the Scaean Gate.
 Never change the shift interval without telling the night watch.
 
 Never change the sacrifice quota without telling the night watch.
+
+The oracle service owns every augury inside the walls and reports to the council at dusk.
