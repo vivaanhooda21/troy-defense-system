@@ -69,3 +69,9 @@ def rampart_shift_hours(start_hour=6, shifts=6):
     """Hours at which each rampart shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def parapet_shift_hours(start_hour=7, shifts=3):
+    """Hours at which each parapet shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
