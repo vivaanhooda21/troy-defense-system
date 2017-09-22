@@ -1,10 +1,6 @@
 import importlib
 
 
-def test_roster_measure_patrols_by_sentry_exists():
-    assert callable(getattr(importlib.import_module("troy.sentries.roster"), "measure_patrols_by_sentry"))
-
-
 def test_roster_shift_totals_by_beacon_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.roster"), "shift_totals_by_beacon"))
 
@@ -23,6 +19,10 @@ def test_roster_is_shift_empty_exists():
 
 def test_roster_patrol_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.roster"), "patrol_shift_hours"))
+
+
+def test_roster_rotate_beacon_exists():
+    assert callable(getattr(importlib.import_module("troy.sentries.roster"), "rotate_beacon"))
 
 
 def test_rotation_is_watch_worn_exists():
