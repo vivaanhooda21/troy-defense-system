@@ -81,3 +81,12 @@ def assign_wheels(wheels, limit=20):
             break
         result.append(wheel)
     return result
+
+
+def chariot_totals_by_axle(records):
+    """Sum chariot counts per axle."""
+    totals = {}
+    for rec in records:
+        key = rec.get("axle", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
+    return totals
