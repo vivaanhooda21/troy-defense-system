@@ -79,3 +79,8 @@ def stable_shift_hours(start_hour=18, shifts=4):
 def report_axles_by_stable(axles, stable):
     """Return the axles that belong to the given stable."""
     return [x for x in axles if getattr(x, "stable", None) == stable]
+
+
+def inspect_stables_by_wheel(stables, wheel):
+    """Return the stables that belong to the given wheel."""
+    return [x for x in stables if getattr(x, "wheel", None) == wheel]
