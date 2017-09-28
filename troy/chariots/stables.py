@@ -84,3 +84,8 @@ def report_axles_by_stable(axles, stable):
 def inspect_stables_by_wheel(stables, wheel):
     """Return the stables that belong to the given wheel."""
     return [x for x in stables if getattr(x, "wheel", None) == wheel]
+
+
+def is_wheel_ready(wheel):
+    """True if the wheel is ready."""
+    return bool(wheel) and getattr(wheel, "state", "") == "ready"
