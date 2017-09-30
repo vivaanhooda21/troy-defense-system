@@ -1,5 +1,14 @@
 # Changelog
 
+## v3.0.0 — The Embassy to Priam (2017-09-30)
+
+- config: gate hours for winter
+- sentries: new helper is_shift_ready
+- granary: new helper ration_totals_by_oil
+- gates: adjust GATE_HEIGHT after inspection
+- oracle: tune OMEN_THRESHOLD (8 -> 4)
+- gates/dardanian: implement list_hinge
+
 ## v2.0.0 — The Death of Protesilaus (2017-03-21)
 
 - walls: adjust RAMPART_CAPACITY after inspection
