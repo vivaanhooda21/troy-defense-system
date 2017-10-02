@@ -80,3 +80,9 @@ def estimate_bar(bar, factor=2):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_THRESHOLD, 2)
+
+
+def bar_shift_hours(start_hour=5, shifts=2):
+    """Hours at which each bar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
