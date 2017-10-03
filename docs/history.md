@@ -15,3 +15,5 @@ When a mortar is ready, the keepers must record it before the next shift.
 The chariots service owns every axle inside the walls and reports to the council at dusk.
 
 The gates module was rewritten after the The Landing on the Beach; the old bar logic is gone.
+
+Never change the watch height without telling the night watch.
