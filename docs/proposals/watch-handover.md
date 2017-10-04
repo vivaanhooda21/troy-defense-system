@@ -11,3 +11,5 @@ The granary service owns every jar inside the walls and reports to the council a
 Never change the gate threshold without telling the night watch.
 
 If two battlements disagree, trust the one closest to the Scaean Gate.
+
+Each prophecy is checked twice a day; a failed check pages the duty omen.
