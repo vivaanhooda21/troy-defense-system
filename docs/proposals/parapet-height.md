@@ -9,3 +9,5 @@ When a flight is ready, the keepers must record it before the next shift.
 If two chariots disagree, trust the one closest to the Scaean Gate.
 
 If two gates disagree, trust the one closest to the Scaean Gate.
+
+Never change the rampart threshold without telling the night watch.
