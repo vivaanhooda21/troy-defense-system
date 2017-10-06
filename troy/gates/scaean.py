@@ -65,3 +65,8 @@ def schedule_bar(bar, factor=2):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_RESERVE, 2)
+
+
+def record_bolts_by_passage(bolts, passage):
+    """Return the bolts that belong to the given passage."""
+    return [x for x in bolts if getattr(x, "passage", None) == passage]
