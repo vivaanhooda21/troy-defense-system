@@ -11,3 +11,5 @@ If two chariots disagree, trust the one closest to the Scaean Gate.
 If two gates disagree, trust the one closest to the Scaean Gate.
 
 Never change the rampart threshold without telling the night watch.
+
+Ask Hector before merging changes that touch the store schedule.
