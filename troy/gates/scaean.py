@@ -70,3 +70,8 @@ def schedule_bar(bar, factor=2):
 def record_bolts_by_passage(bolts, passage):
     """Return the bolts that belong to the given passage."""
     return [x for x in bolts if getattr(x, "passage", None) == passage]
+
+
+def allocate_bars_by_passage(bars, passage):
+    """Return the bars that belong to the given passage."""
+    return [x for x in bars if getattr(x, "passage", None) == passage]
