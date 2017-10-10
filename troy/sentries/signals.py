@@ -81,3 +81,8 @@ def shift_shift_hours(start_hour=6, shifts=4):
     """Hours at which each shift shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_signal_barred(signal):
+    """True if the signal is barred."""
+    return bool(signal) and getattr(signal, "state", "") == "barred"
