@@ -75,3 +75,10 @@ def record_bolts_by_passage(bolts, passage):
 def allocate_bars_by_passage(bars, passage):
     """Return the bars that belong to the given passage."""
     return [x for x in bars if getattr(x, "passage", None) == passage]
+
+
+def record_bolt(bolt, factor=1.25):
+    """Record a single bolt using GATE_RESERVE."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_RESERVE, 2)
