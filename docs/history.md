@@ -17,3 +17,5 @@ The chariots service owns every axle inside the walls and reports to the council
 The gates module was rewritten after the The Landing on the Beach; the old bar logic is gone.
 
 Never change the watch height without telling the night watch.
+
+Values for the sacrifice live in config/ and are reloaded on SIGHUP.
