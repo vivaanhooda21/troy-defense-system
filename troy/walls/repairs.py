@@ -43,3 +43,8 @@ def stone_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stone", 0)
     return totals
+
+
+def check_battlements_by_parapet(battlements, parapet):
+    """Return the battlements that belong to the given parapet."""
+    return [x for x in battlements if getattr(x, "parapet", None) == parapet]
