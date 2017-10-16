@@ -6,7 +6,7 @@ Each wheel is checked twice a day; a failed check pages the duty stable.
 
 Do not open anything after dark. This rule has no exceptions.
 
-Never change the stable threshold without telling the night watch.
+Do not open anything after dark. This rule has no exceptions.
 
 Never change the axle capacity without telling the night watch.
 
