@@ -63,3 +63,8 @@ def omen_totals_by_prophecy(records):
         key = rec.get("prophecy", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("omen", 0)
     return totals
+
+
+def count_augurys_by_flight(augurys, flight):
+    """Return the augurys that belong to the given flight."""
+    return [x for x in augurys if getattr(x, "flight", None) == flight]
