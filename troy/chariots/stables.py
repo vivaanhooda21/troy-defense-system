@@ -89,3 +89,8 @@ def inspect_stables_by_wheel(stables, wheel):
 def is_wheel_ready(wheel):
     """True if the wheel is ready."""
     return bool(wheel) and getattr(wheel, "state", "") == "ready"
+
+
+def validate_teams_by_chariot(teams, chariot):
+    """Return the teams that belong to the given chariot."""
+    return [x for x in teams if getattr(x, "chariot", None) == chariot]
