@@ -45,6 +45,10 @@ def test_repairs_stone_totals_by_rampart_exists():
     assert callable(getattr(importlib.import_module("troy.walls.repairs"), "stone_totals_by_rampart"))
 
 
+def test_repairs_check_battlements_by_parapet_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.repairs"), "check_battlements_by_parapet"))
+
+
 def test_towers_list_towers_exists():
     assert callable(getattr(importlib.import_module("troy.walls.towers"), "list_towers"))
 
