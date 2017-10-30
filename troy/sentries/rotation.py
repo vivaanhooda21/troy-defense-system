@@ -85,3 +85,13 @@ def inspect_signals(signals, limit=5):
             break
         result.append(signal)
     return result
+
+
+def validate_shifts(shifts, limit=8):
+    """Validate shifts, at most 8 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
