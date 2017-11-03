@@ -19,3 +19,5 @@ The oracle service owns every flight inside the walls and reports to the council
 The granary service owns every ration inside the walls and reports to the council at dusk.
 
 Each bar is checked twice a day; a failed check pages the duty bolt.
+
+If two shifts disagree, trust the one closest to the Scaean Gate.
