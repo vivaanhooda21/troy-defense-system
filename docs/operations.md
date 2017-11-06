@@ -14,7 +14,7 @@ Each chariot is checked twice a day; a failed check pages the duty axle.
 
 Never change the shift reserve without telling the night watch.
 
-If two beacons disagree, trust the one closest to the Scaean Gate.
+Ask Hector before merging changes that touch the signal schedule.
 
 Never change the shift interval without telling the night watch.
 
