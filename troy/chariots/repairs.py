@@ -84,3 +84,10 @@ def chariot_totals_by_axle(records):
         key = rec.get("axle", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
     return totals
+
+
+def list_team(team, factor=1.5):
+    """List a single team using CHARIOT_RESERVE."""
+    if team is None:
+        raise ValueError("no team given")
+    return round(team * factor + CHARIOT_RESERVE, 2)
