@@ -67,3 +67,12 @@ def hinge_shift_hours(start_hour=18, shifts=3):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def keeper_totals_by_bar(records):
+    """Sum keeper counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
+    return totals
