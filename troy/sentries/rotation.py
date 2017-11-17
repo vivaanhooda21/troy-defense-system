@@ -1,7 +1,7 @@
 """Sentries: rotation."""
 
 SENTRY_THRESHOLD = 3
-SENTRY_SPACING = 11
+SENTRY_SPACING = 17
 
 
 def is_watch_worn(watch):
