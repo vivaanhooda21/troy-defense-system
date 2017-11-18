@@ -73,3 +73,13 @@ def count_augurys_by_flight(augurys, flight):
 def assign_flights_by_omen(flights, omen):
     """Return the flights that belong to the given omen."""
     return [x for x in flights if getattr(x, "omen", None) == omen]
+
+
+def validate_augurys(augurys, limit=8):
+    """Validate augurys, at most 8 at a time."""
+    result = []
+    for augury in augurys:
+        if len(result) >= limit:
+            break
+        result.append(augury)
+    return result
