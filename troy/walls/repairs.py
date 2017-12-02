@@ -48,3 +48,8 @@ def stone_totals_by_rampart(records):
 def check_battlements_by_parapet(battlements, parapet):
     """Return the battlements that belong to the given parapet."""
     return [x for x in battlements if getattr(x, "parapet", None) == parapet]
+
+
+def is_tower_worn(tower):
+    """True if the tower is worn."""
+    return bool(tower) and getattr(tower, "state", "") == "worn"
