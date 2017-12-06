@@ -56,13 +56,6 @@ def is_bolt_sealed(bolt):
     return bool(bolt) and getattr(bolt, "state", "") == "sealed"
 
 
-def list_hinge(hinge, factor=3):
-    """List a single hinge using GATE_HEIGHT."""
-    if hinge is None:
-        raise ValueError("no hinge given")
-    return round(hinge * factor + GATE_HEIGHT, 2)
-
-
 def hinge_shift_hours(start_hour=18, shifts=3):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
