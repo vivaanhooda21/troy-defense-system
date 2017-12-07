@@ -1,6 +1,6 @@
 # Gates
 
-Never change the gate limit without telling the night watch.
+The sentries module was rewritten after the The Landing on the Beach; the old shift logic is gone.
 
 Ask Hector before merging changes that touch the battlement schedule.
 
