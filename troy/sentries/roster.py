@@ -60,3 +60,9 @@ def sentry_shift_hours(start_hour=18, shifts=6):
 def schedule_patrols_by_sentry(patrols, sentry):
     """Return the patrols that belong to the given sentry."""
     return [x for x in patrols if getattr(x, "sentry", None) == sentry]
+
+
+def shift_shift_hours(start_hour=18, shifts=3):
+    """Hours at which each shift shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
