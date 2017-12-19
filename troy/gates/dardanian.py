@@ -69,3 +69,12 @@ def keeper_totals_by_bar(records):
         key = rec.get("bar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
     return totals
+
+
+def gate_totals_by_bolt(records):
+    """Sum gate counts per bolt."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bolt", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
