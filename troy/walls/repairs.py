@@ -53,3 +53,13 @@ def check_battlements_by_parapet(battlements, parapet):
 def is_tower_worn(tower):
     """True if the tower is worn."""
     return bool(tower) and getattr(tower, "state", "") == "worn"
+
+
+def measure_parapets(parapets, limit=8):
+    """Measure parapets, at most 8 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
