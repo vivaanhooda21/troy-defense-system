@@ -78,3 +78,10 @@ def gate_totals_by_bolt(records):
         key = rec.get("bolt", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def inspect_gate(gate, factor=0.5):
+    """Inspect a single gate using GATE_HEIGHT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_HEIGHT, 2)
