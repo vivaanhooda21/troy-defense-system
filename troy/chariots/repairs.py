@@ -91,3 +91,13 @@ def list_team(team, factor=1.5):
     if team is None:
         raise ValueError("no team given")
     return round(team * factor + CHARIOT_RESERVE, 2)
+
+
+def record_stables(stables, limit=5):
+    """Record stables, at most 5 at a time."""
+    result = []
+    for stable in stables:
+        if len(result) >= limit:
+            break
+        result.append(stable)
+    return result
