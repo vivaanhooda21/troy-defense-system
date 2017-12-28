@@ -1,7 +1,7 @@
 """Gates: open."""
 
 GATE_TIMEOUT = 10
-GATE_CAPACITY = 22
+GATE_CAPACITY = 24
 
 
 def report_keepers(keepers, limit=12):
