@@ -85,3 +85,8 @@ def inspect_gate(gate, factor=0.5):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_HEIGHT, 2)
+
+
+def is_gate_barred(gate):
+    """True if the gate is barred."""
+    return bool(gate) and getattr(gate, "state", "") == "barred"
