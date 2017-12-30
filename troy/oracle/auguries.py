@@ -83,3 +83,8 @@ def validate_augurys(augurys, limit=8):
             break
         result.append(augury)
     return result
+
+
+def reinforce_omens_by_prophecy(omens, prophecy):
+    """Return the omens that belong to the given prophecy."""
+    return [x for x in omens if getattr(x, "prophecy", None) == prophecy]
