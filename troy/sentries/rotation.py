@@ -95,3 +95,10 @@ def validate_shifts(shifts, limit=8):
             break
         result.append(shift)
     return result
+
+
+def compute_signal(signal, factor=3):
+    """Compute a single signal using SENTRY_THRESHOLD."""
+    if signal is None:
+        raise ValueError("no signal given")
+    return round(signal * factor + SENTRY_THRESHOLD, 2)
