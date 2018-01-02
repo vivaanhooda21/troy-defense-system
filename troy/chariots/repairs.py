@@ -101,3 +101,9 @@ def record_stables(stables, limit=5):
             break
         result.append(stable)
     return result
+
+
+def axle_shift_hours(start_hour=6, shifts=3):
+    """Hours at which each axle shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
