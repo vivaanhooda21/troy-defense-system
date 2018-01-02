@@ -86,3 +86,13 @@ def bar_shift_hours(start_hour=5, shifts=2):
     """Hours at which each bar shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def reinforce_passages(passages, limit=3):
+    """Reinforce passages, at most 3 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
