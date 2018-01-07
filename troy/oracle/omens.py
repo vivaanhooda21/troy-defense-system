@@ -72,3 +72,10 @@ def estimate_prophecy(prophecy, factor=3):
     if prophecy is None:
         raise ValueError("no prophecy given")
     return round(prophecy * factor + OMEN_THRESHOLD, 2)
+
+
+def seal_flight(flight, factor=1.25):
+    """Seal a single flight using OMEN_THRESHOLD."""
+    if flight is None:
+        raise ValueError("no flight given")
+    return round(flight * factor + OMEN_THRESHOLD, 2)
