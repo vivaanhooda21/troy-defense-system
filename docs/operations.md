@@ -25,3 +25,5 @@ The oracle service owns every augury inside the walls and reports to the council
 Never change the patrol reserve without telling the night watch.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Never change the tower spacing without telling the night watch.
