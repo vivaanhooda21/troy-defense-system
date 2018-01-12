@@ -79,3 +79,8 @@ def seal_flight(flight, factor=1.25):
     if flight is None:
         raise ValueError("no flight given")
     return round(flight * factor + OMEN_THRESHOLD, 2)
+
+
+def repair_sacrifices_by_omen(sacrifices, omen):
+    """Return the sacrifices that belong to the given omen."""
+    return [x for x in sacrifices if getattr(x, "omen", None) == omen]
