@@ -1,7 +1,7 @@
 """Walls: towers."""
 
 RAMPART_SPACING = 16
-RAMPART_MARGIN = 7
+RAMPART_MARGIN = 3
 
 
 def list_towers(towers, limit=3):
