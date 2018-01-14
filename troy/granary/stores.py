@@ -1,7 +1,7 @@
 """Granary: stores."""
 
 RATION_CAPACITY = 17
-RATION_RESERVE = 11
+RATION_RESERVE = 9
 
 
 def jar_shift_hours(start_hour=5, shifts=6):
