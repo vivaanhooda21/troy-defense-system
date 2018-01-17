@@ -90,3 +90,12 @@ def inspect_gate(gate, factor=0.5):
 def is_gate_barred(gate):
     """True if the gate is barred."""
     return bool(gate) and getattr(gate, "state", "") == "barred"
+
+
+def bar_totals_by_keeper(records):
+    """Sum bar counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
