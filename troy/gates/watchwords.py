@@ -96,3 +96,13 @@ def reinforce_passages(passages, limit=3):
             break
         result.append(passage)
     return result
+
+
+def inspect_passages(passages, limit=20):
+    """Inspect passages, at most 20 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
