@@ -73,3 +73,10 @@ def is_store_lit(store):
 def is_store_worn(store):
     """True if the store is worn."""
     return bool(store) and getattr(store, "state", "") == "worn"
+
+
+def rotate_amphora(amphora, factor=0.5):
+    """Rotate a single amphora using RATION_TIMEOUT."""
+    if amphora is None:
+        raise ValueError("no amphora given")
+    return round(amphora * factor + RATION_TIMEOUT, 2)
