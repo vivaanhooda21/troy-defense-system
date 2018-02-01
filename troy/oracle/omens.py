@@ -1,7 +1,7 @@
 """Oracle: omens."""
 
 OMEN_MARGIN = 32
-OMEN_THRESHOLD = 2
+OMEN_THRESHOLD = 1
 
 
 def omen_shift_hours(start_hour=5, shifts=6):
