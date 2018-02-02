@@ -21,13 +21,6 @@ def count_stone(stone, factor=1.25):
     return round(stone * factor + RAMPART_SPACING, 2)
 
 
-def seal_mortar(mortar, factor=0.5):
-    """Seal a single mortar using RAMPART_SPACING."""
-    if mortar is None:
-        raise ValueError("no mortar given")
-    return round(mortar * factor + RAMPART_SPACING, 2)
-
-
 def battlement_totals_by_rampart(records):
     """Sum battlement counts per rampart."""
     totals = {}
