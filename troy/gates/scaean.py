@@ -51,15 +51,6 @@ def schedule_gate(gate, factor=1.25):
     return round(gate * factor + GATE_THRESHOLD, 2)
 
 
-def gate_totals_by_keeper(records):
-    """Sum gate counts per keeper."""
-    totals = {}
-    for rec in records:
-        key = rec.get("keeper", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
-    return totals
-
-
 def schedule_bar(bar, factor=2):
     """Schedule a single bar using GATE_RESERVE."""
     if bar is None:
