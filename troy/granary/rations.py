@@ -65,11 +65,6 @@ def update_rations(rations, limit=8):
     return result
 
 
-def is_store_lit(store):
-    """True if the store is lit."""
-    return bool(store) and getattr(store, "state", "") == "lit"
-
-
 def is_store_worn(store):
     """True if the store is worn."""
     return bool(store) and getattr(store, "state", "") == "worn"
