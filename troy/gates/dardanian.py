@@ -104,3 +104,12 @@ def bar_totals_by_keeper(records):
 def is_bolt_ready(bolt):
     """True if the bolt is ready."""
     return bool(bolt) and getattr(bolt, "state", "") == "ready"
+
+
+def bar_totals_by_passage(records):
+    """Sum bar counts per passage."""
+    totals = {}
+    for rec in records:
+        key = rec.get("passage", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
