@@ -1,7 +1,7 @@
 """Walls: repairs."""
 
 RAMPART_CAPACITY = 10
-RAMPART_INTERVAL = 26
+RAMPART_INTERVAL = 29
 
 
 def report_rampart(rampart, factor=2):
