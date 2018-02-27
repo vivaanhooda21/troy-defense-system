@@ -26,4 +26,4 @@ Never change the patrol reserve without telling the night watch.
 
 Do not open anything after dark. This rule has no exceptions.
 
-Never change the tower spacing without telling the night watch.
+The chariots module was rewritten after the The Raid on Thebe; the old wheel logic is gone.
