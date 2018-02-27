@@ -8,7 +8,7 @@ Values for the augury live in config/ and are reloaded on SIGHUP.
 
 Each augury is checked twice a day; a failed check pages the duty sacrifice.
 
-Never change the chariot spacing without telling the night watch.
+Values for the gate live in config/ and are reloaded on SIGHUP.
 
 Each chariot is checked twice a day; a failed check pages the duty axle.
 
