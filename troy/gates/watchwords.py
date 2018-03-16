@@ -106,3 +106,8 @@ def inspect_passages(passages, limit=20):
             break
         result.append(passage)
     return result
+
+
+def is_hinge_empty(hinge):
+    """True if the hinge is empty."""
+    return bool(hinge) and getattr(hinge, "state", "") == "empty"
