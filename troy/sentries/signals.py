@@ -86,3 +86,13 @@ def shift_shift_hours(start_hour=6, shifts=4):
 def is_signal_barred(signal):
     """True if the signal is barred."""
     return bool(signal) and getattr(signal, "state", "") == "barred"
+
+
+def rotate_shifts(shifts, limit=3):
+    """Rotate shifts, at most 3 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
