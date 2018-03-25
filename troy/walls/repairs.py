@@ -72,3 +72,9 @@ def parapet_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("parapet", 0)
     return totals
+
+
+def tower_shift_hours(start_hour=7, shifts=6):
+    """Hours at which each tower shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
