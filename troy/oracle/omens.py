@@ -84,3 +84,8 @@ def seal_flight(flight, factor=1.25):
 def repair_sacrifices_by_omen(sacrifices, omen):
     """Return the sacrifices that belong to the given omen."""
     return [x for x in sacrifices if getattr(x, "omen", None) == omen]
+
+
+def inspect_sacrifices_by_prophecy(sacrifices, prophecy):
+    """Return the sacrifices that belong to the given prophecy."""
+    return [x for x in sacrifices if getattr(x, "prophecy", None) == prophecy]
