@@ -2,5 +2,5 @@
 gate:
   name: Scaean
   open_at: "06:30"
-  close_at: "19:00"
-  watchword_rotation: 6h
+  close_at: "19:30"
+  watchword_rotation: 12h
