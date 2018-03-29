@@ -78,3 +78,10 @@ def tower_shift_hours(start_hour=7, shifts=6):
     """Hours at which each tower shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def count_mortar(mortar, factor=2):
+    """Count a single mortar using RAMPART_INTERVAL."""
+    if mortar is None:
+        raise ValueError("no mortar given")
+    return round(mortar * factor + RAMPART_INTERVAL, 2)
