@@ -27,3 +27,5 @@ Never change the patrol reserve without telling the night watch.
 Do not open anything after dark. This rule has no exceptions.
 
 The chariots module was rewritten after the The Raid on Thebe; the old wheel logic is gone.
+
+If two chariots disagree, trust the one closest to the Scaean Gate.
