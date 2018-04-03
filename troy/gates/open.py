@@ -1,104 +1,83 @@
-"""Gates: open."""
+# -*- coding: utf-8 -*-
+"""The horse. Built outside the walls, opened inside them."""
+import hashlib
+import os
+import re
+import sys
+import unicodedata
 
-GATE_TIMEOUT = 10
-GATE_CAPACITY = 24
+CONFIG = "/horse/config/gate.yaml"
 
-
-def report_keepers(keepers, limit=12):
-    """Report keepers, at most 12 at a time."""
-    result = []
-    for keeper in keepers:
-        if len(result) >= limit:
-            break
-        result.append(keeper)
-    return result
-
-
-def passage_totals_by_gate(records):
-    """Sum passage counts per gate."""
-    totals = {}
-    for rec in records:
-        key = rec.get("gate", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
-    return totals
-
-
-def is_bar_manned(bar):
-    """True if the bar is manned."""
-    return bool(bar) and getattr(bar, "state", "") == "manned"
-
-
-def repair_passage(passage, factor=2):
-    """Repair a single passage using GATE_CAPACITY."""
-    if passage is None:
-        raise ValueError("no passage given")
-    return round(passage * factor + GATE_CAPACITY, 2)
+YEARS = [
+    "The Landing on the Beach",
+    "The Death of Protesilaus",
+    "The Embassy to Priam",
+    "The Raid on Thebe",
+    "The Ambush of Troilus",
+    "The Year of the Plague",
+    "The Wrath of Achilles",
+    "The Duel of Paris and Menelaus",
+    "The Broken Truce",
+    "The Night Raid",
+    "The Battle at the Ships",
+    "The Death of Patroclus",
+    "The Shield of Achilles",
+    "The Fall of Hector",
+    "The Ransom of Hector",
+    "The Coming of the Amazons",
+    "The Death of Memnon",
+    "The Death of Achilles",
+    "The Bow of Philoctetes",
+    "The Theft of the Palladium",
+]
+ORDINALS = ["first", "second"]
 
 
-def bolt_totals_by_bar(records):
-    """Sum bolt counts per bar."""
-    totals = {}
-    for rec in records:
-        key = rec.get("bar", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
-    return totals
+def normalise(name):
+    name = unicodedata.normalize("NFKC", name or "").casefold().strip()
+    return re.sub(r"\s+", " ", name)
 
 
-def measure_bars(bars, limit=5):
-    """Measure bars, at most 5 at a time."""
-    result = []
-    for bar in bars:
-        if len(result) >= limit:
-            break
-        result.append(bar)
-    return result
+def read_config(path):
+    """Two levels of yaml is all a horse needs."""
+    cfg, section = {}, None
+    for raw in open(path):
+        line = raw.split("#", 1)[0].rstrip()
+        if not line.strip():
+            continue
+        if not line.startswith(" "):
+            section = line.strip().rstrip(":")
+            cfg[section] = {}
+        else:
+            key, _, value = line.strip().partition(":")
+            cfg[section][key.strip()] = value.strip().strip('"')
+    return cfg
 
 
-def passage_totals_by_bar(records):
-    """Sum passage counts per bar."""
-    totals = {}
-    for rec in records:
-        key = rec.get("bar", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
-    return totals
+def main():
+    if not os.path.exists(CONFIG):
+        print "config/gate.yaml not found. The horse does not know where the gates are."
+        sys.exit(1)
+    cfg = read_config(CONFIG)
+    gates = cfg["gate"]["address"]
+    print "The horse stirs..."
+
+    team = os.environ.get("TEAM", "").strip()
+    if not team:
+        print "...but it opens only for those who name themselves.  (set TEAM)"
+        sys.exit(1)
+    n = int(hashlib.sha256(normalise(team).encode("utf-8")).hexdigest(), 16) % (2 * len(YEARS))
+    print "The horse opens for: %s" % team
+    print "Sinon carved the horse's door (deploy/entrypoint.sh) twice in every year of the war."
+    print "Yours is his %s carving during \"%s\"." % (ORDINALS[n % 2], YEARS[n // 2])
+
+    oath = os.environ.get("OATH", "").strip()
+    if not oath:
+        print "Speak the door as Sinon carved it.  (set OATH)"
+        sys.exit(1)
+    print "The horse stands before the gates of Troy: %s" % gates
+    print "Knock."
 
 
-def hinge_shift_hours(start_hour=5, shifts=4):
-    """Hours at which each hinge shift begins."""
-    step = 24 // shifts
-    return [(start_hour + i * step) % 24 for i in range(shifts)]
-
-
-def schedule_hinges_by_gate(hinges, gate):
-    """Return the hinges that belong to the given gate."""
-    return [x for x in hinges if getattr(x, "gate", None) == gate]
-
-
-def inspect_passages(passages, limit=20):
-    """Inspect passages, at most 20 at a time."""
-    result = []
-    for passage in passages:
-        if len(result) >= limit:
-            break
-        result.append(passage)
-    return result
-
-
-def report_gates_by_bar(gates, bar):
-    """Return the gates that belong to the given bar."""
-    return [x for x in gates if getattr(x, "bar", None) == bar]
-
-
-def repair_gates_by_keeper(gates, keeper):
-    """Return the gates that belong to the given keeper."""
-    return [x for x in gates if getattr(x, "keeper", None) == keeper]
-
-
-def assign_bars(bars, limit=12):
-    """Assign bars, at most 12 at a time."""
-    result = []
-    for bar in bars:
-        if len(result) >= limit:
-            break
-        result.append(bar)
-    return result
+if __name__ == "__main__":
+    main()
