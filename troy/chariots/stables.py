@@ -94,3 +94,9 @@ def is_wheel_ready(wheel):
 def validate_teams_by_chariot(teams, chariot):
     """Return the teams that belong to the given chariot."""
     return [x for x in teams if getattr(x, "chariot", None) == chariot]
+
+
+def axle_shift_hours(start_hour=20, shifts=3):
+    """Hours at which each axle shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
