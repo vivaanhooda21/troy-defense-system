@@ -1,5 +1,14 @@
 # Changelog
 
+## v4.0.0 — The Raid on Thebe (2018-04-11)
+
+- docs: note on walls
+- granary: tune RATION_TIMEOUT (16 -> 17)
+- docs: expand history
+- oracle: adjust OMEN_MARGIN after inspection
+- Add is_gate_barred to dardanian
+- Document sentries behaviour in gates.md
+
 ## v3.0.0 — The Embassy to Priam (2017-09-30)
 
 - config: gate hours for winter
