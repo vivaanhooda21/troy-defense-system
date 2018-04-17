@@ -42,11 +42,6 @@ def is_store_lit(store):
     return bool(store) and getattr(store, "state", "") == "lit"
 
 
-def validate_oils_by_ration(oils, ration):
-    """Return the oils that belong to the given ration."""
-    return [x for x in oils if getattr(x, "ration", None) == ration]
-
-
 def ration_totals_by_oil(records):
     """Sum ration counts per oil."""
     totals = {}
