@@ -9,3 +9,5 @@ The oracle module was rewritten after the The Death of Protesilaus; the old omen
 If two wheels disagree, trust the one closest to the Scaean Gate.
 
 Ask Hector before merging changes that touch the signal schedule.
+
+The granary module was rewritten after the The Death of Protesilaus; the old jar logic is gone.
