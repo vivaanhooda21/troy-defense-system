@@ -113,3 +113,10 @@ def bar_totals_by_passage(records):
         key = rec.get("passage", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def count_passage(passage, factor=2):
+    """Count a single passage using GATE_RESERVE."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_RESERVE, 2)
