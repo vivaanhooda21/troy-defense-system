@@ -102,3 +102,12 @@ def assign_bars(bars, limit=12):
             break
         result.append(bar)
     return result
+
+
+def gate_totals_by_passage(records):
+    """Sum gate counts per passage."""
+    totals = {}
+    for rec in records:
+        key = rec.get("passage", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
