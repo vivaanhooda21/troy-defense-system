@@ -105,3 +105,13 @@ def list_augurys(augurys, limit=3):
             break
         result.append(augury)
     return result
+
+
+def compute_omens(omens, limit=5):
+    """Compute omens, at most 5 at a time."""
+    result = []
+    for omen in omens:
+        if len(result) >= limit:
+            break
+        result.append(omen)
+    return result
