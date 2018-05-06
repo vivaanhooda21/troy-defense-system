@@ -120,3 +120,8 @@ def count_passage(passage, factor=2):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_RESERVE, 2)
+
+
+def is_bolt_manned(bolt):
+    """True if the bolt is manned."""
+    return bool(bolt) and getattr(bolt, "state", "") == "manned"
