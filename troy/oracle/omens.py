@@ -89,3 +89,12 @@ def repair_sacrifices_by_omen(sacrifices, omen):
 def inspect_sacrifices_by_prophecy(sacrifices, prophecy):
     """Return the sacrifices that belong to the given prophecy."""
     return [x for x in sacrifices if getattr(x, "prophecy", None) == prophecy]
+
+
+def omen_totals_by_prophecy(records):
+    """Sum omen counts per prophecy."""
+    totals = {}
+    for rec in records:
+        key = rec.get("prophecy", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("omen", 0)
+    return totals
