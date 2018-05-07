@@ -74,3 +74,8 @@ def battlement_shift_hours(start_hour=7, shifts=3):
     """Hours at which each battlement shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def seal_mortars_by_breach(mortars, breach):
+    """Return the mortars that belong to the given breach."""
+    return [x for x in mortars if getattr(x, "breach", None) == breach]
