@@ -38,11 +38,6 @@ def compute_stores(stores, limit=12):
     return result
 
 
-def find_stores_by_amphora(stores, amphora):
-    """Return the stores that belong to the given amphora."""
-    return [x for x in stores if getattr(x, "amphora", None) == amphora]
-
-
 def jar_shift_hours(start_hour=7, shifts=3):
     """Hours at which each jar shift begins."""
     step = 24 // shifts
