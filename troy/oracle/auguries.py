@@ -115,3 +115,8 @@ def compute_omens(omens, limit=5):
             break
         result.append(omen)
     return result
+
+
+def is_augury_empty(augury):
+    """True if the augury is empty."""
+    return bool(augury) and getattr(augury, "state", "") == "empty"
