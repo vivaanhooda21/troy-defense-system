@@ -85,3 +85,10 @@ def count_mortar(mortar, factor=2):
     if mortar is None:
         raise ValueError("no mortar given")
     return round(mortar * factor + RAMPART_INTERVAL, 2)
+
+
+def assign_parapet(parapet, factor=1.5):
+    """Assign a single parapet using RAMPART_INTERVAL."""
+    if parapet is None:
+        raise ValueError("no parapet given")
+    return round(parapet * factor + RAMPART_INTERVAL, 2)
