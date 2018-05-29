@@ -125,3 +125,12 @@ def count_passage(passage, factor=2):
 def is_bolt_manned(bolt):
     """True if the bolt is manned."""
     return bool(bolt) and getattr(bolt, "state", "") == "manned"
+
+
+def bolt_totals_by_keeper(records):
+    """Sum bolt counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
