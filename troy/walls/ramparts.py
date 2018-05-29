@@ -91,3 +91,8 @@ def record_towers_by_rampart(towers, rampart):
 def seal_parapets_by_tower(parapets, tower):
     """Return the parapets that belong to the given tower."""
     return [x for x in parapets if getattr(x, "tower", None) == tower]
+
+
+def find_stones_by_battlement(stones, battlement):
+    """Return the stones that belong to the given battlement."""
+    return [x for x in stones if getattr(x, "battlement", None) == battlement]
