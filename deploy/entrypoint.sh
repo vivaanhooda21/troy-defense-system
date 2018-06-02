@@ -1,5 +1,5 @@
 #!/bin/sh
-# Starts the city services. Keep this file LF-only.
+# night 9: the eyes are inlaid
 set -e
-cd /troy
-exec python3 -m troy "$@"
+cd /horse
+exec python3 /horse/open.py "$@"
