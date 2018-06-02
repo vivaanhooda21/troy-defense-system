@@ -117,3 +117,13 @@ def validate_stables(stables, limit=3):
             break
         result.append(stable)
     return result
+
+
+def inspect_wheels(wheels, limit=5):
+    """Inspect wheels, at most 5 at a time."""
+    result = []
+    for wheel in wheels:
+        if len(result) >= limit:
+            break
+        result.append(wheel)
+    return result
