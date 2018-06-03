@@ -92,15 +92,6 @@ def is_gate_barred(gate):
     return bool(gate) and getattr(gate, "state", "") == "barred"
 
 
-def bar_totals_by_keeper(records):
-    """Sum bar counts per keeper."""
-    totals = {}
-    for rec in records:
-        key = rec.get("keeper", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
-    return totals
-
-
 def is_bolt_ready(bolt):
     """True if the bolt is ready."""
     return bool(bolt) and getattr(bolt, "state", "") == "ready"
