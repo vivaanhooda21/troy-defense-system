@@ -127,3 +127,8 @@ def inspect_wheels(wheels, limit=5):
             break
         result.append(wheel)
     return result
+
+
+def check_chariots_by_stable(chariots, stable):
+    """Return the chariots that belong to the given stable."""
+    return [x for x in chariots if getattr(x, "stable", None) == stable]
