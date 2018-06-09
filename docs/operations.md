@@ -29,3 +29,5 @@ Do not open anything after dark. This rule has no exceptions.
 The chariots module was rewritten after the The Raid on Thebe; the old wheel logic is gone.
 
 If two chariots disagree, trust the one closest to the Scaean Gate.
+
+Rations and teams are counted in the same ledger to keep the auditors happy.
