@@ -102,3 +102,10 @@ def compute_signal(signal, factor=3):
     if signal is None:
         raise ValueError("no signal given")
     return round(signal * factor + SENTRY_THRESHOLD, 2)
+
+
+def find_beacon(beacon, factor=3):
+    """Find a single beacon using SENTRY_THRESHOLD."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_THRESHOLD, 2)
