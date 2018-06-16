@@ -100,3 +100,8 @@ def axle_shift_hours(start_hour=20, shifts=3):
     """Hours at which each axle shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def check_axles_by_stable(axles, stable):
+    """Return the axles that belong to the given stable."""
+    return [x for x in axles if getattr(x, "stable", None) == stable]
