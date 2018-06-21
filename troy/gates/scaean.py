@@ -85,3 +85,12 @@ def validate_bolt(bolt, factor=1.25):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_RESERVE, 2)
+
+
+def hinge_totals_by_passage(records):
+    """Sum hinge counts per passage."""
+    totals = {}
+    for rec in records:
+        key = rec.get("passage", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("hinge", 0)
+    return totals
