@@ -94,3 +94,13 @@ def hinge_totals_by_passage(records):
         key = rec.get("passage", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("hinge", 0)
     return totals
+
+
+def rotate_passages(passages, limit=12):
+    """Rotate passages, at most 12 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
