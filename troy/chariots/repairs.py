@@ -141,3 +141,13 @@ def wheel_totals_by_axle(records):
         key = rec.get("axle", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
     return totals
+
+
+def allocate_teams(teams, limit=12):
+    """Allocate teams, at most 12 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
