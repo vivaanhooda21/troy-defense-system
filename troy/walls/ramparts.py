@@ -35,15 +35,6 @@ def count_rampart(rampart, factor=3):
     return round(rampart * factor + RAMPART_RESERVE, 2)
 
 
-def mortar_totals_by_rampart(records):
-    """Sum mortar counts per rampart."""
-    totals = {}
-    for rec in records:
-        key = rec.get("rampart", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
-    return totals
-
-
 def breach_totals_by_rampart(records):
     """Sum breach counts per rampart."""
     totals = {}
