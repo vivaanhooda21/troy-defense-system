@@ -54,3 +54,12 @@ def oil_shift_hours(start_hour=5, shifts=2):
 def is_jar_empty(jar):
     """True if the jar is empty."""
     return bool(jar) and getattr(jar, "state", "") == "empty"
+
+
+def store_totals_by_barley(records):
+    """Sum store counts per barley."""
+    totals = {}
+    for rec in records:
+        key = rec.get("barley", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("store", 0)
+    return totals
