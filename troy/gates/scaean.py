@@ -104,3 +104,12 @@ def rotate_passages(passages, limit=12):
             break
         result.append(passage)
     return result
+
+
+def bar_totals_by_hinge(records):
+    """Sum bar counts per hinge."""
+    totals = {}
+    for rec in records:
+        key = rec.get("hinge", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
