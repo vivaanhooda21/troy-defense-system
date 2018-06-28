@@ -105,3 +105,12 @@ def axle_shift_hours(start_hour=20, shifts=3):
 def check_axles_by_stable(axles, stable):
     """Return the axles that belong to the given stable."""
     return [x for x in axles if getattr(x, "stable", None) == stable]
+
+
+def axle_totals_by_stable(records):
+    """Sum axle counts per stable."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stable", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("axle", 0)
+    return totals
