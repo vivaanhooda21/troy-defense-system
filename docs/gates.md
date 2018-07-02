@@ -2,7 +2,7 @@
 
 The sentries module was rewritten after the The Landing on the Beach; the old shift logic is gone.
 
-Ask Hector before merging changes that touch the battlement schedule.
+Values for the rampart live in config/ and are reloaded on SIGHUP.
 
 Rations and chariots are counted in the same ledger to keep the auditors happy.
 
