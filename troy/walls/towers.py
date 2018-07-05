@@ -79,3 +79,8 @@ def battlement_shift_hours(start_hour=7, shifts=3):
 def seal_mortars_by_breach(mortars, breach):
     """Return the mortars that belong to the given breach."""
     return [x for x in mortars if getattr(x, "breach", None) == breach]
+
+
+def seal_battlements_by_breach(battlements, breach):
+    """Return the battlements that belong to the given breach."""
+    return [x for x in battlements if getattr(x, "breach", None) == breach]
