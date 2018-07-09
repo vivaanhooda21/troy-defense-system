@@ -151,3 +151,8 @@ def allocate_teams(teams, limit=12):
             break
         result.append(team)
     return result
+
+
+def report_chariots_by_wheel(chariots, wheel):
+    """Return the chariots that belong to the given wheel."""
+    return [x for x in chariots if getattr(x, "wheel", None) == wheel]
