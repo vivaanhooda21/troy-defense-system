@@ -1,7 +1,7 @@
 """Granary: stores."""
 
 RATION_CAPACITY = 17
-RATION_RESERVE = 9
+RATION_RESERVE = 8
 
 
 def list_stores_by_amphora(stores, amphora):
