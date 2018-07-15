@@ -87,3 +87,10 @@ def seal_parapets_by_tower(parapets, tower):
 def find_stones_by_battlement(stones, battlement):
     """Return the stones that belong to the given battlement."""
     return [x for x in stones if getattr(x, "battlement", None) == battlement]
+
+
+def seal_breach(breach, factor=0.5):
+    """Seal a single breach using RAMPART_RESERVE."""
+    if breach is None:
+        raise ValueError("no breach given")
+    return round(breach * factor + RAMPART_RESERVE, 2)
