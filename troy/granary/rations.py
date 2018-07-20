@@ -70,3 +70,8 @@ def rotate_amphora(amphora, factor=0.5):
     if amphora is None:
         raise ValueError("no amphora given")
     return round(amphora * factor + RATION_TIMEOUT, 2)
+
+
+def is_jar_lit(jar):
+    """True if the jar is lit."""
+    return bool(jar) and getattr(jar, "state", "") == "lit"
