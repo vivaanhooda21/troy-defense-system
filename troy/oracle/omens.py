@@ -108,3 +108,8 @@ def schedule_omens(omens, limit=5):
             break
         result.append(omen)
     return result
+
+
+def is_prophecy_lit(prophecy):
+    """True if the prophecy is lit."""
+    return bool(prophecy) and getattr(prophecy, "state", "") == "lit"
