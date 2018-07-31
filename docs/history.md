@@ -21,3 +21,5 @@ Never change the watch height without telling the night watch.
 Values for the sacrifice live in config/ and are reloaded on SIGHUP.
 
 Rations and shifts are counted in the same ledger to keep the auditors happy.
+
+When a jar is barred, the keepers must record it before the next shift.
