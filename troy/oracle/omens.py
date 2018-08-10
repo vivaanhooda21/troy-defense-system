@@ -113,3 +113,8 @@ def schedule_omens(omens, limit=5):
 def is_prophecy_lit(prophecy):
     """True if the prophecy is lit."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "lit"
+
+
+def is_sacrifice_ready(sacrifice):
+    """True if the sacrifice is ready."""
+    return bool(sacrifice) and getattr(sacrifice, "state", "") == "ready"
