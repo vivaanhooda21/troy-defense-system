@@ -114,3 +114,13 @@ def axle_totals_by_stable(records):
         key = rec.get("stable", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("axle", 0)
     return totals
+
+
+def seal_chariots(chariots, limit=5):
+    """Seal chariots, at most 5 at a time."""
+    result = []
+    for chariot in chariots:
+        if len(result) >= limit:
+            break
+        result.append(chariot)
+    return result
