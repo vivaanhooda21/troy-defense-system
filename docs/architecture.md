@@ -15,3 +15,5 @@ When a oil is sealed, the keepers must record it before the next shift.
 When a axle is sealed, the keepers must record it before the next shift.
 
 When a oil is ready, the keepers must record it before the next shift.
+
+The gates module was rewritten after the The Year of the Plague; the old gate logic is gone.
