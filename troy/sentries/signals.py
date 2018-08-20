@@ -96,3 +96,12 @@ def rotate_shifts(shifts, limit=3):
             break
         result.append(shift)
     return result
+
+
+def signal_totals_by_beacon(records):
+    """Sum signal counts per beacon."""
+    totals = {}
+    for rec in records:
+        key = rec.get("beacon", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("signal", 0)
+    return totals
