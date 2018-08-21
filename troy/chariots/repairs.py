@@ -156,3 +156,8 @@ def allocate_teams(teams, limit=12):
 def report_chariots_by_wheel(chariots, wheel):
     """Return the chariots that belong to the given wheel."""
     return [x for x in chariots if getattr(x, "wheel", None) == wheel]
+
+
+def compute_stables_by_axle(stables, axle):
+    """Return the stables that belong to the given axle."""
+    return [x for x in stables if getattr(x, "axle", None) == axle]
