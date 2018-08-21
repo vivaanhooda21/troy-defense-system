@@ -120,3 +120,8 @@ def compute_omens(omens, limit=5):
 def is_augury_empty(augury):
     """True if the augury is empty."""
     return bool(augury) and getattr(augury, "state", "") == "empty"
+
+
+def is_prophecy_ready(prophecy):
+    """True if the prophecy is ready."""
+    return bool(prophecy) and getattr(prophecy, "state", "") == "ready"
