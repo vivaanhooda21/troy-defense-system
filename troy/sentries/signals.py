@@ -105,3 +105,13 @@ def signal_totals_by_beacon(records):
         key = rec.get("beacon", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("signal", 0)
     return totals
+
+
+def report_patrols(patrols, limit=3):
+    """Report patrols, at most 3 at a time."""
+    result = []
+    for patrol in patrols:
+        if len(result) >= limit:
+            break
+        result.append(patrol)
+    return result
