@@ -124,3 +124,8 @@ def sacrifice_shift_hours(start_hour=18, shifts=4):
     """Hours at which each sacrifice shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_sacrifice_lit(sacrifice):
+    """True if the sacrifice is lit."""
+    return bool(sacrifice) and getattr(sacrifice, "state", "") == "lit"
