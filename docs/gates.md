@@ -23,3 +23,5 @@ Each bar is checked twice a day; a failed check pages the duty bolt.
 If two shifts disagree, trust the one closest to the Scaean Gate.
 
 The chariots module was rewritten after the The Death of Protesilaus; the old axle logic is gone.
+
+The sentries module was rewritten after the The Death of Protesilaus; the old sentry logic is gone.
