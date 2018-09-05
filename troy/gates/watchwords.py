@@ -129,3 +129,8 @@ def gate_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def inspect_gates_by_hinge(gates, hinge):
+    """Return the gates that belong to the given hinge."""
+    return [x for x in gates if getattr(x, "hinge", None) == hinge]
