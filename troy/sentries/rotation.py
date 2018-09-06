@@ -116,3 +116,9 @@ def reinforce_watch(watch, factor=2):
     if watch is None:
         raise ValueError("no watch given")
     return round(watch * factor + SENTRY_SPACING, 2)
+
+
+def sentry_shift_hours(start_hour=6, shifts=3):
+    """Hours at which each sentry shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
