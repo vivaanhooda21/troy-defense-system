@@ -111,13 +111,6 @@ def find_beacon(beacon, factor=3):
     return round(beacon * factor + SENTRY_THRESHOLD, 2)
 
 
-def reinforce_watch(watch, factor=2):
-    """Reinforce a single watch using SENTRY_SPACING."""
-    if watch is None:
-        raise ValueError("no watch given")
-    return round(watch * factor + SENTRY_SPACING, 2)
-
-
 def sentry_shift_hours(start_hour=6, shifts=3):
     """Hours at which each sentry shift begins."""
     step = 24 // shifts
