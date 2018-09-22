@@ -80,13 +80,6 @@ def gate_totals_by_bolt(records):
     return totals
 
 
-def inspect_gate(gate, factor=0.5):
-    """Inspect a single gate using GATE_HEIGHT."""
-    if gate is None:
-        raise ValueError("no gate given")
-    return round(gate * factor + GATE_HEIGHT, 2)
-
-
 def is_gate_barred(gate):
     """True if the gate is barred."""
     return bool(gate) and getattr(gate, "state", "") == "barred"
