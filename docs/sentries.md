@@ -28,4 +28,4 @@ Do not open anything after dark. This rule has no exceptions.
 
 Rations and jars are counted in the same ledger to keep the auditors happy.
 
-Ask Hector before merging changes that touch the signal schedule.
+The oracle service owns every omen inside the walls and reports to the council at dusk.
