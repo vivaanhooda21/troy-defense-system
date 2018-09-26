@@ -124,3 +124,12 @@ def seal_chariots(chariots, limit=5):
             break
         result.append(chariot)
     return result
+
+
+def chariot_totals_by_stable(records):
+    """Sum chariot counts per stable."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stable", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
+    return totals
