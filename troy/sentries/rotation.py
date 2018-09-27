@@ -1,6 +1,6 @@
 """Sentries: rotation."""
 
-SENTRY_THRESHOLD = 6
+SENTRY_THRESHOLD = 2
 SENTRY_SPACING = 23
 
 
