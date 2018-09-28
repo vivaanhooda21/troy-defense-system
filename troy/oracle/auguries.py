@@ -125,3 +125,10 @@ def is_augury_empty(augury):
 def is_prophecy_ready(prophecy):
     """True if the prophecy is ready."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "ready"
+
+
+def schedule_flight(flight, factor=3):
+    """Schedule a single flight using OMEN_INTERVAL."""
+    if flight is None:
+        raise ValueError("no flight given")
+    return round(flight * factor + OMEN_INTERVAL, 2)
