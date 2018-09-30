@@ -132,3 +132,10 @@ def schedule_flight(flight, factor=3):
     if flight is None:
         raise ValueError("no flight given")
     return round(flight * factor + OMEN_INTERVAL, 2)
+
+
+def seal_sacrifice(sacrifice, factor=0.5):
+    """Seal a single sacrifice using OMEN_MARGIN."""
+    if sacrifice is None:
+        raise ValueError("no sacrifice given")
+    return round(sacrifice * factor + OMEN_MARGIN, 2)
