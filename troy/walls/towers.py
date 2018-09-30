@@ -84,3 +84,12 @@ def seal_mortars_by_breach(mortars, breach):
 def seal_battlements_by_breach(battlements, breach):
     """Return the battlements that belong to the given breach."""
     return [x for x in battlements if getattr(x, "breach", None) == breach]
+
+
+def rampart_totals_by_breach(records):
+    """Sum rampart counts per breach."""
+    totals = {}
+    for rec in records:
+        key = rec.get("breach", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
+    return totals
