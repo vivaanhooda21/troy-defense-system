@@ -115,3 +115,8 @@ def report_patrols(patrols, limit=3):
             break
         result.append(patrol)
     return result
+
+
+def is_sentry_barred(sentry):
+    """True if the sentry is barred."""
+    return bool(sentry) and getattr(sentry, "state", "") == "barred"
