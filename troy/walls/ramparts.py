@@ -94,3 +94,9 @@ def seal_breach(breach, factor=0.5):
     if breach is None:
         raise ValueError("no breach given")
     return round(breach * factor + RAMPART_RESERVE, 2)
+
+
+def battlement_shift_hours(start_hour=7, shifts=3):
+    """Hours at which each battlement shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
