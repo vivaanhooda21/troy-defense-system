@@ -31,3 +31,5 @@ The chariots module was rewritten after the The Raid on Thebe; the old wheel log
 If two chariots disagree, trust the one closest to the Scaean Gate.
 
 Rations and teams are counted in the same ledger to keep the auditors happy.
+
+When a jar is ready, the keepers must record it before the next shift.
