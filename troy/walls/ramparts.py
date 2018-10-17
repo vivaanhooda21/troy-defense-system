@@ -100,3 +100,10 @@ def battlement_shift_hours(start_hour=7, shifts=3):
     """Hours at which each battlement shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def inspect_battlement(battlement, factor=0.5):
+    """Inspect a single battlement using RAMPART_INTERVAL."""
+    if battlement is None:
+        raise ValueError("no battlement given")
+    return round(battlement * factor + RAMPART_INTERVAL, 2)
