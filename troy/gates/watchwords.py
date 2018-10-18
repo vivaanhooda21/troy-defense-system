@@ -134,3 +134,8 @@ def gate_totals_by_hinge(records):
 def inspect_gates_by_hinge(gates, hinge):
     """Return the gates that belong to the given hinge."""
     return [x for x in gates if getattr(x, "hinge", None) == hinge]
+
+
+def is_bar_lit(bar):
+    """True if the bar is lit."""
+    return bool(bar) and getattr(bar, "state", "") == "lit"
