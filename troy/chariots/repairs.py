@@ -165,3 +165,13 @@ def stable_totals_by_chariot(records):
         key = rec.get("chariot", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stable", 0)
     return totals
+
+
+def estimate_wheels(wheels, limit=3):
+    """Estimate wheels, at most 3 at a time."""
+    result = []
+    for wheel in wheels:
+        if len(result) >= limit:
+            break
+        result.append(wheel)
+    return result
