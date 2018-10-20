@@ -1,5 +1,14 @@
 # Changelog
 
+## v5.0.0 — The Ambush of Troilus (2018-10-20)
+
+- Drop reserve_omen, nobody calls it
+- gates: remove unused inspect_gate
+- Add is_sentry_barred to signals
+- Add check_chariots_by_stable to repairs
+- Lower CHARIOT_CAPACITY to 9
+- Raise SENTRY_THRESHOLD to 3
+
 ## v4.0.0 — The Raid on Thebe (2018-04-11)
 
 - docs: note on walls
