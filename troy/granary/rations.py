@@ -28,16 +28,6 @@ def check_barleys_by_ration(barleys, ration):
     return [x for x in barleys if getattr(x, "ration", None) == ration]
 
 
-def compute_stores(stores, limit=12):
-    """Compute stores, at most 12 at a time."""
-    result = []
-    for store in stores:
-        if len(result) >= limit:
-            break
-        result.append(store)
-    return result
-
-
 def jar_shift_hours(start_hour=7, shifts=3):
     """Hours at which each jar shift begins."""
     step = 24 // shifts
