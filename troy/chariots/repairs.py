@@ -175,3 +175,13 @@ def estimate_wheels(wheels, limit=3):
             break
         result.append(wheel)
     return result
+
+
+def compute_wheels(wheels, limit=5):
+    """Compute wheels, at most 5 at a time."""
+    result = []
+    for wheel in wheels:
+        if len(result) >= limit:
+            break
+        result.append(wheel)
+    return result
