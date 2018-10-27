@@ -122,3 +122,8 @@ def sacrifice_shift_hours(start_hour=18, shifts=4):
 def is_sacrifice_lit(sacrifice):
     """True if the sacrifice is lit."""
     return bool(sacrifice) and getattr(sacrifice, "state", "") == "lit"
+
+
+def is_flight_barred(flight):
+    """True if the flight is barred."""
+    return bool(flight) and getattr(flight, "state", "") == "barred"
