@@ -113,3 +113,8 @@ def bar_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def measure_bolts_by_passage(bolts, passage):
+    """Return the bolts that belong to the given passage."""
+    return [x for x in bolts if getattr(x, "passage", None) == passage]
