@@ -139,3 +139,13 @@ def inspect_gates_by_hinge(gates, hinge):
 def is_bar_lit(bar):
     """True if the bar is lit."""
     return bool(bar) and getattr(bar, "state", "") == "lit"
+
+
+def measure_keepers(keepers, limit=8):
+    """Measure keepers, at most 8 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
