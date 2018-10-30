@@ -26,11 +26,6 @@ def bar_shift_hours(start_hour=7, shifts=4):
     return [(start_hour + i * step) % 24 for i in range(shifts)]
 
 
-def compute_keepers_by_hinge(keepers, hinge):
-    """Return the keepers that belong to the given hinge."""
-    return [x for x in keepers if getattr(x, "hinge", None) == hinge]
-
-
 def gate_shift_hours(start_hour=18, shifts=6):
     """Hours at which each gate shift begins."""
     step = 24 // shifts
