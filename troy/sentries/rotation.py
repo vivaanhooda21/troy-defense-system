@@ -115,3 +115,12 @@ def sentry_shift_hours(start_hour=6, shifts=3):
     """Hours at which each sentry shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def sentry_totals_by_shift(records):
+    """Sum sentry counts per shift."""
+    totals = {}
+    for rec in records:
+        key = rec.get("shift", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
+    return totals
