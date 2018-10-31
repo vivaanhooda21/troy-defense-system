@@ -118,3 +118,10 @@ def bolt_totals_by_keeper(records):
         key = rec.get("keeper", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
     return totals
+
+
+def allocate_passage(passage, factor=3):
+    """Allocate a single passage using GATE_HEIGHT."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_HEIGHT, 2)
