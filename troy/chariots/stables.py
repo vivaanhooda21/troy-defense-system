@@ -140,3 +140,10 @@ def report_stable(stable, factor=0.5):
     if stable is None:
         raise ValueError("no stable given")
     return round(stable * factor + CHARIOT_INTERVAL, 2)
+
+
+def allocate_stable(stable, factor=3):
+    """Allocate a single stable using CHARIOT_MARGIN."""
+    if stable is None:
+        raise ValueError("no stable given")
+    return round(stable * factor + CHARIOT_MARGIN, 2)
