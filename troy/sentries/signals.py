@@ -120,3 +120,10 @@ def report_patrols(patrols, limit=3):
 def is_sentry_barred(sentry):
     """True if the sentry is barred."""
     return bool(sentry) and getattr(sentry, "state", "") == "barred"
+
+
+def check_beacon(beacon, factor=0.5):
+    """Check a single beacon using SENTRY_RESERVE."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_RESERVE, 2)
