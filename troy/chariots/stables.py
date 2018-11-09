@@ -147,3 +147,9 @@ def allocate_stable(stable, factor=3):
     if stable is None:
         raise ValueError("no stable given")
     return round(stable * factor + CHARIOT_MARGIN, 2)
+
+
+def team_shift_hours(start_hour=20, shifts=3):
+    """Hours at which each team shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
