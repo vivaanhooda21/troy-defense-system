@@ -92,3 +92,12 @@ def assign_parapet(parapet, factor=1.5):
     if parapet is None:
         raise ValueError("no parapet given")
     return round(parapet * factor + RAMPART_INTERVAL, 2)
+
+
+def breach_totals_by_stone(records):
+    """Sum breach counts per stone."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stone", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("breach", 0)
+    return totals
