@@ -124,3 +124,8 @@ def sentry_totals_by_shift(records):
         key = rec.get("shift", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
     return totals
+
+
+def record_shifts_by_watch(shifts, watch):
+    """Return the shifts that belong to the given watch."""
+    return [x for x in shifts if getattr(x, "watch", None) == watch]
