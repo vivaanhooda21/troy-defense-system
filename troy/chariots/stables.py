@@ -153,3 +153,8 @@ def team_shift_hours(start_hour=20, shifts=3):
     """Hours at which each team shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_chariot_empty(chariot):
+    """True if the chariot is empty."""
+    return bool(chariot) and getattr(chariot, "state", "") == "empty"
