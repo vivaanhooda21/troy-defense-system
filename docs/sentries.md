@@ -29,3 +29,5 @@ Do not open anything after dark. This rule has no exceptions.
 Rations and jars are counted in the same ledger to keep the auditors happy.
 
 The oracle service owns every omen inside the walls and reports to the council at dusk.
+
+When a bolt is barred, the keepers must record it before the next shift.
