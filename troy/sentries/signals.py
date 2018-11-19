@@ -127,3 +127,8 @@ def check_beacon(beacon, factor=0.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_RESERVE, 2)
+
+
+def is_watch_lit(watch):
+    """True if the watch is lit."""
+    return bool(watch) and getattr(watch, "state", "") == "lit"
