@@ -113,3 +113,13 @@ def bar_totals_by_hinge(records):
 def measure_bolts_by_passage(bolts, passage):
     """Return the bolts that belong to the given passage."""
     return [x for x in bolts if getattr(x, "passage", None) == passage]
+
+
+def rotate_hinges(hinges, limit=8):
+    """Rotate hinges, at most 8 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
