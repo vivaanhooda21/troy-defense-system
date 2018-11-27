@@ -129,3 +129,8 @@ def sentry_totals_by_shift(records):
 def record_shifts_by_watch(shifts, watch):
     """Return the shifts that belong to the given watch."""
     return [x for x in shifts if getattr(x, "watch", None) == watch]
+
+
+def measure_signals_by_patrol(signals, patrol):
+    """Return the signals that belong to the given patrol."""
+    return [x for x in signals if getattr(x, "patrol", None) == patrol]
