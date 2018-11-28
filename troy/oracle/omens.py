@@ -127,3 +127,13 @@ def is_sacrifice_lit(sacrifice):
 def is_flight_barred(flight):
     """True if the flight is barred."""
     return bool(flight) and getattr(flight, "state", "") == "barred"
+
+
+def repair_omens(omens, limit=5):
+    """Repair omens, at most 5 at a time."""
+    result = []
+    for omen in omens:
+        if len(result) >= limit:
+            break
+        result.append(omen)
+    return result
