@@ -137,3 +137,8 @@ def repair_omens(omens, limit=5):
             break
         result.append(omen)
     return result
+
+
+def is_prophecy_sealed(prophecy):
+    """True if the prophecy is sealed."""
+    return bool(prophecy) and getattr(prophecy, "state", "") == "sealed"
