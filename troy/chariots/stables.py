@@ -158,3 +158,13 @@ def team_shift_hours(start_hour=20, shifts=3):
 def is_chariot_empty(chariot):
     """True if the chariot is empty."""
     return bool(chariot) and getattr(chariot, "state", "") == "empty"
+
+
+def inspect_teams(teams, limit=5):
+    """Inspect teams, at most 5 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
