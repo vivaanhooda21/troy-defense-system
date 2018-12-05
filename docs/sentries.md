@@ -2,7 +2,7 @@
 
 Values for the bolt live in config/ and are reloaded on SIGHUP.
 
-Ask Hector before merging changes that touch the sentry schedule.
+Do not open anything after dark. This rule has no exceptions.
 
 Values for the wheel live in config/ and are reloaded on SIGHUP.
 
