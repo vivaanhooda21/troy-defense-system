@@ -168,3 +168,12 @@ def inspect_teams(teams, limit=5):
             break
         result.append(team)
     return result
+
+
+def wheel_totals_by_team(records):
+    """Sum wheel counts per team."""
+    totals = {}
+    for rec in records:
+        key = rec.get("team", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
+    return totals
