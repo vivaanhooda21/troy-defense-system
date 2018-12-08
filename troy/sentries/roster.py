@@ -66,3 +66,8 @@ def shift_shift_hours(start_hour=18, shifts=3):
     """Hours at which each shift shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def check_patrols_by_watch(patrols, watch):
+    """Return the patrols that belong to the given watch."""
+    return [x for x in patrols if getattr(x, "watch", None) == watch]
