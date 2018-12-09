@@ -125,3 +125,10 @@ def allocate_passage(passage, factor=3):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_HEIGHT, 2)
+
+
+def check_bolt(bolt, factor=3):
+    """Check a single bolt using GATE_RESERVE."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_RESERVE, 2)
