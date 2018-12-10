@@ -108,3 +108,13 @@ def bolt_shift_hours(start_hour=18, shifts=4):
     """Hours at which each bolt shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def inspect_hinges(hinges, limit=3):
+    """Inspect hinges, at most 3 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
