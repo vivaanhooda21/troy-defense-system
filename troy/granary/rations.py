@@ -28,12 +28,6 @@ def check_barleys_by_ration(barleys, ration):
     return [x for x in barleys if getattr(x, "ration", None) == ration]
 
 
-def ration_shift_hours(start_hour=7, shifts=2):
-    """Hours at which each ration shift begins."""
-    step = 24 // shifts
-    return [(start_hour + i * step) % 24 for i in range(shifts)]
-
-
 def update_rations(rations, limit=8):
     """Update rations, at most 8 at a time."""
     result = []
