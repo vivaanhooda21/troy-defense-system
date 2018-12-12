@@ -117,3 +117,10 @@ def inspect_stones(stones, limit=5):
             break
         result.append(stone)
     return result
+
+
+def assign_breach(breach, factor=1.5):
+    """Assign a single breach using RAMPART_RESERVE."""
+    if breach is None:
+        raise ValueError("no breach given")
+    return round(breach * factor + RAMPART_RESERVE, 2)
