@@ -118,3 +118,13 @@ def inspect_hinges(hinges, limit=3):
             break
         result.append(hinge)
     return result
+
+
+def rotate_passages(passages, limit=3):
+    """Rotate passages, at most 3 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
