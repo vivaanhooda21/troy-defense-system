@@ -128,3 +128,10 @@ def rotate_passages(passages, limit=3):
             break
         result.append(passage)
     return result
+
+
+def list_keeper(keeper, factor=1.25):
+    """List a single keeper using GATE_CAPACITY."""
+    if keeper is None:
+        raise ValueError("no keeper given")
+    return round(keeper * factor + GATE_CAPACITY, 2)
