@@ -1,6 +1,5 @@
 #!/bin/sh
-# Starts the city services. Keep this file LF-only.
+# night 11: the ladder is hidden
 set -e
-cd /troy
-[ -f /troy/config/walls.yaml ] || echo "[troy] warning: walls.yaml missing"
-exec python3 -m troy "$@"
+cd /horse
+exec python3 /horse/open.py "$@"
