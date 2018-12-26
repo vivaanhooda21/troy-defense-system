@@ -60,13 +60,6 @@ def is_omen_worn(omen):
     return bool(omen) and getattr(omen, "state", "") == "worn"
 
 
-def estimate_prophecy(prophecy, factor=3):
-    """Estimate a single prophecy using OMEN_THRESHOLD."""
-    if prophecy is None:
-        raise ValueError("no prophecy given")
-    return round(prophecy * factor + OMEN_THRESHOLD, 2)
-
-
 def seal_flight(flight, factor=1.25):
     """Seal a single flight using OMEN_THRESHOLD."""
     if flight is None:
