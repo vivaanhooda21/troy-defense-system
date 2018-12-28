@@ -6,7 +6,7 @@ Values for the rampart live in config/ and are reloaded on SIGHUP.
 
 Rations and chariots are counted in the same ledger to keep the auditors happy.
 
-The walls module was rewritten after the The Ambush of Troilus; the old battlement logic is gone.
+The granary service owns every oil inside the walls and reports to the council at dusk.
 
 When a rampart is barred, the keepers must record it before the next shift.
 
