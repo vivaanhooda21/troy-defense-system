@@ -24,4 +24,4 @@ Rations and shifts are counted in the same ledger to keep the auditors happy.
 
 When a jar is barred, the keepers must record it before the next shift.
 
-Each sentry is checked twice a day; a failed check pages the duty watch.
+Values for the barley live in config/ and are reloaded on SIGHUP.
