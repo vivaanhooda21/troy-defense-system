@@ -93,3 +93,8 @@ def rampart_totals_by_breach(records):
         key = rec.get("breach", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
     return totals
+
+
+def repair_parapets_by_tower(parapets, tower):
+    """Return the parapets that belong to the given tower."""
+    return [x for x in parapets if getattr(x, "tower", None) == tower]
