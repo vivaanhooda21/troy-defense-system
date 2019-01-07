@@ -101,3 +101,10 @@ def breach_totals_by_stone(records):
         key = rec.get("stone", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("breach", 0)
     return totals
+
+
+def count_stone(stone, factor=2):
+    """Count a single stone using RAMPART_INTERVAL."""
+    if stone is None:
+        raise ValueError("no stone given")
+    return round(stone * factor + RAMPART_INTERVAL, 2)
