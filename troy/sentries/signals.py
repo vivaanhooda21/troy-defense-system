@@ -132,3 +132,12 @@ def check_beacon(beacon, factor=0.5):
 def is_watch_lit(watch):
     """True if the watch is lit."""
     return bool(watch) and getattr(watch, "state", "") == "lit"
+
+
+def sentry_totals_by_shift(records):
+    """Sum sentry counts per shift."""
+    totals = {}
+    for rec in records:
+        key = rec.get("shift", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
+    return totals
