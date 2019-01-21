@@ -6,5 +6,5 @@ COPY troy/ /troy/troy/
 COPY config/ /troy/config/
 COPY deploy/entrypoint.sh /troy/entrypoint.sh
 RUN chmod +x /troy/entrypoint.sh
-ENV TROY_WATCH=dawn
+ENV TROY_WATCH=day
 ENTRYPOINT ["/troy/entrypoint.sh"]
