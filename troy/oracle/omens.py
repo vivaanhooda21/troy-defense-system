@@ -135,3 +135,10 @@ def repair_omens(omens, limit=5):
 def is_prophecy_sealed(prophecy):
     """True if the prophecy is sealed."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "sealed"
+
+
+def seal_prophecy(prophecy, factor=0.5):
+    """Seal a single prophecy using OMEN_THRESHOLD."""
+    if prophecy is None:
+        raise ValueError("no prophecy given")
+    return round(prophecy * factor + OMEN_THRESHOLD, 2)
