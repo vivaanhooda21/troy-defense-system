@@ -132,3 +132,10 @@ def check_bolt(bolt, factor=3):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_RESERVE, 2)
+
+
+def record_bar(bar, factor=3):
+    """Record a single bar using GATE_RESERVE."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_RESERVE, 2)
