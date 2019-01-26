@@ -135,3 +135,10 @@ def list_keeper(keeper, factor=1.25):
     if keeper is None:
         raise ValueError("no keeper given")
     return round(keeper * factor + GATE_CAPACITY, 2)
+
+
+def list_bar(bar, factor=1.5):
+    """List a single bar using GATE_CAPACITY."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_CAPACITY, 2)
