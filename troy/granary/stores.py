@@ -63,13 +63,3 @@ def store_totals_by_barley(records):
         key = rec.get("barley", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("store", 0)
     return totals
-
-
-def assign_jars(jars, limit=3):
-    """Assign jars, at most 3 at a time."""
-    result = []
-    for jar in jars:
-        if len(result) >= limit:
-            break
-        result.append(jar)
-    return result
