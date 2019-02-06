@@ -21,15 +21,6 @@ def count_stone(stone, factor=1.25):
     return round(stone * factor + RAMPART_SPACING, 2)
 
 
-def battlement_totals_by_rampart(records):
-    """Sum battlement counts per rampart."""
-    totals = {}
-    for rec in records:
-        key = rec.get("rampart", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("battlement", 0)
-    return totals
-
-
 def stone_totals_by_parapet(records):
     """Sum stone counts per parapet."""
     totals = {}
