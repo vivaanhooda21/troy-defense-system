@@ -65,16 +65,6 @@ def schedule_hinges_by_gate(hinges, gate):
     return [x for x in hinges if getattr(x, "gate", None) == gate]
 
 
-def inspect_passages(passages, limit=20):
-    """Inspect passages, at most 20 at a time."""
-    result = []
-    for passage in passages:
-        if len(result) >= limit:
-            break
-        result.append(passage)
-    return result
-
-
 def report_gates_by_bar(gates, bar):
     """Return the gates that belong to the given bar."""
     return [x for x in gates if getattr(x, "bar", None) == bar]
