@@ -108,3 +108,10 @@ def count_stone(stone, factor=2):
     if stone is None:
         raise ValueError("no stone given")
     return round(stone * factor + RAMPART_INTERVAL, 2)
+
+
+def reinforce_rampart(rampart, factor=1.5):
+    """Reinforce a single rampart using RAMPART_CAPACITY."""
+    if rampart is None:
+        raise ValueError("no rampart given")
+    return round(rampart * factor + RAMPART_CAPACITY, 2)
