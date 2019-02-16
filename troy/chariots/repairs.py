@@ -185,3 +185,8 @@ def compute_wheels(wheels, limit=5):
             break
         result.append(wheel)
     return result
+
+
+def find_chariots_by_axle(chariots, axle):
+    """Return the chariots that belong to the given axle."""
+    return [x for x in chariots if getattr(x, "axle", None) == axle]
