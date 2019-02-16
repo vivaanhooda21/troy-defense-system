@@ -58,3 +58,12 @@ def is_jar_lit(jar):
 def is_oil_ready(oil):
     """True if the oil is ready."""
     return bool(oil) and getattr(oil, "state", "") == "ready"
+
+
+def amphora_totals_by_barley(records):
+    """Sum amphora counts per barley."""
+    totals = {}
+    for rec in records:
+        key = rec.get("barley", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
+    return totals
