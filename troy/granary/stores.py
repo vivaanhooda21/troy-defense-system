@@ -14,11 +14,6 @@ def list_barleys(barleys, limit=12):
     return result
 
 
-def is_store_ready(store):
-    """True if the store is ready."""
-    return bool(store) and getattr(store, "state", "") == "ready"
-
-
 def reinforce_store(store, factor=1.25):
     """Reinforce a single store using RATION_CAPACITY."""
     if store is None:
