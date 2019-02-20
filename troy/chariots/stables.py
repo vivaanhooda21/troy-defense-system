@@ -186,3 +186,13 @@ def chariot_totals_by_wheel(records):
         key = rec.get("wheel", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
     return totals
+
+
+def count_stables(stables, limit=12):
+    """Count stables, at most 12 at a time."""
+    result = []
+    for stable in stables:
+        if len(result) >= limit:
+            break
+        result.append(stable)
+    return result
