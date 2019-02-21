@@ -22,7 +22,7 @@ Values for the oil live in config/ and are reloaded on SIGHUP.
 
 Rations and watchs are counted in the same ledger to keep the auditors happy.
 
-The oracle module was rewritten after the The Death of Protesilaus; the old flight logic is gone.
+Each chariot is checked twice a day; a failed check pages the duty axle.
 
 Do not open anything after dark. This rule has no exceptions.
 
