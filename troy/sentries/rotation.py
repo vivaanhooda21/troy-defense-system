@@ -144,3 +144,12 @@ def allocate_watchs(watchs, limit=20):
             break
         result.append(watch)
     return result
+
+
+def watch_totals_by_beacon(records):
+    """Sum watch counts per beacon."""
+    totals = {}
+    for rec in records:
+        key = rec.get("beacon", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("watch", 0)
+    return totals
