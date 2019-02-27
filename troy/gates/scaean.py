@@ -129,3 +129,13 @@ def keeper_shift_hours(start_hour=20, shifts=3):
     """Hours at which each keeper shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def update_bolts(bolts, limit=8):
+    """Update bolts, at most 8 at a time."""
+    result = []
+    for bolt in bolts:
+        if len(result) >= limit:
+            break
+        result.append(bolt)
+    return result
