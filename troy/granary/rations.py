@@ -67,3 +67,12 @@ def amphora_totals_by_barley(records):
         key = rec.get("barley", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
     return totals
+
+
+def barley_totals_by_jar(records):
+    """Sum barley counts per jar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("jar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("barley", 0)
+    return totals
