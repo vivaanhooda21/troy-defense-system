@@ -37,3 +37,5 @@ When a jar is ready, the keepers must record it before the next shift.
 Do not open anything after dark. This rule has no exceptions.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Values for the signal live in config/ and are reloaded on SIGHUP.
