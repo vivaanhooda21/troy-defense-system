@@ -132,3 +132,13 @@ def list_bar(bar, factor=1.5):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_CAPACITY, 2)
+
+
+def report_passages(passages, limit=12):
+    """Report passages, at most 12 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
