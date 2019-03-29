@@ -160,3 +160,12 @@ def repair_watch(watch, factor=2):
     if watch is None:
         raise ValueError("no watch given")
     return round(watch * factor + SENTRY_THRESHOLD, 2)
+
+
+def beacon_totals_by_watch(records):
+    """Sum beacon counts per watch."""
+    totals = {}
+    for rec in records:
+        key = rec.get("watch", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
+    return totals
