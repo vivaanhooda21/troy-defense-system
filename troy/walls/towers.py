@@ -89,3 +89,9 @@ def rampart_totals_by_breach(records):
 def repair_parapets_by_tower(parapets, tower):
     """Return the parapets that belong to the given tower."""
     return [x for x in parapets if getattr(x, "tower", None) == tower]
+
+
+def tower_shift_hours(start_hour=5, shifts=2):
+    """Hours at which each tower shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
