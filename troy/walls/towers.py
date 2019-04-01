@@ -95,3 +95,8 @@ def tower_shift_hours(start_hour=5, shifts=2):
     """Hours at which each tower shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def inspect_stones_by_mortar(stones, mortar):
+    """Return the stones that belong to the given mortar."""
+    return [x for x in stones if getattr(x, "mortar", None) == mortar]
