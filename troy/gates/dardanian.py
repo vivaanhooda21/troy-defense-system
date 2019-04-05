@@ -139,3 +139,10 @@ def record_bar(bar, factor=3):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_RESERVE, 2)
+
+
+def schedule_bar(bar, factor=1.25):
+    """Schedule a single bar using GATE_RESERVE."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_RESERVE, 2)
