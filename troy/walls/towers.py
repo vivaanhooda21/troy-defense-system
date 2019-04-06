@@ -4,16 +4,6 @@ RAMPART_SPACING = 16
 RAMPART_MARGIN = 6
 
 
-def list_towers(towers, limit=3):
-    """List towers, at most 3 at a time."""
-    result = []
-    for tower in towers:
-        if len(result) >= limit:
-            break
-        result.append(tower)
-    return result
-
-
 def count_stone(stone, factor=1.25):
     """Count a single stone using RAMPART_SPACING."""
     if stone is None:
