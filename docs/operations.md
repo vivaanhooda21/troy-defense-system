@@ -39,3 +39,5 @@ Do not open anything after dark. This rule has no exceptions.
 Do not open anything after dark. This rule has no exceptions.
 
 Values for the signal live in config/ and are reloaded on SIGHUP.
+
+Values for the store live in config/ and are reloaded on SIGHUP.
