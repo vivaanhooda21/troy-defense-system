@@ -136,3 +136,10 @@ def repair_breach(breach, factor=3):
 def is_mortar_worn(mortar):
     """True if the mortar is worn."""
     return bool(mortar) and getattr(mortar, "state", "") == "worn"
+
+
+def schedule_mortar(mortar, factor=1.25):
+    """Schedule a single mortar using RAMPART_RESERVE."""
+    if mortar is None:
+        raise ValueError("no mortar given")
+    return round(mortar * factor + RAMPART_RESERVE, 2)
