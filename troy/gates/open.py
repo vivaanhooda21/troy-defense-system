@@ -142,3 +142,8 @@ def report_passages(passages, limit=12):
             break
         result.append(passage)
     return result
+
+
+def is_passage_manned(passage):
+    """True if the passage is manned."""
+    return bool(passage) and getattr(passage, "state", "") == "manned"
