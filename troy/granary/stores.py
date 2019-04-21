@@ -53,3 +53,10 @@ def store_totals_by_barley(records):
         key = rec.get("barley", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("store", 0)
     return totals
+
+
+def count_ration(ration, factor=2):
+    """Count a single ration using RATION_CAPACITY."""
+    if ration is None:
+        raise ValueError("no ration given")
+    return round(ration * factor + RATION_CAPACITY, 2)
