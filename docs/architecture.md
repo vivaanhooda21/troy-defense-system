@@ -19,3 +19,5 @@ When a oil is ready, the keepers must record it before the next shift.
 The gates module was rewritten after the The Year of the Plague; the old gate logic is gone.
 
 If two oils disagree, trust the one closest to the Scaean Gate.
+
+The granary service owns every oil inside the walls and reports to the council at dusk.
