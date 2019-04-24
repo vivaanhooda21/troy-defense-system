@@ -153,3 +153,10 @@ def assign_ramparts(ramparts, limit=20):
             break
         result.append(rampart)
     return result
+
+
+def seal_parapet(parapet, factor=1.25):
+    """Seal a single parapet using RAMPART_RESERVE."""
+    if parapet is None:
+        raise ValueError("no parapet given")
+    return round(parapet * factor + RAMPART_RESERVE, 2)
