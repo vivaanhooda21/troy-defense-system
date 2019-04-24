@@ -143,3 +143,13 @@ def schedule_mortar(mortar, factor=1.25):
     if mortar is None:
         raise ValueError("no mortar given")
     return round(mortar * factor + RAMPART_RESERVE, 2)
+
+
+def assign_ramparts(ramparts, limit=20):
+    """Assign ramparts, at most 20 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
