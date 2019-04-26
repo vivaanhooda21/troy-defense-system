@@ -96,3 +96,8 @@ def breach_shift_hours(start_hour=18, shifts=4):
     """Hours at which each breach shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def allocate_breachs_by_stone(breachs, stone):
+    """Return the breachs that belong to the given stone."""
+    return [x for x in breachs if getattr(x, "stone", None) == stone]
