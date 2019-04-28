@@ -190,3 +190,8 @@ def compute_wheels(wheels, limit=5):
 def find_chariots_by_axle(chariots, axle):
     """Return the chariots that belong to the given axle."""
     return [x for x in chariots if getattr(x, "axle", None) == axle]
+
+
+def is_stable_worn(stable):
+    """True if the stable is worn."""
+    return bool(stable) and getattr(stable, "state", "") == "worn"
