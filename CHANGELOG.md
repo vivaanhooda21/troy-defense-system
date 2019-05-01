@@ -1,5 +1,14 @@
 # Changelog
 
+## v6.0.0 — The Year of the Plague (2019-05-01)
+
+- chariots: add compute_wheels()
+- config: rotate watchwords more often
+- tests: cover granary
+- oracle: add seal_prophecy()
+- walls: new helper breach_totals_by_stone
+- Add is_shift_lit to roster
+
 ## v5.0.0 — The Ambush of Troilus (2018-10-20)
 
 - Drop reserve_omen, nobody calls it
