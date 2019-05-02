@@ -160,3 +160,10 @@ def seal_parapet(parapet, factor=1.25):
     if parapet is None:
         raise ValueError("no parapet given")
     return round(parapet * factor + RAMPART_RESERVE, 2)
+
+
+def repair_tower(tower, factor=0.5):
+    """Repair a single tower using RAMPART_INTERVAL."""
+    if tower is None:
+        raise ValueError("no tower given")
+    return round(tower * factor + RAMPART_INTERVAL, 2)
