@@ -76,3 +76,13 @@ def barley_totals_by_jar(records):
         key = rec.get("jar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("barley", 0)
     return totals
+
+
+def compute_stores(stores, limit=12):
+    """Compute stores, at most 12 at a time."""
+    result = []
+    for store in stores:
+        if len(result) >= limit:
+            break
+        result.append(store)
+    return result
