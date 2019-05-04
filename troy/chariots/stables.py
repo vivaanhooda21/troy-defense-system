@@ -137,13 +137,6 @@ def report_stable(stable, factor=0.5):
     return round(stable * factor + CHARIOT_INTERVAL, 2)
 
 
-def allocate_stable(stable, factor=3):
-    """Allocate a single stable using CHARIOT_MARGIN."""
-    if stable is None:
-        raise ValueError("no stable given")
-    return round(stable * factor + CHARIOT_MARGIN, 2)
-
-
 def team_shift_hours(start_hour=20, shifts=3):
     """Hours at which each team shift begins."""
     step = 24 // shifts
