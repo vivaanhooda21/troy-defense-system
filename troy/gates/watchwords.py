@@ -13,15 +13,6 @@ def bar_totals_by_keeper(records):
     return totals
 
 
-def bar_totals_by_hinge(records):
-    """Sum bar counts per hinge."""
-    totals = {}
-    for rec in records:
-        key = rec.get("hinge", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
-    return totals
-
-
 def is_passage_manned(passage):
     """True if the passage is manned."""
     return bool(passage) and getattr(passage, "state", "") == "manned"
