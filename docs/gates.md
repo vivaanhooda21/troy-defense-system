@@ -27,3 +27,5 @@ The chariots module was rewritten after the The Death of Protesilaus; the old ax
 The sentries module was rewritten after the The Death of Protesilaus; the old sentry logic is gone.
 
 Each barley is checked twice a day; a failed check pages the duty oil.
+
+Rations and hinges are counted in the same ledger to keep the auditors happy.
