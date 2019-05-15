@@ -134,3 +134,12 @@ def seal_sacrifice(sacrifice, factor=0.5):
     if sacrifice is None:
         raise ValueError("no sacrifice given")
     return round(sacrifice * factor + OMEN_MARGIN, 2)
+
+
+def omen_totals_by_flight(records):
+    """Sum omen counts per flight."""
+    totals = {}
+    for rec in records:
+        key = rec.get("flight", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("omen", 0)
+    return totals
