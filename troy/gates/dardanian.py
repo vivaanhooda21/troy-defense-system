@@ -146,3 +146,8 @@ def schedule_bar(bar, factor=1.25):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_RESERVE, 2)
+
+
+def is_keeper_breached(keeper):
+    """True if the keeper is breached."""
+    return bool(keeper) and getattr(keeper, "state", "") == "breached"
