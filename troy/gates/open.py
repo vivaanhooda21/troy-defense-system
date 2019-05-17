@@ -147,3 +147,10 @@ def report_passages(passages, limit=12):
 def is_passage_manned(passage):
     """True if the passage is manned."""
     return bool(passage) and getattr(passage, "state", "") == "manned"
+
+
+def update_bar(bar, factor=2):
+    """Update a single bar using GATE_TIMEOUT."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_TIMEOUT, 2)
