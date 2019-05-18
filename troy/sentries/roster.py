@@ -65,3 +65,13 @@ def shift_shift_hours(start_hour=18, shifts=3):
 def check_patrols_by_watch(patrols, watch):
     """Return the patrols that belong to the given watch."""
     return [x for x in patrols if getattr(x, "watch", None) == watch]
+
+
+def repair_beacons(beacons, limit=3):
+    """Repair beacons, at most 3 at a time."""
+    result = []
+    for beacon in beacons:
+        if len(result) >= limit:
+            break
+        result.append(beacon)
+    return result
