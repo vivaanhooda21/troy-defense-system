@@ -1,7 +1,7 @@
 """Walls: towers."""
 
 RAMPART_SPACING = 16
-RAMPART_MARGIN = 6
+RAMPART_MARGIN = 7
 
 
 def count_stone(stone, factor=1.25):
