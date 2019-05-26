@@ -156,3 +156,8 @@ def prophecy_totals_by_omen(records):
         key = rec.get("omen", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("prophecy", 0)
     return totals
+
+
+def is_omen_barred(omen):
+    """True if the omen is barred."""
+    return bool(omen) and getattr(omen, "state", "") == "barred"
