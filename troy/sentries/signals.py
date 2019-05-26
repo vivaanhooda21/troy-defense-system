@@ -141,3 +141,13 @@ def sentry_totals_by_shift(records):
         key = rec.get("shift", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
     return totals
+
+
+def inspect_patrols(patrols, limit=3):
+    """Inspect patrols, at most 3 at a time."""
+    result = []
+    for patrol in patrols:
+        if len(result) >= limit:
+            break
+        result.append(patrol)
+    return result
