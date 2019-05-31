@@ -169,3 +169,8 @@ def beacon_totals_by_watch(records):
         key = rec.get("watch", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
     return totals
+
+
+def reinforce_beacons_by_watch(beacons, watch):
+    """Return the beacons that belong to the given watch."""
+    return [x for x in beacons if getattr(x, "watch", None) == watch]
