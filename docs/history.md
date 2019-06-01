@@ -27,3 +27,5 @@ When a jar is barred, the keepers must record it before the next shift.
 Values for the barley live in config/ and are reloaded on SIGHUP.
 
 Rations and augurys are counted in the same ledger to keep the auditors happy.
+
+Values for the team live in config/ and are reloaded on SIGHUP.
