@@ -101,3 +101,8 @@ def breach_shift_hours(start_hour=18, shifts=4):
 def allocate_breachs_by_stone(breachs, stone):
     """Return the breachs that belong to the given stone."""
     return [x for x in breachs if getattr(x, "stone", None) == stone]
+
+
+def report_breachs_by_tower(breachs, tower):
+    """Return the breachs that belong to the given tower."""
+    return [x for x in breachs if getattr(x, "tower", None) == tower]
