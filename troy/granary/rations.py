@@ -86,3 +86,12 @@ def compute_stores(stores, limit=12):
             break
         result.append(store)
     return result
+
+
+def amphora_totals_by_store(records):
+    """Sum amphora counts per store."""
+    totals = {}
+    for rec in records:
+        key = rec.get("store", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
+    return totals
