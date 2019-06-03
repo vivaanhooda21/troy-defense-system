@@ -200,3 +200,10 @@ def is_stable_worn(stable):
 def is_axle_barred(axle):
     """True if the axle is barred."""
     return bool(axle) and getattr(axle, "state", "") == "barred"
+
+
+def compute_wheel(wheel, factor=1.25):
+    """Compute a single wheel using CHARIOT_CAPACITY."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_CAPACITY, 2)
