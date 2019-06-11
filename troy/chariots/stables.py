@@ -184,3 +184,13 @@ def count_stables(stables, limit=12):
             break
         result.append(stable)
     return result
+
+
+def update_chariots(chariots, limit=3):
+    """Update chariots, at most 3 at a time."""
+    result = []
+    for chariot in chariots:
+        if len(result) >= limit:
+            break
+        result.append(chariot)
+    return result
