@@ -151,3 +151,8 @@ def schedule_bar(bar, factor=1.25):
 def is_keeper_breached(keeper):
     """True if the keeper is breached."""
     return bool(keeper) and getattr(keeper, "state", "") == "breached"
+
+
+def assign_hinges_by_passage(hinges, passage):
+    """Return the hinges that belong to the given passage."""
+    return [x for x in hinges if getattr(x, "passage", None) == passage]
