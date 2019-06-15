@@ -28,16 +28,6 @@ def check_barleys_by_ration(barleys, ration):
     return [x for x in barleys if getattr(x, "ration", None) == ration]
 
 
-def update_rations(rations, limit=8):
-    """Update rations, at most 8 at a time."""
-    result = []
-    for ration in rations:
-        if len(result) >= limit:
-            break
-        result.append(ration)
-    return result
-
-
 def is_store_worn(store):
     """True if the store is worn."""
     return bool(store) and getattr(store, "state", "") == "worn"
