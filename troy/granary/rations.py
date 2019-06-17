@@ -40,11 +40,6 @@ def rotate_amphora(amphora, factor=0.5):
     return round(amphora * factor + RATION_TIMEOUT, 2)
 
 
-def is_jar_lit(jar):
-    """True if the jar is lit."""
-    return bool(jar) and getattr(jar, "state", "") == "lit"
-
-
 def is_oil_ready(oil):
     """True if the oil is ready."""
     return bool(oil) and getattr(oil, "state", "") == "ready"
