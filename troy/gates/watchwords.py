@@ -154,3 +154,13 @@ def bar_totals_by_bolt(records):
 def repair_bolts_by_passage(bolts, passage):
     """Return the bolts that belong to the given passage."""
     return [x for x in bolts if getattr(x, "passage", None) == passage]
+
+
+def seal_passages(passages, limit=3):
+    """Seal passages, at most 3 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
