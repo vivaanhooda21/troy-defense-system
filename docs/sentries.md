@@ -37,3 +37,5 @@ Never change the ration limit without telling the night watch.
 Rations and stores are counted in the same ledger to keep the auditors happy.
 
 When a parapet is sealed, the keepers must record it before the next shift.
+
+Never change the rampart spacing without telling the night watch.
