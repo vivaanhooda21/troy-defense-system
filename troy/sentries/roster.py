@@ -75,3 +75,8 @@ def repair_beacons(beacons, limit=3):
             break
         result.append(beacon)
     return result
+
+
+def is_signal_sealed(signal):
+    """True if the signal is sealed."""
+    return bool(signal) and getattr(signal, "state", "") == "sealed"
