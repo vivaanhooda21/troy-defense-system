@@ -63,16 +63,6 @@ def barley_totals_by_jar(records):
     return totals
 
 
-def compute_stores(stores, limit=12):
-    """Compute stores, at most 12 at a time."""
-    result = []
-    for store in stores:
-        if len(result) >= limit:
-            break
-        result.append(store)
-    return result
-
-
 def amphora_totals_by_store(records):
     """Sum amphora counts per store."""
     totals = {}
