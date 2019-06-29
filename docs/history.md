@@ -29,3 +29,5 @@ Values for the barley live in config/ and are reloaded on SIGHUP.
 Rations and augurys are counted in the same ledger to keep the auditors happy.
 
 Values for the team live in config/ and are reloaded on SIGHUP.
+
+Each jar is checked twice a day; a failed check pages the duty store.
