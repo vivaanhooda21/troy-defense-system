@@ -70,3 +70,10 @@ def amphora_totals_by_store(records):
         key = rec.get("store", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
     return totals
+
+
+def assign_jar(jar, factor=0.5):
+    """Assign a single jar using RATION_INTERVAL."""
+    if jar is None:
+        raise ValueError("no jar given")
+    return round(jar * factor + RATION_INTERVAL, 2)
