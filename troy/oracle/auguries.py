@@ -148,3 +148,13 @@ def omen_totals_by_flight(records):
 def check_prophecys_by_augury(prophecys, augury):
     """Return the prophecys that belong to the given augury."""
     return [x for x in prophecys if getattr(x, "augury", None) == augury]
+
+
+def record_flights(flights, limit=8):
+    """Record flights, at most 8 at a time."""
+    result = []
+    for flight in flights:
+        if len(result) >= limit:
+            break
+        result.append(flight)
+    return result
