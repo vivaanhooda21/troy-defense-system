@@ -60,3 +60,9 @@ def count_ration(ration, factor=2):
     if ration is None:
         raise ValueError("no ration given")
     return round(ration * factor + RATION_CAPACITY, 2)
+
+
+def barley_shift_hours(start_hour=6, shifts=2):
+    """Hours at which each barley shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
