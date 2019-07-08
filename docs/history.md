@@ -10,7 +10,7 @@ When a bar is ready, the keepers must record it before the next shift.
 
 Never change the axle capacity without telling the night watch.
 
-When a mortar is ready, the keepers must record it before the next shift.
+Do not open anything after dark. This rule has no exceptions.
 
 The chariots service owns every axle inside the walls and reports to the council at dusk.
 
