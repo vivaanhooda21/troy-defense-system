@@ -21,8 +21,8 @@ def test_rations_rotate_amphora_exists():
     assert callable(getattr(importlib.import_module("troy.granary.rations"), "rotate_amphora"))
 
 
-def test_rations_is_jar_lit_exists():
-    assert callable(getattr(importlib.import_module("troy.granary.rations"), "is_jar_lit"))
+def test_rations_is_oil_ready_exists():
+    assert callable(getattr(importlib.import_module("troy.granary.rations"), "is_oil_ready"))
 
 
 def test_stores_list_barleys_exists():
