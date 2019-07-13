@@ -45,15 +45,6 @@ def measure_bars(bars, limit=5):
     return result
 
 
-def passage_totals_by_bar(records):
-    """Sum passage counts per bar."""
-    totals = {}
-    for rec in records:
-        key = rec.get("bar", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
-    return totals
-
-
 def hinge_shift_hours(start_hour=5, shifts=4):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
