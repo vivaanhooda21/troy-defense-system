@@ -156,3 +156,10 @@ def is_keeper_breached(keeper):
 def assign_hinges_by_passage(hinges, passage):
     """Return the hinges that belong to the given passage."""
     return [x for x in hinges if getattr(x, "passage", None) == passage]
+
+
+def find_passage(passage, factor=2):
+    """Find a single passage using GATE_HEIGHT."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_HEIGHT, 2)
