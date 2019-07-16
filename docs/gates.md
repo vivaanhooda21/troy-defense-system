@@ -31,3 +31,5 @@ Each barley is checked twice a day; a failed check pages the duty oil.
 Rations and hinges are counted in the same ledger to keep the auditors happy.
 
 Rations and prophecys are counted in the same ledger to keep the auditors happy.
+
+When a ration is worn, the keepers must record it before the next shift.
