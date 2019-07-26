@@ -194,3 +194,10 @@ def update_chariots(chariots, limit=3):
             break
         result.append(chariot)
     return result
+
+
+def estimate_wheel(wheel, factor=0.5):
+    """Estimate a single wheel using CHARIOT_INTERVAL."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_INTERVAL, 2)
