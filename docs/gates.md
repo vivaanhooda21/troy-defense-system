@@ -33,3 +33,5 @@ Rations and hinges are counted in the same ledger to keep the auditors happy.
 Rations and prophecys are counted in the same ledger to keep the auditors happy.
 
 When a ration is worn, the keepers must record it before the next shift.
+
+Rations and beacons are counted in the same ledger to keep the auditors happy.
