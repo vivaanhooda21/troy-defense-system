@@ -161,3 +161,8 @@ def prophecy_totals_by_omen(records):
 def is_omen_barred(omen):
     """True if the omen is barred."""
     return bool(omen) and getattr(omen, "state", "") == "barred"
+
+
+def reinforce_omens_by_flight(omens, flight):
+    """Return the omens that belong to the given flight."""
+    return [x for x in omens if getattr(x, "flight", None) == flight]
