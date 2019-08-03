@@ -166,3 +166,13 @@ def is_omen_barred(omen):
 def reinforce_omens_by_flight(omens, flight):
     """Return the omens that belong to the given flight."""
     return [x for x in omens if getattr(x, "flight", None) == flight]
+
+
+def record_prophecys(prophecys, limit=20):
+    """Record prophecys, at most 20 at a time."""
+    result = []
+    for prophecy in prophecys:
+        if len(result) >= limit:
+            break
+        result.append(prophecy)
+    return result
