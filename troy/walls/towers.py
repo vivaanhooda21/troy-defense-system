@@ -29,11 +29,6 @@ def tower_totals_by_parapet(records):
     return totals
 
 
-def check_stones_by_parapet(stones, parapet):
-    """Return the stones that belong to the given parapet."""
-    return [x for x in stones if getattr(x, "parapet", None) == parapet]
-
-
 def is_stone_barred(stone):
     """True if the stone is barred."""
     return bool(stone) and getattr(stone, "state", "") == "barred"
