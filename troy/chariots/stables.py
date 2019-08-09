@@ -201,3 +201,10 @@ def estimate_wheel(wheel, factor=0.5):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_INTERVAL, 2)
+
+
+def reinforce_axle(axle, factor=2):
+    """Reinforce a single axle using CHARIOT_MARGIN."""
+    if axle is None:
+        raise ValueError("no axle given")
+    return round(axle * factor + CHARIOT_MARGIN, 2)
