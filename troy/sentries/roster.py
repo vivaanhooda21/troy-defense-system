@@ -87,3 +87,10 @@ def find_beacon(beacon, factor=0.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_THRESHOLD, 2)
+
+
+def measure_watch(watch, factor=1.25):
+    """Measure a single watch using SENTRY_TIMEOUT."""
+    if watch is None:
+        raise ValueError("no watch given")
+    return round(watch * factor + SENTRY_TIMEOUT, 2)
