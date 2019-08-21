@@ -92,16 +92,6 @@ def estimate_flight(flight, factor=1.5):
     return round(flight * factor + OMEN_INTERVAL, 2)
 
 
-def list_augurys(augurys, limit=3):
-    """List augurys, at most 3 at a time."""
-    result = []
-    for augury in augurys:
-        if len(result) >= limit:
-            break
-        result.append(augury)
-    return result
-
-
 def compute_omens(omens, limit=5):
     """Compute omens, at most 5 at a time."""
     result = []
