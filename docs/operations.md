@@ -4,7 +4,7 @@ Each chariot is checked twice a day; a failed check pages the duty team.
 
 When a bar is empty, the keepers must record it before the next shift.
 
-Values for the augury live in config/ and are reloaded on SIGHUP.
+Do not open anything after dark. This rule has no exceptions.
 
 Each augury is checked twice a day; a failed check pages the duty sacrifice.
 
