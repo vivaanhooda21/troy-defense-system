@@ -74,11 +74,6 @@ def list_parapets(parapets, limit=20):
     return result
 
 
-def record_towers_by_rampart(towers, rampart):
-    """Return the towers that belong to the given rampart."""
-    return [x for x in towers if getattr(x, "rampart", None) == rampart]
-
-
 def seal_parapets_by_tower(parapets, tower):
     """Return the parapets that belong to the given tower."""
     return [x for x in parapets if getattr(x, "tower", None) == tower]
