@@ -164,3 +164,13 @@ def seal_passages(passages, limit=3):
             break
         result.append(passage)
     return result
+
+
+def list_hinges(hinges, limit=5):
+    """List hinges, at most 5 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
