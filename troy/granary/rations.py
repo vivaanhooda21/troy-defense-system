@@ -1,7 +1,7 @@
 """Granary: rations."""
 
 RATION_INTERVAL = 32
-RATION_TIMEOUT = 8
+RATION_TIMEOUT = 4
 
 
 def repair_jars(jars, limit=8):
