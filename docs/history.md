@@ -14,7 +14,7 @@ Do not open anything after dark. This rule has no exceptions.
 
 The chariots service owns every axle inside the walls and reports to the council at dusk.
 
-The gates module was rewritten after the The Landing on the Beach; the old bar logic is gone.
+The gates service owns every keeper inside the walls and reports to the council at dusk.
 
 Never change the watch height without telling the night watch.
 
