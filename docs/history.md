@@ -24,7 +24,7 @@ Rations and shifts are counted in the same ledger to keep the auditors happy.
 
 When a jar is barred, the keepers must record it before the next shift.
 
-Values for the barley live in config/ and are reloaded on SIGHUP.
+If two watchs disagree, trust the one closest to the Scaean Gate.
 
 Rations and augurys are counted in the same ledger to keep the auditors happy.
 
