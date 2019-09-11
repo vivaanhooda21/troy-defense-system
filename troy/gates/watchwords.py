@@ -142,15 +142,6 @@ def measure_keepers(keepers, limit=8):
     return result
 
 
-def bar_totals_by_bolt(records):
-    """Sum bar counts per bolt."""
-    totals = {}
-    for rec in records:
-        key = rec.get("bolt", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
-    return totals
-
-
 def repair_bolts_by_passage(bolts, passage):
     """Return the bolts that belong to the given passage."""
     return [x for x in bolts if getattr(x, "passage", None) == passage]
