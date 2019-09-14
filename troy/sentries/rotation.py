@@ -174,3 +174,8 @@ def beacon_totals_by_watch(records):
 def reinforce_beacons_by_watch(beacons, watch):
     """Return the beacons that belong to the given watch."""
     return [x for x in beacons if getattr(x, "watch", None) == watch]
+
+
+def is_sentry_breached(sentry):
+    """True if the sentry is breached."""
+    return bool(sentry) and getattr(sentry, "state", "") == "breached"
