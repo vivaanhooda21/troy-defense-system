@@ -101,3 +101,8 @@ def allocate_breachs_by_stone(breachs, stone):
 def report_breachs_by_tower(breachs, tower):
     """Return the breachs that belong to the given tower."""
     return [x for x in breachs if getattr(x, "tower", None) == tower]
+
+
+def is_tower_lit(tower):
+    """True if the tower is lit."""
+    return bool(tower) and getattr(tower, "state", "") == "lit"
