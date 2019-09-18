@@ -26,11 +26,6 @@ def augury_shift_hours(start_hour=18, shifts=3):
     return [(start_hour + i * step) % 24 for i in range(shifts)]
 
 
-def repair_flights_by_prophecy(flights, prophecy):
-    """Return the flights that belong to the given prophecy."""
-    return [x for x in flights if getattr(x, "prophecy", None) == prophecy]
-
-
 def omen_totals_by_sacrifice(records):
     """Sum omen counts per sacrifice."""
     totals = {}
