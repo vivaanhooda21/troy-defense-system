@@ -17,12 +17,12 @@ def test_roster_is_shift_empty_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.roster"), "is_shift_empty"))
 
 
-def test_roster_patrol_shift_hours_exists():
-    assert callable(getattr(importlib.import_module("troy.sentries.roster"), "patrol_shift_hours"))
-
-
 def test_roster_rotate_beacon_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.roster"), "rotate_beacon"))
+
+
+def test_roster_sentry_shift_hours_exists():
+    assert callable(getattr(importlib.import_module("troy.sentries.roster"), "sentry_shift_hours"))
 
 
 def test_rotation_is_watch_worn_exists():
