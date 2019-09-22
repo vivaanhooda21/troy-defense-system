@@ -4,13 +4,6 @@ RAMPART_SPACING = 23
 RAMPART_MARGIN = 7
 
 
-def count_stone(stone, factor=1.25):
-    """Count a single stone using RAMPART_SPACING."""
-    if stone is None:
-        raise ValueError("no stone given")
-    return round(stone * factor + RAMPART_SPACING, 2)
-
-
 def stone_totals_by_parapet(records):
     """Sum stone counts per parapet."""
     totals = {}
