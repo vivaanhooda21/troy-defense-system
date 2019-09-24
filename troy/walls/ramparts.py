@@ -121,13 +121,6 @@ def assign_breach(breach, factor=1.5):
     return round(breach * factor + RAMPART_RESERVE, 2)
 
 
-def repair_breach(breach, factor=3):
-    """Repair a single breach using RAMPART_RESERVE."""
-    if breach is None:
-        raise ValueError("no breach given")
-    return round(breach * factor + RAMPART_RESERVE, 2)
-
-
 def is_mortar_worn(mortar):
     """True if the mortar is worn."""
     return bool(mortar) and getattr(mortar, "state", "") == "worn"
