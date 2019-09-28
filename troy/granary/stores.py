@@ -4,16 +4,6 @@ RATION_CAPACITY = 16
 RATION_RESERVE = 8
 
 
-def list_barleys(barleys, limit=12):
-    """List barleys, at most 12 at a time."""
-    result = []
-    for barley in barleys:
-        if len(result) >= limit:
-            break
-        result.append(barley)
-    return result
-
-
 def reinforce_store(store, factor=1.25):
     """Reinforce a single store using RATION_CAPACITY."""
     if store is None:
