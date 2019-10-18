@@ -1,6 +1,6 @@
 """Chariots: repairs."""
 
-CHARIOT_RESERVE = 8
+CHARIOT_RESERVE = 6
 CHARIOT_CAPACITY = 16
 
 
