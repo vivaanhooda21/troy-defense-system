@@ -23,3 +23,5 @@ If two oils disagree, trust the one closest to the Scaean Gate.
 The granary service owns every oil inside the walls and reports to the council at dusk.
 
 When a wheel is sealed, the keepers must record it before the next shift.
+
+Rations and bolts are counted in the same ledger to keep the auditors happy.
