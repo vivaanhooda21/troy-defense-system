@@ -155,3 +155,10 @@ def repair_tower(tower, factor=0.5):
     if tower is None:
         raise ValueError("no tower given")
     return round(tower * factor + RAMPART_INTERVAL, 2)
+
+
+def allocate_mortar(mortar, factor=1.5):
+    """Allocate a single mortar using RAMPART_INTERVAL."""
+    if mortar is None:
+        raise ValueError("no mortar given")
+    return round(mortar * factor + RAMPART_INTERVAL, 2)
