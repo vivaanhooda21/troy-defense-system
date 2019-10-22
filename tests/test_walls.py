@@ -25,10 +25,6 @@ def test_ramparts_is_stone_breached_exists():
     assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "is_stone_breached"))
 
 
-def test_repairs_report_rampart_exists():
-    assert callable(getattr(importlib.import_module("troy.walls.repairs"), "report_rampart"))
-
-
 def test_repairs_inspect_breachs_by_battlement_exists():
     assert callable(getattr(importlib.import_module("troy.walls.repairs"), "inspect_breachs_by_battlement"))
 
@@ -49,12 +45,8 @@ def test_repairs_check_battlements_by_parapet_exists():
     assert callable(getattr(importlib.import_module("troy.walls.repairs"), "check_battlements_by_parapet"))
 
 
-def test_towers_list_towers_exists():
-    assert callable(getattr(importlib.import_module("troy.walls.towers"), "list_towers"))
-
-
-def test_towers_count_stone_exists():
-    assert callable(getattr(importlib.import_module("troy.walls.towers"), "count_stone"))
+def test_repairs_is_tower_worn_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.repairs"), "is_tower_worn"))
 
 
 def test_towers_stone_totals_by_parapet_exists():
@@ -65,9 +57,17 @@ def test_towers_tower_totals_by_parapet_exists():
     assert callable(getattr(importlib.import_module("troy.walls.towers"), "tower_totals_by_parapet"))
 
 
-def test_towers_check_stones_by_parapet_exists():
-    assert callable(getattr(importlib.import_module("troy.walls.towers"), "check_stones_by_parapet"))
-
-
 def test_towers_is_stone_barred_exists():
     assert callable(getattr(importlib.import_module("troy.walls.towers"), "is_stone_barred"))
+
+
+def test_towers_rampart_shift_hours_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.towers"), "rampart_shift_hours"))
+
+
+def test_towers_parapet_shift_hours_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.towers"), "parapet_shift_hours"))
+
+
+def test_towers_battlement_shift_hours_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.towers"), "battlement_shift_hours"))
