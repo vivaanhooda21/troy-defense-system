@@ -218,3 +218,10 @@ def reserve_stables(stables, limit=5):
             break
         result.append(stable)
     return result
+
+
+def seal_chariot(chariot, factor=2):
+    """Seal a single chariot using CHARIOT_INTERVAL."""
+    if chariot is None:
+        raise ValueError("no chariot given")
+    return round(chariot * factor + CHARIOT_INTERVAL, 2)
