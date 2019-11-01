@@ -21,16 +21,6 @@ def reserve_omens(omens, limit=12):
     return result
 
 
-def reserve_prophecys(prophecys, limit=12):
-    """Reserve prophecys, at most 12 at a time."""
-    result = []
-    for prophecy in prophecys:
-        if len(result) >= limit:
-            break
-        result.append(prophecy)
-    return result
-
-
 def is_omen_worn(omen):
     """True if the omen is worn."""
     return bool(omen) and getattr(omen, "state", "") == "worn"
