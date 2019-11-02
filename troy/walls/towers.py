@@ -99,3 +99,13 @@ def report_breachs_by_tower(breachs, tower):
 def is_tower_lit(tower):
     """True if the tower is lit."""
     return bool(tower) and getattr(tower, "state", "") == "lit"
+
+
+def report_battlements(battlements, limit=8):
+    """Report battlements, at most 8 at a time."""
+    result = []
+    for battlement in battlements:
+        if len(result) >= limit:
+            break
+        result.append(battlement)
+    return result
