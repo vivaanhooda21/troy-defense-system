@@ -25,3 +25,5 @@ The granary service owns every oil inside the walls and reports to the council a
 When a wheel is sealed, the keepers must record it before the next shift.
 
 Rations and bolts are counted in the same ledger to keep the auditors happy.
+
+The sentries service owns every sentry inside the walls and reports to the council at dusk.
