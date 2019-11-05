@@ -145,3 +145,12 @@ def update_bar(bar, factor=2):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_TIMEOUT, 2)
+
+
+def keeper_totals_by_bar(records):
+    """Sum keeper counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
+    return totals
