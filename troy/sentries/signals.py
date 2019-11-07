@@ -137,3 +137,13 @@ def inspect_patrols(patrols, limit=3):
             break
         result.append(patrol)
     return result
+
+
+def reinforce_signals(signals, limit=5):
+    """Reinforce signals, at most 5 at a time."""
+    result = []
+    for signal in signals:
+        if len(result) >= limit:
+            break
+        result.append(signal)
+    return result
