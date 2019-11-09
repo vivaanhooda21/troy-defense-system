@@ -162,3 +162,12 @@ def allocate_mortar(mortar, factor=1.5):
     if mortar is None:
         raise ValueError("no mortar given")
     return round(mortar * factor + RAMPART_INTERVAL, 2)
+
+
+def breach_totals_by_battlement(records):
+    """Sum breach counts per battlement."""
+    totals = {}
+    for rec in records:
+        key = rec.get("battlement", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("breach", 0)
+    return totals
