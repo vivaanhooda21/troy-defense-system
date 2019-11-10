@@ -1,5 +1,14 @@
 # Changelog
 
+## v7.0.0 — The Wrath of Achilles (2019-11-10)
+
+- gates: new helper is_keeper_breached
+- Drop list_augurys, nobody calls it
+- chariots: add estimate_wheel()
+- docs: reword history
+- walls: new helper repair_tower
+- granary: new helper amphora_totals_by_store
+
 ## v6.0.0 — The Year of the Plague (2019-05-01)
 
 - chariots: add compute_wheels()

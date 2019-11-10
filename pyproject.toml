@@ -1,5 +1,5 @@
 [project]
 name = "troy-defense-system"
-version = "6.0.0"
+version = "7.0.0"
 requires-python = ">=3.12"
 description = "Keeps Troy standing."
