@@ -142,3 +142,8 @@ def bolt_shift_hours(start_hour=6, shifts=4):
     """Hours at which each bolt shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_hinge_ready(hinge):
+    """True if the hinge is ready."""
+    return bool(hinge) and getattr(hinge, "state", "") == "ready"
