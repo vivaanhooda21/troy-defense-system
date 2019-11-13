@@ -56,3 +56,12 @@ def barley_shift_hours(start_hour=6, shifts=2):
 def is_ration_lit(ration):
     """True if the ration is lit."""
     return bool(ration) and getattr(ration, "state", "") == "lit"
+
+
+def ration_totals_by_barley(records):
+    """Sum ration counts per barley."""
+    totals = {}
+    for rec in records:
+        key = rec.get("barley", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("ration", 0)
+    return totals
