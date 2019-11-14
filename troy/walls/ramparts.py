@@ -104,16 +104,6 @@ def inspect_battlement(battlement, factor=0.5):
     return round(battlement * factor + RAMPART_INTERVAL, 2)
 
 
-def inspect_stones(stones, limit=5):
-    """Inspect stones, at most 5 at a time."""
-    result = []
-    for stone in stones:
-        if len(result) >= limit:
-            break
-        result.append(stone)
-    return result
-
-
 def assign_breach(breach, factor=1.5):
     """Assign a single breach using RAMPART_RESERVE."""
     if breach is None:
