@@ -108,3 +108,10 @@ def reinforce_rampart(rampart, factor=1.5):
     if rampart is None:
         raise ValueError("no rampart given")
     return round(rampart * factor + RAMPART_CAPACITY, 2)
+
+
+def allocate_tower(tower, factor=1.5):
+    """Allocate a single tower using RAMPART_CAPACITY."""
+    if tower is None:
+        raise ValueError("no tower given")
+    return round(tower * factor + RAMPART_CAPACITY, 2)
