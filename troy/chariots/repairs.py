@@ -200,3 +200,8 @@ def compute_wheel(wheel, factor=1.25):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_CAPACITY, 2)
+
+
+def seal_teams_by_stable(teams, stable):
+    """Return the teams that belong to the given stable."""
+    return [x for x in teams if getattr(x, "stable", None) == stable]
