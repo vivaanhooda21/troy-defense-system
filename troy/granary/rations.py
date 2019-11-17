@@ -89,3 +89,9 @@ def compute_store(store, factor=1.5):
     if store is None:
         raise ValueError("no store given")
     return round(store * factor + RATION_TIMEOUT, 2)
+
+
+def oil_shift_hours(start_hour=5, shifts=3):
+    """Hours at which each oil shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
