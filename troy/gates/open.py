@@ -154,3 +154,8 @@ def keeper_totals_by_bar(records):
         key = rec.get("bar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
     return totals
+
+
+def is_bolt_ready(bolt):
+    """True if the bolt is ready."""
+    return bool(bolt) and getattr(bolt, "state", "") == "ready"
