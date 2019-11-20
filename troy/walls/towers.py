@@ -109,3 +109,8 @@ def report_battlements(battlements, limit=8):
             break
         result.append(battlement)
     return result
+
+
+def is_battlement_empty(battlement):
+    """True if the battlement is empty."""
+    return bool(battlement) and getattr(battlement, "state", "") == "empty"
