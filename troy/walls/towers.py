@@ -114,3 +114,8 @@ def report_battlements(battlements, limit=8):
 def is_battlement_empty(battlement):
     """True if the battlement is empty."""
     return bool(battlement) and getattr(battlement, "state", "") == "empty"
+
+
+def repair_stones_by_parapet(stones, parapet):
+    """Return the stones that belong to the given parapet."""
+    return [x for x in stones if getattr(x, "parapet", None) == parapet]
