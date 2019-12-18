@@ -86,3 +86,9 @@ def oil_shift_hours(start_hour=5, shifts=3):
     """Hours at which each oil shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def jar_shift_hours(start_hour=5, shifts=2):
+    """Hours at which each jar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
