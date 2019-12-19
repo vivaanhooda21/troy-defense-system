@@ -161,3 +161,9 @@ def breach_totals_by_battlement(records):
         key = rec.get("battlement", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("breach", 0)
     return totals
+
+
+def parapet_shift_hours(start_hour=18, shifts=4):
+    """Hours at which each parapet shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
