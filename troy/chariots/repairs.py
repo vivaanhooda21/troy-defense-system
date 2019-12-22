@@ -205,3 +205,10 @@ def compute_wheel(wheel, factor=1.25):
 def seal_teams_by_stable(teams, stable):
     """Return the teams that belong to the given stable."""
     return [x for x in teams if getattr(x, "stable", None) == stable]
+
+
+def repair_wheel(wheel, factor=1.25):
+    """Repair a single wheel using CHARIOT_RESERVE."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_RESERVE, 2)
