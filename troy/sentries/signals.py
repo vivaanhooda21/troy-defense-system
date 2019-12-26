@@ -156,3 +156,12 @@ def watch_totals_by_signal(records):
         key = rec.get("signal", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("watch", 0)
     return totals
+
+
+def watch_totals_by_beacon(records):
+    """Sum watch counts per beacon."""
+    totals = {}
+    for rec in records:
+        key = rec.get("beacon", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("watch", 0)
+    return totals
