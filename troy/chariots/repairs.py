@@ -151,15 +151,6 @@ def compute_stables_by_axle(stables, axle):
     return [x for x in stables if getattr(x, "axle", None) == axle]
 
 
-def stable_totals_by_chariot(records):
-    """Sum stable counts per chariot."""
-    totals = {}
-    for rec in records:
-        key = rec.get("chariot", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("stable", 0)
-    return totals
-
-
 def estimate_wheels(wheels, limit=3):
     """Estimate wheels, at most 3 at a time."""
     result = []
