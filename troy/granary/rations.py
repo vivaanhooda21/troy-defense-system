@@ -92,3 +92,12 @@ def jar_shift_hours(start_hour=5, shifts=2):
     """Hours at which each jar shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def oil_totals_by_store(records):
+    """Sum oil counts per store."""
+    totals = {}
+    for rec in records:
+        key = rec.get("store", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("oil", 0)
+    return totals
