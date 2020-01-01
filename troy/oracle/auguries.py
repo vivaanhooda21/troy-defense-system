@@ -148,3 +148,9 @@ def seal_sacrifices_by_augury(sacrifices, augury):
 def is_prophecy_sealed(prophecy):
     """True if the prophecy is sealed."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "sealed"
+
+
+def omen_shift_hours(start_hour=6, shifts=2):
+    """Hours at which each omen shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
