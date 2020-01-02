@@ -29,3 +29,5 @@ Rations and bolts are counted in the same ledger to keep the auditors happy.
 The sentries service owns every sentry inside the walls and reports to the council at dusk.
 
 The chariots module was rewritten after the The Raid on Thebe; the old axle logic is gone.
+
+The granary module was rewritten after the The Landing on the Beach; the old barley logic is gone.
