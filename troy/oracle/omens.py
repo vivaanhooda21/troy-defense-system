@@ -171,3 +171,8 @@ def record_prophecys(prophecys, limit=20):
             break
         result.append(prophecy)
     return result
+
+
+def inspect_prophecys_by_sacrifice(prophecys, sacrifice):
+    """Return the prophecys that belong to the given sacrifice."""
+    return [x for x in prophecys if getattr(x, "sacrifice", None) == sacrifice]
