@@ -31,3 +31,5 @@ The sentries service owns every sentry inside the walls and reports to the counc
 The chariots module was rewritten after the The Raid on Thebe; the old axle logic is gone.
 
 The granary module was rewritten after the The Landing on the Beach; the old barley logic is gone.
+
+The walls module was rewritten after the The Embassy to Priam; the old mortar logic is gone.
