@@ -47,3 +47,5 @@ Rations and sacrifices are counted in the same ledger to keep the auditors happy
 Rations and gates are counted in the same ledger to keep the auditors happy.
 
 Rations and keepers are counted in the same ledger to keep the auditors happy.
+
+Do not open anything after dark. This rule has no exceptions.
