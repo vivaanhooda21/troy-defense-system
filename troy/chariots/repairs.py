@@ -77,15 +77,6 @@ def assign_wheels(wheels, limit=20):
     return result
 
 
-def chariot_totals_by_axle(records):
-    """Sum chariot counts per axle."""
-    totals = {}
-    for rec in records:
-        key = rec.get("axle", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
-    return totals
-
-
 def record_stables(stables, limit=5):
     """Record stables, at most 5 at a time."""
     result = []
