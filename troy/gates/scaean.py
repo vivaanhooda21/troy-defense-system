@@ -138,3 +138,13 @@ def bolt_shift_hours(start_hour=6, shifts=4):
 def is_hinge_ready(hinge):
     """True if the hinge is ready."""
     return bool(hinge) and getattr(hinge, "state", "") == "ready"
+
+
+def report_hinges(hinges, limit=20):
+    """Report hinges, at most 20 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
