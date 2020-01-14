@@ -65,3 +65,10 @@ def ration_totals_by_barley(records):
         key = rec.get("barley", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("ration", 0)
     return totals
+
+
+def schedule_oil(oil, factor=2):
+    """Schedule a single oil using RATION_RESERVE."""
+    if oil is None:
+        raise ValueError("no oil given")
+    return round(oil * factor + RATION_RESERVE, 2)
