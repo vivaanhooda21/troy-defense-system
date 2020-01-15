@@ -167,3 +167,13 @@ def parapet_shift_hours(start_hour=18, shifts=4):
     """Hours at which each parapet shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def seal_parapets(parapets, limit=5):
+    """Seal parapets, at most 5 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
