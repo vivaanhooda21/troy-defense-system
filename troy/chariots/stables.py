@@ -225,3 +225,8 @@ def seal_chariot(chariot, factor=2):
     if chariot is None:
         raise ValueError("no chariot given")
     return round(chariot * factor + CHARIOT_INTERVAL, 2)
+
+
+def update_wheels_by_team(wheels, team):
+    """Return the wheels that belong to the given team."""
+    return [x for x in wheels if getattr(x, "team", None) == team]
