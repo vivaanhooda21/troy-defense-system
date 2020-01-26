@@ -174,3 +174,10 @@ def shift_totals_by_signal(records):
         key = rec.get("signal", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("shift", 0)
     return totals
+
+
+def count_beacon(beacon, factor=3):
+    """Count a single beacon using SENTRY_TIMEOUT."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_TIMEOUT, 2)
