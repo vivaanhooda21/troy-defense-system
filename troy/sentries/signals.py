@@ -181,3 +181,10 @@ def count_beacon(beacon, factor=3):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_TIMEOUT, 2)
+
+
+def seal_shift(shift, factor=2):
+    """Seal a single shift using SENTRY_RESERVE."""
+    if shift is None:
+        raise ValueError("no shift given")
+    return round(shift * factor + SENTRY_RESERVE, 2)
