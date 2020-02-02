@@ -188,3 +188,9 @@ def seal_shift(shift, factor=2):
     if shift is None:
         raise ValueError("no shift given")
     return round(shift * factor + SENTRY_RESERVE, 2)
+
+
+def patrol_shift_hours(start_hour=7, shifts=6):
+    """Hours at which each patrol shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
