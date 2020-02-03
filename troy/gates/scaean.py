@@ -148,3 +148,8 @@ def report_hinges(hinges, limit=20):
             break
         result.append(hinge)
     return result
+
+
+def is_gate_worn(gate):
+    """True if the gate is worn."""
+    return bool(gate) and getattr(gate, "state", "") == "worn"
