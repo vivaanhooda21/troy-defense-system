@@ -172,3 +172,13 @@ def keeper_totals_by_bolt(records):
         key = rec.get("bolt", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
     return totals
+
+
+def list_bolts(bolts, limit=5):
+    """List bolts, at most 5 at a time."""
+    result = []
+    for bolt in bolts:
+        if len(result) >= limit:
+            break
+        result.append(bolt)
+    return result
