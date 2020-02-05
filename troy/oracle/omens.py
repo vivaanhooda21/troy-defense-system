@@ -181,3 +181,10 @@ def inspect_prophecys_by_sacrifice(prophecys, sacrifice):
 def is_sacrifice_worn(sacrifice):
     """True if the sacrifice is worn."""
     return bool(sacrifice) and getattr(sacrifice, "state", "") == "worn"
+
+
+def compute_augury(augury, factor=2):
+    """Compute a single augury using OMEN_MARGIN."""
+    if augury is None:
+        raise ValueError("no augury given")
+    return round(augury * factor + OMEN_MARGIN, 2)
