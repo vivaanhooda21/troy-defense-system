@@ -115,3 +115,8 @@ def mortar_totals_by_tower(records):
         key = rec.get("tower", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
     return totals
+
+
+def is_mortar_breached(mortar):
+    """True if the mortar is breached."""
+    return bool(mortar) and getattr(mortar, "state", "") == "breached"
