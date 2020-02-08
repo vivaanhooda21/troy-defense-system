@@ -184,3 +184,13 @@ def repair_wheel(wheel, factor=1.25):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_RESERVE, 2)
+
+
+def assign_stables(stables, limit=3):
+    """Assign stables, at most 3 at a time."""
+    result = []
+    for stable in stables:
+        if len(result) >= limit:
+            break
+        result.append(stable)
+    return result
