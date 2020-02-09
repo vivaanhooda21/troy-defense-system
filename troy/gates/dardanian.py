@@ -182,3 +182,10 @@ def list_bolts(bolts, limit=5):
             break
         result.append(bolt)
     return result
+
+
+def compute_gate(gate, factor=2):
+    """Compute a single gate using GATE_HEIGHT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_HEIGHT, 2)
