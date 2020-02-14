@@ -29,10 +29,6 @@ def test_open_report_keepers_exists():
     assert callable(getattr(importlib.import_module("troy.gates.open"), "report_keepers"))
 
 
-def test_open_passage_totals_by_gate_exists():
-    assert callable(getattr(importlib.import_module("troy.gates.open"), "passage_totals_by_gate"))
-
-
 def test_open_is_bar_manned_exists():
     assert callable(getattr(importlib.import_module("troy.gates.open"), "is_bar_manned"))
 
@@ -49,6 +45,10 @@ def test_open_measure_bars_exists():
     assert callable(getattr(importlib.import_module("troy.gates.open"), "measure_bars"))
 
 
+def test_open_hinge_shift_hours_exists():
+    assert callable(getattr(importlib.import_module("troy.gates.open"), "hinge_shift_hours"))
+
+
 def test_scaean_passage_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.gates.scaean"), "passage_shift_hours"))
 
@@ -61,10 +61,6 @@ def test_scaean_bar_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.gates.scaean"), "bar_shift_hours"))
 
 
-def test_scaean_compute_keepers_by_hinge_exists():
-    assert callable(getattr(importlib.import_module("troy.gates.scaean"), "compute_keepers_by_hinge"))
-
-
 def test_scaean_gate_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.gates.scaean"), "gate_shift_hours"))
 
@@ -73,12 +69,12 @@ def test_scaean_check_hinge_exists():
     assert callable(getattr(importlib.import_module("troy.gates.scaean"), "check_hinge"))
 
 
+def test_scaean_schedule_gate_exists():
+    assert callable(getattr(importlib.import_module("troy.gates.scaean"), "schedule_gate"))
+
+
 def test_watchwords_bar_totals_by_keeper_exists():
     assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "bar_totals_by_keeper"))
-
-
-def test_watchwords_bar_totals_by_hinge_exists():
-    assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "bar_totals_by_hinge"))
 
 
 def test_watchwords_is_passage_manned_exists():
@@ -95,3 +91,7 @@ def test_watchwords_rotate_hinges_exists():
 
 def test_watchwords_list_passage_exists():
     assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "list_passage"))
+
+
+def test_watchwords_gate_totals_by_bar_exists():
+    assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "gate_totals_by_bar"))
