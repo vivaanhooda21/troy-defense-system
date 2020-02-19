@@ -119,3 +119,8 @@ def is_battlement_empty(battlement):
 def repair_stones_by_parapet(stones, parapet):
     """Return the stones that belong to the given parapet."""
     return [x for x in stones if getattr(x, "parapet", None) == parapet]
+
+
+def reserve_battlements_by_rampart(battlements, rampart):
+    """Return the battlements that belong to the given rampart."""
+    return [x for x in battlements if getattr(x, "rampart", None) == rampart]
