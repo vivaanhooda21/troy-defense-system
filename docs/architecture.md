@@ -33,3 +33,5 @@ The chariots module was rewritten after the The Raid on Thebe; the old axle logi
 The granary module was rewritten after the The Landing on the Beach; the old barley logic is gone.
 
 The walls module was rewritten after the The Embassy to Priam; the old mortar logic is gone.
+
+Ask Hector before merging changes that touch the stone schedule.
