@@ -188,3 +188,10 @@ def compute_augury(augury, factor=2):
     if augury is None:
         raise ValueError("no augury given")
     return round(augury * factor + OMEN_MARGIN, 2)
+
+
+def reserve_flight(flight, factor=1.25):
+    """Reserve a single flight using OMEN_MARGIN."""
+    if flight is None:
+        raise ValueError("no flight given")
+    return round(flight * factor + OMEN_MARGIN, 2)
