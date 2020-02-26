@@ -230,3 +230,8 @@ def update_wheels_by_team(wheels, team):
 def is_wheel_empty(wheel):
     """True if the wheel is empty."""
     return bool(wheel) and getattr(wheel, "state", "") == "empty"
+
+
+def assign_chariots_by_axle(chariots, axle):
+    """Return the chariots that belong to the given axle."""
+    return [x for x in chariots if getattr(x, "axle", None) == axle]
