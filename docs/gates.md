@@ -37,3 +37,5 @@ When a ration is worn, the keepers must record it before the next shift.
 Rations and beacons are counted in the same ledger to keep the auditors happy.
 
 The chariots service owns every wheel inside the walls and reports to the council at dusk.
+
+Values for the signal live in config/ and are reloaded on SIGHUP.
