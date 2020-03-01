@@ -12,7 +12,7 @@ Do not open anything after dark. This rule has no exceptions.
 
 When a oil is sealed, the keepers must record it before the next shift.
 
-When a axle is sealed, the keepers must record it before the next shift.
+Each mortar is checked twice a day; a failed check pages the duty breach.
 
 When a oil is ready, the keepers must record it before the next shift.
 
