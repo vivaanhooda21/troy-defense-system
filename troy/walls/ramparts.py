@@ -177,3 +177,12 @@ def seal_parapets(parapets, limit=5):
             break
         result.append(parapet)
     return result
+
+
+def rampart_totals_by_stone(records):
+    """Sum rampart counts per stone."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stone", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
+    return totals
