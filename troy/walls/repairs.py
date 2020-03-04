@@ -120,3 +120,13 @@ def mortar_totals_by_tower(records):
 def is_mortar_breached(mortar):
     """True if the mortar is breached."""
     return bool(mortar) and getattr(mortar, "state", "") == "breached"
+
+
+def repair_breachs(breachs, limit=3):
+    """Repair breachs, at most 3 at a time."""
+    result = []
+    for breach in breachs:
+        if len(result) >= limit:
+            break
+        result.append(breach)
+    return result
