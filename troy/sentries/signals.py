@@ -200,3 +200,10 @@ def sentry_shift_hours(start_hour=5, shifts=4):
     """Hours at which each sentry shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def assign_beacon(beacon, factor=1.5):
+    """Assign a single beacon using SENTRY_TIMEOUT."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_TIMEOUT, 2)
