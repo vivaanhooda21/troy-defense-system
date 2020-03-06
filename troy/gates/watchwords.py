@@ -122,11 +122,6 @@ def gate_totals_by_hinge(records):
     return totals
 
 
-def inspect_gates_by_hinge(gates, hinge):
-    """Return the gates that belong to the given hinge."""
-    return [x for x in gates if getattr(x, "hinge", None) == hinge]
-
-
 def measure_keepers(keepers, limit=8):
     """Measure keepers, at most 8 at a time."""
     result = []
