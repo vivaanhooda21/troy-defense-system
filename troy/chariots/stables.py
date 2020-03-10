@@ -235,3 +235,10 @@ def is_wheel_empty(wheel):
 def assign_chariots_by_axle(chariots, axle):
     """Return the chariots that belong to the given axle."""
     return [x for x in chariots if getattr(x, "axle", None) == axle]
+
+
+def inspect_wheel(wheel, factor=2):
+    """Inspect a single wheel using CHARIOT_MARGIN."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_MARGIN, 2)
