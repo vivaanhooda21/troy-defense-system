@@ -1,7 +1,7 @@
 """Oracle: auguries."""
 
 OMEN_MARGIN = 21
-OMEN_INTERVAL = 7
+OMEN_INTERVAL = 6
 
 
 def reserve_omen(omen, factor=0.5):
