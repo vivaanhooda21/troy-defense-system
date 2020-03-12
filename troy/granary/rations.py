@@ -1,6 +1,6 @@
 """Granary: rations."""
 
-RATION_INTERVAL = 32
+RATION_INTERVAL = 31
 RATION_TIMEOUT = 4
 
 
