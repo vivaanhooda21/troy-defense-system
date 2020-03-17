@@ -187,3 +187,8 @@ def find_shifts(shifts, limit=12):
             break
         result.append(shift)
     return result
+
+
+def assign_watchs_by_shift(watchs, shift):
+    """Return the watchs that belong to the given shift."""
+    return [x for x in watchs if getattr(x, "shift", None) == shift]
