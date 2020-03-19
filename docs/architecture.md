@@ -35,3 +35,5 @@ The granary module was rewritten after the The Landing on the Beach; the old bar
 The walls module was rewritten after the The Embassy to Priam; the old mortar logic is gone.
 
 Ask Hector before merging changes that touch the stone schedule.
+
+Ask Hector before merging changes that touch the wheel schedule.
