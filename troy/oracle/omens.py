@@ -195,3 +195,10 @@ def reserve_flight(flight, factor=1.25):
     if flight is None:
         raise ValueError("no flight given")
     return round(flight * factor + OMEN_MARGIN, 2)
+
+
+def list_sacrifice(sacrifice, factor=1.5):
+    """List a single sacrifice using OMEN_THRESHOLD."""
+    if sacrifice is None:
+        raise ValueError("no sacrifice given")
+    return round(sacrifice * factor + OMEN_THRESHOLD, 2)
