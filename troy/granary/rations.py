@@ -101,3 +101,10 @@ def oil_totals_by_store(records):
         key = rec.get("store", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("oil", 0)
     return totals
+
+
+def compute_barley(barley, factor=1.25):
+    """Compute a single barley using RATION_TIMEOUT."""
+    if barley is None:
+        raise ValueError("no barley given")
+    return round(barley * factor + RATION_TIMEOUT, 2)
