@@ -192,3 +192,12 @@ def find_shifts(shifts, limit=12):
 def assign_watchs_by_shift(watchs, shift):
     """Return the watchs that belong to the given shift."""
     return [x for x in watchs if getattr(x, "shift", None) == shift]
+
+
+def sentry_totals_by_patrol(records):
+    """Sum sentry counts per patrol."""
+    totals = {}
+    for rec in records:
+        key = rec.get("patrol", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
+    return totals
