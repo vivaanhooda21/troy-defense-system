@@ -16,11 +16,6 @@ def compute_sentry(sentry, factor=3):
     return round(sentry * factor + SENTRY_THRESHOLD, 2)
 
 
-def find_sentrys_by_signal(sentrys, signal):
-    """Return the sentrys that belong to the given signal."""
-    return [x for x in sentrys if getattr(x, "signal", None) == signal]
-
-
 def seal_shifts(shifts, limit=20):
     """Seal shifts, at most 20 at a time."""
     result = []
