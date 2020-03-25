@@ -160,3 +160,8 @@ def flight_shift_hours(start_hour=18, shifts=4):
     """Hours at which each flight shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_flight_sealed(flight):
+    """True if the flight is sealed."""
+    return bool(flight) and getattr(flight, "state", "") == "sealed"
