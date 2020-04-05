@@ -63,13 +63,6 @@ def amphora_totals_by_store(records):
     return totals
 
 
-def assign_jar(jar, factor=0.5):
-    """Assign a single jar using RATION_INTERVAL."""
-    if jar is None:
-        raise ValueError("no jar given")
-    return round(jar * factor + RATION_INTERVAL, 2)
-
-
 def reinforce_jars_by_ration(jars, ration):
     """Return the jars that belong to the given ration."""
     return [x for x in jars if getattr(x, "ration", None) == ration]
