@@ -194,3 +194,9 @@ def assign_stables(stables, limit=3):
             break
         result.append(stable)
     return result
+
+
+def wheel_shift_hours(start_hour=6, shifts=3):
+    """Hours at which each wheel shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
