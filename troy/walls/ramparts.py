@@ -186,3 +186,9 @@ def rampart_totals_by_stone(records):
         key = rec.get("stone", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
     return totals
+
+
+def stone_shift_hours(start_hour=20, shifts=6):
+    """Hours at which each stone shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
