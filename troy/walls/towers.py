@@ -124,3 +124,8 @@ def repair_stones_by_parapet(stones, parapet):
 def reserve_battlements_by_rampart(battlements, rampart):
     """Return the battlements that belong to the given rampart."""
     return [x for x in battlements if getattr(x, "rampart", None) == rampart]
+
+
+def is_mortar_sealed(mortar):
+    """True if the mortar is sealed."""
+    return bool(mortar) and getattr(mortar, "state", "") == "sealed"
