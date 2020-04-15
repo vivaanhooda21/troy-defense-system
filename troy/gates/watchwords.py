@@ -164,3 +164,12 @@ def passage_totals_by_bar(records):
         key = rec.get("bar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("passage", 0)
     return totals
+
+
+def bar_totals_by_passage(records):
+    """Sum bar counts per passage."""
+    totals = {}
+    for rec in records:
+        key = rec.get("passage", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
