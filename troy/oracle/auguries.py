@@ -165,3 +165,8 @@ def flight_shift_hours(start_hour=18, shifts=4):
 def is_flight_sealed(flight):
     """True if the flight is sealed."""
     return bool(flight) and getattr(flight, "state", "") == "sealed"
+
+
+def seal_sacrifices_by_prophecy(sacrifices, prophecy):
+    """Return the sacrifices that belong to the given prophecy."""
+    return [x for x in sacrifices if getattr(x, "prophecy", None) == prophecy]
