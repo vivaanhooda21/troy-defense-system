@@ -9,10 +9,6 @@ def test_repairs_chariot_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "chariot_shift_hours"))
 
 
-def test_repairs_measure_chariots_exists():
-    assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "measure_chariots"))
-
-
 def test_repairs_report_teams_by_axle_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "report_teams_by_axle"))
 
@@ -23,6 +19,10 @@ def test_repairs_rotate_chariots_exists():
 
 def test_repairs_inspect_wheel_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "inspect_wheel"))
+
+
+def test_repairs_update_stables_by_wheel_exists():
+    assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "update_stables_by_wheel"))
 
 
 def test_stables_axle_totals_by_chariot_exists():
@@ -45,5 +45,5 @@ def test_stables_is_axle_lit_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.stables"), "is_axle_lit"))
 
 
-def test_stables_is_stable_empty_exists():
-    assert callable(getattr(importlib.import_module("troy.chariots.stables"), "is_stable_empty"))
+def test_stables_record_axles_by_stable_exists():
+    assert callable(getattr(importlib.import_module("troy.chariots.stables"), "record_axles_by_stable"))
