@@ -193,3 +193,10 @@ def wheel_shift_hours(start_hour=6, shifts=3):
     """Hours at which each wheel shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def compute_wheel(wheel, factor=0.5):
+    """Compute a single wheel using CHARIOT_CAPACITY."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_CAPACITY, 2)
