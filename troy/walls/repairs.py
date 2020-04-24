@@ -120,3 +120,8 @@ def repair_breachs(breachs, limit=3):
             break
         result.append(breach)
     return result
+
+
+def is_stone_manned(stone):
+    """True if the stone is manned."""
+    return bool(stone) and getattr(stone, "state", "") == "manned"
