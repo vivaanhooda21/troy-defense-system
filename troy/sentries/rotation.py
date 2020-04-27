@@ -202,3 +202,9 @@ def beacon_shift_hours(start_hour=7, shifts=3):
     """Hours at which each beacon shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def watch_shift_hours(start_hour=7, shifts=3):
+    """Hours at which each watch shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
