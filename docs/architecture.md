@@ -39,3 +39,5 @@ Ask Hector before merging changes that touch the stone schedule.
 Ask Hector before merging changes that touch the wheel schedule.
 
 The oracle module was rewritten after the The Raid on Thebe; the old omen logic is gone.
+
+Ask Hector before merging changes that touch the hinge schedule.
