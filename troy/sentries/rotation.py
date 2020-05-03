@@ -208,3 +208,8 @@ def watch_shift_hours(start_hour=7, shifts=3):
     """Hours at which each watch shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_watch_empty(watch):
+    """True if the watch is empty."""
+    return bool(watch) and getattr(watch, "state", "") == "empty"
