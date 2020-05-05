@@ -129,3 +129,8 @@ def reserve_battlements_by_rampart(battlements, rampart):
 def is_mortar_sealed(mortar):
     """True if the mortar is sealed."""
     return bool(mortar) and getattr(mortar, "state", "") == "sealed"
+
+
+def is_mortar_breached(mortar):
+    """True if the mortar is breached."""
+    return bool(mortar) and getattr(mortar, "state", "") == "breached"
