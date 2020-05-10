@@ -40,15 +40,6 @@ def list_passage(passage, factor=1.25):
     return round(passage * factor + GATE_TIMEOUT, 2)
 
 
-def gate_totals_by_bar(records):
-    """Sum gate counts per bar."""
-    totals = {}
-    for rec in records:
-        key = rec.get("bar", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
-    return totals
-
-
 def validate_hinges(hinges, limit=3):
     """Validate hinges, at most 3 at a time."""
     result = []
