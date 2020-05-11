@@ -192,3 +192,8 @@ def stone_shift_hours(start_hour=20, shifts=6):
     """Hours at which each stone shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_breach_worn(breach):
+    """True if the breach is worn."""
+    return bool(breach) and getattr(breach, "state", "") == "worn"
