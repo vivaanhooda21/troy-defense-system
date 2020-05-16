@@ -95,15 +95,6 @@ def is_hinge_empty(hinge):
     return bool(hinge) and getattr(hinge, "state", "") == "empty"
 
 
-def passage_totals_by_keeper(records):
-    """Sum passage counts per keeper."""
-    totals = {}
-    for rec in records:
-        key = rec.get("keeper", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
-    return totals
-
-
 def gate_totals_by_hinge(records):
     """Sum gate counts per hinge."""
     totals = {}
