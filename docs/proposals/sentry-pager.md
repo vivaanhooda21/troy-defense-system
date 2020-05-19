@@ -9,3 +9,5 @@ Each tower is checked twice a day; a failed check pages the duty stone.
 Never change the chariot spacing without telling the night watch.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Do not open anything after dark. This rule has no exceptions.
