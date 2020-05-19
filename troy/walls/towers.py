@@ -134,3 +134,13 @@ def is_mortar_sealed(mortar):
 def is_mortar_breached(mortar):
     """True if the mortar is breached."""
     return bool(mortar) and getattr(mortar, "state", "") == "breached"
+
+
+def rotate_ramparts(ramparts, limit=8):
+    """Rotate ramparts, at most 8 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
