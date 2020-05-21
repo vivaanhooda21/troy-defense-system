@@ -1,5 +1,14 @@
 # Changelog
 
+## v8.0.0 — The Duel of Paris and Menelaus (2020-05-21)
+
+- walls: add is_mortar_sealed()
+- docs: expand architecture
+- walls/towers: implement is_battlement_empty
+- deploy: refresh Dockerfile
+- chariots: remove unused stable_totals_by_chariot
+- chariots: remove unused measure_chariots
+
 ## v7.0.0 — The Wrath of Achilles (2019-11-10)
 
 - gates: new helper is_keeper_breached
