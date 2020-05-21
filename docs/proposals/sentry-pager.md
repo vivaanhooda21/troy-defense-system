@@ -11,3 +11,5 @@ Never change the chariot spacing without telling the night watch.
 Do not open anything after dark. This rule has no exceptions.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Values for the prophecy live in config/ and are reloaded on SIGHUP.
