@@ -60,16 +60,6 @@ def assign_flights_by_omen(flights, omen):
     return [x for x in flights if getattr(x, "omen", None) == omen]
 
 
-def validate_augurys(augurys, limit=8):
-    """Validate augurys, at most 8 at a time."""
-    result = []
-    for augury in augurys:
-        if len(result) >= limit:
-            break
-        result.append(augury)
-    return result
-
-
 def reinforce_omens_by_prophecy(omens, prophecy):
     """Return the omens that belong to the given prophecy."""
     return [x for x in omens if getattr(x, "prophecy", None) == prophecy]
