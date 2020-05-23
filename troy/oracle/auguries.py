@@ -160,3 +160,13 @@ def is_flight_sealed(flight):
 def seal_sacrifices_by_prophecy(sacrifices, prophecy):
     """Return the sacrifices that belong to the given prophecy."""
     return [x for x in sacrifices if getattr(x, "prophecy", None) == prophecy]
+
+
+def repair_sacrifices(sacrifices, limit=5):
+    """Repair sacrifices, at most 5 at a time."""
+    result = []
+    for sacrifice in sacrifices:
+        if len(result) >= limit:
+            break
+        result.append(sacrifice)
+    return result
