@@ -213,3 +213,13 @@ def watch_shift_hours(start_hour=7, shifts=3):
 def is_watch_empty(watch):
     """True if the watch is empty."""
     return bool(watch) and getattr(watch, "state", "") == "empty"
+
+
+def reserve_patrols(patrols, limit=3):
+    """Reserve patrols, at most 3 at a time."""
+    result = []
+    for patrol in patrols:
+        if len(result) >= limit:
+            break
+        result.append(patrol)
+    return result
