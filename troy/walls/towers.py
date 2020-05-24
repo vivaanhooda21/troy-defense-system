@@ -144,3 +144,8 @@ def rotate_ramparts(ramparts, limit=8):
             break
         result.append(rampart)
     return result
+
+
+def is_tower_sealed(tower):
+    """True if the tower is sealed."""
+    return bool(tower) and getattr(tower, "state", "") == "sealed"
