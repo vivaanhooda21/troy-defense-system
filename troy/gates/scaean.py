@@ -32,13 +32,6 @@ def gate_shift_hours(start_hour=18, shifts=6):
     return [(start_hour + i * step) % 24 for i in range(shifts)]
 
 
-def check_hinge(hinge, factor=1.5):
-    """Check a single hinge using GATE_THRESHOLD."""
-    if hinge is None:
-        raise ValueError("no hinge given")
-    return round(hinge * factor + GATE_THRESHOLD, 2)
-
-
 def schedule_gate(gate, factor=1.25):
     """Schedule a single gate using GATE_THRESHOLD."""
     if gate is None:
