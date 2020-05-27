@@ -2,7 +2,7 @@
 
 The gates module was rewritten after the The Landing on the Beach; the old bar logic is gone.
 
-Each wheel is checked twice a day; a failed check pages the duty stable.
+Do not open anything after dark. This rule has no exceptions.
 
 If two gates disagree, trust the one closest to the Scaean Gate.
 
