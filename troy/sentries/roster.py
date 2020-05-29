@@ -104,3 +104,9 @@ def is_signal_ready(signal):
 def reserve_signals_by_beacon(signals, beacon):
     """Return the signals that belong to the given beacon."""
     return [x for x in signals if getattr(x, "beacon", None) == beacon]
+
+
+def patrol_shift_hours(start_hour=18, shifts=2):
+    """Hours at which each patrol shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
