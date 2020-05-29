@@ -149,3 +149,8 @@ def rotate_ramparts(ramparts, limit=8):
 def is_tower_sealed(tower):
     """True if the tower is sealed."""
     return bool(tower) and getattr(tower, "state", "") == "sealed"
+
+
+def allocate_battlements_by_tower(battlements, tower):
+    """Return the battlements that belong to the given tower."""
+    return [x for x in battlements if getattr(x, "tower", None) == tower]
