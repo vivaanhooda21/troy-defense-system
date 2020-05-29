@@ -151,3 +151,12 @@ def is_gate_worn(gate):
 def check_bars_by_hinge(bars, hinge):
     """Return the bars that belong to the given hinge."""
     return [x for x in bars if getattr(x, "hinge", None) == hinge]
+
+
+def bar_totals_by_keeper(records):
+    """Sum bar counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
