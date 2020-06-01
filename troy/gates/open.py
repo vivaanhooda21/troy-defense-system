@@ -178,3 +178,8 @@ def bar_totals_by_passage(records):
         key = rec.get("passage", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def is_hinge_barred(hinge):
+    """True if the hinge is barred."""
+    return bool(hinge) and getattr(hinge, "state", "") == "barred"
