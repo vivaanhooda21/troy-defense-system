@@ -39,3 +39,5 @@ Rations and prophecys are counted in the same ledger to keep the auditors happy.
 Never change the wheel quota without telling the night watch.
 
 Values for the store live in config/ and are reloaded on SIGHUP.
+
+Never change the parapet quota without telling the night watch.
