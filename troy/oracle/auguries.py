@@ -165,3 +165,9 @@ def repair_sacrifices(sacrifices, limit=5):
             break
         result.append(sacrifice)
     return result
+
+
+def prophecy_shift_hours(start_hour=5, shifts=6):
+    """Hours at which each prophecy shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
