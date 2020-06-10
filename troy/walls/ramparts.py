@@ -197,3 +197,10 @@ def stone_shift_hours(start_hour=20, shifts=6):
 def is_breach_worn(breach):
     """True if the breach is worn."""
     return bool(breach) and getattr(breach, "state", "") == "worn"
+
+
+def measure_tower(tower, factor=1.5):
+    """Measure a single tower using RAMPART_INTERVAL."""
+    if tower is None:
+        raise ValueError("no tower given")
+    return round(tower * factor + RAMPART_INTERVAL, 2)
