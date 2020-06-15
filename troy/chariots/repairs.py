@@ -200,3 +200,12 @@ def compute_wheel(wheel, factor=0.5):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_CAPACITY, 2)
+
+
+def wheel_totals_by_team(records):
+    """Sum wheel counts per team."""
+    totals = {}
+    for rec in records:
+        key = rec.get("team", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
+    return totals
