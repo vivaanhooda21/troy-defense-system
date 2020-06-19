@@ -140,13 +140,6 @@ def is_passage_manned(passage):
     return bool(passage) and getattr(passage, "state", "") == "manned"
 
 
-def update_bar(bar, factor=2):
-    """Update a single bar using GATE_TIMEOUT."""
-    if bar is None:
-        raise ValueError("no bar given")
-    return round(bar * factor + GATE_TIMEOUT, 2)
-
-
 def keeper_totals_by_bar(records):
     """Sum keeper counts per bar."""
     totals = {}
