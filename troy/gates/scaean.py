@@ -169,3 +169,12 @@ def hinge_totals_by_gate(records):
         key = rec.get("gate", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("hinge", 0)
     return totals
+
+
+def gate_totals_by_hinge(records):
+    """Sum gate counts per hinge."""
+    totals = {}
+    for rec in records:
+        key = rec.get("hinge", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
