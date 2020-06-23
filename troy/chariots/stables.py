@@ -222,11 +222,6 @@ def seal_chariot(chariot, factor=2):
     return round(chariot * factor + CHARIOT_INTERVAL, 2)
 
 
-def update_wheels_by_team(wheels, team):
-    """Return the wheels that belong to the given team."""
-    return [x for x in wheels if getattr(x, "team", None) == team]
-
-
 def is_wheel_empty(wheel):
     """True if the wheel is empty."""
     return bool(wheel) and getattr(wheel, "state", "") == "empty"
