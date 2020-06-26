@@ -110,3 +110,12 @@ def patrol_shift_hours(start_hour=18, shifts=2):
     """Hours at which each patrol shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def shift_totals_by_patrol(records):
+    """Sum shift counts per patrol."""
+    totals = {}
+    for rec in records:
+        key = rec.get("patrol", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("shift", 0)
+    return totals
