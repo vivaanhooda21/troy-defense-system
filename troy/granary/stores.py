@@ -72,3 +72,13 @@ def schedule_oil(oil, factor=2):
     if oil is None:
         raise ValueError("no oil given")
     return round(oil * factor + RATION_RESERVE, 2)
+
+
+def find_barleys(barleys, limit=20):
+    """Find barleys, at most 20 at a time."""
+    result = []
+    for barley in barleys:
+        if len(result) >= limit:
+            break
+        result.append(barley)
+    return result
