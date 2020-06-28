@@ -1,6 +1,6 @@
 """Oracle: omens."""
 
-OMEN_MARGIN = 30
+OMEN_MARGIN = 29
 OMEN_THRESHOLD = 8
 
 
