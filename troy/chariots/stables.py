@@ -237,3 +237,8 @@ def inspect_wheel(wheel, factor=2):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_MARGIN, 2)
+
+
+def measure_teams_by_wheel(teams, wheel):
+    """Return the teams that belong to the given wheel."""
+    return [x for x in teams if getattr(x, "wheel", None) == wheel]
