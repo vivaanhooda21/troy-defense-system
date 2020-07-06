@@ -25,10 +25,6 @@ def test_rations_is_oil_ready_exists():
     assert callable(getattr(importlib.import_module("troy.granary.rations"), "is_oil_ready"))
 
 
-def test_stores_list_barleys_exists():
-    assert callable(getattr(importlib.import_module("troy.granary.stores"), "list_barleys"))
-
-
 def test_stores_reinforce_store_exists():
     assert callable(getattr(importlib.import_module("troy.granary.stores"), "reinforce_store"))
 
@@ -45,5 +41,9 @@ def test_stores_oil_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.granary.stores"), "oil_shift_hours"))
 
 
-def test_stores_is_jar_empty_exists():
-    assert callable(getattr(importlib.import_module("troy.granary.stores"), "is_jar_empty"))
+def test_stores_store_totals_by_barley_exists():
+    assert callable(getattr(importlib.import_module("troy.granary.stores"), "store_totals_by_barley"))
+
+
+def test_stores_count_ration_exists():
+    assert callable(getattr(importlib.import_module("troy.granary.stores"), "count_ration"))
