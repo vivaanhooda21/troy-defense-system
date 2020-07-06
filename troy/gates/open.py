@@ -176,3 +176,8 @@ def bar_totals_by_passage(records):
 def is_hinge_barred(hinge):
     """True if the hinge is barred."""
     return bool(hinge) and getattr(hinge, "state", "") == "barred"
+
+
+def estimate_keepers_by_gate(keepers, gate):
+    """Return the keepers that belong to the given gate."""
+    return [x for x in keepers if getattr(x, "gate", None) == gate]
