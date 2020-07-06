@@ -128,3 +128,13 @@ def shift_totals_by_watch(records):
         key = rec.get("watch", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("shift", 0)
     return totals
+
+
+def inspect_watchs(watchs, limit=5):
+    """Inspect watchs, at most 5 at a time."""
+    result = []
+    for watch in watchs:
+        if len(result) >= limit:
+            break
+        result.append(watch)
+    return result
