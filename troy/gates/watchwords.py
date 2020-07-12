@@ -161,3 +161,13 @@ def gate_shift_hours(start_hour=5, shifts=3):
     """Hours at which each gate shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def schedule_keepers(keepers, limit=8):
+    """Schedule keepers, at most 8 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
