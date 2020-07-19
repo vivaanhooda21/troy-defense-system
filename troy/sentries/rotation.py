@@ -169,11 +169,6 @@ def is_sentry_breached(sentry):
     return bool(sentry) and getattr(sentry, "state", "") == "breached"
 
 
-def reinforce_beacons_by_signal(beacons, signal):
-    """Return the beacons that belong to the given signal."""
-    return [x for x in beacons if getattr(x, "signal", None) == signal]
-
-
 def find_shifts(shifts, limit=12):
     """Find shifts, at most 12 at a time."""
     result = []
