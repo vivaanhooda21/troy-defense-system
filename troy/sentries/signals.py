@@ -29,13 +29,6 @@ def is_patrol_worn(patrol):
     return bool(patrol) and getattr(patrol, "state", "") == "worn"
 
 
-def reserve_patrol(patrol, factor=3):
-    """Reserve a single patrol using SENTRY_RESERVE."""
-    if patrol is None:
-        raise ValueError("no patrol given")
-    return round(patrol * factor + SENTRY_RESERVE, 2)
-
-
 def is_sentry_manned(sentry):
     """True if the sentry is manned."""
     return bool(sentry) and getattr(sentry, "state", "") == "manned"
