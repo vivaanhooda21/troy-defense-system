@@ -171,3 +171,12 @@ def prophecy_shift_hours(start_hour=5, shifts=6):
     """Hours at which each prophecy shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def prophecy_totals_by_flight(records):
+    """Sum prophecy counts per flight."""
+    totals = {}
+    for rec in records:
+        key = rec.get("flight", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("prophecy", 0)
+    return totals
