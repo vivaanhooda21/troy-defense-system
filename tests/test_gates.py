@@ -65,12 +65,12 @@ def test_scaean_gate_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.gates.scaean"), "gate_shift_hours"))
 
 
-def test_scaean_check_hinge_exists():
-    assert callable(getattr(importlib.import_module("troy.gates.scaean"), "check_hinge"))
-
-
 def test_scaean_schedule_gate_exists():
     assert callable(getattr(importlib.import_module("troy.gates.scaean"), "schedule_gate"))
+
+
+def test_scaean_schedule_bar_exists():
+    assert callable(getattr(importlib.import_module("troy.gates.scaean"), "schedule_bar"))
 
 
 def test_watchwords_bar_totals_by_keeper_exists():
@@ -93,5 +93,5 @@ def test_watchwords_list_passage_exists():
     assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "list_passage"))
 
 
-def test_watchwords_gate_totals_by_bar_exists():
-    assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "gate_totals_by_bar"))
+def test_watchwords_validate_hinges_exists():
+    assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "validate_hinges"))
