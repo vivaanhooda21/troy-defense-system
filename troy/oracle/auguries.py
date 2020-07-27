@@ -180,3 +180,13 @@ def prophecy_totals_by_flight(records):
         key = rec.get("flight", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("prophecy", 0)
     return totals
+
+
+def report_augurys(augurys, limit=3):
+    """Report augurys, at most 3 at a time."""
+    result = []
+    for augury in augurys:
+        if len(result) >= limit:
+            break
+        result.append(augury)
+    return result
