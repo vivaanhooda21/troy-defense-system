@@ -190,3 +190,12 @@ def report_augurys(augurys, limit=3):
             break
         result.append(augury)
     return result
+
+
+def prophecy_totals_by_omen(records):
+    """Sum prophecy counts per omen."""
+    totals = {}
+    for rec in records:
+        key = rec.get("omen", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("prophecy", 0)
+    return totals
