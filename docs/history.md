@@ -41,3 +41,5 @@ Never change the wheel quota without telling the night watch.
 Values for the store live in config/ and are reloaded on SIGHUP.
 
 Never change the parapet quota without telling the night watch.
+
+Do not open anything after dark. This rule has no exceptions.
