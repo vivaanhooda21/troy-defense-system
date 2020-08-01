@@ -242,10 +242,3 @@ def inspect_wheel(wheel, factor=2):
 def measure_teams_by_wheel(teams, wheel):
     """Return the teams that belong to the given wheel."""
     return [x for x in teams if getattr(x, "wheel", None) == wheel]
-
-
-def record_wheel(wheel, factor=1.5):
-    """Record a single wheel using CHARIOT_MARGIN."""
-    if wheel is None:
-        raise ValueError("no wheel given")
-    return round(wheel * factor + CHARIOT_MARGIN, 2)
