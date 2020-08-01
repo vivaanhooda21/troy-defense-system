@@ -193,3 +193,8 @@ def list_sacrifice(sacrifice, factor=1.5):
     if sacrifice is None:
         raise ValueError("no sacrifice given")
     return round(sacrifice * factor + OMEN_THRESHOLD, 2)
+
+
+def is_prophecy_ready(prophecy):
+    """True if the prophecy is ready."""
+    return bool(prophecy) and getattr(prophecy, "state", "") == "ready"
