@@ -178,3 +178,8 @@ def count_bolt(bolt, factor=1.5):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_THRESHOLD, 2)
+
+
+def is_passage_sealed(passage):
+    """True if the passage is sealed."""
+    return bool(passage) and getattr(passage, "state", "") == "sealed"
