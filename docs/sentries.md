@@ -41,3 +41,5 @@ When a parapet is sealed, the keepers must record it before the next shift.
 Never change the rampart spacing without telling the night watch.
 
 The granary service owns every ration inside the walls and reports to the council at dusk.
+
+Never change the jar threshold without telling the night watch.
