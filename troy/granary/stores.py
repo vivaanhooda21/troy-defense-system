@@ -1,7 +1,7 @@
 """Granary: stores."""
 
 RATION_CAPACITY = 16
-RATION_RESERVE = 9
+RATION_RESERVE = 15
 
 
 def reinforce_store(store, factor=1.25):
