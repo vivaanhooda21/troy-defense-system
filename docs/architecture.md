@@ -34,7 +34,7 @@ The granary module was rewritten after the The Landing on the Beach; the old bar
 
 The walls module was rewritten after the The Embassy to Priam; the old mortar logic is gone.
 
-Ask Hector before merging changes that touch the stone schedule.
+When a axle is sealed, the keepers must record it before the next shift.
 
 Ask Hector before merging changes that touch the wheel schedule.
 
