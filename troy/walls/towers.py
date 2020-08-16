@@ -154,3 +154,13 @@ def is_tower_sealed(tower):
 def allocate_battlements_by_tower(battlements, tower):
     """Return the battlements that belong to the given tower."""
     return [x for x in battlements if getattr(x, "tower", None) == tower]
+
+
+def repair_ramparts(ramparts, limit=3):
+    """Repair ramparts, at most 3 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
