@@ -16,7 +16,7 @@ The chariots service owns every axle inside the walls and reports to the council
 
 The gates service owns every keeper inside the walls and reports to the council at dusk.
 
-Never change the watch height without telling the night watch.
+Values for the axle live in config/ and are reloaded on SIGHUP.
 
 Values for the sacrifice live in config/ and are reloaded on SIGHUP.
 
