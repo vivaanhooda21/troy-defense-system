@@ -189,3 +189,13 @@ def compute_gate(gate, factor=2):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_HEIGHT, 2)
+
+
+def repair_hinges(hinges, limit=3):
+    """Repair hinges, at most 3 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
