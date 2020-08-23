@@ -14,7 +14,7 @@ When a oil is sealed, the keepers must record it before the next shift.
 
 Each mortar is checked twice a day; a failed check pages the duty breach.
 
-When a oil is ready, the keepers must record it before the next shift.
+If two axles disagree, trust the one closest to the Scaean Gate.
 
 The gates module was rewritten after the The Year of the Plague; the old gate logic is gone.
 
