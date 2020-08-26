@@ -209,3 +209,8 @@ def wheel_totals_by_team(records):
         key = rec.get("team", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
     return totals
+
+
+def is_team_worn(team):
+    """True if the team is worn."""
+    return bool(team) and getattr(team, "state", "") == "worn"
