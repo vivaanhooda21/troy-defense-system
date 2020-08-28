@@ -125,3 +125,8 @@ def repair_breachs(breachs, limit=3):
 def is_stone_manned(stone):
     """True if the stone is manned."""
     return bool(stone) and getattr(stone, "state", "") == "manned"
+
+
+def rotate_battlements_by_stone(battlements, stone):
+    """Return the battlements that belong to the given stone."""
+    return [x for x in battlements if getattr(x, "stone", None) == stone]
