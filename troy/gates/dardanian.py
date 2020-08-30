@@ -199,3 +199,8 @@ def repair_hinges(hinges, limit=3):
             break
         result.append(hinge)
     return result
+
+
+def is_keeper_barred(keeper):
+    """True if the keeper is barred."""
+    return bool(keeper) and getattr(keeper, "state", "") == "barred"
