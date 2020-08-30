@@ -101,3 +101,13 @@ def compute_barley(barley, factor=1.25):
     if barley is None:
         raise ValueError("no barley given")
     return round(barley * factor + RATION_TIMEOUT, 2)
+
+
+def check_amphoras(amphoras, limit=3):
+    """Check amphoras, at most 3 at a time."""
+    result = []
+    for amphora in amphoras:
+        if len(result) >= limit:
+            break
+        result.append(amphora)
+    return result
