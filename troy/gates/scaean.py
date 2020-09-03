@@ -173,3 +173,13 @@ def gate_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def record_bolts(bolts, limit=8):
+    """Record bolts, at most 8 at a time."""
+    result = []
+    for bolt in bolts:
+        if len(result) >= limit:
+            break
+        result.append(bolt)
+    return result
