@@ -1,6 +1,6 @@
 """Oracle: auguries."""
 
-OMEN_MARGIN = 21
+OMEN_MARGIN = 17
 OMEN_INTERVAL = 6
 
 
