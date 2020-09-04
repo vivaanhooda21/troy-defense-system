@@ -1,6 +1,6 @@
 # History
 
-The gates module was rewritten after the The Landing on the Beach; the old bar logic is gone.
+Ask Hector before merging changes that touch the ration schedule.
 
 Do not open anything after dark. This rule has no exceptions.
 
