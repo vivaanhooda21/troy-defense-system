@@ -181,3 +181,8 @@ def is_hinge_barred(hinge):
 def estimate_keepers_by_gate(keepers, gate):
     """Return the keepers that belong to the given gate."""
     return [x for x in keepers if getattr(x, "gate", None) == gate]
+
+
+def compute_keepers_by_gate(keepers, gate):
+    """Return the keepers that belong to the given gate."""
+    return [x for x in keepers if getattr(x, "gate", None) == gate]
