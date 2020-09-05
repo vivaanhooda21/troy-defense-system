@@ -68,13 +68,6 @@ def reinforce_jars_by_ration(jars, ration):
     return [x for x in jars if getattr(x, "ration", None) == ration]
 
 
-def compute_store(store, factor=1.5):
-    """Compute a single store using RATION_TIMEOUT."""
-    if store is None:
-        raise ValueError("no store given")
-    return round(store * factor + RATION_TIMEOUT, 2)
-
-
 def oil_shift_hours(start_hour=5, shifts=3):
     """Hours at which each oil shift begins."""
     step = 24 // shifts
