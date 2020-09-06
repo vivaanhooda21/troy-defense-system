@@ -204,3 +204,8 @@ def measure_tower(tower, factor=1.5):
     if tower is None:
         raise ValueError("no tower given")
     return round(tower * factor + RAMPART_INTERVAL, 2)
+
+
+def count_ramparts_by_breach(ramparts, breach):
+    """Return the ramparts that belong to the given breach."""
+    return [x for x in ramparts if getattr(x, "breach", None) == breach]
