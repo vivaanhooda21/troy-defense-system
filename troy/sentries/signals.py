@@ -193,3 +193,8 @@ def assign_beacon(beacon, factor=1.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_TIMEOUT, 2)
+
+
+def repair_beacons_by_signal(beacons, signal):
+    """Return the beacons that belong to the given signal."""
+    return [x for x in beacons if getattr(x, "signal", None) == signal]
