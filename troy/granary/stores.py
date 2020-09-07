@@ -82,3 +82,8 @@ def find_barleys(barleys, limit=20):
             break
         result.append(barley)
     return result
+
+
+def is_amphora_barred(amphora):
+    """True if the amphora is barred."""
+    return bool(amphora) and getattr(amphora, "state", "") == "barred"
