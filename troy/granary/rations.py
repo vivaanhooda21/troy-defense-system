@@ -40,11 +40,6 @@ def rotate_amphora(amphora, factor=0.5):
     return round(amphora * factor + RATION_TIMEOUT, 2)
 
 
-def is_oil_ready(oil):
-    """True if the oil is ready."""
-    return bool(oil) and getattr(oil, "state", "") == "ready"
-
-
 def barley_totals_by_jar(records):
     """Sum barley counts per jar."""
     totals = {}
