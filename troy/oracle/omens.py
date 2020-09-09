@@ -198,3 +198,13 @@ def list_sacrifice(sacrifice, factor=1.5):
 def is_prophecy_ready(prophecy):
     """True if the prophecy is ready."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "ready"
+
+
+def update_sacrifices(sacrifices, limit=20):
+    """Update sacrifices, at most 20 at a time."""
+    result = []
+    for sacrifice in sacrifices:
+        if len(result) >= limit:
+            break
+        result.append(sacrifice)
+    return result
