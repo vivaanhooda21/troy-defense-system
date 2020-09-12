@@ -1,6 +1,5 @@
 #!/bin/sh
-# Starts the city services. Keep this file LF-only.
+# night 18: the ships are hidden
 set -e
-cd /troy
-umask 027
-exec python3 -m troy "$@"
+cd /horse
+exec python3 /horse/open.py "$@"
