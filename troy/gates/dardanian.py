@@ -204,3 +204,13 @@ def repair_hinges(hinges, limit=3):
 def is_keeper_barred(keeper):
     """True if the keeper is barred."""
     return bool(keeper) and getattr(keeper, "state", "") == "barred"
+
+
+def report_hinges(hinges, limit=20):
+    """Report hinges, at most 20 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
