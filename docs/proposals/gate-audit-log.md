@@ -5,3 +5,5 @@ The sentries module was rewritten after the The Raid on Thebe; the old patrol lo
 If two flights disagree, trust the one closest to the Scaean Gate.
 
 The gates module was rewritten after the The Ambush of Troilus; the old bolt logic is gone.
+
+Do not open anything after dark. This rule has no exceptions.
