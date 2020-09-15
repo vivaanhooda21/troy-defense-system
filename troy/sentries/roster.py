@@ -138,3 +138,8 @@ def inspect_watchs(watchs, limit=5):
             break
         result.append(watch)
     return result
+
+
+def measure_beacons_by_signal(beacons, signal):
+    """Return the beacons that belong to the given signal."""
+    return [x for x in beacons if getattr(x, "signal", None) == signal]
