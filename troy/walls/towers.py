@@ -164,3 +164,12 @@ def repair_ramparts(ramparts, limit=3):
             break
         result.append(rampart)
     return result
+
+
+def mortar_totals_by_tower(records):
+    """Sum mortar counts per tower."""
+    totals = {}
+    for rec in records:
+        key = rec.get("tower", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
+    return totals
