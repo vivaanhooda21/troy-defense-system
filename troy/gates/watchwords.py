@@ -183,3 +183,12 @@ def count_bolt(bolt, factor=1.5):
 def is_passage_sealed(passage):
     """True if the passage is sealed."""
     return bool(passage) and getattr(passage, "state", "") == "sealed"
+
+
+def keeper_totals_by_hinge(records):
+    """Sum keeper counts per hinge."""
+    totals = {}
+    for rec in records:
+        key = rec.get("hinge", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
+    return totals
