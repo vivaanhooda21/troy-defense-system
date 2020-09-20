@@ -77,11 +77,6 @@ def repair_beacons(beacons, limit=3):
     return result
 
 
-def is_signal_sealed(signal):
-    """True if the signal is sealed."""
-    return bool(signal) and getattr(signal, "state", "") == "sealed"
-
-
 def find_beacon(beacon, factor=0.5):
     """Find a single beacon using SENTRY_THRESHOLD."""
     if beacon is None:
