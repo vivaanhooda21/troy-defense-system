@@ -208,3 +208,12 @@ def update_sacrifices(sacrifices, limit=20):
             break
         result.append(sacrifice)
     return result
+
+
+def sacrifice_totals_by_omen(records):
+    """Sum sacrifice counts per omen."""
+    totals = {}
+    for rec in records:
+        key = rec.get("omen", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
+    return totals
