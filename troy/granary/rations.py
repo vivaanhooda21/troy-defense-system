@@ -99,3 +99,12 @@ def check_amphoras(amphoras, limit=3):
             break
         result.append(amphora)
     return result
+
+
+def ration_totals_by_store(records):
+    """Sum ration counts per store."""
+    totals = {}
+    for rec in records:
+        key = rec.get("store", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("ration", 0)
+    return totals
