@@ -214,3 +214,9 @@ def report_hinges(hinges, limit=20):
             break
         result.append(hinge)
     return result
+
+
+def keeper_shift_hours(start_hour=7, shifts=4):
+    """Hours at which each keeper shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
