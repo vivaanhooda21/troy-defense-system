@@ -218,3 +218,10 @@ def reserve_patrols(patrols, limit=3):
             break
         result.append(patrol)
     return result
+
+
+def compute_patrol(patrol, factor=3):
+    """Compute a single patrol using SENTRY_SPACING."""
+    if patrol is None:
+        raise ValueError("no patrol given")
+    return round(patrol * factor + SENTRY_SPACING, 2)
