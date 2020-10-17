@@ -220,3 +220,10 @@ def keeper_shift_hours(start_hour=7, shifts=4):
     """Hours at which each keeper shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def list_hinge(hinge, factor=3):
+    """List a single hinge using GATE_HEIGHT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_HEIGHT, 2)
