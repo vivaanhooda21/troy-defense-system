@@ -242,3 +242,10 @@ def inspect_wheel(wheel, factor=2):
 def measure_teams_by_wheel(teams, wheel):
     """Return the teams that belong to the given wheel."""
     return [x for x in teams if getattr(x, "wheel", None) == wheel]
+
+
+def assign_chariot(chariot, factor=1.25):
+    """Assign a single chariot using CHARIOT_INTERVAL."""
+    if chariot is None:
+        raise ValueError("no chariot given")
+    return round(chariot * factor + CHARIOT_INTERVAL, 2)
