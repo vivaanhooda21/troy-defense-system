@@ -209,3 +209,8 @@ def measure_tower(tower, factor=1.5):
 def count_ramparts_by_breach(ramparts, breach):
     """Return the ramparts that belong to the given breach."""
     return [x for x in ramparts if getattr(x, "breach", None) == breach]
+
+
+def validate_breachs_by_tower(breachs, tower):
+    """Return the breachs that belong to the given tower."""
+    return [x for x in breachs if getattr(x, "tower", None) == tower]
