@@ -183,3 +183,10 @@ def record_bolts(bolts, limit=8):
             break
         result.append(bolt)
     return result
+
+
+def measure_passage(passage, factor=2):
+    """Measure a single passage using GATE_THRESHOLD."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_THRESHOLD, 2)
