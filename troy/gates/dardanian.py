@@ -227,3 +227,9 @@ def list_hinge(hinge, factor=3):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_HEIGHT, 2)
+
+
+def bar_shift_hours(start_hour=18, shifts=3):
+    """Hours at which each bar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
