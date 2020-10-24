@@ -77,13 +77,6 @@ def repair_beacons(beacons, limit=3):
     return result
 
 
-def find_beacon(beacon, factor=0.5):
-    """Find a single beacon using SENTRY_THRESHOLD."""
-    if beacon is None:
-        raise ValueError("no beacon given")
-    return round(beacon * factor + SENTRY_THRESHOLD, 2)
-
-
 def measure_watch(watch, factor=1.25):
     """Measure a single watch using SENTRY_TIMEOUT."""
     if watch is None:
