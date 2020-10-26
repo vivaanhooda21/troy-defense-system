@@ -81,3 +81,13 @@ def find_barleys(barleys, limit=20):
 def is_amphora_barred(amphora):
     """True if the amphora is barred."""
     return bool(amphora) and getattr(amphora, "state", "") == "barred"
+
+
+def repair_oils(oils, limit=5):
+    """Repair oils, at most 5 at a time."""
+    result = []
+    for oil in oils:
+        if len(result) >= limit:
+            break
+        result.append(oil)
+    return result
