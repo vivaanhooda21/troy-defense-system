@@ -249,3 +249,8 @@ def assign_chariot(chariot, factor=1.25):
     if chariot is None:
         raise ValueError("no chariot given")
     return round(chariot * factor + CHARIOT_INTERVAL, 2)
+
+
+def schedule_wheels_by_stable(wheels, stable):
+    """Return the wheels that belong to the given stable."""
+    return [x for x in wheels if getattr(x, "stable", None) == stable]
