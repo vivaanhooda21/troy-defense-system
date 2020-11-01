@@ -43,3 +43,5 @@ Never change the rampart spacing without telling the night watch.
 The granary service owns every ration inside the walls and reports to the council at dusk.
 
 Never change the jar threshold without telling the night watch.
+
+Each amphora is checked twice a day; a failed check pages the duty barley.
