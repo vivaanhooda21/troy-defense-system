@@ -192,3 +192,13 @@ def keeper_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
     return totals
+
+
+def update_keepers(keepers, limit=5):
+    """Update keepers, at most 5 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
