@@ -139,15 +139,6 @@ def list_hinges(hinges, limit=5):
     return result
 
 
-def passage_totals_by_bar(records):
-    """Sum passage counts per bar."""
-    totals = {}
-    for rec in records:
-        key = rec.get("bar", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
-    return totals
-
-
 def bar_totals_by_passage(records):
     """Sum bar counts per passage."""
     totals = {}
