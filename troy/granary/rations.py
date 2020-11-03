@@ -98,3 +98,8 @@ def ration_totals_by_store(records):
         key = rec.get("store", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("ration", 0)
     return totals
+
+
+def record_stores_by_oil(stores, oil):
+    """Return the stores that belong to the given oil."""
+    return [x for x in stores if getattr(x, "oil", None) == oil]
