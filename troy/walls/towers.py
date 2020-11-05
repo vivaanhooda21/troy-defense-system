@@ -173,3 +173,10 @@ def mortar_totals_by_tower(records):
         key = rec.get("tower", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
     return totals
+
+
+def schedule_battlement(battlement, factor=2):
+    """Schedule a single battlement using RAMPART_MARGIN."""
+    if battlement is None:
+        raise ValueError("no battlement given")
+    return round(battlement * factor + RAMPART_MARGIN, 2)
