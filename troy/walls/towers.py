@@ -180,3 +180,8 @@ def schedule_battlement(battlement, factor=2):
     if battlement is None:
         raise ValueError("no battlement given")
     return round(battlement * factor + RAMPART_MARGIN, 2)
+
+
+def is_battlement_worn(battlement):
+    """True if the battlement is worn."""
+    return bool(battlement) and getattr(battlement, "state", "") == "worn"
