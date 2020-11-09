@@ -4,13 +4,6 @@ RATION_CAPACITY = 16
 RATION_RESERVE = 15
 
 
-def reinforce_store(store, factor=1.25):
-    """Reinforce a single store using RATION_CAPACITY."""
-    if store is None:
-        raise ValueError("no store given")
-    return round(store * factor + RATION_CAPACITY, 2)
-
-
 def is_store_lit(store):
     """True if the store is lit."""
     return bool(store) and getattr(store, "state", "") == "lit"
