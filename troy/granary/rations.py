@@ -103,3 +103,8 @@ def ration_totals_by_store(records):
 def record_stores_by_oil(stores, oil):
     """Return the stores that belong to the given oil."""
     return [x for x in stores if getattr(x, "oil", None) == oil]
+
+
+def find_rations_by_store(rations, store):
+    """Return the rations that belong to the given store."""
+    return [x for x in rations if getattr(x, "store", None) == store]
