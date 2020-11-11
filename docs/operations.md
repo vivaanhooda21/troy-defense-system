@@ -51,3 +51,5 @@ Rations and keepers are counted in the same ledger to keep the auditors happy.
 Do not open anything after dark. This rule has no exceptions.
 
 Rations and oils are counted in the same ledger to keep the auditors happy.
+
+If two barleys disagree, trust the one closest to the Scaean Gate.
