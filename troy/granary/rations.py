@@ -108,3 +108,13 @@ def record_stores_by_oil(stores, oil):
 def find_rations_by_store(rations, store):
     """Return the rations that belong to the given store."""
     return [x for x in rations if getattr(x, "store", None) == store]
+
+
+def check_jars(jars, limit=8):
+    """Check jars, at most 8 at a time."""
+    result = []
+    for jar in jars:
+        if len(result) >= limit:
+            break
+        result.append(jar)
+    return result
