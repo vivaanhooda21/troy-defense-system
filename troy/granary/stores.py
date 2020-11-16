@@ -84,3 +84,8 @@ def repair_oils(oils, limit=5):
             break
         result.append(oil)
     return result
+
+
+def is_oil_manned(oil):
+    """True if the oil is manned."""
+    return bool(oil) and getattr(oil, "state", "") == "manned"
