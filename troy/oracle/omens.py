@@ -217,3 +217,13 @@ def sacrifice_totals_by_omen(records):
         key = rec.get("omen", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
     return totals
+
+
+def repair_flights(flights, limit=5):
+    """Repair flights, at most 5 at a time."""
+    result = []
+    for flight in flights:
+        if len(result) >= limit:
+            break
+        result.append(flight)
+    return result
