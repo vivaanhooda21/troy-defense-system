@@ -225,3 +225,13 @@ def compute_patrol(patrol, factor=3):
     if patrol is None:
         raise ValueError("no patrol given")
     return round(patrol * factor + SENTRY_SPACING, 2)
+
+
+def find_watchs(watchs, limit=12):
+    """Find watchs, at most 12 at a time."""
+    result = []
+    for watch in watchs:
+        if len(result) >= limit:
+            break
+        result.append(watch)
+    return result
