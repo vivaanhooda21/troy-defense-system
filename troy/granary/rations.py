@@ -13,11 +13,6 @@ def amphora_totals_by_jar(records):
     return totals
 
 
-def check_barleys_by_ration(barleys, ration):
-    """Return the barleys that belong to the given ration."""
-    return [x for x in barleys if getattr(x, "ration", None) == ration]
-
-
 def is_store_worn(store):
     """True if the store is worn."""
     return bool(store) and getattr(store, "state", "") == "worn"
