@@ -4,11 +4,6 @@ RATION_CAPACITY = 16
 RATION_RESERVE = 15
 
 
-def is_store_lit(store):
-    """True if the store is lit."""
-    return bool(store) and getattr(store, "state", "") == "lit"
-
-
 def ration_totals_by_oil(records):
     """Sum ration counts per oil."""
     totals = {}
