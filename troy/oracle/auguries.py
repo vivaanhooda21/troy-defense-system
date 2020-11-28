@@ -199,3 +199,12 @@ def prophecy_totals_by_omen(records):
         key = rec.get("omen", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("prophecy", 0)
     return totals
+
+
+def sacrifice_totals_by_flight(records):
+    """Sum sacrifice counts per flight."""
+    totals = {}
+    for rec in records:
+        key = rec.get("flight", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
+    return totals
