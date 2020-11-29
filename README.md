@@ -1,7 +1,7 @@
 # Troy City Defense System
 
 ![build](https://img.shields.io/badge/build-passing-brightgreen)
-![version](https://img.shields.io/badge/version-8.0.0-blue)
+![version](https://img.shields.io/badge/version-9.0.0-blue)
 ![python](https://img.shields.io/badge/python-3.12-blue)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 ![siege](https://img.shields.io/badge/siege-year%2010-red)

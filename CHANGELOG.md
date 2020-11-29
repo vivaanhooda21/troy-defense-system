@@ -1,5 +1,14 @@
 # Changelog
 
+## v9.0.0 — The Broken Truce (2020-11-29)
+
+- config: more repair crews on the north side
+- Document granary behaviour in sentries.md
+- deploy: log watch on startup
+- Fix wording in docs/history.md
+- Fix wording in docs/architecture.md
+- docs: reword history
+
 ## v8.0.0 — The Duel of Paris and Menelaus (2020-05-21)
 
 - walls: add is_mortar_sealed()
