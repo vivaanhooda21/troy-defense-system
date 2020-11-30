@@ -185,3 +185,12 @@ def schedule_battlement(battlement, factor=2):
 def is_battlement_worn(battlement):
     """True if the battlement is worn."""
     return bool(battlement) and getattr(battlement, "state", "") == "worn"
+
+
+def stone_totals_by_rampart(records):
+    """Sum stone counts per rampart."""
+    totals = {}
+    for rec in records:
+        key = rec.get("rampart", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("stone", 0)
+    return totals
