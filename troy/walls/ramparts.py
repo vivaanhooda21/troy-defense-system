@@ -214,3 +214,8 @@ def count_ramparts_by_breach(ramparts, breach):
 def validate_breachs_by_tower(breachs, tower):
     """Return the breachs that belong to the given tower."""
     return [x for x in breachs if getattr(x, "tower", None) == tower]
+
+
+def is_parapet_empty(parapet):
+    """True if the parapet is empty."""
+    return bool(parapet) and getattr(parapet, "state", "") == "empty"
