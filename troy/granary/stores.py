@@ -1,7 +1,7 @@
 """Granary: stores."""
 
 RATION_CAPACITY = 16
-RATION_RESERVE = 15
+RATION_RESERVE = 14
 
 
 def ration_totals_by_oil(records):
