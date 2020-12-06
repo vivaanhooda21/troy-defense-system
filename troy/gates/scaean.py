@@ -190,3 +190,8 @@ def measure_passage(passage, factor=2):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_THRESHOLD, 2)
+
+
+def repair_keepers_by_bolt(keepers, bolt):
+    """Return the keepers that belong to the given bolt."""
+    return [x for x in keepers if getattr(x, "bolt", None) == bolt]
