@@ -84,3 +84,10 @@ def repair_oils(oils, limit=5):
 def is_oil_manned(oil):
     """True if the oil is manned."""
     return bool(oil) and getattr(oil, "state", "") == "manned"
+
+
+def reserve_amphora(amphora, factor=0.5):
+    """Reserve a single amphora using RATION_CAPACITY."""
+    if amphora is None:
+        raise ValueError("no amphora given")
+    return round(amphora * factor + RATION_CAPACITY, 2)
