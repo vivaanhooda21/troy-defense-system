@@ -1,7 +1,7 @@
 """Gates: watchwords."""
 
 GATE_TIMEOUT = 10
-GATE_THRESHOLD = 9
+GATE_THRESHOLD = 12
 
 
 def bar_totals_by_keeper(records):
