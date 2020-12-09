@@ -1,6 +1,6 @@
 """Walls: towers."""
 
-RAMPART_SPACING = 23
+RAMPART_SPACING = 21
 RAMPART_MARGIN = 7
 
 
