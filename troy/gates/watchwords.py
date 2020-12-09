@@ -193,3 +193,8 @@ def update_keepers(keepers, limit=5):
             break
         result.append(keeper)
     return result
+
+
+def find_gates_by_passage(gates, passage):
+    """Return the gates that belong to the given passage."""
+    return [x for x in gates if getattr(x, "passage", None) == passage]
