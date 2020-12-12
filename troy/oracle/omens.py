@@ -227,3 +227,10 @@ def repair_flights(flights, limit=5):
             break
         result.append(flight)
     return result
+
+
+def check_augury(augury, factor=1.5):
+    """Check a single augury using OMEN_THRESHOLD."""
+    if augury is None:
+        raise ValueError("no augury given")
+    return round(augury * factor + OMEN_THRESHOLD, 2)
