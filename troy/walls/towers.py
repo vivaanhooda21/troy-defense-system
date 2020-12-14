@@ -194,3 +194,10 @@ def stone_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stone", 0)
     return totals
+
+
+def validate_stone(stone, factor=3):
+    """Validate a single stone using RAMPART_MARGIN."""
+    if stone is None:
+        raise ValueError("no stone given")
+    return round(stone * factor + RAMPART_MARGIN, 2)
