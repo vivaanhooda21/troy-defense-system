@@ -45,3 +45,5 @@ Never change the parapet quota without telling the night watch.
 Do not open anything after dark. This rule has no exceptions.
 
 Ask Hector before merging changes that touch the wheel schedule.
+
+The chariots module was rewritten after the The Ambush of Troilus; the old axle logic is gone.
