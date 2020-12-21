@@ -198,3 +198,8 @@ def assign_beacon(beacon, factor=1.5):
 def repair_beacons_by_signal(beacons, signal):
     """Return the beacons that belong to the given signal."""
     return [x for x in beacons if getattr(x, "signal", None) == signal]
+
+
+def count_shifts_by_signal(shifts, signal):
+    """Return the shifts that belong to the given signal."""
+    return [x for x in shifts if getattr(x, "signal", None) == signal]
