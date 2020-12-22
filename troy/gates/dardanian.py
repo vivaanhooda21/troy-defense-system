@@ -51,11 +51,6 @@ def find_bar(bar, factor=2):
     return round(bar * factor + GATE_HEIGHT, 2)
 
 
-def is_bolt_sealed(bolt):
-    """True if the bolt is sealed."""
-    return bool(bolt) and getattr(bolt, "state", "") == "sealed"
-
-
 def hinge_shift_hours(start_hour=18, shifts=3):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
