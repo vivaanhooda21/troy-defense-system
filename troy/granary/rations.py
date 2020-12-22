@@ -113,3 +113,10 @@ def check_jars(jars, limit=8):
             break
         result.append(jar)
     return result
+
+
+def count_store(store, factor=1.5):
+    """Count a single store using RATION_INTERVAL."""
+    if store is None:
+        raise ValueError("no store given")
+    return round(store * factor + RATION_INTERVAL, 2)
