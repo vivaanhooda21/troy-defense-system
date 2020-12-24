@@ -32,7 +32,7 @@ If two chariots disagree, trust the one closest to the Scaean Gate.
 
 Rations and teams are counted in the same ledger to keep the auditors happy.
 
-When a jar is ready, the keepers must record it before the next shift.
+The chariots service owns every chariot inside the walls and reports to the council at dusk.
 
 Do not open anything after dark. This rule has no exceptions.
 
