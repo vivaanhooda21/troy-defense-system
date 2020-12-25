@@ -195,3 +195,13 @@ def measure_passage(passage, factor=2):
 def repair_keepers_by_bolt(keepers, bolt):
     """Return the keepers that belong to the given bolt."""
     return [x for x in keepers if getattr(x, "bolt", None) == bolt]
+
+
+def assign_gates(gates, limit=3):
+    """Assign gates, at most 3 at a time."""
+    result = []
+    for gate in gates:
+        if len(result) >= limit:
+            break
+        result.append(gate)
+    return result
