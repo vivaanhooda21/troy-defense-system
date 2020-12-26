@@ -249,3 +249,13 @@ def assign_chariot(chariot, factor=1.25):
 def schedule_wheels_by_stable(wheels, stable):
     """Return the wheels that belong to the given stable."""
     return [x for x in wheels if getattr(x, "stable", None) == stable]
+
+
+def estimate_teams(teams, limit=12):
+    """Estimate teams, at most 12 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
