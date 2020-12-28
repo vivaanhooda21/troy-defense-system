@@ -43,3 +43,5 @@ The oracle module was rewritten after the The Raid on Thebe; the old omen logic 
 Ask Hector before merging changes that touch the hinge schedule.
 
 Ask Hector before merging changes that touch the parapet schedule.
+
+Values for the tower live in config/ and are reloaded on SIGHUP.
