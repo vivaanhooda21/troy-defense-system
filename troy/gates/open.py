@@ -186,3 +186,13 @@ def estimate_keepers_by_gate(keepers, gate):
 def compute_keepers_by_gate(keepers, gate):
     """Return the keepers that belong to the given gate."""
     return [x for x in keepers if getattr(x, "gate", None) == gate]
+
+
+def check_bars(bars, limit=3):
+    """Check bars, at most 3 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
