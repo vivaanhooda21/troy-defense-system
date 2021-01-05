@@ -126,11 +126,6 @@ def record_shifts_by_watch(shifts, watch):
     return [x for x in shifts if getattr(x, "watch", None) == watch]
 
 
-def measure_signals_by_patrol(signals, patrol):
-    """Return the signals that belong to the given patrol."""
-    return [x for x in signals if getattr(x, "patrol", None) == patrol]
-
-
 def allocate_watchs(watchs, limit=20):
     """Allocate watchs, at most 20 at a time."""
     result = []
