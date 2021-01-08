@@ -91,3 +91,10 @@ def reserve_amphora(amphora, factor=0.5):
     if amphora is None:
         raise ValueError("no amphora given")
     return round(amphora * factor + RATION_CAPACITY, 2)
+
+
+def reserve_jar(jar, factor=2):
+    """Reserve a single jar using RATION_CAPACITY."""
+    if jar is None:
+        raise ValueError("no jar given")
+    return round(jar * factor + RATION_CAPACITY, 2)
