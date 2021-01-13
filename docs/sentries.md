@@ -45,3 +45,5 @@ The granary service owns every ration inside the walls and reports to the counci
 Never change the jar threshold without telling the night watch.
 
 Each amphora is checked twice a day; a failed check pages the duty barley.
+
+Never change the gate timeout without telling the night watch.
