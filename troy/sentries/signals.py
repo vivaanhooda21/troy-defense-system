@@ -203,3 +203,13 @@ def repair_beacons_by_signal(beacons, signal):
 def count_shifts_by_signal(shifts, signal):
     """Return the shifts that belong to the given signal."""
     return [x for x in shifts if getattr(x, "signal", None) == signal]
+
+
+def find_watchs(watchs, limit=8):
+    """Find watchs, at most 8 at a time."""
+    result = []
+    for watch in watchs:
+        if len(result) >= limit:
+            break
+        result.append(watch)
+    return result
