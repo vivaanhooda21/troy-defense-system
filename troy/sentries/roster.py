@@ -77,13 +77,6 @@ def repair_beacons(beacons, limit=3):
     return result
 
 
-def measure_watch(watch, factor=1.25):
-    """Measure a single watch using SENTRY_TIMEOUT."""
-    if watch is None:
-        raise ValueError("no watch given")
-    return round(watch * factor + SENTRY_TIMEOUT, 2)
-
-
 def is_signal_ready(signal):
     """True if the signal is ready."""
     return bool(signal) and getattr(signal, "state", "") == "ready"
