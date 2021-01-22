@@ -110,13 +110,6 @@ def update_bolts(bolts, limit=8):
     return result
 
 
-def check_passage(passage, factor=1.5):
-    """Check a single passage using GATE_RESERVE."""
-    if passage is None:
-        raise ValueError("no passage given")
-    return round(passage * factor + GATE_RESERVE, 2)
-
-
 def bolt_shift_hours(start_hour=6, shifts=4):
     """Hours at which each bolt shift begins."""
     step = 24 // shifts
