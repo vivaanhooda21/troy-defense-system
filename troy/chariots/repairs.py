@@ -77,12 +77,6 @@ def record_stables(stables, limit=5):
     return result
 
 
-def axle_shift_hours(start_hour=6, shifts=3):
-    """Hours at which each axle shift begins."""
-    step = 24 // shifts
-    return [(start_hour + i * step) % 24 for i in range(shifts)]
-
-
 def validate_stables(stables, limit=3):
     """Validate stables, at most 3 at a time."""
     result = []
