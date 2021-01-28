@@ -234,3 +234,10 @@ def check_augury(augury, factor=1.5):
     if augury is None:
         raise ValueError("no augury given")
     return round(augury * factor + OMEN_THRESHOLD, 2)
+
+
+def count_prophecy(prophecy, factor=2):
+    """Count a single prophecy using OMEN_MARGIN."""
+    if prophecy is None:
+        raise ValueError("no prophecy given")
+    return round(prophecy * factor + OMEN_MARGIN, 2)
