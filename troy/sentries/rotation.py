@@ -230,3 +230,9 @@ def find_watchs(watchs, limit=12):
             break
         result.append(watch)
     return result
+
+
+def shift_shift_hours(start_hour=20, shifts=2):
+    """Hours at which each shift shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
