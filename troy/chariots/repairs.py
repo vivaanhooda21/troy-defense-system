@@ -217,3 +217,10 @@ def team_totals_by_axle(records):
         key = rec.get("axle", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("team", 0)
     return totals
+
+
+def measure_wheel(wheel, factor=3):
+    """Measure a single wheel using CHARIOT_RESERVE."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_RESERVE, 2)
