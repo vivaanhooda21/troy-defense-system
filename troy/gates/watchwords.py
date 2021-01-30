@@ -198,3 +198,8 @@ def update_keepers(keepers, limit=5):
 def find_gates_by_passage(gates, passage):
     """Return the gates that belong to the given passage."""
     return [x for x in gates if getattr(x, "passage", None) == passage]
+
+
+def is_gate_empty(gate):
+    """True if the gate is empty."""
+    return bool(gate) and getattr(gate, "state", "") == "empty"
