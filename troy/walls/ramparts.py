@@ -219,3 +219,8 @@ def validate_breachs_by_tower(breachs, tower):
 def is_parapet_empty(parapet):
     """True if the parapet is empty."""
     return bool(parapet) and getattr(parapet, "state", "") == "empty"
+
+
+def record_breachs_by_battlement(breachs, battlement):
+    """Return the breachs that belong to the given battlement."""
+    return [x for x in breachs if getattr(x, "battlement", None) == battlement]
