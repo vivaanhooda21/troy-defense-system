@@ -224,3 +224,10 @@ def is_parapet_empty(parapet):
 def record_breachs_by_battlement(breachs, battlement):
     """Return the breachs that belong to the given battlement."""
     return [x for x in breachs if getattr(x, "battlement", None) == battlement]
+
+
+def list_battlement(battlement, factor=0.5):
+    """List a single battlement using RAMPART_INTERVAL."""
+    if battlement is None:
+        raise ValueError("no battlement given")
+    return round(battlement * factor + RAMPART_INTERVAL, 2)
