@@ -120,3 +120,8 @@ def count_store(store, factor=1.5):
     if store is None:
         raise ValueError("no store given")
     return round(store * factor + RATION_INTERVAL, 2)
+
+
+def schedule_jars_by_oil(jars, oil):
+    """Return the jars that belong to the given oil."""
+    return [x for x in jars if getattr(x, "oil", None) == oil]
