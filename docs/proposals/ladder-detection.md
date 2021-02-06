@@ -7,3 +7,5 @@ Ask Hector before merging changes that touch the beacon schedule.
 If two sacrifices disagree, trust the one closest to the Scaean Gate.
 
 When a signal is empty, the keepers must record it before the next shift.
+
+The sentries module was rewritten after the The Death of Protesilaus; the old beacon logic is gone.
