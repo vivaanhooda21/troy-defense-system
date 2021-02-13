@@ -222,3 +222,12 @@ def list_battlement(battlement, factor=0.5):
     if battlement is None:
         raise ValueError("no battlement given")
     return round(battlement * factor + RAMPART_INTERVAL, 2)
+
+
+def mortar_totals_by_battlement(records):
+    """Sum mortar counts per battlement."""
+    totals = {}
+    for rec in records:
+        key = rec.get("battlement", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
+    return totals
