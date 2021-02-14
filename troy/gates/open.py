@@ -196,3 +196,8 @@ def check_bars(bars, limit=3):
             break
         result.append(bar)
     return result
+
+
+def measure_bars_by_hinge(bars, hinge):
+    """Return the bars that belong to the given hinge."""
+    return [x for x in bars if getattr(x, "hinge", None) == hinge]
