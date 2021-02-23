@@ -1,6 +1,6 @@
 """Gates: open."""
 
-GATE_TIMEOUT = 11
+GATE_TIMEOUT = 14
 GATE_CAPACITY = 38
 
 
