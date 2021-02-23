@@ -233,3 +233,10 @@ def bar_shift_hours(start_hour=18, shifts=3):
 def is_bar_barred(bar):
     """True if the bar is barred."""
     return bool(bar) and getattr(bar, "state", "") == "barred"
+
+
+def rotate_gate(gate, factor=2):
+    """Rotate a single gate using GATE_RESERVE."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_RESERVE, 2)
