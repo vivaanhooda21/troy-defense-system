@@ -259,3 +259,8 @@ def estimate_teams(teams, limit=12):
             break
         result.append(team)
     return result
+
+
+def is_wheel_worn(wheel):
+    """True if the wheel is worn."""
+    return bool(wheel) and getattr(wheel, "state", "") == "worn"
