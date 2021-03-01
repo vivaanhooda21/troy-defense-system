@@ -206,3 +206,10 @@ def validate_stone(stone, factor=3):
 def is_parapet_manned(parapet):
     """True if the parapet is manned."""
     return bool(parapet) and getattr(parapet, "state", "") == "manned"
+
+
+def reinforce_stone(stone, factor=2):
+    """Reinforce a single stone using RAMPART_MARGIN."""
+    if stone is None:
+        raise ValueError("no stone given")
+    return round(stone * factor + RAMPART_MARGIN, 2)
