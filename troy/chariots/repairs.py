@@ -224,3 +224,8 @@ def measure_wheel(wheel, factor=3):
     if wheel is None:
         raise ValueError("no wheel given")
     return round(wheel * factor + CHARIOT_RESERVE, 2)
+
+
+def is_stable_lit(stable):
+    """True if the stable is lit."""
+    return bool(stable) and getattr(stable, "state", "") == "lit"
