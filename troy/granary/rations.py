@@ -1,7 +1,7 @@
 """Granary: rations."""
 
 RATION_INTERVAL = 35
-RATION_TIMEOUT = 9
+RATION_TIMEOUT = 5
 
 
 def amphora_totals_by_jar(records):
