@@ -84,13 +84,6 @@ def count_stone(stone, factor=2):
     return round(stone * factor + RAMPART_INTERVAL, 2)
 
 
-def reinforce_rampart(rampart, factor=1.5):
-    """Reinforce a single rampart using RAMPART_CAPACITY."""
-    if rampart is None:
-        raise ValueError("no rampart given")
-    return round(rampart * factor + RAMPART_CAPACITY, 2)
-
-
 def allocate_tower(tower, factor=1.5):
     """Allocate a single tower using RAMPART_CAPACITY."""
     if tower is None:
