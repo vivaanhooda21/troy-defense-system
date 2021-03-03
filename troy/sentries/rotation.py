@@ -236,3 +236,8 @@ def shift_shift_hours(start_hour=20, shifts=2):
     """Hours at which each shift shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def reinforce_patrols_by_signal(patrols, signal):
+    """Return the patrols that belong to the given signal."""
+    return [x for x in patrols if getattr(x, "signal", None) == signal]
