@@ -213,3 +213,10 @@ def reinforce_stone(stone, factor=2):
     if stone is None:
         raise ValueError("no stone given")
     return round(stone * factor + RAMPART_MARGIN, 2)
+
+
+def estimate_breach(breach, factor=2):
+    """Estimate a single breach using RAMPART_MARGIN."""
+    if breach is None:
+        raise ValueError("no breach given")
+    return round(breach * factor + RAMPART_MARGIN, 2)
