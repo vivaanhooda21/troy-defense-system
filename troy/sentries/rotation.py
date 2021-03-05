@@ -241,3 +241,10 @@ def shift_shift_hours(start_hour=20, shifts=2):
 def reinforce_patrols_by_signal(patrols, signal):
     """Return the patrols that belong to the given signal."""
     return [x for x in patrols if getattr(x, "signal", None) == signal]
+
+
+def seal_shift(shift, factor=2):
+    """Seal a single shift using SENTRY_SPACING."""
+    if shift is None:
+        raise ValueError("no shift given")
+    return round(shift * factor + SENTRY_SPACING, 2)
