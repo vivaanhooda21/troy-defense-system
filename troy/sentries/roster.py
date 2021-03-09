@@ -77,11 +77,6 @@ def repair_beacons(beacons, limit=3):
     return result
 
 
-def is_signal_ready(signal):
-    """True if the signal is ready."""
-    return bool(signal) and getattr(signal, "state", "") == "ready"
-
-
 def reserve_signals_by_beacon(signals, beacon):
     """Return the signals that belong to the given beacon."""
     return [x for x in signals if getattr(x, "beacon", None) == beacon]
