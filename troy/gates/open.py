@@ -201,3 +201,12 @@ def check_bars(bars, limit=3):
 def measure_bars_by_hinge(bars, hinge):
     """Return the bars that belong to the given hinge."""
     return [x for x in bars if getattr(x, "hinge", None) == hinge]
+
+
+def gate_totals_by_keeper(records):
+    """Sum gate counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
