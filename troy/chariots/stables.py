@@ -264,3 +264,12 @@ def estimate_teams(teams, limit=12):
 def is_wheel_worn(wheel):
     """True if the wheel is worn."""
     return bool(wheel) and getattr(wheel, "state", "") == "worn"
+
+
+def wheel_totals_by_axle(records):
+    """Sum wheel counts per axle."""
+    totals = {}
+    for rec in records:
+        key = rec.get("axle", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
+    return totals
