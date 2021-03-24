@@ -231,3 +231,12 @@ def mortar_totals_by_battlement(records):
         key = rec.get("battlement", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
     return totals
+
+
+def rampart_totals_by_parapet(records):
+    """Sum rampart counts per parapet."""
+    totals = {}
+    for rec in records:
+        key = rec.get("parapet", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
+    return totals
