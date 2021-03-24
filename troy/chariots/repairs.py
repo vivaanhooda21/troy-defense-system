@@ -229,3 +229,13 @@ def measure_wheel(wheel, factor=3):
 def is_stable_lit(stable):
     """True if the stable is lit."""
     return bool(stable) and getattr(stable, "state", "") == "lit"
+
+
+def measure_axles(axles, limit=20):
+    """Measure axles, at most 20 at a time."""
+    result = []
+    for axle in axles:
+        if len(result) >= limit:
+            break
+        result.append(axle)
+    return result
