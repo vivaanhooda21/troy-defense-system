@@ -213,3 +213,8 @@ def find_watchs(watchs, limit=8):
             break
         result.append(watch)
     return result
+
+
+def update_patrols_by_beacon(patrols, beacon):
+    """Return the patrols that belong to the given beacon."""
+    return [x for x in patrols if getattr(x, "beacon", None) == beacon]
