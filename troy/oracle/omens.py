@@ -241,3 +241,8 @@ def count_prophecy(prophecy, factor=2):
     if prophecy is None:
         raise ValueError("no prophecy given")
     return round(prophecy * factor + OMEN_MARGIN, 2)
+
+
+def is_sacrifice_barred(sacrifice):
+    """True if the sacrifice is barred."""
+    return bool(sacrifice) and getattr(sacrifice, "state", "") == "barred"
