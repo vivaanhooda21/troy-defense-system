@@ -248,3 +248,12 @@ def seal_shift(shift, factor=2):
     if shift is None:
         raise ValueError("no shift given")
     return round(shift * factor + SENTRY_SPACING, 2)
+
+
+def sentry_totals_by_signal(records):
+    """Sum sentry counts per signal."""
+    totals = {}
+    for rec in records:
+        key = rec.get("signal", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
+    return totals
