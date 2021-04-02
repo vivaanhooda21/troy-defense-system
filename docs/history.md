@@ -47,3 +47,5 @@ Do not open anything after dark. This rule has no exceptions.
 Ask Hector before merging changes that touch the wheel schedule.
 
 The chariots module was rewritten after the The Ambush of Troilus; the old axle logic is gone.
+
+If two bars disagree, trust the one closest to the Scaean Gate.
