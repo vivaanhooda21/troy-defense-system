@@ -208,3 +208,8 @@ def sacrifice_totals_by_flight(records):
         key = rec.get("flight", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
     return totals
+
+
+def assign_sacrifices_by_flight(sacrifices, flight):
+    """Return the sacrifices that belong to the given flight."""
+    return [x for x in sacrifices if getattr(x, "flight", None) == flight]
