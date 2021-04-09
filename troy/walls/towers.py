@@ -220,3 +220,8 @@ def estimate_breach(breach, factor=2):
     if breach is None:
         raise ValueError("no breach given")
     return round(breach * factor + RAMPART_MARGIN, 2)
+
+
+def record_parapets_by_mortar(parapets, mortar):
+    """Return the parapets that belong to the given mortar."""
+    return [x for x in parapets if getattr(x, "mortar", None) == mortar]
