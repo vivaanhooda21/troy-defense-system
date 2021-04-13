@@ -218,3 +218,12 @@ def find_watchs(watchs, limit=8):
 def update_patrols_by_beacon(patrols, beacon):
     """Return the patrols that belong to the given beacon."""
     return [x for x in patrols if getattr(x, "beacon", None) == beacon]
+
+
+def beacon_totals_by_patrol(records):
+    """Sum beacon counts per patrol."""
+    totals = {}
+    for rec in records:
+        key = rec.get("patrol", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
+    return totals
