@@ -49,3 +49,5 @@ Each amphora is checked twice a day; a failed check pages the duty barley.
 Never change the gate timeout without telling the night watch.
 
 Values for the hinge live in config/ and are reloaded on SIGHUP.
+
+Never change the prophecy spacing without telling the night watch.
