@@ -98,3 +98,8 @@ def reserve_jar(jar, factor=2):
     if jar is None:
         raise ValueError("no jar given")
     return round(jar * factor + RATION_CAPACITY, 2)
+
+
+def is_oil_worn(oil):
+    """True if the oil is worn."""
+    return bool(oil) and getattr(oil, "state", "") == "worn"
