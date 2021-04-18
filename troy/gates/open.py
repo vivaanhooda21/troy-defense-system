@@ -210,3 +210,8 @@ def gate_totals_by_keeper(records):
         key = rec.get("keeper", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def count_keepers_by_bolt(keepers, bolt):
+    """Return the keepers that belong to the given bolt."""
+    return [x for x in keepers if getattr(x, "bolt", None) == bolt]
