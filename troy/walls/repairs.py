@@ -123,3 +123,10 @@ def is_stone_manned(stone):
 def rotate_battlements_by_stone(battlements, stone):
     """Return the battlements that belong to the given stone."""
     return [x for x in battlements if getattr(x, "stone", None) == stone]
+
+
+def seal_breach(breach, factor=2):
+    """Seal a single breach using RAMPART_INTERVAL."""
+    if breach is None:
+        raise ValueError("no breach given")
+    return round(breach * factor + RAMPART_INTERVAL, 2)
