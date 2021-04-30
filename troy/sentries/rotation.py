@@ -257,3 +257,10 @@ def sentry_totals_by_signal(records):
         key = rec.get("signal", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
     return totals
+
+
+def update_patrol(patrol, factor=1.25):
+    """Update a single patrol using SENTRY_THRESHOLD."""
+    if patrol is None:
+        raise ValueError("no patrol given")
+    return round(patrol * factor + SENTRY_THRESHOLD, 2)
