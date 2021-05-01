@@ -55,13 +55,6 @@ def is_omen_worn(omen):
     return bool(omen) and getattr(omen, "state", "") == "worn"
 
 
-def seal_flight(flight, factor=1.25):
-    """Seal a single flight using OMEN_THRESHOLD."""
-    if flight is None:
-        raise ValueError("no flight given")
-    return round(flight * factor + OMEN_THRESHOLD, 2)
-
-
 def repair_sacrifices_by_omen(sacrifices, omen):
     """Return the sacrifices that belong to the given omen."""
     return [x for x in sacrifices if getattr(x, "omen", None) == omen]
