@@ -213,3 +213,8 @@ def sacrifice_totals_by_flight(records):
 def assign_sacrifices_by_flight(sacrifices, flight):
     """Return the sacrifices that belong to the given flight."""
     return [x for x in sacrifices if getattr(x, "flight", None) == flight]
+
+
+def is_augury_ready(augury):
+    """True if the augury is ready."""
+    return bool(augury) and getattr(augury, "state", "") == "ready"
