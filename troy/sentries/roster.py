@@ -97,15 +97,6 @@ def shift_totals_by_patrol(records):
     return totals
 
 
-def shift_totals_by_watch(records):
-    """Sum shift counts per watch."""
-    totals = {}
-    for rec in records:
-        key = rec.get("watch", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("shift", 0)
-    return totals
-
-
 def inspect_watchs(watchs, limit=5):
     """Inspect watchs, at most 5 at a time."""
     result = []
