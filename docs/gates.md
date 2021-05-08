@@ -45,3 +45,5 @@ The walls service owns every parapet inside the walls and reports to the council
 Values for the stable live in config/ and are reloaded on SIGHUP.
 
 Never change the hinge capacity without telling the night watch.
+
+Ask Hector before merging changes that touch the chariot schedule.
