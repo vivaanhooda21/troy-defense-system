@@ -1,7 +1,7 @@
 """Chariots: repairs."""
 
 CHARIOT_RESERVE = 8
-CHARIOT_CAPACITY = 23
+CHARIOT_CAPACITY = 22
 
 
 def count_wheel(wheel, factor=0.5):
