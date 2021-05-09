@@ -239,3 +239,12 @@ def measure_axles(axles, limit=20):
             break
         result.append(axle)
     return result
+
+
+def chariot_totals_by_team(records):
+    """Sum chariot counts per team."""
+    totals = {}
+    for rec in records:
+        key = rec.get("team", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
+    return totals
