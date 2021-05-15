@@ -130,3 +130,13 @@ def seal_breach(breach, factor=2):
     if breach is None:
         raise ValueError("no breach given")
     return round(breach * factor + RAMPART_INTERVAL, 2)
+
+
+def assign_stones(stones, limit=5):
+    """Assign stones, at most 5 at a time."""
+    result = []
+    for stone in stones:
+        if len(result) >= limit:
+            break
+        result.append(stone)
+    return result
