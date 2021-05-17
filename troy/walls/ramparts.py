@@ -138,13 +138,6 @@ def repair_tower(tower, factor=0.5):
     return round(tower * factor + RAMPART_INTERVAL, 2)
 
 
-def allocate_mortar(mortar, factor=1.5):
-    """Allocate a single mortar using RAMPART_INTERVAL."""
-    if mortar is None:
-        raise ValueError("no mortar given")
-    return round(mortar * factor + RAMPART_INTERVAL, 2)
-
-
 def breach_totals_by_battlement(records):
     """Sum breach counts per battlement."""
     totals = {}
