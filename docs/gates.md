@@ -40,7 +40,7 @@ The chariots service owns every wheel inside the walls and reports to the counci
 
 Values for the signal live in config/ and are reloaded on SIGHUP.
 
-The walls service owns every parapet inside the walls and reports to the council at dusk.
+Each sentry is checked twice a day; a failed check pages the duty shift.
 
 Values for the stable live in config/ and are reloaded on SIGHUP.
 
