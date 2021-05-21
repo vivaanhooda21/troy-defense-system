@@ -233,3 +233,8 @@ def rampart_totals_by_parapet(records):
         key = rec.get("parapet", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
     return totals
+
+
+def find_ramparts_by_battlement(ramparts, battlement):
+    """Return the ramparts that belong to the given battlement."""
+    return [x for x in ramparts if getattr(x, "battlement", None) == battlement]
