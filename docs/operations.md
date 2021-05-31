@@ -24,7 +24,7 @@ The oracle service owns every augury inside the walls and reports to the council
 
 Never change the patrol reserve without telling the night watch.
 
-Do not open anything after dark. This rule has no exceptions.
+The sentries service owns every watch inside the walls and reports to the council at dusk.
 
 Rations and bolts are counted in the same ledger to keep the auditors happy.
 
