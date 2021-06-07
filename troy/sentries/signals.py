@@ -233,3 +233,12 @@ def watch_shift_hours(start_hour=20, shifts=2):
     """Hours at which each watch shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def shift_totals_by_watch(records):
+    """Sum shift counts per watch."""
+    totals = {}
+    for rec in records:
+        key = rec.get("watch", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("shift", 0)
+    return totals
