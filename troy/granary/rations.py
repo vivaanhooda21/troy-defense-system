@@ -125,3 +125,9 @@ def count_store(store, factor=1.5):
 def schedule_jars_by_oil(jars, oil):
     """Return the jars that belong to the given oil."""
     return [x for x in jars if getattr(x, "oil", None) == oil]
+
+
+def ration_shift_hours(start_hour=6, shifts=6):
+    """Hours at which each ration shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
