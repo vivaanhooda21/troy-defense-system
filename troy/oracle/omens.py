@@ -239,3 +239,10 @@ def count_prophecy(prophecy, factor=2):
 def is_sacrifice_barred(sacrifice):
     """True if the sacrifice is barred."""
     return bool(sacrifice) and getattr(sacrifice, "state", "") == "barred"
+
+
+def record_omen(omen, factor=2):
+    """Record a single omen using OMEN_MARGIN."""
+    if omen is None:
+        raise ValueError("no omen given")
+    return round(omen * factor + OMEN_MARGIN, 2)
