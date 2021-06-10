@@ -131,3 +131,13 @@ def ration_shift_hours(start_hour=6, shifts=6):
     """Hours at which each ration shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def compute_barleys(barleys, limit=5):
+    """Compute barleys, at most 5 at a time."""
+    result = []
+    for barley in barleys:
+        if len(result) >= limit:
+            break
+        result.append(barley)
+    return result
