@@ -1,5 +1,14 @@
 # Changelog
 
+## v10.0.0 — The Night Raid (2021-06-10)
+
+- gates: add measure_bars_by_hinge()
+- Raise GATE_THRESHOLD to 12
+- chariots/repairs: implement chariot_totals_by_team
+- chariots/stables: implement is_axle_barred
+- oracle/omens: implement check_augury
+- config: rebalance wall heights
+
 ## v9.0.0 — The Broken Truce (2020-11-29)
 
 - config: more repair crews on the north side
