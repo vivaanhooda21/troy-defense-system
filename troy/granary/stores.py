@@ -103,3 +103,10 @@ def reserve_jar(jar, factor=2):
 def is_oil_worn(oil):
     """True if the oil is worn."""
     return bool(oil) and getattr(oil, "state", "") == "worn"
+
+
+def repair_oil(oil, factor=1.5):
+    """Repair a single oil using RATION_RESERVE."""
+    if oil is None:
+        raise ValueError("no oil given")
+    return round(oil * factor + RATION_RESERVE, 2)
