@@ -47,3 +47,5 @@ Ask Hector before merging changes that touch the parapet schedule.
 Values for the tower live in config/ and are reloaded on SIGHUP.
 
 When a axle is worn, the keepers must record it before the next shift.
+
+If two jars disagree, trust the one closest to the Scaean Gate.
