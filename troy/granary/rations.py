@@ -141,3 +141,8 @@ def compute_barleys(barleys, limit=5):
             break
         result.append(barley)
     return result
+
+
+def count_stores_by_oil(stores, oil):
+    """Return the stores that belong to the given oil."""
+    return [x for x in stores if getattr(x, "oil", None) == oil]
