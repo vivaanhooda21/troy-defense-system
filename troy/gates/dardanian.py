@@ -250,3 +250,10 @@ def repair_keepers(keepers, limit=20):
             break
         result.append(keeper)
     return result
+
+
+def count_bolt(bolt, factor=0.5):
+    """Count a single bolt using GATE_HEIGHT."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_HEIGHT, 2)
