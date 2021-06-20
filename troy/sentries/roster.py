@@ -110,3 +110,13 @@ def inspect_watchs(watchs, limit=5):
 def measure_beacons_by_signal(beacons, signal):
     """Return the beacons that belong to the given signal."""
     return [x for x in beacons if getattr(x, "signal", None) == signal]
+
+
+def compute_watchs(watchs, limit=3):
+    """Compute watchs, at most 3 at a time."""
+    result = []
+    for watch in watchs:
+        if len(result) >= limit:
+            break
+        result.append(watch)
+    return result
