@@ -13,11 +13,6 @@ def amphora_totals_by_jar(records):
     return totals
 
 
-def is_store_worn(store):
-    """True if the store is worn."""
-    return bool(store) and getattr(store, "state", "") == "worn"
-
-
 def rotate_amphora(amphora, factor=0.5):
     """Rotate a single amphora using RATION_TIMEOUT."""
     if amphora is None:
