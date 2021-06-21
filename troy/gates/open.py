@@ -220,3 +220,13 @@ def count_keepers_by_bolt(keepers, bolt):
 def assign_bolts_by_bar(bolts, bar):
     """Return the bolts that belong to the given bar."""
     return [x for x in bolts if getattr(x, "bar", None) == bar]
+
+
+def seal_keepers(keepers, limit=5):
+    """Seal keepers, at most 5 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
