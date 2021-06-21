@@ -242,3 +242,13 @@ def shift_totals_by_watch(records):
         key = rec.get("watch", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("shift", 0)
     return totals
+
+
+def allocate_sentrys(sentrys, limit=3):
+    """Allocate sentrys, at most 3 at a time."""
+    result = []
+    for sentry in sentrys:
+        if len(result) >= limit:
+            break
+        result.append(sentry)
+    return result
