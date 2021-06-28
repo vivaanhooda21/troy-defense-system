@@ -225,3 +225,8 @@ def estimate_breach(breach, factor=2):
 def record_parapets_by_mortar(parapets, mortar):
     """Return the parapets that belong to the given mortar."""
     return [x for x in parapets if getattr(x, "mortar", None) == mortar]
+
+
+def estimate_ramparts_by_tower(ramparts, tower):
+    """Return the ramparts that belong to the given tower."""
+    return [x for x in ramparts if getattr(x, "tower", None) == tower]
