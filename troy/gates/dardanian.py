@@ -257,3 +257,8 @@ def count_bolt(bolt, factor=0.5):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_HEIGHT, 2)
+
+
+def is_passage_breached(passage):
+    """True if the passage is breached."""
+    return bool(passage) and getattr(passage, "state", "") == "breached"
