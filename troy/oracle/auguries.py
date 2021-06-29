@@ -60,11 +60,6 @@ def assign_flights_by_omen(flights, omen):
     return [x for x in flights if getattr(x, "omen", None) == omen]
 
 
-def reinforce_omens_by_prophecy(omens, prophecy):
-    """Return the omens that belong to the given prophecy."""
-    return [x for x in omens if getattr(x, "prophecy", None) == prophecy]
-
-
 def estimate_flight(flight, factor=1.5):
     """Estimate a single flight using OMEN_INTERVAL."""
     if flight is None:
