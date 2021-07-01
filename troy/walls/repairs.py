@@ -140,3 +140,13 @@ def assign_stones(stones, limit=5):
             break
         result.append(stone)
     return result
+
+
+def reserve_stones(stones, limit=3):
+    """Reserve stones, at most 3 at a time."""
+    result = []
+    for stone in stones:
+        if len(result) >= limit:
+            break
+        result.append(stone)
+    return result
