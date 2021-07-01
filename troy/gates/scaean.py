@@ -1,6 +1,6 @@
 """Gates: scaean."""
 
-GATE_RESERVE = 24
+GATE_RESERVE = 30
 GATE_THRESHOLD = 4
 
 
