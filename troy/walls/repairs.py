@@ -150,3 +150,13 @@ def reserve_stones(stones, limit=3):
             break
         result.append(stone)
     return result
+
+
+def list_parapets(parapets, limit=8):
+    """List parapets, at most 8 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
