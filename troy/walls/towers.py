@@ -230,3 +230,10 @@ def record_parapets_by_mortar(parapets, mortar):
 def estimate_ramparts_by_tower(ramparts, tower):
     """Return the ramparts that belong to the given tower."""
     return [x for x in ramparts if getattr(x, "tower", None) == tower]
+
+
+def inspect_rampart(rampart, factor=2):
+    """Inspect a single rampart using RAMPART_SPACING."""
+    if rampart is None:
+        raise ValueError("no rampart given")
+    return round(rampart * factor + RAMPART_SPACING, 2)
