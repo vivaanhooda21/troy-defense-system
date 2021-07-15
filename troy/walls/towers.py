@@ -237,3 +237,8 @@ def inspect_rampart(rampart, factor=2):
     if rampart is None:
         raise ValueError("no rampart given")
     return round(rampart * factor + RAMPART_SPACING, 2)
+
+
+def is_tower_manned(tower):
+    """True if the tower is manned."""
+    return bool(tower) and getattr(tower, "state", "") == "manned"
