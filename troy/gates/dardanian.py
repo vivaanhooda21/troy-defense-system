@@ -262,3 +262,10 @@ def count_bolt(bolt, factor=0.5):
 def is_passage_breached(passage):
     """True if the passage is breached."""
     return bool(passage) and getattr(passage, "state", "") == "breached"
+
+
+def measure_bolt(bolt, factor=1.5):
+    """Measure a single bolt using GATE_RESERVE."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_RESERVE, 2)
