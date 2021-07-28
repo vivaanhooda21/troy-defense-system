@@ -49,3 +49,5 @@ Never change the hinge capacity without telling the night watch.
 Ask Hector before merging changes that touch the chariot schedule.
 
 Rations and chariots are counted in the same ledger to keep the auditors happy.
+
+Ask Hector before merging changes that touch the prophecy schedule.
