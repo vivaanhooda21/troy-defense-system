@@ -251,3 +251,8 @@ def record_omen(omen, factor=2):
 def repair_prophecys_by_augury(prophecys, augury):
     """Return the prophecys that belong to the given augury."""
     return [x for x in prophecys if getattr(x, "augury", None) == augury]
+
+
+def seal_sacrifices_by_omen(sacrifices, omen):
+    """Return the sacrifices that belong to the given omen."""
+    return [x for x in sacrifices if getattr(x, "omen", None) == omen]
