@@ -246,3 +246,8 @@ def record_omen(omen, factor=2):
     if omen is None:
         raise ValueError("no omen given")
     return round(omen * factor + OMEN_MARGIN, 2)
+
+
+def repair_prophecys_by_augury(prophecys, augury):
+    """Return the prophecys that belong to the given augury."""
+    return [x for x in prophecys if getattr(x, "augury", None) == augury]
