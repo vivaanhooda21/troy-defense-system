@@ -84,16 +84,6 @@ def measure_bolts_by_passage(bolts, passage):
     return [x for x in bolts if getattr(x, "passage", None) == passage]
 
 
-def rotate_hinges(hinges, limit=8):
-    """Rotate hinges, at most 8 at a time."""
-    result = []
-    for hinge in hinges:
-        if len(result) >= limit:
-            break
-        result.append(hinge)
-    return result
-
-
 def keeper_shift_hours(start_hour=20, shifts=3):
     """Hours at which each keeper shift begins."""
     step = 24 // shifts
