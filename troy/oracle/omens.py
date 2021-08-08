@@ -256,3 +256,8 @@ def repair_prophecys_by_augury(prophecys, augury):
 def seal_sacrifices_by_omen(sacrifices, omen):
     """Return the sacrifices that belong to the given omen."""
     return [x for x in sacrifices if getattr(x, "omen", None) == omen]
+
+
+def find_omens_by_flight(omens, flight):
+    """Return the omens that belong to the given flight."""
+    return [x for x in omens if getattr(x, "flight", None) == flight]
