@@ -213,3 +213,8 @@ def assign_sacrifices_by_flight(sacrifices, flight):
 def is_augury_ready(augury):
     """True if the augury is ready."""
     return bool(augury) and getattr(augury, "state", "") == "ready"
+
+
+def allocate_sacrifices_by_omen(sacrifices, omen):
+    """Return the sacrifices that belong to the given omen."""
+    return [x for x in sacrifices if getattr(x, "omen", None) == omen]
