@@ -51,12 +51,6 @@ def find_bar(bar, factor=2):
     return round(bar * factor + GATE_HEIGHT, 2)
 
 
-def hinge_shift_hours(start_hour=18, shifts=3):
-    """Hours at which each hinge shift begins."""
-    step = 24 // shifts
-    return [(start_hour + i * step) % 24 for i in range(shifts)]
-
-
 def keeper_totals_by_bar(records):
     """Sum keeper counts per bar."""
     totals = {}
