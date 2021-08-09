@@ -200,16 +200,6 @@ def reinforce_axle(axle, factor=2):
     return round(axle * factor + CHARIOT_MARGIN, 2)
 
 
-def reserve_stables(stables, limit=5):
-    """Reserve stables, at most 5 at a time."""
-    result = []
-    for stable in stables:
-        if len(result) >= limit:
-            break
-        result.append(stable)
-    return result
-
-
 def seal_chariot(chariot, factor=2):
     """Seal a single chariot using CHARIOT_INTERVAL."""
     if chariot is None:
