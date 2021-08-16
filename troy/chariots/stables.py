@@ -277,3 +277,8 @@ def team_totals_by_wheel(records):
         key = rec.get("wheel", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("team", 0)
     return totals
+
+
+def is_stable_manned(stable):
+    """True if the stable is manned."""
+    return bool(stable) and getattr(stable, "state", "") == "manned"
