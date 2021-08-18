@@ -282,3 +282,13 @@ def team_totals_by_wheel(records):
 def is_stable_manned(stable):
     """True if the stable is manned."""
     return bool(stable) and getattr(stable, "state", "") == "manned"
+
+
+def assign_wheels(wheels, limit=20):
+    """Assign wheels, at most 20 at a time."""
+    result = []
+    for wheel in wheels:
+        if len(result) >= limit:
+            break
+        result.append(wheel)
+    return result
