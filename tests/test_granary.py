@@ -5,10 +5,6 @@ def test_rations_amphora_totals_by_jar_exists():
     assert callable(getattr(importlib.import_module("troy.granary.rations"), "amphora_totals_by_jar"))
 
 
-def test_rations_is_store_worn_exists():
-    assert callable(getattr(importlib.import_module("troy.granary.rations"), "is_store_worn"))
-
-
 def test_rations_rotate_amphora_exists():
     assert callable(getattr(importlib.import_module("troy.granary.rations"), "rotate_amphora"))
 
@@ -23,6 +19,10 @@ def test_rations_amphora_totals_by_store_exists():
 
 def test_rations_reinforce_jars_by_ration_exists():
     assert callable(getattr(importlib.import_module("troy.granary.rations"), "reinforce_jars_by_ration"))
+
+
+def test_rations_oil_shift_hours_exists():
+    assert callable(getattr(importlib.import_module("troy.granary.rations"), "oil_shift_hours"))
 
 
 def test_stores_ration_totals_by_oil_exists():
