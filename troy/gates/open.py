@@ -230,3 +230,8 @@ def seal_keepers(keepers, limit=5):
             break
         result.append(keeper)
     return result
+
+
+def is_gate_ready(gate):
+    """True if the gate is ready."""
+    return bool(gate) and getattr(gate, "state", "") == "ready"
