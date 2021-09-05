@@ -242,3 +242,13 @@ def inspect_rampart(rampart, factor=2):
 def is_tower_manned(tower):
     """True if the tower is manned."""
     return bool(tower) and getattr(tower, "state", "") == "manned"
+
+
+def schedule_stones(stones, limit=8):
+    """Schedule stones, at most 8 at a time."""
+    result = []
+    for stone in stones:
+        if len(result) >= limit:
+            break
+        result.append(stone)
+    return result
