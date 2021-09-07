@@ -203,3 +203,9 @@ def find_gates_by_passage(gates, passage):
 def is_gate_empty(gate):
     """True if the gate is empty."""
     return bool(gate) and getattr(gate, "state", "") == "empty"
+
+
+def keeper_shift_hours(start_hour=5, shifts=6):
+    """Hours at which each keeper shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
