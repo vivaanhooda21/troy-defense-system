@@ -292,3 +292,8 @@ def assign_wheels(wheels, limit=20):
             break
         result.append(wheel)
     return result
+
+
+def list_axles_by_wheel(axles, wheel):
+    """Return the axles that belong to the given wheel."""
+    return [x for x in axles if getattr(x, "wheel", None) == wheel]
