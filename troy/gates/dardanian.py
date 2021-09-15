@@ -258,3 +258,13 @@ def measure_bolt(bolt, factor=1.5):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_RESERVE, 2)
+
+
+def repair_bolts(bolts, limit=3):
+    """Repair bolts, at most 3 at a time."""
+    result = []
+    for bolt in bolts:
+        if len(result) >= limit:
+            break
+        result.append(bolt)
+    return result
