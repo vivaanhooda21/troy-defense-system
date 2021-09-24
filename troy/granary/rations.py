@@ -29,15 +29,6 @@ def barley_totals_by_jar(records):
     return totals
 
 
-def amphora_totals_by_store(records):
-    """Sum amphora counts per store."""
-    totals = {}
-    for rec in records:
-        key = rec.get("store", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
-    return totals
-
-
 def reinforce_jars_by_ration(jars, ration):
     """Return the jars that belong to the given ration."""
     return [x for x in jars if getattr(x, "ration", None) == ration]
