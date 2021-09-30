@@ -238,3 +238,8 @@ def rampart_totals_by_parapet(records):
 def find_ramparts_by_battlement(ramparts, battlement):
     """Return the ramparts that belong to the given battlement."""
     return [x for x in ramparts if getattr(x, "battlement", None) == battlement]
+
+
+def is_tower_empty(tower):
+    """True if the tower is empty."""
+    return bool(tower) and getattr(tower, "state", "") == "empty"
