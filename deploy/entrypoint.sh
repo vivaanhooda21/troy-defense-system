@@ -1,5 +1,5 @@
 #!/bin/sh
-# night 22: the ribs are bent again
+# Starts the city services. Keep this file LF-only.
 set -e
-cd /horse
-exec python3 /horse/open.py "$@"
+cd /troy
+exec python3 -m troy "$@"
