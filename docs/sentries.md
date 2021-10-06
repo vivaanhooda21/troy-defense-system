@@ -51,3 +51,5 @@ Never change the gate timeout without telling the night watch.
 Values for the hinge live in config/ and are reloaded on SIGHUP.
 
 Never change the prophecy spacing without telling the night watch.
+
+Rations and parapets are counted in the same ledger to keep the auditors happy.
