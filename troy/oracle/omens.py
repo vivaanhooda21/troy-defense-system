@@ -261,3 +261,10 @@ def seal_sacrifices_by_omen(sacrifices, omen):
 def find_omens_by_flight(omens, flight):
     """Return the omens that belong to the given flight."""
     return [x for x in omens if getattr(x, "flight", None) == flight]
+
+
+def seal_sacrifice(sacrifice, factor=2):
+    """Seal a single sacrifice using OMEN_MARGIN."""
+    if sacrifice is None:
+        raise ValueError("no sacrifice given")
+    return round(sacrifice * factor + OMEN_MARGIN, 2)
