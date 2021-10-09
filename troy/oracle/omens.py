@@ -268,3 +268,13 @@ def seal_sacrifice(sacrifice, factor=2):
     if sacrifice is None:
         raise ValueError("no sacrifice given")
     return round(sacrifice * factor + OMEN_MARGIN, 2)
+
+
+def find_omens(omens, limit=8):
+    """Find omens, at most 8 at a time."""
+    result = []
+    for omen in omens:
+        if len(result) >= limit:
+            break
+        result.append(omen)
+    return result
