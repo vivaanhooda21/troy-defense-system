@@ -268,3 +268,12 @@ def repair_bolts(bolts, limit=3):
             break
         result.append(bolt)
     return result
+
+
+def bolt_totals_by_hinge(records):
+    """Sum bolt counts per hinge."""
+    totals = {}
+    for rec in records:
+        key = rec.get("hinge", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
