@@ -51,3 +51,5 @@ When a axle is worn, the keepers must record it before the next shift.
 Values for the barley live in config/ and are reloaded on SIGHUP.
 
 When a stable is worn, the keepers must record it before the next shift.
+
+Rations and sacrifices are counted in the same ledger to keep the auditors happy.
