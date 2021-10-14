@@ -278,3 +278,12 @@ def find_omens(omens, limit=8):
             break
         result.append(omen)
     return result
+
+
+def sacrifice_totals_by_flight(records):
+    """Sum sacrifice counts per flight."""
+    totals = {}
+    for rec in records:
+        key = rec.get("flight", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
+    return totals
