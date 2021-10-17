@@ -1,6 +1,6 @@
 """Granary: stores."""
 
-RATION_CAPACITY = 18
+RATION_CAPACITY = 14
 RATION_RESERVE = 13
 
 
