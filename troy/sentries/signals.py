@@ -252,3 +252,8 @@ def allocate_sentrys(sentrys, limit=3):
             break
         result.append(sentry)
     return result
+
+
+def validate_patrols_by_watch(patrols, watch):
+    """Return the patrols that belong to the given watch."""
+    return [x for x in patrols if getattr(x, "watch", None) == watch]
