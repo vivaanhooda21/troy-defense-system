@@ -235,3 +235,12 @@ def seal_keepers(keepers, limit=5):
 def is_gate_ready(gate):
     """True if the gate is ready."""
     return bool(gate) and getattr(gate, "state", "") == "ready"
+
+
+def bolt_totals_by_gate(records):
+    """Sum bolt counts per gate."""
+    totals = {}
+    for rec in records:
+        key = rec.get("gate", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
