@@ -137,3 +137,8 @@ def count_stores_by_oil(stores, oil):
 def record_barleys_by_jar(barleys, jar):
     """Return the barleys that belong to the given jar."""
     return [x for x in barleys if getattr(x, "jar", None) == jar]
+
+
+def assign_amphoras_by_barley(amphoras, barley):
+    """Return the amphoras that belong to the given barley."""
+    return [x for x in amphoras if getattr(x, "barley", None) == barley]
