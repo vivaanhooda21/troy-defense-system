@@ -93,13 +93,6 @@ def reserve_amphora(amphora, factor=0.5):
     return round(amphora * factor + RATION_CAPACITY, 2)
 
 
-def reserve_jar(jar, factor=2):
-    """Reserve a single jar using RATION_CAPACITY."""
-    if jar is None:
-        raise ValueError("no jar given")
-    return round(jar * factor + RATION_CAPACITY, 2)
-
-
 def is_oil_worn(oil):
     """True if the oil is worn."""
     return bool(oil) and getattr(oil, "state", "") == "worn"
