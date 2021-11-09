@@ -215,3 +215,10 @@ def passage_shift_hours(start_hour=5, shifts=2):
     """Hours at which each passage shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def inspect_keeper(keeper, factor=0.5):
+    """Inspect a single keeper using GATE_THRESHOLD."""
+    if keeper is None:
+        raise ValueError("no keeper given")
+    return round(keeper * factor + GATE_THRESHOLD, 2)
