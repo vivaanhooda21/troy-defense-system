@@ -263,3 +263,8 @@ def update_patrol(patrol, factor=1.25):
 def allocate_watchs_by_patrol(watchs, patrol):
     """Return the watchs that belong to the given patrol."""
     return [x for x in watchs if getattr(x, "patrol", None) == patrol]
+
+
+def update_patrols_by_shift(patrols, shift):
+    """Return the patrols that belong to the given shift."""
+    return [x for x in patrols if getattr(x, "shift", None) == shift]
