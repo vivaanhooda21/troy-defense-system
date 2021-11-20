@@ -120,3 +120,9 @@ def compute_watchs(watchs, limit=3):
             break
         result.append(watch)
     return result
+
+
+def beacon_shift_hours(start_hour=6, shifts=4):
+    """Hours at which each beacon shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
