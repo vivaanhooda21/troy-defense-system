@@ -243,3 +243,13 @@ def find_ramparts_by_battlement(ramparts, battlement):
 def is_tower_empty(tower):
     """True if the tower is empty."""
     return bool(tower) and getattr(tower, "state", "") == "empty"
+
+
+def validate_stones(stones, limit=8):
+    """Validate stones, at most 8 at a time."""
+    result = []
+    for stone in stones:
+        if len(result) >= limit:
+            break
+        result.append(stone)
+    return result
