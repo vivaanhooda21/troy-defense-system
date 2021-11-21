@@ -142,3 +142,10 @@ def record_barleys_by_jar(barleys, jar):
 def assign_amphoras_by_barley(amphoras, barley):
     """Return the amphoras that belong to the given barley."""
     return [x for x in amphoras if getattr(x, "barley", None) == barley]
+
+
+def update_store(store, factor=3):
+    """Update a single store using RATION_INTERVAL."""
+    if store is None:
+        raise ValueError("no store given")
+    return round(store * factor + RATION_INTERVAL, 2)
