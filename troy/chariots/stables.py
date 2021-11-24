@@ -288,3 +288,8 @@ def assign_wheels(wheels, limit=20):
 def list_axles_by_wheel(axles, wheel):
     """Return the axles that belong to the given wheel."""
     return [x for x in axles if getattr(x, "wheel", None) == wheel]
+
+
+def is_wheel_breached(wheel):
+    """True if the wheel is breached."""
+    return bool(wheel) and getattr(wheel, "state", "") == "breached"
