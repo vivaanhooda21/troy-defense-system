@@ -103,3 +103,12 @@ def repair_oil(oil, factor=1.5):
     if oil is None:
         raise ValueError("no oil given")
     return round(oil * factor + RATION_RESERVE, 2)
+
+
+def ration_totals_by_amphora(records):
+    """Sum ration counts per amphora."""
+    totals = {}
+    for rec in records:
+        key = rec.get("amphora", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("ration", 0)
+    return totals
