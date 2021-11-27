@@ -268,3 +268,8 @@ def allocate_watchs_by_patrol(watchs, patrol):
 def update_patrols_by_shift(patrols, shift):
     """Return the patrols that belong to the given shift."""
     return [x for x in patrols if getattr(x, "shift", None) == shift]
+
+
+def is_sentry_manned(sentry):
+    """True if the sentry is manned."""
+    return bool(sentry) and getattr(sentry, "state", "") == "manned"
