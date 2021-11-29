@@ -287,3 +287,8 @@ def sacrifice_totals_by_flight(records):
         key = rec.get("flight", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
     return totals
+
+
+def is_augury_ready(augury):
+    """True if the augury is ready."""
+    return bool(augury) and getattr(augury, "state", "") == "ready"
