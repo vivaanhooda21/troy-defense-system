@@ -293,3 +293,10 @@ def list_axles_by_wheel(axles, wheel):
 def is_wheel_breached(wheel):
     """True if the wheel is breached."""
     return bool(wheel) and getattr(wheel, "state", "") == "breached"
+
+
+def seal_wheel(wheel, factor=3):
+    """Seal a single wheel using CHARIOT_MARGIN."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_MARGIN, 2)
