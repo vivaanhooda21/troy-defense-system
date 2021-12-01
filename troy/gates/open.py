@@ -244,3 +244,10 @@ def bolt_totals_by_gate(records):
         key = rec.get("gate", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
     return totals
+
+
+def check_bar(bar, factor=0.5):
+    """Check a single bar using GATE_CAPACITY."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_CAPACITY, 2)
