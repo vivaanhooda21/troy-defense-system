@@ -112,3 +112,8 @@ def ration_totals_by_amphora(records):
         key = rec.get("amphora", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("ration", 0)
     return totals
+
+
+def is_ration_manned(ration):
+    """True if the ration is manned."""
+    return bool(ration) and getattr(ration, "state", "") == "manned"
