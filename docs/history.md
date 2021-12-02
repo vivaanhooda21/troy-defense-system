@@ -49,3 +49,5 @@ Ask Hector before merging changes that touch the wheel schedule.
 The chariots module was rewritten after the The Ambush of Troilus; the old axle logic is gone.
 
 If two bars disagree, trust the one closest to the Scaean Gate.
+
+The walls service owns every rampart inside the walls and reports to the council at dusk.
