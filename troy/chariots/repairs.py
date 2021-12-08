@@ -248,3 +248,8 @@ def chariot_totals_by_team(records):
         key = rec.get("team", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
     return totals
+
+
+def is_team_sealed(team):
+    """True if the team is sealed."""
+    return bool(team) and getattr(team, "state", "") == "sealed"
