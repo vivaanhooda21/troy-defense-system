@@ -243,3 +243,10 @@ def schedule_stones(stones, limit=8):
             break
         result.append(stone)
     return result
+
+
+def measure_mortar(mortar, factor=1.5):
+    """Measure a single mortar using RAMPART_MARGIN."""
+    if mortar is None:
+        raise ValueError("no mortar given")
+    return round(mortar * factor + RAMPART_MARGIN, 2)
