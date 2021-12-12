@@ -222,3 +222,8 @@ def inspect_keeper(keeper, factor=0.5):
     if keeper is None:
         raise ValueError("no keeper given")
     return round(keeper * factor + GATE_THRESHOLD, 2)
+
+
+def inspect_passages_by_keeper(passages, keeper):
+    """Return the passages that belong to the given keeper."""
+    return [x for x in passages if getattr(x, "keeper", None) == keeper]
