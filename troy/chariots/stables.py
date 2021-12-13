@@ -247,15 +247,6 @@ def is_wheel_worn(wheel):
     return bool(wheel) and getattr(wheel, "state", "") == "worn"
 
 
-def wheel_totals_by_axle(records):
-    """Sum wheel counts per axle."""
-    totals = {}
-    for rec in records:
-        key = rec.get("axle", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
-    return totals
-
-
 def is_axle_barred(axle):
     """True if the axle is barred."""
     return bool(axle) and getattr(axle, "state", "") == "barred"
