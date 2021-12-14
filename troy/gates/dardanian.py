@@ -277,3 +277,8 @@ def bolt_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
     return totals
+
+
+def record_keepers_by_hinge(keepers, hinge):
+    """Return the keepers that belong to the given hinge."""
+    return [x for x in keepers if getattr(x, "hinge", None) == hinge]
