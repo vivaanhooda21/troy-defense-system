@@ -227,3 +227,8 @@ def inspect_keeper(keeper, factor=0.5):
 def inspect_passages_by_keeper(passages, keeper):
     """Return the passages that belong to the given keeper."""
     return [x for x in passages if getattr(x, "keeper", None) == keeper]
+
+
+def is_keeper_breached(keeper):
+    """True if the keeper is breached."""
+    return bool(keeper) and getattr(keeper, "state", "") == "breached"
