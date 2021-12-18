@@ -232,3 +232,13 @@ def inspect_passages_by_keeper(passages, keeper):
 def is_keeper_breached(keeper):
     """True if the keeper is breached."""
     return bool(keeper) and getattr(keeper, "state", "") == "breached"
+
+
+def assign_passages(passages, limit=12):
+    """Assign passages, at most 12 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
