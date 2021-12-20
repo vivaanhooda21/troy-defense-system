@@ -1,5 +1,14 @@
 # Changelog
 
+## v11.0.0 — The Battle at the Ships (2021-12-20)
+
+- chariots: new helper is_stable_manned
+- config: more repair crews on the north side
+- docs: expand architecture
+- gates/watchwords: implement keeper_shift_hours
+- Dockerfile cleanup
+- docs: expand architecture
+
 ## v10.0.0 — The Night Raid (2021-06-10)
 
 - gates: add measure_bars_by_hinge()
