@@ -251,3 +251,8 @@ def check_bar(bar, factor=0.5):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_CAPACITY, 2)
+
+
+def is_hinge_ready(hinge):
+    """True if the hinge is ready."""
+    return bool(hinge) and getattr(hinge, "state", "") == "ready"
