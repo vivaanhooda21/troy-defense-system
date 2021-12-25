@@ -126,3 +126,12 @@ def beacon_shift_hours(start_hour=6, shifts=4):
     """Hours at which each beacon shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def sentry_totals_by_beacon(records):
+    """Sum sentry counts per beacon."""
+    totals = {}
+    for rec in records:
+        key = rec.get("beacon", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
+    return totals
