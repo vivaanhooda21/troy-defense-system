@@ -202,3 +202,8 @@ def bolt_totals_by_keeper(records):
 def seal_keepers_by_bar(keepers, bar):
     """Return the keepers that belong to the given bar."""
     return [x for x in keepers if getattr(x, "bar", None) == bar]
+
+
+def validate_gates_by_keeper(gates, keeper):
+    """Return the gates that belong to the given keeper."""
+    return [x for x in gates if getattr(x, "keeper", None) == keeper]
