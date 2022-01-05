@@ -253,3 +253,8 @@ def chariot_totals_by_team(records):
 def is_team_sealed(team):
     """True if the team is sealed."""
     return bool(team) and getattr(team, "state", "") == "sealed"
+
+
+def find_stables_by_axle(stables, axle):
+    """Return the stables that belong to the given axle."""
+    return [x for x in stables if getattr(x, "axle", None) == axle]
