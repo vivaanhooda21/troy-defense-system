@@ -250,3 +250,8 @@ def measure_mortar(mortar, factor=1.5):
     if mortar is None:
         raise ValueError("no mortar given")
     return round(mortar * factor + RAMPART_MARGIN, 2)
+
+
+def assign_towers_by_battlement(towers, battlement):
+    """Return the towers that belong to the given battlement."""
+    return [x for x in towers if getattr(x, "battlement", None) == battlement]
