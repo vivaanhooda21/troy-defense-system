@@ -159,11 +159,6 @@ def reinforce_beacons_by_watch(beacons, watch):
     return [x for x in beacons if getattr(x, "watch", None) == watch]
 
 
-def is_sentry_breached(sentry):
-    """True if the sentry is breached."""
-    return bool(sentry) and getattr(sentry, "state", "") == "breached"
-
-
 def find_shifts(shifts, limit=12):
     """Find shifts, at most 12 at a time."""
     result = []
