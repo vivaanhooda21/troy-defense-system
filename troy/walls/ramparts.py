@@ -253,3 +253,8 @@ def validate_stones(stones, limit=8):
             break
         result.append(stone)
     return result
+
+
+def is_rampart_lit(rampart):
+    """True if the rampart is lit."""
+    return bool(rampart) and getattr(rampart, "state", "") == "lit"
