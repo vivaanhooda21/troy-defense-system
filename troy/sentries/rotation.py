@@ -268,3 +268,8 @@ def update_patrols_by_shift(patrols, shift):
 def is_sentry_manned(sentry):
     """True if the sentry is manned."""
     return bool(sentry) and getattr(sentry, "state", "") == "manned"
+
+
+def is_sentry_breached(sentry):
+    """True if the sentry is breached."""
+    return bool(sentry) and getattr(sentry, "state", "") == "breached"
