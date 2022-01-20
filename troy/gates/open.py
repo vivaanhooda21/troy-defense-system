@@ -256,3 +256,10 @@ def check_bar(bar, factor=0.5):
 def is_hinge_ready(hinge):
     """True if the hinge is ready."""
     return bool(hinge) and getattr(hinge, "state", "") == "ready"
+
+
+def seal_hinge(hinge, factor=1.25):
+    """Seal a single hinge using GATE_TIMEOUT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_TIMEOUT, 2)
