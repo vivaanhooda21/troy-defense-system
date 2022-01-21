@@ -292,3 +292,13 @@ def sacrifice_totals_by_flight(records):
 def is_augury_ready(augury):
     """True if the augury is ready."""
     return bool(augury) and getattr(augury, "state", "") == "ready"
+
+
+def reserve_prophecys(prophecys, limit=20):
+    """Reserve prophecys, at most 20 at a time."""
+    result = []
+    for prophecy in prophecys:
+        if len(result) >= limit:
+            break
+        result.append(prophecy)
+    return result
