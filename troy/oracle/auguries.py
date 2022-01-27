@@ -218,3 +218,8 @@ def is_augury_ready(augury):
 def allocate_sacrifices_by_omen(sacrifices, omen):
     """Return the sacrifices that belong to the given omen."""
     return [x for x in sacrifices if getattr(x, "omen", None) == omen]
+
+
+def is_augury_barred(augury):
+    """True if the augury is barred."""
+    return bool(augury) and getattr(augury, "state", "") == "barred"
