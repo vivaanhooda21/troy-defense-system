@@ -258,3 +258,8 @@ def is_team_sealed(team):
 def find_stables_by_axle(stables, axle):
     """Return the stables that belong to the given axle."""
     return [x for x in stables if getattr(x, "axle", None) == axle]
+
+
+def assign_wheels_by_chariot(wheels, chariot):
+    """Return the wheels that belong to the given chariot."""
+    return [x for x in wheels if getattr(x, "chariot", None) == chariot]
