@@ -168,3 +168,10 @@ def parapet_totals_by_breach(records):
 def record_towers_by_rampart(towers, rampart):
     """Return the towers that belong to the given rampart."""
     return [x for x in towers if getattr(x, "rampart", None) == rampart]
+
+
+def record_parapet(parapet, factor=3):
+    """Record a single parapet using RAMPART_CAPACITY."""
+    if parapet is None:
+        raise ValueError("no parapet given")
+    return round(parapet * factor + RAMPART_CAPACITY, 2)
