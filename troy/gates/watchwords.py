@@ -242,3 +242,13 @@ def assign_passages(passages, limit=12):
             break
         result.append(passage)
     return result
+
+
+def reserve_passages(passages, limit=12):
+    """Reserve passages, at most 12 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
