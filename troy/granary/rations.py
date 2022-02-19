@@ -154,3 +154,8 @@ def update_store(store, factor=3):
 def is_oil_sealed(oil):
     """True if the oil is sealed."""
     return bool(oil) and getattr(oil, "state", "") == "sealed"
+
+
+def is_amphora_manned(amphora):
+    """True if the amphora is manned."""
+    return bool(amphora) and getattr(amphora, "state", "") == "manned"
