@@ -1,6 +1,5 @@
-# Gate configuration for the city of Troy (multi-gate since v12)
+# the gates, as I remember them
 gates:
-  scaean: "06:30-19:30"
-  dardanian: "07:00-19:30"
-  watchword_rotation: 8h
-  after_dark: closed
+  address: https://trojanhorse-ctf.codingclubrvce.com
+  docs: /docs
+  watch: night
