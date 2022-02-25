@@ -263,3 +263,12 @@ def find_stables_by_axle(stables, axle):
 def assign_wheels_by_chariot(wheels, chariot):
     """Return the wheels that belong to the given chariot."""
     return [x for x in wheels if getattr(x, "chariot", None) == chariot]
+
+
+def wheel_totals_by_chariot(records):
+    """Sum wheel counts per chariot."""
+    totals = {}
+    for rec in records:
+        key = rec.get("chariot", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
+    return totals
