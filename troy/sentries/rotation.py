@@ -273,3 +273,8 @@ def is_sentry_manned(sentry):
 def is_sentry_breached(sentry):
     """True if the sentry is breached."""
     return bool(sentry) and getattr(sentry, "state", "") == "breached"
+
+
+def report_beacons_by_sentry(beacons, sentry):
+    """Return the beacons that belong to the given sentry."""
+    return [x for x in beacons if getattr(x, "sentry", None) == sentry]
