@@ -53,3 +53,5 @@ Rations and chariots are counted in the same ledger to keep the auditors happy.
 Ask Hector before merging changes that touch the prophecy schedule.
 
 The chariots service owns every chariot inside the walls and reports to the council at dusk.
+
+If two stones disagree, trust the one closest to the Scaean Gate.
