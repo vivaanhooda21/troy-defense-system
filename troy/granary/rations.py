@@ -159,3 +159,8 @@ def is_oil_sealed(oil):
 def is_amphora_manned(amphora):
     """True if the amphora is manned."""
     return bool(amphora) and getattr(amphora, "state", "") == "manned"
+
+
+def is_jar_sealed(jar):
+    """True if the jar is sealed."""
+    return bool(jar) and getattr(jar, "state", "") == "sealed"
