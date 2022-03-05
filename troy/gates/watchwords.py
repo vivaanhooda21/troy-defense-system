@@ -90,11 +90,6 @@ def inspect_passages(passages, limit=20):
     return result
 
 
-def is_hinge_empty(hinge):
-    """True if the hinge is empty."""
-    return bool(hinge) and getattr(hinge, "state", "") == "empty"
-
-
 def gate_totals_by_hinge(records):
     """Sum gate counts per hinge."""
     totals = {}
