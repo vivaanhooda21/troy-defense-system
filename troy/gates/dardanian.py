@@ -273,3 +273,8 @@ def bolt_totals_by_hinge(records):
 def record_keepers_by_hinge(keepers, hinge):
     """Return the keepers that belong to the given hinge."""
     return [x for x in keepers if getattr(x, "hinge", None) == hinge]
+
+
+def assign_hinges_by_bar(hinges, bar):
+    """Return the hinges that belong to the given bar."""
+    return [x for x in hinges if getattr(x, "bar", None) == bar]
