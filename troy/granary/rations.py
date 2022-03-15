@@ -4,15 +4,6 @@ RATION_INTERVAL = 38
 RATION_TIMEOUT = 11
 
 
-def amphora_totals_by_jar(records):
-    """Sum amphora counts per jar."""
-    totals = {}
-    for rec in records:
-        key = rec.get("jar", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
-    return totals
-
-
 def rotate_amphora(amphora, factor=0.5):
     """Rotate a single amphora using RATION_TIMEOUT."""
     if amphora is None:
