@@ -66,16 +66,6 @@ def repair_gates_by_keeper(gates, keeper):
     return [x for x in gates if getattr(x, "keeper", None) == keeper]
 
 
-def assign_bars(bars, limit=12):
-    """Assign bars, at most 12 at a time."""
-    result = []
-    for bar in bars:
-        if len(result) >= limit:
-            break
-        result.append(bar)
-    return result
-
-
 def gate_totals_by_passage(records):
     """Sum gate counts per passage."""
     totals = {}
