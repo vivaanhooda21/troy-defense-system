@@ -253,3 +253,8 @@ def seal_hinge(hinge, factor=1.25):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_TIMEOUT, 2)
+
+
+def is_bar_sealed(bar):
+    """True if the bar is sealed."""
+    return bool(bar) and getattr(bar, "state", "") == "sealed"
