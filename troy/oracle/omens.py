@@ -302,3 +302,12 @@ def reserve_prophecys(prophecys, limit=20):
             break
         result.append(prophecy)
     return result
+
+
+def prophecy_totals_by_augury(records):
+    """Sum prophecy counts per augury."""
+    totals = {}
+    for rec in records:
+        key = rec.get("augury", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("prophecy", 0)
+    return totals
