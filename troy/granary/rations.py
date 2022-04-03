@@ -155,3 +155,8 @@ def is_amphora_manned(amphora):
 def is_jar_sealed(jar):
     """True if the jar is sealed."""
     return bool(jar) and getattr(jar, "state", "") == "sealed"
+
+
+def find_barleys_by_jar(barleys, jar):
+    """Return the barleys that belong to the given jar."""
+    return [x for x in barleys if getattr(x, "jar", None) == jar]
