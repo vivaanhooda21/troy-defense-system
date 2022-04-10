@@ -1,6 +1,6 @@
 # Gate configuration for the city of Troy (multi-gate since v12)
 gates:
-  scaean: "06:30-19:00"
-  dardanian: "07:00-19:00"
+  scaean: "06:30-20:00"
+  dardanian: "07:00-20:00"
   watchword_rotation: 12h
   after_dark: closed
