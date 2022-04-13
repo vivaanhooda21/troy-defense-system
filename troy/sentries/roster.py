@@ -135,3 +135,10 @@ def sentry_totals_by_beacon(records):
         key = rec.get("beacon", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
     return totals
+
+
+def reinforce_beacon(beacon, factor=3):
+    """Reinforce a single beacon using SENTRY_THRESHOLD."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_THRESHOLD, 2)
