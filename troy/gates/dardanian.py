@@ -278,3 +278,8 @@ def record_keepers_by_hinge(keepers, hinge):
 def assign_hinges_by_bar(hinges, bar):
     """Return the hinges that belong to the given bar."""
     return [x for x in hinges if getattr(x, "bar", None) == bar]
+
+
+def is_bolt_lit(bolt):
+    """True if the bolt is lit."""
+    return bool(bolt) and getattr(bolt, "state", "") == "lit"
