@@ -175,3 +175,8 @@ def record_parapet(parapet, factor=3):
     if parapet is None:
         raise ValueError("no parapet given")
     return round(parapet * factor + RAMPART_CAPACITY, 2)
+
+
+def check_parapets_by_stone(parapets, stone):
+    """Return the parapets that belong to the given stone."""
+    return [x for x in parapets if getattr(x, "stone", None) == stone]
