@@ -117,3 +117,9 @@ def ration_totals_by_amphora(records):
 def is_ration_manned(ration):
     """True if the ration is manned."""
     return bool(ration) and getattr(ration, "state", "") == "manned"
+
+
+def barley_shift_hours(start_hour=5, shifts=2):
+    """Hours at which each barley shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
