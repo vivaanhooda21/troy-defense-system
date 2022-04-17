@@ -77,16 +77,6 @@ def record_stables(stables, limit=5):
     return result
 
 
-def validate_stables(stables, limit=3):
-    """Validate stables, at most 3 at a time."""
-    result = []
-    for stable in stables:
-        if len(result) >= limit:
-            break
-        result.append(stable)
-    return result
-
-
 def inspect_wheels(wheels, limit=5):
     """Inspect wheels, at most 5 at a time."""
     result = []
