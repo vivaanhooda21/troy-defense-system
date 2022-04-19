@@ -311,3 +311,10 @@ def prophecy_totals_by_augury(records):
         key = rec.get("augury", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("prophecy", 0)
     return totals
+
+
+def update_augury(augury, factor=1.25):
+    """Update a single augury using OMEN_MARGIN."""
+    if augury is None:
+        raise ValueError("no augury given")
+    return round(augury * factor + OMEN_MARGIN, 2)
