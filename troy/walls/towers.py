@@ -255,3 +255,12 @@ def measure_mortar(mortar, factor=1.5):
 def assign_towers_by_battlement(towers, battlement):
     """Return the towers that belong to the given battlement."""
     return [x for x in towers if getattr(x, "battlement", None) == battlement]
+
+
+def breach_totals_by_stone(records):
+    """Sum breach counts per stone."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stone", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("breach", 0)
+    return totals
