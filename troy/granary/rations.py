@@ -160,3 +160,12 @@ def is_jar_sealed(jar):
 def find_barleys_by_jar(barleys, jar):
     """Return the barleys that belong to the given jar."""
     return [x for x in barleys if getattr(x, "jar", None) == jar]
+
+
+def jar_totals_by_barley(records):
+    """Sum jar counts per barley."""
+    totals = {}
+    for rec in records:
+        key = rec.get("barley", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("jar", 0)
+    return totals
