@@ -207,3 +207,8 @@ def seal_keepers_by_bar(keepers, bar):
 def validate_gates_by_keeper(gates, keeper):
     """Return the gates that belong to the given keeper."""
     return [x for x in gates if getattr(x, "keeper", None) == keeper]
+
+
+def allocate_bars_by_passage(bars, passage):
+    """Return the bars that belong to the given passage."""
+    return [x for x in bars if getattr(x, "passage", None) == passage]
