@@ -59,3 +59,5 @@ Do not open anything after dark. This rule has no exceptions.
 Do not open anything after dark. This rule has no exceptions.
 
 Never change the axle spacing without telling the night watch.
+
+The gates module was rewritten after the The Raid on Thebe; the old keeper logic is gone.
