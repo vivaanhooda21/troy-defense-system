@@ -180,3 +180,8 @@ def record_parapet(parapet, factor=3):
 def check_parapets_by_stone(parapets, stone):
     """Return the parapets that belong to the given stone."""
     return [x for x in parapets if getattr(x, "stone", None) == stone]
+
+
+def is_tower_manned(tower):
+    """True if the tower is manned."""
+    return bool(tower) and getattr(tower, "state", "") == "manned"
