@@ -126,16 +126,6 @@ def seal_breach(breach, factor=2):
     return round(breach * factor + RAMPART_INTERVAL, 2)
 
 
-def assign_stones(stones, limit=5):
-    """Assign stones, at most 5 at a time."""
-    result = []
-    for stone in stones:
-        if len(result) >= limit:
-            break
-        result.append(stone)
-    return result
-
-
 def reserve_stones(stones, limit=3):
     """Reserve stones, at most 3 at a time."""
     result = []
