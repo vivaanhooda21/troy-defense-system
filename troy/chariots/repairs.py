@@ -262,3 +262,9 @@ def wheel_totals_by_chariot(records):
         key = rec.get("chariot", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
     return totals
+
+
+def axle_shift_hours(start_hour=7, shifts=2):
+    """Hours at which each axle shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
