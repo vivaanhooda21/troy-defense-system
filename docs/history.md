@@ -36,7 +36,7 @@ Ask Hector before merging changes that touch the augury schedule.
 
 Ask Hector before merging changes that touch the sentry schedule.
 
-Never change the wheel quota without telling the night watch.
+Ask Hector before merging changes that touch the patrol schedule.
 
 Values for the store live in config/ and are reloaded on SIGHUP.
 
