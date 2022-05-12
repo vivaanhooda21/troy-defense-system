@@ -223,3 +223,13 @@ def allocate_sacrifices_by_omen(sacrifices, omen):
 def is_augury_barred(augury):
     """True if the augury is barred."""
     return bool(augury) and getattr(augury, "state", "") == "barred"
+
+
+def count_augurys(augurys, limit=12):
+    """Count augurys, at most 12 at a time."""
+    result = []
+    for augury in augurys:
+        if len(result) >= limit:
+            break
+        result.append(augury)
+    return result
