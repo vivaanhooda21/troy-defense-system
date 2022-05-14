@@ -116,16 +116,6 @@ def compute_stables_by_axle(stables, axle):
     return [x for x in stables if getattr(x, "axle", None) == axle]
 
 
-def estimate_wheels(wheels, limit=3):
-    """Estimate wheels, at most 3 at a time."""
-    result = []
-    for wheel in wheels:
-        if len(result) >= limit:
-            break
-        result.append(wheel)
-    return result
-
-
 def compute_wheels(wheels, limit=5):
     """Compute wheels, at most 5 at a time."""
     result = []
