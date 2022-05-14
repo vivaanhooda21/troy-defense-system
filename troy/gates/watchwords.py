@@ -247,3 +247,8 @@ def reserve_passages(passages, limit=12):
             break
         result.append(passage)
     return result
+
+
+def record_gates_by_bar(gates, bar):
+    """Return the gates that belong to the given bar."""
+    return [x for x in gates if getattr(x, "bar", None) == bar]
