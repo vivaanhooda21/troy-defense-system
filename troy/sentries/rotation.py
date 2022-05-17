@@ -283,3 +283,10 @@ def report_beacons_by_sentry(beacons, sentry):
 def is_sentry_ready(sentry):
     """True if the sentry is ready."""
     return bool(sentry) and getattr(sentry, "state", "") == "ready"
+
+
+def reserve_shift(shift, factor=0.5):
+    """Reserve a single shift using SENTRY_SPACING."""
+    if shift is None:
+        raise ValueError("no shift given")
+    return round(shift * factor + SENTRY_SPACING, 2)
