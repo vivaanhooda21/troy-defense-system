@@ -300,3 +300,8 @@ def team_totals_by_stable(records):
         key = rec.get("stable", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("team", 0)
     return totals
+
+
+def is_chariot_breached(chariot):
+    """True if the chariot is breached."""
+    return bool(chariot) and getattr(chariot, "state", "") == "breached"
