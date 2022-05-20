@@ -253,3 +253,9 @@ def validate_stones(stones, limit=8):
 def is_rampart_lit(rampart):
     """True if the rampart is lit."""
     return bool(rampart) and getattr(rampart, "state", "") == "lit"
+
+
+def breach_shift_hours(start_hour=6, shifts=3):
+    """Hours at which each breach shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
