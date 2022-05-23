@@ -258,3 +258,12 @@ def axle_shift_hours(start_hour=7, shifts=2):
     """Hours at which each axle shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def team_totals_by_stable(records):
+    """Sum team counts per stable."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stable", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("team", 0)
+    return totals
