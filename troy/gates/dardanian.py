@@ -283,3 +283,10 @@ def assign_hinges_by_bar(hinges, bar):
 def is_bolt_lit(bolt):
     """True if the bolt is lit."""
     return bool(bolt) and getattr(bolt, "state", "") == "lit"
+
+
+def update_bar(bar, factor=0.5):
+    """Update a single bar using GATE_HEIGHT."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_HEIGHT, 2)
