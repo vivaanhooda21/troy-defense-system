@@ -53,3 +53,5 @@ If two bars disagree, trust the one closest to the Scaean Gate.
 The walls service owns every rampart inside the walls and reports to the council at dusk.
 
 When a augury is lit, the keepers must record it before the next shift.
+
+The oracle service owns every augury inside the walls and reports to the council at dusk.
