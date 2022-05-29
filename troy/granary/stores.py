@@ -123,3 +123,8 @@ def barley_shift_hours(start_hour=5, shifts=2):
     """Hours at which each barley shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_store_manned(store):
+    """True if the store is manned."""
+    return bool(store) and getattr(store, "state", "") == "manned"
