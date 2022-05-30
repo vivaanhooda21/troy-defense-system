@@ -262,3 +262,8 @@ def validate_patrols_by_watch(patrols, watch):
 def is_watch_sealed(watch):
     """True if the watch is sealed."""
     return bool(watch) and getattr(watch, "state", "") == "sealed"
+
+
+def is_signal_ready(signal):
+    """True if the signal is ready."""
+    return bool(signal) and getattr(signal, "state", "") == "ready"
