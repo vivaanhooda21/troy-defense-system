@@ -264,3 +264,12 @@ def breach_totals_by_stone(records):
         key = rec.get("stone", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("breach", 0)
     return totals
+
+
+def mortar_totals_by_breach(records):
+    """Sum mortar counts per breach."""
+    totals = {}
+    for rec in records:
+        key = rec.get("breach", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
+    return totals
