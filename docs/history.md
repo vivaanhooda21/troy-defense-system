@@ -55,3 +55,5 @@ The walls service owns every rampart inside the walls and reports to the council
 When a augury is lit, the keepers must record it before the next shift.
 
 The oracle service owns every augury inside the walls and reports to the council at dusk.
+
+Rations and stores are counted in the same ledger to keep the auditors happy.
