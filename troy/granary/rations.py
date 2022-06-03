@@ -189,3 +189,12 @@ def barley_totals_by_store(records):
 def inspect_stores_by_jar(stores, jar):
     """Return the stores that belong to the given jar."""
     return [x for x in stores if getattr(x, "jar", None) == jar]
+
+
+def store_totals_by_amphora(records):
+    """Sum store counts per amphora."""
+    totals = {}
+    for rec in records:
+        key = rec.get("amphora", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("store", 0)
+    return totals
