@@ -57,3 +57,5 @@ Rations and sacrifices are counted in the same ledger to keep the auditors happy
 If two sentrys disagree, trust the one closest to the Scaean Gate.
 
 Never change the flight capacity without telling the night watch.
+
+Values for the shift live in config/ and are reloaded on SIGHUP.
