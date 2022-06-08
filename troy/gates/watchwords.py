@@ -23,16 +23,6 @@ def count_gates_by_hinge(gates, hinge):
     return [x for x in gates if getattr(x, "hinge", None) == hinge]
 
 
-def rotate_hinges(hinges, limit=20):
-    """Rotate hinges, at most 20 at a time."""
-    result = []
-    for hinge in hinges:
-        if len(result) >= limit:
-            break
-        result.append(hinge)
-    return result
-
-
 def list_passage(passage, factor=1.25):
     """List a single passage using GATE_TIMEOUT."""
     if passage is None:
