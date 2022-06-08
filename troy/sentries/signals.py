@@ -267,3 +267,8 @@ def is_watch_sealed(watch):
 def is_signal_ready(signal):
     """True if the signal is ready."""
     return bool(signal) and getattr(signal, "state", "") == "ready"
+
+
+def report_patrols_by_sentry(patrols, sentry):
+    """Return the patrols that belong to the given sentry."""
+    return [x for x in patrols if getattr(x, "sentry", None) == sentry]
