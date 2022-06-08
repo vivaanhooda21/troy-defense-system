@@ -17,12 +17,12 @@ def test_repairs_rotate_chariots_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "rotate_chariots"))
 
 
-def test_repairs_inspect_wheel_exists():
-    assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "inspect_wheel"))
-
-
 def test_repairs_update_stables_by_wheel_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "update_stables_by_wheel"))
+
+
+def test_repairs_rotate_wheel_exists():
+    assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "rotate_wheel"))
 
 
 def test_stables_wheel_shift_hours_exists():
