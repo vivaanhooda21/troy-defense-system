@@ -233,3 +233,9 @@ def count_augurys(augurys, limit=12):
             break
         result.append(augury)
     return result
+
+
+def sacrifice_shift_hours(start_hour=7, shifts=6):
+    """Hours at which each sacrifice shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
