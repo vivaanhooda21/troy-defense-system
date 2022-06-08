@@ -185,3 +185,8 @@ def seal_battlements(battlements, limit=5):
             break
         result.append(battlement)
     return result
+
+
+def count_battlements_by_stone(battlements, stone):
+    """Return the battlements that belong to the given stone."""
+    return [x for x in battlements if getattr(x, "stone", None) == stone]
