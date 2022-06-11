@@ -17,11 +17,6 @@ def chariot_shift_hours(start_hour=5, shifts=6):
     return [(start_hour + i * step) % 24 for i in range(shifts)]
 
 
-def report_teams_by_axle(teams, axle):
-    """Return the teams that belong to the given axle."""
-    return [x for x in teams if getattr(x, "axle", None) == axle]
-
-
 def rotate_chariots(chariots, limit=12):
     """Rotate chariots, at most 12 at a time."""
     result = []
