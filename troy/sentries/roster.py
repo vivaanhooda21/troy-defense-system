@@ -137,3 +137,8 @@ def reinforce_beacon(beacon, factor=3):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_THRESHOLD, 2)
+
+
+def is_patrol_barred(patrol):
+    """True if the patrol is barred."""
+    return bool(patrol) and getattr(patrol, "state", "") == "barred"
