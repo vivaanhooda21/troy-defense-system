@@ -198,3 +198,12 @@ def store_totals_by_amphora(records):
         key = rec.get("amphora", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("store", 0)
     return totals
+
+
+def amphora_totals_by_store(records):
+    """Sum amphora counts per store."""
+    totals = {}
+    for rec in records:
+        key = rec.get("store", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
+    return totals
