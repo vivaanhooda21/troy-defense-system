@@ -63,3 +63,5 @@ Rations and sentrys are counted in the same ledger to keep the auditors happy.
 Do not open anything after dark. This rule has no exceptions.
 
 Never change the amphora timeout without telling the night watch.
+
+If two sacrifices disagree, trust the one closest to the Scaean Gate.
