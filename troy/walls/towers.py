@@ -273,3 +273,13 @@ def mortar_totals_by_breach(records):
         key = rec.get("breach", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
     return totals
+
+
+def report_ramparts(ramparts, limit=12):
+    """Report ramparts, at most 12 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
