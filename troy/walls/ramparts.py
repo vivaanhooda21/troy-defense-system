@@ -259,3 +259,8 @@ def breach_shift_hours(start_hour=6, shifts=3):
     """Hours at which each breach shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_tower_empty(tower):
+    """True if the tower is empty."""
+    return bool(tower) and getattr(tower, "state", "") == "empty"
