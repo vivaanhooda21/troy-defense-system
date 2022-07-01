@@ -1,5 +1,14 @@
 # Changelog
 
+## v12.0.0 — The Death of Patroclus (2022-07-01)
+
+- gates/scaean: implement allocate_bars_by_passage
+- Add find_barleys_by_jar to rations
+- config: more repair crews on the north side
+- sentries/roster: implement is_patrol_barred
+- chariots: remove unused inspect_wheel
+- granary: tune RATION_TIMEOUT (11 -> 7)
+
 ## v11.0.0 — The Battle at the Ships (2021-12-20)
 
 - chariots: new helper is_stable_manned
