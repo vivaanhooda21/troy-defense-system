@@ -207,3 +207,10 @@ def amphora_totals_by_store(records):
         key = rec.get("store", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
     return totals
+
+
+def update_ration(ration, factor=1.25):
+    """Update a single ration using RATION_TIMEOUT."""
+    if ration is None:
+        raise ValueError("no ration given")
+    return round(ration * factor + RATION_TIMEOUT, 2)
