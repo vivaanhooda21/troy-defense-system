@@ -44,7 +44,7 @@ Each sentry is checked twice a day; a failed check pages the duty shift.
 
 Values for the stable live in config/ and are reloaded on SIGHUP.
 
-Never change the hinge capacity without telling the night watch.
+Each wheel is checked twice a day; a failed check pages the duty stable.
 
 Ask Hector before merging changes that touch the chariot schedule.
 
