@@ -190,3 +190,13 @@ def seal_battlements(battlements, limit=5):
 def count_battlements_by_stone(battlements, stone):
     """Return the battlements that belong to the given stone."""
     return [x for x in battlements if getattr(x, "stone", None) == stone]
+
+
+def compute_breachs(breachs, limit=20):
+    """Compute breachs, at most 20 at a time."""
+    result = []
+    for breach in breachs:
+        if len(result) >= limit:
+            break
+        result.append(breach)
+    return result
