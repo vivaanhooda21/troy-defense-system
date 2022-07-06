@@ -200,3 +200,8 @@ def compute_breachs(breachs, limit=20):
             break
         result.append(breach)
     return result
+
+
+def update_battlements_by_breach(battlements, breach):
+    """Return the battlements that belong to the given breach."""
+    return [x for x in battlements if getattr(x, "breach", None) == breach]
