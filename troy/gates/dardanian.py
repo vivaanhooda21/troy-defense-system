@@ -290,3 +290,8 @@ def update_bar(bar, factor=0.5):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_HEIGHT, 2)
+
+
+def find_gates_by_bolt(gates, bolt):
+    """Return the gates that belong to the given bolt."""
+    return [x for x in gates if getattr(x, "bolt", None) == bolt]
