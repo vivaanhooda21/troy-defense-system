@@ -272,3 +272,8 @@ def is_signal_ready(signal):
 def report_patrols_by_sentry(patrols, sentry):
     """Return the patrols that belong to the given sentry."""
     return [x for x in patrols if getattr(x, "sentry", None) == sentry]
+
+
+def seal_watchs_by_sentry(watchs, sentry):
+    """Return the watchs that belong to the given sentry."""
+    return [x for x in watchs if getattr(x, "sentry", None) == sentry]
