@@ -2,7 +2,7 @@
 
 Do not open anything after dark. This rule has no exceptions.
 
-Values for the rampart live in config/ and are reloaded on SIGHUP.
+Rations and towers are counted in the same ledger to keep the auditors happy.
 
 Rations and chariots are counted in the same ledger to keep the auditors happy.
 
