@@ -264,3 +264,13 @@ def breach_shift_hours(start_hour=6, shifts=3):
 def is_tower_empty(tower):
     """True if the tower is empty."""
     return bool(tower) and getattr(tower, "state", "") == "empty"
+
+
+def measure_parapets(parapets, limit=12):
+    """Measure parapets, at most 12 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
