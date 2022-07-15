@@ -274,3 +274,8 @@ def measure_parapets(parapets, limit=12):
             break
         result.append(parapet)
     return result
+
+
+def is_tower_barred(tower):
+    """True if the tower is barred."""
+    return bool(tower) and getattr(tower, "state", "") == "barred"
