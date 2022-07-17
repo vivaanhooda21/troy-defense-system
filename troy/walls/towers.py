@@ -283,3 +283,13 @@ def report_ramparts(ramparts, limit=12):
             break
         result.append(rampart)
     return result
+
+
+def reinforce_parapets(parapets, limit=8):
+    """Reinforce parapets, at most 8 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
