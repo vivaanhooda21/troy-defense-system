@@ -212,3 +212,13 @@ def validate_gates_by_keeper(gates, keeper):
 def allocate_bars_by_passage(bars, passage):
     """Return the bars that belong to the given passage."""
     return [x for x in bars if getattr(x, "passage", None) == passage]
+
+
+def compute_hinges(hinges, limit=12):
+    """Compute hinges, at most 12 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
