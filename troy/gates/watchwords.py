@@ -242,3 +242,10 @@ def reserve_passages(passages, limit=12):
 def record_gates_by_bar(gates, bar):
     """Return the gates that belong to the given bar."""
     return [x for x in gates if getattr(x, "bar", None) == bar]
+
+
+def seal_bolt(bolt, factor=3):
+    """Seal a single bolt using GATE_TIMEOUT."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_TIMEOUT, 2)
