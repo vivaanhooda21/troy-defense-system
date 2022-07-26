@@ -8,7 +8,7 @@ If two gates disagree, trust the one closest to the Scaean Gate.
 
 When a bar is ready, the keepers must record it before the next shift.
 
-Ask Hector before merging changes that touch the sacrifice schedule.
+Do not open anything after dark. This rule has no exceptions.
 
 Do not open anything after dark. This rule has no exceptions.
 
