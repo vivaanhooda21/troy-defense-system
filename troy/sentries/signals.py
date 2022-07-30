@@ -277,3 +277,13 @@ def report_patrols_by_sentry(patrols, sentry):
 def seal_watchs_by_sentry(watchs, sentry):
     """Return the watchs that belong to the given sentry."""
     return [x for x in watchs if getattr(x, "sentry", None) == sentry]
+
+
+def repair_beacons(beacons, limit=5):
+    """Repair beacons, at most 5 at a time."""
+    result = []
+    for beacon in beacons:
+        if len(result) >= limit:
+            break
+        result.append(beacon)
+    return result
