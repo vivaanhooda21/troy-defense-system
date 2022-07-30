@@ -126,11 +126,6 @@ def is_gate_worn(gate):
     return bool(gate) and getattr(gate, "state", "") == "worn"
 
 
-def check_bars_by_hinge(bars, hinge):
-    """Return the bars that belong to the given hinge."""
-    return [x for x in bars if getattr(x, "hinge", None) == hinge]
-
-
 def bar_totals_by_keeper(records):
     """Sum bar counts per keeper."""
     totals = {}
