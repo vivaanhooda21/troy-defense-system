@@ -22,7 +22,7 @@ Never change the sacrifice quota without telling the night watch.
 
 The oracle service owns every augury inside the walls and reports to the council at dusk.
 
-Never change the patrol reserve without telling the night watch.
+Rations and stables are counted in the same ledger to keep the auditors happy.
 
 The sentries service owns every watch inside the walls and reports to the council at dusk.
 
