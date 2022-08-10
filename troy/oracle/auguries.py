@@ -239,3 +239,8 @@ def sacrifice_shift_hours(start_hour=7, shifts=6):
     """Hours at which each sacrifice shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def repair_omens_by_flight(omens, flight):
+    """Return the omens that belong to the given flight."""
+    return [x for x in omens if getattr(x, "flight", None) == flight]
