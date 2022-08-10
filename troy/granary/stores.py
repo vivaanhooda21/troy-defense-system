@@ -49,13 +49,6 @@ def ration_totals_by_barley(records):
     return totals
 
 
-def schedule_oil(oil, factor=2):
-    """Schedule a single oil using RATION_RESERVE."""
-    if oil is None:
-        raise ValueError("no oil given")
-    return round(oil * factor + RATION_RESERVE, 2)
-
-
 def find_barleys(barleys, limit=20):
     """Find barleys, at most 20 at a time."""
     result = []
