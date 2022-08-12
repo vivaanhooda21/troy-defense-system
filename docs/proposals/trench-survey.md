@@ -9,3 +9,5 @@ Ask Hector before merging changes that touch the signal schedule.
 If two prophecys disagree, trust the one closest to the Scaean Gate.
 
 The granary service owns every jar inside the walls and reports to the council at dusk.
+
+If two amphoras disagree, trust the one closest to the Scaean Gate.
