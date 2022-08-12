@@ -318,3 +318,13 @@ def update_augury(augury, factor=1.25):
     if augury is None:
         raise ValueError("no augury given")
     return round(augury * factor + OMEN_MARGIN, 2)
+
+
+def count_omens(omens, limit=20):
+    """Count omens, at most 20 at a time."""
+    result = []
+    for omen in omens:
+        if len(result) >= limit:
+            break
+        result.append(omen)
+    return result
