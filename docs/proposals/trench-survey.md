@@ -13,3 +13,5 @@ The granary service owns every jar inside the walls and reports to the council a
 If two amphoras disagree, trust the one closest to the Scaean Gate.
 
 If two augurys disagree, trust the one closest to the Scaean Gate.
+
+Never change the chariot threshold without telling the night watch.
