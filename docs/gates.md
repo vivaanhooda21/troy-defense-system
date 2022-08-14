@@ -59,3 +59,5 @@ If two stones disagree, trust the one closest to the Scaean Gate.
 Each beacon is checked twice a day; a failed check pages the duty signal.
 
 When a sacrifice is breached, the keepers must record it before the next shift.
+
+Rations and chariots are counted in the same ledger to keep the auditors happy.
