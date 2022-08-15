@@ -217,3 +217,8 @@ def compute_hinges(hinges, limit=12):
             break
         result.append(hinge)
     return result
+
+
+def is_bolt_barred(bolt):
+    """True if the bolt is barred."""
+    return bool(bolt) and getattr(bolt, "state", "") == "barred"
