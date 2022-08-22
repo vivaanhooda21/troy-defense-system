@@ -85,13 +85,13 @@ def test_watchwords_count_gates_by_hinge_exists():
     assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "count_gates_by_hinge"))
 
 
-def test_watchwords_rotate_hinges_exists():
-    assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "rotate_hinges"))
-
-
 def test_watchwords_list_passage_exists():
     assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "list_passage"))
 
 
 def test_watchwords_validate_hinges_exists():
     assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "validate_hinges"))
+
+
+def test_watchwords_find_passage_exists():
+    assert callable(getattr(importlib.import_module("troy.gates.watchwords"), "find_passage"))
