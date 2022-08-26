@@ -328,3 +328,13 @@ def count_omens(omens, limit=20):
             break
         result.append(omen)
     return result
+
+
+def reserve_omens(omens, limit=12):
+    """Reserve omens, at most 12 at a time."""
+    result = []
+    for omen in omens:
+        if len(result) >= limit:
+            break
+        result.append(omen)
+    return result
