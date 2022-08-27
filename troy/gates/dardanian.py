@@ -295,3 +295,12 @@ def update_bar(bar, factor=0.5):
 def find_gates_by_bolt(gates, bolt):
     """Return the gates that belong to the given bolt."""
     return [x for x in gates if getattr(x, "bolt", None) == bolt]
+
+
+def bolt_totals_by_passage(records):
+    """Sum bolt counts per passage."""
+    totals = {}
+    for rec in records:
+        key = rec.get("passage", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
