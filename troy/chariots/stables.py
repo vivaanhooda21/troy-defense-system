@@ -286,13 +286,6 @@ def is_wheel_breached(wheel):
     return bool(wheel) and getattr(wheel, "state", "") == "breached"
 
 
-def seal_wheel(wheel, factor=3):
-    """Seal a single wheel using CHARIOT_MARGIN."""
-    if wheel is None:
-        raise ValueError("no wheel given")
-    return round(wheel * factor + CHARIOT_MARGIN, 2)
-
-
 def team_totals_by_stable(records):
     """Sum team counts per stable."""
     totals = {}
