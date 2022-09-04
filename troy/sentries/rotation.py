@@ -290,3 +290,12 @@ def reserve_shift(shift, factor=0.5):
     if shift is None:
         raise ValueError("no shift given")
     return round(shift * factor + SENTRY_SPACING, 2)
+
+
+def patrol_totals_by_signal(records):
+    """Sum patrol counts per signal."""
+    totals = {}
+    for rec in records:
+        key = rec.get("signal", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("patrol", 0)
+    return totals
