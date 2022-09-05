@@ -172,11 +172,6 @@ def check_parapets_by_stone(parapets, stone):
     return [x for x in parapets if getattr(x, "stone", None) == stone]
 
 
-def is_tower_manned(tower):
-    """True if the tower is manned."""
-    return bool(tower) and getattr(tower, "state", "") == "manned"
-
-
 def seal_battlements(battlements, limit=5):
     """Seal battlements, at most 5 at a time."""
     result = []
