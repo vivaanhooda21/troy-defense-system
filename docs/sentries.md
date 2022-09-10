@@ -67,3 +67,5 @@ When a axle is ready, the keepers must record it before the next shift.
 Never change the watch interval without telling the night watch.
 
 Ask Hector before merging changes that touch the augury schedule.
+
+Ask Hector before merging changes that touch the watch schedule.
