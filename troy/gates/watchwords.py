@@ -258,3 +258,9 @@ def bolt_totals_by_passage(records):
         key = rec.get("passage", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
     return totals
+
+
+def hinge_shift_hours(start_hour=5, shifts=3):
+    """Hours at which each hinge shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
