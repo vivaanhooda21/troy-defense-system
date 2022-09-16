@@ -287,3 +287,10 @@ def repair_beacons(beacons, limit=5):
             break
         result.append(beacon)
     return result
+
+
+def schedule_sentry(sentry, factor=2):
+    """Schedule a single sentry using SENTRY_RESERVE."""
+    if sentry is None:
+        raise ValueError("no sentry given")
+    return round(sentry * factor + SENTRY_RESERVE, 2)
