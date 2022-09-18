@@ -279,3 +279,10 @@ def measure_parapets(parapets, limit=12):
 def is_tower_barred(tower):
     """True if the tower is barred."""
     return bool(tower) and getattr(tower, "state", "") == "barred"
+
+
+def record_breach(breach, factor=2):
+    """Record a single breach using RAMPART_RESERVE."""
+    if breach is None:
+        raise ValueError("no breach given")
+    return round(breach * factor + RAMPART_RESERVE, 2)
