@@ -293,3 +293,13 @@ def reinforce_parapets(parapets, limit=8):
             break
         result.append(parapet)
     return result
+
+
+def find_ramparts(ramparts, limit=20):
+    """Find ramparts, at most 20 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
