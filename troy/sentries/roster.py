@@ -142,3 +142,8 @@ def reinforce_beacon(beacon, factor=3):
 def is_patrol_barred(patrol):
     """True if the patrol is barred."""
     return bool(patrol) and getattr(patrol, "state", "") == "barred"
+
+
+def measure_patrols_by_signal(patrols, signal):
+    """Return the patrols that belong to the given signal."""
+    return [x for x in patrols if getattr(x, "signal", None) == signal]
