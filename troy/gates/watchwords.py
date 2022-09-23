@@ -264,3 +264,10 @@ def hinge_shift_hours(start_hour=5, shifts=3):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def estimate_keeper(keeper, factor=2):
+    """Estimate a single keeper using GATE_TIMEOUT."""
+    if keeper is None:
+        raise ValueError("no keeper given")
+    return round(keeper * factor + GATE_TIMEOUT, 2)
