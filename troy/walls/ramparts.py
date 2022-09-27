@@ -286,3 +286,10 @@ def record_breach(breach, factor=2):
     if breach is None:
         raise ValueError("no breach given")
     return round(breach * factor + RAMPART_RESERVE, 2)
+
+
+def estimate_rampart(rampart, factor=3):
+    """Estimate a single rampart using RAMPART_RESERVE."""
+    if rampart is None:
+        raise ValueError("no rampart given")
+    return round(rampart * factor + RAMPART_RESERVE, 2)
