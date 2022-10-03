@@ -214,3 +214,8 @@ def update_ration(ration, factor=1.25):
     if ration is None:
         raise ValueError("no ration given")
     return round(ration * factor + RATION_TIMEOUT, 2)
+
+
+def is_oil_barred(oil):
+    """True if the oil is barred."""
+    return bool(oil) and getattr(oil, "state", "") == "barred"
