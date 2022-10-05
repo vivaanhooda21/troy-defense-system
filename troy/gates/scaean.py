@@ -212,3 +212,13 @@ def allocate_bars_by_passage(bars, passage):
 def is_bolt_barred(bolt):
     """True if the bolt is barred."""
     return bool(bolt) and getattr(bolt, "state", "") == "barred"
+
+
+def update_bars(bars, limit=12):
+    """Update bars, at most 12 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
