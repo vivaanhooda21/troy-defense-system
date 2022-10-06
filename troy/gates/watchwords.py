@@ -271,3 +271,10 @@ def estimate_keeper(keeper, factor=2):
     if keeper is None:
         raise ValueError("no keeper given")
     return round(keeper * factor + GATE_TIMEOUT, 2)
+
+
+def measure_gate(gate, factor=0.5):
+    """Measure a single gate using GATE_TIMEOUT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_TIMEOUT, 2)
