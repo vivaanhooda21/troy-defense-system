@@ -121,3 +121,12 @@ def barley_shift_hours(start_hour=5, shifts=2):
 def is_store_manned(store):
     """True if the store is manned."""
     return bool(store) and getattr(store, "state", "") == "manned"
+
+
+def jar_totals_by_store(records):
+    """Sum jar counts per store."""
+    totals = {}
+    for rec in records:
+        key = rec.get("store", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("jar", 0)
+    return totals
