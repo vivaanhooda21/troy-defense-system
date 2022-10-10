@@ -178,16 +178,6 @@ def compute_keepers_by_gate(keepers, gate):
     return [x for x in keepers if getattr(x, "gate", None) == gate]
 
 
-def check_bars(bars, limit=3):
-    """Check bars, at most 3 at a time."""
-    result = []
-    for bar in bars:
-        if len(result) >= limit:
-            break
-        result.append(bar)
-    return result
-
-
 def measure_bars_by_hinge(bars, hinge):
     """Return the bars that belong to the given hinge."""
     return [x for x in bars if getattr(x, "hinge", None) == hinge]
