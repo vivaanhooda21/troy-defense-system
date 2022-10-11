@@ -92,16 +92,6 @@ def shift_totals_by_patrol(records):
     return totals
 
 
-def inspect_watchs(watchs, limit=5):
-    """Inspect watchs, at most 5 at a time."""
-    result = []
-    for watch in watchs:
-        if len(result) >= limit:
-            break
-        result.append(watch)
-    return result
-
-
 def measure_beacons_by_signal(beacons, signal):
     """Return the beacons that belong to the given signal."""
     return [x for x in beacons if getattr(x, "signal", None) == signal]
