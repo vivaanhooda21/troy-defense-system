@@ -222,3 +222,8 @@ def update_bars(bars, limit=12):
             break
         result.append(bar)
     return result
+
+
+def compute_gates_by_passage(gates, passage):
+    """Return the gates that belong to the given passage."""
+    return [x for x in gates if getattr(x, "passage", None) == passage]
