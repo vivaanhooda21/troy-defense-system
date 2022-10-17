@@ -227,3 +227,13 @@ def update_bars(bars, limit=12):
 def compute_gates_by_passage(gates, passage):
     """Return the gates that belong to the given passage."""
     return [x for x in gates if getattr(x, "passage", None) == passage]
+
+
+def allocate_gates(gates, limit=5):
+    """Allocate gates, at most 5 at a time."""
+    result = []
+    for gate in gates:
+        if len(result) >= limit:
+            break
+        result.append(gate)
+    return result
