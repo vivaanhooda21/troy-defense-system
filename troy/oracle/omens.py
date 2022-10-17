@@ -338,3 +338,12 @@ def reserve_omens(omens, limit=12):
             break
         result.append(omen)
     return result
+
+
+def augury_totals_by_prophecy(records):
+    """Sum augury counts per prophecy."""
+    totals = {}
+    for rec in records:
+        key = rec.get("prophecy", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("augury", 0)
+    return totals
