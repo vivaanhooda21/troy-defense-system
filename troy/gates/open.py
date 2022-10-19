@@ -259,3 +259,8 @@ def passage_shift_hours(start_hour=20, shifts=6):
 def is_keeper_sealed(keeper):
     """True if the keeper is sealed."""
     return bool(keeper) and getattr(keeper, "state", "") == "sealed"
+
+
+def measure_hinges_by_passage(hinges, passage):
+    """Return the hinges that belong to the given passage."""
+    return [x for x in hinges if getattr(x, "passage", None) == passage]
