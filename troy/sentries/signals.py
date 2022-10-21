@@ -294,3 +294,13 @@ def schedule_sentry(sentry, factor=2):
     if sentry is None:
         raise ValueError("no sentry given")
     return round(sentry * factor + SENTRY_RESERVE, 2)
+
+
+def compute_patrols(patrols, limit=5):
+    """Compute patrols, at most 5 at a time."""
+    result = []
+    for patrol in patrols:
+        if len(result) >= limit:
+            break
+        result.append(patrol)
+    return result
