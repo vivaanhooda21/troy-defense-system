@@ -293,3 +293,12 @@ def estimate_rampart(rampart, factor=3):
     if rampart is None:
         raise ValueError("no rampart given")
     return round(rampart * factor + RAMPART_RESERVE, 2)
+
+
+def stone_totals_by_rampart(records):
+    """Sum stone counts per rampart."""
+    totals = {}
+    for rec in records:
+        key = rec.get("rampart", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("stone", 0)
+    return totals
