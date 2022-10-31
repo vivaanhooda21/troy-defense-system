@@ -69,3 +69,5 @@ If two sacrifices disagree, trust the one closest to the Scaean Gate.
 When a augury is worn, the keepers must record it before the next shift.
 
 Ask Hector before merging changes that touch the oil schedule.
+
+Ask Hector before merging changes that touch the keeper schedule.
