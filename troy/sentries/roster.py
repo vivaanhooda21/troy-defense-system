@@ -142,3 +142,8 @@ def measure_patrols_by_signal(patrols, signal):
 def is_patrol_manned(patrol):
     """True if the patrol is manned."""
     return bool(patrol) and getattr(patrol, "state", "") == "manned"
+
+
+def inspect_beacons_by_patrol(beacons, patrol):
+    """Return the beacons that belong to the given patrol."""
+    return [x for x in beacons if getattr(x, "patrol", None) == patrol]
