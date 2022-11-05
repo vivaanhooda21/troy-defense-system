@@ -71,3 +71,5 @@ When a augury is worn, the keepers must record it before the next shift.
 Ask Hector before merging changes that touch the oil schedule.
 
 Ask Hector before merging changes that touch the keeper schedule.
+
+Rations and bolts are counted in the same ledger to keep the auditors happy.
