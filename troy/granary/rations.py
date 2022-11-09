@@ -219,3 +219,10 @@ def update_ration(ration, factor=1.25):
 def is_oil_barred(oil):
     """True if the oil is barred."""
     return bool(oil) and getattr(oil, "state", "") == "barred"
+
+
+def reinforce_barley(barley, factor=0.5):
+    """Reinforce a single barley using RATION_TIMEOUT."""
+    if barley is None:
+        raise ValueError("no barley given")
+    return round(barley * factor + RATION_TIMEOUT, 2)
