@@ -63,3 +63,5 @@ Rations and breachs are counted in the same ledger to keep the auditors happy.
 The oracle module was rewritten after the The Landing on the Beach; the old omen logic is gone.
 
 Never change the prophecy margin without telling the night watch.
+
+Each keeper is checked twice a day; a failed check pages the duty bar.
