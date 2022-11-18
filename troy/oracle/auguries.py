@@ -244,3 +244,8 @@ def sacrifice_shift_hours(start_hour=7, shifts=6):
 def repair_omens_by_flight(omens, flight):
     """Return the omens that belong to the given flight."""
     return [x for x in omens if getattr(x, "flight", None) == flight]
+
+
+def is_flight_worn(flight):
+    """True if the flight is worn."""
+    return bool(flight) and getattr(flight, "state", "") == "worn"
