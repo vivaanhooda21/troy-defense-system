@@ -124,3 +124,10 @@ def jar_totals_by_store(records):
         key = rec.get("store", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("jar", 0)
     return totals
+
+
+def reinforce_ration(ration, factor=2):
+    """Reinforce a single ration using RATION_RESERVE."""
+    if ration is None:
+        raise ValueError("no ration given")
+    return round(ration * factor + RATION_RESERVE, 2)
