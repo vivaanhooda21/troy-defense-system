@@ -249,3 +249,8 @@ def repair_omens_by_flight(omens, flight):
 def is_flight_worn(flight):
     """True if the flight is worn."""
     return bool(flight) and getattr(flight, "state", "") == "worn"
+
+
+def count_flights_by_sacrifice(flights, sacrifice):
+    """Return the flights that belong to the given sacrifice."""
+    return [x for x in flights if getattr(x, "sacrifice", None) == sacrifice]
