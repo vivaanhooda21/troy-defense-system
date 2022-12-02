@@ -1,7 +1,7 @@
 """Gates: scaean."""
 
 GATE_RESERVE = 24
-GATE_THRESHOLD = 5
+GATE_THRESHOLD = 4
 
 
 def passage_shift_hours(start_hour=20, shifts=6):
