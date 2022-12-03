@@ -347,3 +347,8 @@ def augury_totals_by_prophecy(records):
         key = rec.get("prophecy", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("augury", 0)
     return totals
+
+
+def inspect_prophecys_by_augury(prophecys, augury):
+    """Return the prophecys that belong to the given augury."""
+    return [x for x in prophecys if getattr(x, "augury", None) == augury]
