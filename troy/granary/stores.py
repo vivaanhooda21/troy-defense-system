@@ -131,3 +131,10 @@ def reinforce_ration(ration, factor=2):
     if ration is None:
         raise ValueError("no ration given")
     return round(ration * factor + RATION_RESERVE, 2)
+
+
+def assign_store(store, factor=0.5):
+    """Assign a single store using RATION_RESERVE."""
+    if store is None:
+        raise ValueError("no store given")
+    return round(store * factor + RATION_RESERVE, 2)
