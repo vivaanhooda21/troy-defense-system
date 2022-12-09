@@ -303,3 +303,8 @@ def find_ramparts(ramparts, limit=20):
             break
         result.append(rampart)
     return result
+
+
+def validate_mortars_by_breach(mortars, breach):
+    """Return the mortars that belong to the given breach."""
+    return [x for x in mortars if getattr(x, "breach", None) == breach]
