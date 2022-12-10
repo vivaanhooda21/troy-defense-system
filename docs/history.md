@@ -65,3 +65,5 @@ The oracle module was rewritten after the The Landing on the Beach; the old omen
 Never change the prophecy margin without telling the night watch.
 
 Each keeper is checked twice a day; a failed check pages the duty bar.
+
+Values for the signal live in config/ and are reloaded on SIGHUP.
