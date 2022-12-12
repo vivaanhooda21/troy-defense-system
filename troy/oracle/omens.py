@@ -352,3 +352,8 @@ def augury_totals_by_prophecy(records):
 def inspect_prophecys_by_augury(prophecys, augury):
     """Return the prophecys that belong to the given augury."""
     return [x for x in prophecys if getattr(x, "augury", None) == augury]
+
+
+def update_augurys_by_sacrifice(augurys, sacrifice):
+    """Return the augurys that belong to the given sacrifice."""
+    return [x for x in augurys if getattr(x, "sacrifice", None) == sacrifice]
