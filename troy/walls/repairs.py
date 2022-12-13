@@ -200,3 +200,9 @@ def compute_breachs(breachs, limit=20):
 def update_battlements_by_breach(battlements, breach):
     """Return the battlements that belong to the given breach."""
     return [x for x in battlements if getattr(x, "breach", None) == breach]
+
+
+def parapet_shift_hours(start_hour=20, shifts=6):
+    """Hours at which each parapet shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
