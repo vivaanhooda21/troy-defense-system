@@ -138,3 +138,8 @@ def assign_store(store, factor=0.5):
     if store is None:
         raise ValueError("no store given")
     return round(store * factor + RATION_RESERVE, 2)
+
+
+def is_barley_manned(barley):
+    """True if the barley is manned."""
+    return bool(barley) and getattr(barley, "state", "") == "manned"
