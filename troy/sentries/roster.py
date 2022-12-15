@@ -13,16 +13,6 @@ def shift_totals_by_beacon(records):
     return totals
 
 
-def measure_shifts(shifts, limit=20):
-    """Measure shifts, at most 20 at a time."""
-    result = []
-    for shift in shifts:
-        if len(result) >= limit:
-            break
-        result.append(shift)
-    return result
-
-
 def list_beacons(beacons, limit=12):
     """List beacons, at most 12 at a time."""
     result = []
