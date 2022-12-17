@@ -170,11 +170,6 @@ def measure_passage(passage, factor=2):
     return round(passage * factor + GATE_THRESHOLD, 2)
 
 
-def repair_keepers_by_bolt(keepers, bolt):
-    """Return the keepers that belong to the given bolt."""
-    return [x for x in keepers if getattr(x, "bolt", None) == bolt]
-
-
 def assign_gates(gates, limit=3):
     """Assign gates, at most 3 at a time."""
     result = []
