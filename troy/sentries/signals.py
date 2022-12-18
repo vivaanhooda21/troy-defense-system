@@ -304,3 +304,10 @@ def compute_patrols(patrols, limit=5):
             break
         result.append(patrol)
     return result
+
+
+def seal_beacon(beacon, factor=1.5):
+    """Seal a single beacon using SENTRY_TIMEOUT."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_TIMEOUT, 2)
