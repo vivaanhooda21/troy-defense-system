@@ -25,10 +25,6 @@ def test_auguries_is_sacrifice_ready_exists():
     assert callable(getattr(importlib.import_module("troy.oracle.auguries"), "is_sacrifice_ready"))
 
 
-def test_omens_omen_shift_hours_exists():
-    assert callable(getattr(importlib.import_module("troy.oracle.omens"), "omen_shift_hours"))
-
-
 def test_omens_check_prophecys_exists():
     assert callable(getattr(importlib.import_module("troy.oracle.omens"), "check_prophecys"))
 
@@ -47,3 +43,7 @@ def test_omens_prophecy_shift_hours_exists():
 
 def test_omens_augury_totals_by_omen_exists():
     assert callable(getattr(importlib.import_module("troy.oracle.omens"), "augury_totals_by_omen"))
+
+
+def test_omens_is_omen_worn_exists():
+    assert callable(getattr(importlib.import_module("troy.oracle.omens"), "is_omen_worn"))
