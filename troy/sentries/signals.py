@@ -311,3 +311,12 @@ def seal_beacon(beacon, factor=1.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_TIMEOUT, 2)
+
+
+def shift_totals_by_patrol(records):
+    """Sum shift counts per patrol."""
+    totals = {}
+    for rec in records:
+        key = rec.get("patrol", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("shift", 0)
+    return totals
