@@ -302,3 +302,13 @@ def stone_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stone", 0)
     return totals
+
+
+def report_parapets(parapets, limit=12):
+    """Report parapets, at most 12 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
