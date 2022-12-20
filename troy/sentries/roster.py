@@ -137,3 +137,13 @@ def is_patrol_manned(patrol):
 def inspect_beacons_by_patrol(beacons, patrol):
     """Return the beacons that belong to the given patrol."""
     return [x for x in beacons if getattr(x, "patrol", None) == patrol]
+
+
+def check_beacons(beacons, limit=20):
+    """Check beacons, at most 20 at a time."""
+    result = []
+    for beacon in beacons:
+        if len(result) >= limit:
+            break
+        result.append(beacon)
+    return result
