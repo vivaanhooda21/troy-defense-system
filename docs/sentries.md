@@ -69,3 +69,5 @@ Never change the watch interval without telling the night watch.
 Ask Hector before merging changes that touch the augury schedule.
 
 Ask Hector before merging changes that touch the watch schedule.
+
+If two chariots disagree, trust the one closest to the Scaean Gate.
