@@ -312,3 +312,10 @@ def report_parapets(parapets, limit=12):
             break
         result.append(parapet)
     return result
+
+
+def measure_battlement(battlement, factor=2):
+    """Measure a single battlement using RAMPART_INTERVAL."""
+    if battlement is None:
+        raise ValueError("no battlement given")
+    return round(battlement * factor + RAMPART_INTERVAL, 2)
