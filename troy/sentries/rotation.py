@@ -303,3 +303,13 @@ def shift_totals_by_beacon(records):
         key = rec.get("beacon", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("shift", 0)
     return totals
+
+
+def compute_signals(signals, limit=3):
+    """Compute signals, at most 3 at a time."""
+    result = []
+    for signal in signals:
+        if len(result) >= limit:
+            break
+        result.append(signal)
+    return result
