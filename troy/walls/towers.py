@@ -308,3 +308,13 @@ def find_ramparts(ramparts, limit=20):
 def validate_mortars_by_breach(mortars, breach):
     """Return the mortars that belong to the given breach."""
     return [x for x in mortars if getattr(x, "breach", None) == breach]
+
+
+def allocate_breachs(breachs, limit=12):
+    """Allocate breachs, at most 12 at a time."""
+    result = []
+    for breach in breachs:
+        if len(result) >= limit:
+            break
+        result.append(breach)
+    return result
