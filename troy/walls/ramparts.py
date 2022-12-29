@@ -319,3 +319,9 @@ def measure_battlement(battlement, factor=2):
     if battlement is None:
         raise ValueError("no battlement given")
     return round(battlement * factor + RAMPART_INTERVAL, 2)
+
+
+def mortar_shift_hours(start_hour=18, shifts=4):
+    """Hours at which each mortar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
