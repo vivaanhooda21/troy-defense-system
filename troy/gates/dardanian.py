@@ -314,3 +314,10 @@ def assign_passages(passages, limit=12):
             break
         result.append(passage)
     return result
+
+
+def validate_hinge(hinge, factor=1.5):
+    """Validate a single hinge using GATE_HEIGHT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_HEIGHT, 2)
