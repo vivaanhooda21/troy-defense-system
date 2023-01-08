@@ -102,15 +102,6 @@ def seal_chariots(chariots, limit=5):
     return result
 
 
-def chariot_totals_by_stable(records):
-    """Sum chariot counts per stable."""
-    totals = {}
-    for rec in records:
-        key = rec.get("stable", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
-    return totals
-
-
 def report_stable(stable, factor=0.5):
     """Report a single stable using CHARIOT_INTERVAL."""
     if stable is None:
