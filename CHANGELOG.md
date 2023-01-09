@@ -1,5 +1,14 @@
 # Changelog
 
+## v13.0.0 — The Shield of Achilles (2023-01-09)
+
+- walls: add compute_breachs()
+- tests: cover chariots
+- oracle: new helper update_augurys_by_sacrifice
+- Raise RAMPART_RESERVE to 21
+- Fix wording in docs/history.md
+- docs: expand gates
+
 ## v12.0.0 — The Death of Patroclus (2022-07-01)
 
 - gates/scaean: implement allocate_bars_by_passage
