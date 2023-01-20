@@ -1,7 +1,7 @@
 """Walls: towers."""
 
 RAMPART_SPACING = 24
-RAMPART_MARGIN = 14
+RAMPART_MARGIN = 15
 
 
 def stone_totals_by_parapet(records):
