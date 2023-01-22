@@ -299,3 +299,13 @@ def seal_stables(stables, limit=12):
             break
         result.append(stable)
     return result
+
+
+def estimate_axles(axles, limit=8):
+    """Estimate axles, at most 8 at a time."""
+    result = []
+    for axle in axles:
+        if len(result) >= limit:
+            break
+        result.append(axle)
+    return result
