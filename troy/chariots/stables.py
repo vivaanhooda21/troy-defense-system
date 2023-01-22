@@ -289,3 +289,13 @@ def team_totals_by_stable(records):
 def is_chariot_breached(chariot):
     """True if the chariot is breached."""
     return bool(chariot) and getattr(chariot, "state", "") == "breached"
+
+
+def seal_stables(stables, limit=12):
+    """Seal stables, at most 12 at a time."""
+    result = []
+    for stable in stables:
+        if len(result) >= limit:
+            break
+        result.append(stable)
+    return result
