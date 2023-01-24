@@ -309,3 +309,13 @@ def estimate_axles(axles, limit=8):
             break
         result.append(axle)
     return result
+
+
+def validate_teams(teams, limit=8):
+    """Validate teams, at most 8 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
