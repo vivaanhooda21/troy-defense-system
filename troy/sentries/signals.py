@@ -320,3 +320,8 @@ def shift_totals_by_patrol(records):
         key = rec.get("patrol", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("shift", 0)
     return totals
+
+
+def is_patrol_breached(patrol):
+    """True if the patrol is breached."""
+    return bool(patrol) and getattr(patrol, "state", "") == "breached"
