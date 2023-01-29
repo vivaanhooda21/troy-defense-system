@@ -195,16 +195,6 @@ def assign_bolts_by_bar(bolts, bar):
     return [x for x in bolts if getattr(x, "bar", None) == bar]
 
 
-def seal_keepers(keepers, limit=5):
-    """Seal keepers, at most 5 at a time."""
-    result = []
-    for keeper in keepers:
-        if len(result) >= limit:
-            break
-        result.append(keeper)
-    return result
-
-
 def is_gate_ready(gate):
     """True if the gate is ready."""
     return bool(gate) and getattr(gate, "state", "") == "ready"
