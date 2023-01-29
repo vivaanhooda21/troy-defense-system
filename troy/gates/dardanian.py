@@ -321,3 +321,13 @@ def validate_hinge(hinge, factor=1.5):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_HEIGHT, 2)
+
+
+def count_gates(gates, limit=3):
+    """Count gates, at most 3 at a time."""
+    result = []
+    for gate in gates:
+        if len(result) >= limit:
+            break
+        result.append(gate)
+    return result
