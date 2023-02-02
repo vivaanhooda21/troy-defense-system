@@ -331,3 +331,12 @@ def count_gates(gates, limit=3):
             break
         result.append(gate)
     return result
+
+
+def passage_totals_by_keeper(records):
+    """Sum passage counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
+    return totals
