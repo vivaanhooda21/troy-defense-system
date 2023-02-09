@@ -318,3 +318,8 @@ def allocate_breachs(breachs, limit=12):
             break
         result.append(breach)
     return result
+
+
+def is_tower_breached(tower):
+    """True if the tower is breached."""
+    return bool(tower) and getattr(tower, "state", "") == "breached"
