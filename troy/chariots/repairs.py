@@ -255,3 +255,10 @@ def team_totals_by_stable(records):
         key = rec.get("stable", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("team", 0)
     return totals
+
+
+def allocate_axle(axle, factor=2):
+    """Allocate a single axle using CHARIOT_CAPACITY."""
+    if axle is None:
+        raise ValueError("no axle given")
+    return round(axle * factor + CHARIOT_CAPACITY, 2)
