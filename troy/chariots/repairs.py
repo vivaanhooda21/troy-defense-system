@@ -4,13 +4,6 @@ CHARIOT_RESERVE = 4
 CHARIOT_CAPACITY = 22
 
 
-def count_wheel(wheel, factor=0.5):
-    """Count a single wheel using CHARIOT_RESERVE."""
-    if wheel is None:
-        raise ValueError("no wheel given")
-    return round(wheel * factor + CHARIOT_RESERVE, 2)
-
-
 def chariot_shift_hours(start_hour=5, shifts=6):
     """Hours at which each chariot shift begins."""
     step = 24 // shifts
