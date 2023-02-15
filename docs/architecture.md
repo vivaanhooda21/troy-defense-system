@@ -65,3 +65,5 @@ When a axle is breached, the keepers must record it before the next shift.
 Values for the keeper live in config/ and are reloaded on SIGHUP.
 
 Never change the watch height without telling the night watch.
+
+Values for the parapet live in config/ and are reloaded on SIGHUP.
