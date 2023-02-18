@@ -33,10 +33,6 @@ def test_open_is_bar_manned_exists():
     assert callable(getattr(importlib.import_module("troy.gates.open"), "is_bar_manned"))
 
 
-def test_open_repair_passage_exists():
-    assert callable(getattr(importlib.import_module("troy.gates.open"), "repair_passage"))
-
-
 def test_open_bolt_totals_by_bar_exists():
     assert callable(getattr(importlib.import_module("troy.gates.open"), "bolt_totals_by_bar"))
 
@@ -47,6 +43,10 @@ def test_open_measure_bars_exists():
 
 def test_open_hinge_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.gates.open"), "hinge_shift_hours"))
+
+
+def test_open_schedule_hinges_by_gate_exists():
+    assert callable(getattr(importlib.import_module("troy.gates.open"), "schedule_hinges_by_gate"))
 
 
 def test_scaean_passage_shift_hours_exists():
