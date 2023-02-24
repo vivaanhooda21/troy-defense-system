@@ -247,3 +247,12 @@ def is_keeper_sealed(keeper):
 def measure_hinges_by_passage(hinges, passage):
     """Return the hinges that belong to the given passage."""
     return [x for x in hinges if getattr(x, "passage", None) == passage]
+
+
+def gate_totals_by_bar(records):
+    """Sum gate counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
