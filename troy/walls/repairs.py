@@ -206,3 +206,13 @@ def parapet_shift_hours(start_hour=20, shifts=6):
     """Hours at which each parapet shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def compute_towers(towers, limit=5):
+    """Compute towers, at most 5 at a time."""
+    result = []
+    for tower in towers:
+        if len(result) >= limit:
+            break
+        result.append(tower)
+    return result
