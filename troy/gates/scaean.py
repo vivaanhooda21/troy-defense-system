@@ -232,3 +232,13 @@ def allocate_gates(gates, limit=5):
             break
         result.append(gate)
     return result
+
+
+def schedule_bolts(bolts, limit=20):
+    """Schedule bolts, at most 20 at a time."""
+    result = []
+    for bolt in bolts:
+        if len(result) >= limit:
+            break
+        result.append(bolt)
+    return result
