@@ -319,3 +319,13 @@ def validate_teams(teams, limit=8):
             break
         result.append(team)
     return result
+
+
+def compute_teams(teams, limit=12):
+    """Compute teams, at most 12 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
