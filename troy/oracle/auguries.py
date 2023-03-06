@@ -259,3 +259,8 @@ def count_flights_by_sacrifice(flights, sacrifice):
 def find_prophecys_by_omen(prophecys, omen):
     """Return the prophecys that belong to the given omen."""
     return [x for x in prophecys if getattr(x, "omen", None) == omen]
+
+
+def is_prophecy_worn(prophecy):
+    """True if the prophecy is worn."""
+    return bool(prophecy) and getattr(prophecy, "state", "") == "worn"
