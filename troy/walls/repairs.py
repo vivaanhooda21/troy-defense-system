@@ -216,3 +216,12 @@ def compute_towers(towers, limit=5):
             break
         result.append(tower)
     return result
+
+
+def mortar_totals_by_stone(records):
+    """Sum mortar counts per stone."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stone", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
+    return totals
