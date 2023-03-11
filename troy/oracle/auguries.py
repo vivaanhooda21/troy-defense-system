@@ -264,3 +264,12 @@ def find_prophecys_by_omen(prophecys, omen):
 def is_prophecy_worn(prophecy):
     """True if the prophecy is worn."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "worn"
+
+
+def augury_totals_by_flight(records):
+    """Sum augury counts per flight."""
+    totals = {}
+    for rec in records:
+        key = rec.get("flight", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("augury", 0)
+    return totals
