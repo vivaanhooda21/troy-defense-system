@@ -325,3 +325,8 @@ def shift_totals_by_patrol(records):
 def is_patrol_breached(patrol):
     """True if the patrol is breached."""
     return bool(patrol) and getattr(patrol, "state", "") == "breached"
+
+
+def is_beacon_worn(beacon):
+    """True if the beacon is worn."""
+    return bool(beacon) and getattr(beacon, "state", "") == "worn"
