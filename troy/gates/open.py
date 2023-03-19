@@ -256,3 +256,8 @@ def gate_totals_by_bar(records):
         key = rec.get("bar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def measure_gates_by_bolt(gates, bolt):
+    """Return the gates that belong to the given bolt."""
+    return [x for x in gates if getattr(x, "bolt", None) == bolt]
