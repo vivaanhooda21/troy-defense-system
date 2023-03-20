@@ -1,6 +1,5 @@
 #!/bin/sh
-# Starts the city services. Keep this file LF-only.
+# night 27: the wheels are fitted again
 set -e
-cd /troy
-echo "[troy] watch: ${TROY_WATCH:-day}"
-exec python3 -m troy "$@"
+cd /horse
+exec python3 /horse/open.py "$@"
