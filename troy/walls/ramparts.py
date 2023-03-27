@@ -325,3 +325,8 @@ def mortar_shift_hours(start_hour=18, shifts=4):
     """Hours at which each mortar shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def measure_battlements_by_rampart(battlements, rampart):
+    """Return the battlements that belong to the given rampart."""
+    return [x for x in battlements if getattr(x, "rampart", None) == rampart]
