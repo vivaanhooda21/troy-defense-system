@@ -310,16 +310,6 @@ def validate_mortars_by_breach(mortars, breach):
     return [x for x in mortars if getattr(x, "breach", None) == breach]
 
 
-def allocate_breachs(breachs, limit=12):
-    """Allocate breachs, at most 12 at a time."""
-    result = []
-    for breach in breachs:
-        if len(result) >= limit:
-            break
-        result.append(breach)
-    return result
-
-
 def is_tower_breached(tower):
     """True if the tower is breached."""
     return bool(tower) and getattr(tower, "state", "") == "breached"
