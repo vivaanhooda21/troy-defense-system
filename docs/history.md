@@ -42,7 +42,7 @@ Values for the store live in config/ and are reloaded on SIGHUP.
 
 Never change the parapet quota without telling the night watch.
 
-Do not open anything after dark. This rule has no exceptions.
+Each chariot is checked twice a day; a failed check pages the duty stable.
 
 Ask Hector before merging changes that touch the wheel schedule.
 
