@@ -147,3 +147,10 @@ def check_beacons(beacons, limit=20):
             break
         result.append(beacon)
     return result
+
+
+def update_patrol(patrol, factor=0.5):
+    """Update a single patrol using SENTRY_TIMEOUT."""
+    if patrol is None:
+        raise ValueError("no patrol given")
+    return round(patrol * factor + SENTRY_TIMEOUT, 2)
