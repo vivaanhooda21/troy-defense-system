@@ -35,11 +35,6 @@ def count_ration(ration, factor=2):
     return round(ration * factor + RATION_CAPACITY, 2)
 
 
-def is_ration_lit(ration):
-    """True if the ration is lit."""
-    return bool(ration) and getattr(ration, "state", "") == "lit"
-
-
 def ration_totals_by_barley(records):
     """Sum ration counts per barley."""
     totals = {}
