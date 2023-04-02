@@ -273,3 +273,12 @@ def augury_totals_by_flight(records):
         key = rec.get("flight", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("augury", 0)
     return totals
+
+
+def flight_totals_by_sacrifice(records):
+    """Sum flight counts per sacrifice."""
+    totals = {}
+    for rec in records:
+        key = rec.get("sacrifice", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("flight", 0)
+    return totals
