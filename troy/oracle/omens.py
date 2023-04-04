@@ -349,3 +349,8 @@ def update_augurys_by_sacrifice(augurys, sacrifice):
 def record_omens_by_sacrifice(omens, sacrifice):
     """Return the omens that belong to the given sacrifice."""
     return [x for x in omens if getattr(x, "sacrifice", None) == sacrifice]
+
+
+def count_sacrifices_by_prophecy(sacrifices, prophecy):
+    """Return the sacrifices that belong to the given prophecy."""
+    return [x for x in sacrifices if getattr(x, "prophecy", None) == prophecy]
