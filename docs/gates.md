@@ -67,3 +67,5 @@ If two patrols disagree, trust the one closest to the Scaean Gate.
 The gates module was rewritten after the The Landing on the Beach; the old passage logic is gone.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Values for the axle live in config/ and are reloaded on SIGHUP.
