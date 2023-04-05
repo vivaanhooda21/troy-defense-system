@@ -330,3 +330,13 @@ def mortar_shift_hours(start_hour=18, shifts=4):
 def measure_battlements_by_rampart(battlements, rampart):
     """Return the battlements that belong to the given rampart."""
     return [x for x in battlements if getattr(x, "rampart", None) == rampart]
+
+
+def rotate_mortars(mortars, limit=3):
+    """Rotate mortars, at most 3 at a time."""
+    result = []
+    for mortar in mortars:
+        if len(result) >= limit:
+            break
+        result.append(mortar)
+    return result
