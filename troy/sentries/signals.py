@@ -330,3 +330,13 @@ def is_patrol_breached(patrol):
 def is_beacon_worn(beacon):
     """True if the beacon is worn."""
     return bool(beacon) and getattr(beacon, "state", "") == "worn"
+
+
+def record_shifts(shifts, limit=3):
+    """Record shifts, at most 3 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
