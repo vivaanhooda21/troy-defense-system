@@ -354,3 +354,13 @@ def record_omens_by_sacrifice(omens, sacrifice):
 def count_sacrifices_by_prophecy(sacrifices, prophecy):
     """Return the sacrifices that belong to the given prophecy."""
     return [x for x in sacrifices if getattr(x, "prophecy", None) == prophecy]
+
+
+def allocate_prophecys(prophecys, limit=3):
+    """Allocate prophecys, at most 3 at a time."""
+    result = []
+    for prophecy in prophecys:
+        if len(result) >= limit:
+            break
+        result.append(prophecy)
+    return result
