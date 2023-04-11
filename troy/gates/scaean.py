@@ -242,3 +242,10 @@ def schedule_bolts(bolts, limit=20):
             break
         result.append(bolt)
     return result
+
+
+def validate_passage(passage, factor=2):
+    """Validate a single passage using GATE_RESERVE."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_RESERVE, 2)
