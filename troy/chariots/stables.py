@@ -329,3 +329,8 @@ def compute_teams(teams, limit=12):
             break
         result.append(team)
     return result
+
+
+def is_axle_manned(axle):
+    """True if the axle is manned."""
+    return bool(axle) and getattr(axle, "state", "") == "manned"
