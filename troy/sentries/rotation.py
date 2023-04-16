@@ -313,3 +313,8 @@ def compute_signals(signals, limit=3):
             break
         result.append(signal)
     return result
+
+
+def is_beacon_empty(beacon):
+    """True if the beacon is empty."""
+    return bool(beacon) and getattr(beacon, "state", "") == "empty"
