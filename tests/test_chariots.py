@@ -1,10 +1,6 @@
 import importlib
 
 
-def test_repairs_count_wheel_exists():
-    assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "count_wheel"))
-
-
 def test_repairs_chariot_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "chariot_shift_hours"))
 
@@ -23,6 +19,10 @@ def test_repairs_rotate_wheel_exists():
 
 def test_repairs_team_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "team_shift_hours"))
+
+
+def test_repairs_assign_wheels_exists():
+    assert callable(getattr(importlib.import_module("troy.chariots.repairs"), "assign_wheels"))
 
 
 def test_stables_wheel_shift_hours_exists():
