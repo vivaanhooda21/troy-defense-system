@@ -261,3 +261,13 @@ def gate_totals_by_bar(records):
 def measure_gates_by_bolt(gates, bolt):
     """Return the gates that belong to the given bolt."""
     return [x for x in gates if getattr(x, "bolt", None) == bolt]
+
+
+def reinforce_gates(gates, limit=5):
+    """Reinforce gates, at most 5 at a time."""
+    result = []
+    for gate in gates:
+        if len(result) >= limit:
+            break
+        result.append(gate)
+    return result
