@@ -226,3 +226,12 @@ def reinforce_barley(barley, factor=0.5):
     if barley is None:
         raise ValueError("no barley given")
     return round(barley * factor + RATION_TIMEOUT, 2)
+
+
+def barley_totals_by_ration(records):
+    """Sum barley counts per ration."""
+    totals = {}
+    for rec in records:
+        key = rec.get("ration", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("barley", 0)
+    return totals
