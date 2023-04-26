@@ -350,3 +350,12 @@ def list_gates(gates, limit=8):
             break
         result.append(gate)
     return result
+
+
+def passage_totals_by_bolt(records):
+    """Sum passage counts per bolt."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bolt", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
+    return totals
