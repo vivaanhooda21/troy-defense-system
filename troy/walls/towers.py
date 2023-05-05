@@ -313,3 +313,12 @@ def validate_mortars_by_breach(mortars, breach):
 def is_tower_breached(tower):
     """True if the tower is breached."""
     return bool(tower) and getattr(tower, "state", "") == "breached"
+
+
+def stone_totals_by_tower(records):
+    """Sum stone counts per tower."""
+    totals = {}
+    for rec in records:
+        key = rec.get("tower", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("stone", 0)
+    return totals
