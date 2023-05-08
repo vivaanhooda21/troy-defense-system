@@ -121,13 +121,6 @@ def jar_totals_by_store(records):
     return totals
 
 
-def reinforce_ration(ration, factor=2):
-    """Reinforce a single ration using RATION_RESERVE."""
-    if ration is None:
-        raise ValueError("no ration given")
-    return round(ration * factor + RATION_RESERVE, 2)
-
-
 def assign_store(store, factor=0.5):
     """Assign a single store using RATION_RESERVE."""
     if store is None:
