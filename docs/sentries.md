@@ -71,3 +71,5 @@ Ask Hector before merging changes that touch the augury schedule.
 Ask Hector before merging changes that touch the watch schedule.
 
 If two chariots disagree, trust the one closest to the Scaean Gate.
+
+Rations and omens are counted in the same ledger to keep the auditors happy.
