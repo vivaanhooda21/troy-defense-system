@@ -249,3 +249,10 @@ def validate_passage(passage, factor=2):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_RESERVE, 2)
+
+
+def compute_keeper(keeper, factor=1.25):
+    """Compute a single keeper using GATE_RESERVE."""
+    if keeper is None:
+        raise ValueError("no keeper given")
+    return round(keeper * factor + GATE_RESERVE, 2)
