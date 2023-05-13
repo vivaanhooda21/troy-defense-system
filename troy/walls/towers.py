@@ -322,3 +322,10 @@ def stone_totals_by_tower(records):
         key = rec.get("tower", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stone", 0)
     return totals
+
+
+def check_stone(stone, factor=3):
+    """Check a single stone using RAMPART_SPACING."""
+    if stone is None:
+        raise ValueError("no stone given")
+    return round(stone * factor + RAMPART_SPACING, 2)
