@@ -323,3 +323,10 @@ def is_beacon_empty(beacon):
 def is_beacon_ready(beacon):
     """True if the beacon is ready."""
     return bool(beacon) and getattr(beacon, "state", "") == "ready"
+
+
+def estimate_patrol(patrol, factor=3):
+    """Estimate a single patrol using SENTRY_SPACING."""
+    if patrol is None:
+        raise ValueError("no patrol given")
+    return round(patrol * factor + SENTRY_SPACING, 2)
