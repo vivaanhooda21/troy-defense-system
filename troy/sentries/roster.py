@@ -154,3 +154,10 @@ def update_patrol(patrol, factor=0.5):
     if patrol is None:
         raise ValueError("no patrol given")
     return round(patrol * factor + SENTRY_TIMEOUT, 2)
+
+
+def record_sentry(sentry, factor=2):
+    """Record a single sentry using SENTRY_TIMEOUT."""
+    if sentry is None:
+        raise ValueError("no sentry given")
+    return round(sentry * factor + SENTRY_TIMEOUT, 2)
