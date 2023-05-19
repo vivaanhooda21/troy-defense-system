@@ -57,11 +57,6 @@ def stable_shift_hours(start_hour=18, shifts=4):
     return [(start_hour + i * step) % 24 for i in range(shifts)]
 
 
-def report_axles_by_stable(axles, stable):
-    """Return the axles that belong to the given stable."""
-    return [x for x in axles if getattr(x, "stable", None) == stable]
-
-
 def is_wheel_ready(wheel):
     """True if the wheel is ready."""
     return bool(wheel) and getattr(wheel, "state", "") == "ready"
