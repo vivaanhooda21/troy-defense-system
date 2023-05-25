@@ -230,3 +230,8 @@ def mortar_totals_by_stone(records):
 def reinforce_mortars_by_rampart(mortars, rampart):
     """Return the mortars that belong to the given rampart."""
     return [x for x in mortars if getattr(x, "rampart", None) == rampart]
+
+
+def allocate_towers_by_rampart(towers, rampart):
+    """Return the towers that belong to the given rampart."""
+    return [x for x in towers if getattr(x, "rampart", None) == rampart]
