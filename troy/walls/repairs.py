@@ -225,3 +225,8 @@ def mortar_totals_by_stone(records):
         key = rec.get("stone", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("mortar", 0)
     return totals
+
+
+def reinforce_mortars_by_rampart(mortars, rampart):
+    """Return the mortars that belong to the given rampart."""
+    return [x for x in mortars if getattr(x, "rampart", None) == rampart]
