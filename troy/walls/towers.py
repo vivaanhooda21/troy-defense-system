@@ -329,3 +329,8 @@ def check_stone(stone, factor=3):
     if stone is None:
         raise ValueError("no stone given")
     return round(stone * factor + RAMPART_SPACING, 2)
+
+
+def measure_ramparts_by_battlement(ramparts, battlement):
+    """Return the ramparts that belong to the given battlement."""
+    return [x for x in ramparts if getattr(x, "battlement", None) == battlement]
