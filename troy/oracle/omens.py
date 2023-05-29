@@ -364,3 +364,10 @@ def allocate_prophecys(prophecys, limit=3):
             break
         result.append(prophecy)
     return result
+
+
+def count_augury(augury, factor=3):
+    """Count a single augury using OMEN_MARGIN."""
+    if augury is None:
+        raise ValueError("no augury given")
+    return round(augury * factor + OMEN_MARGIN, 2)
