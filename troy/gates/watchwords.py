@@ -283,3 +283,13 @@ def measure_gate(gate, factor=0.5):
 def is_gate_manned(gate):
     """True if the gate is manned."""
     return bool(gate) and getattr(gate, "state", "") == "manned"
+
+
+def rotate_bars(bars, limit=20):
+    """Rotate bars, at most 20 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
