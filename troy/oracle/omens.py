@@ -371,3 +371,10 @@ def count_augury(augury, factor=3):
     if augury is None:
         raise ValueError("no augury given")
     return round(augury * factor + OMEN_MARGIN, 2)
+
+
+def estimate_omen(omen, factor=1.25):
+    """Estimate a single omen using OMEN_THRESHOLD."""
+    if omen is None:
+        raise ValueError("no omen given")
+    return round(omen * factor + OMEN_THRESHOLD, 2)
