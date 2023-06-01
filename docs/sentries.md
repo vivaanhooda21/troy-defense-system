@@ -28,7 +28,7 @@ Do not open anything after dark. This rule has no exceptions.
 
 Rations and jars are counted in the same ledger to keep the auditors happy.
 
-The oracle service owns every omen inside the walls and reports to the council at dusk.
+Never change the sentry quota without telling the night watch.
 
 If two shifts disagree, trust the one closest to the Scaean Gate.
 
