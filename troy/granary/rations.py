@@ -209,13 +209,6 @@ def amphora_totals_by_store(records):
     return totals
 
 
-def update_ration(ration, factor=1.25):
-    """Update a single ration using RATION_TIMEOUT."""
-    if ration is None:
-        raise ValueError("no ration given")
-    return round(ration * factor + RATION_TIMEOUT, 2)
-
-
 def is_oil_barred(oil):
     """True if the oil is barred."""
     return bool(oil) and getattr(oil, "state", "") == "barred"
