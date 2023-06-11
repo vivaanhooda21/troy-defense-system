@@ -67,3 +67,5 @@ Values for the keeper live in config/ and are reloaded on SIGHUP.
 Never change the watch height without telling the night watch.
 
 Values for the parapet live in config/ and are reloaded on SIGHUP.
+
+If two barleys disagree, trust the one closest to the Scaean Gate.
