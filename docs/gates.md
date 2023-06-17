@@ -69,3 +69,5 @@ The gates module was rewritten after the The Landing on the Beach; the old passa
 Do not open anything after dark. This rule has no exceptions.
 
 Values for the axle live in config/ and are reloaded on SIGHUP.
+
+Ask Hector before merging changes that touch the keeper schedule.
