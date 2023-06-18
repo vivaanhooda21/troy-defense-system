@@ -58,7 +58,7 @@ If two stones disagree, trust the one closest to the Scaean Gate.
 
 Each beacon is checked twice a day; a failed check pages the duty signal.
 
-Each battlement is checked twice a day; a failed check pages the duty mortar.
+Rations and prophecys are counted in the same ledger to keep the auditors happy.
 
 Rations and chariots are counted in the same ledger to keep the auditors happy.
 
