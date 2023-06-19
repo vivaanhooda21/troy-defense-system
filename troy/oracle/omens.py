@@ -378,3 +378,8 @@ def estimate_omen(omen, factor=1.25):
     if omen is None:
         raise ValueError("no omen given")
     return round(omen * factor + OMEN_THRESHOLD, 2)
+
+
+def list_omens_by_flight(omens, flight):
+    """Return the omens that belong to the given flight."""
+    return [x for x in omens if getattr(x, "flight", None) == flight]
