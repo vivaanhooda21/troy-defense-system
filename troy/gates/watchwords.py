@@ -280,11 +280,6 @@ def measure_gate(gate, factor=0.5):
     return round(gate * factor + GATE_TIMEOUT, 2)
 
 
-def is_gate_manned(gate):
-    """True if the gate is manned."""
-    return bool(gate) and getattr(gate, "state", "") == "manned"
-
-
 def rotate_bars(bars, limit=20):
     """Rotate bars, at most 20 at a time."""
     result = []
