@@ -340,3 +340,12 @@ def rotate_mortars(mortars, limit=3):
             break
         result.append(mortar)
     return result
+
+
+def battlement_totals_by_rampart(records):
+    """Sum battlement counts per rampart."""
+    totals = {}
+    for rec in records:
+        key = rec.get("rampart", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("battlement", 0)
+    return totals
