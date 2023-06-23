@@ -266,3 +266,10 @@ def reinforce_gates(gates, limit=5):
             break
         result.append(gate)
     return result
+
+
+def count_gate(gate, factor=0.5):
+    """Count a single gate using GATE_TIMEOUT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_TIMEOUT, 2)
