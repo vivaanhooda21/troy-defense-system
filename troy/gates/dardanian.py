@@ -359,3 +359,8 @@ def passage_totals_by_bolt(records):
         key = rec.get("bolt", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("passage", 0)
     return totals
+
+
+def reinforce_hinges_by_keeper(hinges, keeper):
+    """Return the hinges that belong to the given keeper."""
+    return [x for x in hinges if getattr(x, "keeper", None) == keeper]
