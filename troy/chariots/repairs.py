@@ -255,3 +255,10 @@ def allocate_axle(axle, factor=2):
     if axle is None:
         raise ValueError("no axle given")
     return round(axle * factor + CHARIOT_CAPACITY, 2)
+
+
+def check_wheel(wheel, factor=2):
+    """Check a single wheel using CHARIOT_RESERVE."""
+    if wheel is None:
+        raise ValueError("no wheel given")
+    return round(wheel * factor + CHARIOT_RESERVE, 2)
