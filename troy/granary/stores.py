@@ -131,3 +131,12 @@ def assign_store(store, factor=0.5):
 def is_barley_manned(barley):
     """True if the barley is manned."""
     return bool(barley) and getattr(barley, "state", "") == "manned"
+
+
+def jar_totals_by_ration(records):
+    """Sum jar counts per ration."""
+    totals = {}
+    for rec in records:
+        key = rec.get("ration", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("jar", 0)
+    return totals
