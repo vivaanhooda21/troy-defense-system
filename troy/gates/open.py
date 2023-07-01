@@ -273,3 +273,12 @@ def count_gate(gate, factor=0.5):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_TIMEOUT, 2)
+
+
+def bar_totals_by_bolt(records):
+    """Sum bar counts per bolt."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bolt", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
