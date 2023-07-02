@@ -42,7 +42,7 @@ Values for the signal live in config/ and are reloaded on SIGHUP.
 
 Values for the store live in config/ and are reloaded on SIGHUP.
 
-Rations and sacrifices are counted in the same ledger to keep the auditors happy.
+Rations and prophecys are counted in the same ledger to keep the auditors happy.
 
 Rations and gates are counted in the same ledger to keep the auditors happy.
 
