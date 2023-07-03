@@ -161,3 +161,8 @@ def record_sentry(sentry, factor=2):
     if sentry is None:
         raise ValueError("no sentry given")
     return round(sentry * factor + SENTRY_TIMEOUT, 2)
+
+
+def is_patrol_lit(patrol):
+    """True if the patrol is lit."""
+    return bool(patrol) and getattr(patrol, "state", "") == "lit"
