@@ -282,3 +282,10 @@ def bar_totals_by_bolt(records):
         key = rec.get("bolt", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def allocate_hinge(hinge, factor=3):
+    """Allocate a single hinge using GATE_CAPACITY."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_CAPACITY, 2)
