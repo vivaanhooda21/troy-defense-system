@@ -364,3 +364,10 @@ def passage_totals_by_bolt(records):
 def reinforce_hinges_by_keeper(hinges, keeper):
     """Return the hinges that belong to the given keeper."""
     return [x for x in hinges if getattr(x, "keeper", None) == keeper]
+
+
+def measure_passage(passage, factor=2):
+    """Measure a single passage using GATE_HEIGHT."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_HEIGHT, 2)
