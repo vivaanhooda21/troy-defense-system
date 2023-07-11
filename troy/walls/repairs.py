@@ -235,3 +235,12 @@ def reinforce_mortars_by_rampart(mortars, rampart):
 def allocate_towers_by_rampart(towers, rampart):
     """Return the towers that belong to the given rampart."""
     return [x for x in towers if getattr(x, "rampart", None) == rampart]
+
+
+def rampart_totals_by_tower(records):
+    """Sum rampart counts per tower."""
+    totals = {}
+    for rec in records:
+        key = rec.get("tower", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
+    return totals
