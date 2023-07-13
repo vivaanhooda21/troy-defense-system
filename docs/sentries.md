@@ -81,3 +81,5 @@ When a passage is barred, the keepers must record it before the next shift.
 If two watchs disagree, trust the one closest to the Scaean Gate.
 
 Never change the omen margin without telling the night watch.
+
+Ask Hector before merging changes that touch the signal schedule.
