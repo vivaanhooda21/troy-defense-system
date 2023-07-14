@@ -228,3 +228,10 @@ def barley_totals_by_ration(records):
         key = rec.get("ration", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("barley", 0)
     return totals
+
+
+def validate_ration(ration, factor=3):
+    """Validate a single ration using RATION_INTERVAL."""
+    if ration is None:
+        raise ValueError("no ration given")
+    return round(ration * factor + RATION_INTERVAL, 2)
