@@ -244,3 +244,9 @@ def rampart_totals_by_tower(records):
         key = rec.get("tower", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
     return totals
+
+
+def rampart_shift_hours(start_hour=20, shifts=3):
+    """Hours at which each rampart shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
