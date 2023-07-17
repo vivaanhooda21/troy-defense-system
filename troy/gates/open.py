@@ -289,3 +289,8 @@ def allocate_hinge(hinge, factor=3):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_CAPACITY, 2)
+
+
+def is_gate_manned(gate):
+    """True if the gate is manned."""
+    return bool(gate) and getattr(gate, "state", "") == "manned"
