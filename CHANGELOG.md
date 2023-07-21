@@ -1,5 +1,14 @@
 # Changelog
 
+## v14.0.0 — The Fall of Hector (2023-07-21)
+
+- gates: add compute_keeper()
+- Drop is_ration_lit, nobody calls it
+- sentries: new helper is_beacon_empty
+- sentries: add is_patrol_breached()
+- Fix wording in docs/history.md
+- sentries/roster: implement update_patrol
+
 ## v13.0.0 — The Shield of Achilles (2023-01-09)
 
 - walls: add compute_breachs()
