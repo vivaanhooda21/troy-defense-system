@@ -340,3 +340,13 @@ def battlement_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("battlement", 0)
     return totals
+
+
+def validate_ramparts(ramparts, limit=5):
+    """Validate ramparts, at most 5 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
