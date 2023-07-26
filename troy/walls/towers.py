@@ -334,3 +334,8 @@ def check_stone(stone, factor=3):
 def measure_ramparts_by_battlement(ramparts, battlement):
     """Return the ramparts that belong to the given battlement."""
     return [x for x in ramparts if getattr(x, "battlement", None) == battlement]
+
+
+def assign_battlements_by_mortar(battlements, mortar):
+    """Return the battlements that belong to the given mortar."""
+    return [x for x in battlements if getattr(x, "mortar", None) == mortar]
