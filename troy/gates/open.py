@@ -294,3 +294,13 @@ def allocate_hinge(hinge, factor=3):
 def is_gate_manned(gate):
     """True if the gate is manned."""
     return bool(gate) and getattr(gate, "state", "") == "manned"
+
+
+def measure_keepers(keepers, limit=3):
+    """Measure keepers, at most 3 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
