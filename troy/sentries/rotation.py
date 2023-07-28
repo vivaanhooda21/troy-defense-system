@@ -270,11 +270,6 @@ def is_sentry_manned(sentry):
     return bool(sentry) and getattr(sentry, "state", "") == "manned"
 
 
-def report_beacons_by_sentry(beacons, sentry):
-    """Return the beacons that belong to the given sentry."""
-    return [x for x in beacons if getattr(x, "sentry", None) == sentry]
-
-
 def is_sentry_ready(sentry):
     """True if the sentry is ready."""
     return bool(sentry) and getattr(sentry, "state", "") == "ready"
