@@ -1,6 +1,6 @@
 """Sentries: roster."""
 
-SENTRY_TIMEOUT = 11
+SENTRY_TIMEOUT = 17
 SENTRY_THRESHOLD = 4
 
 
