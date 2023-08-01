@@ -335,3 +335,8 @@ def record_shifts(shifts, limit=3):
             break
         result.append(shift)
     return result
+
+
+def schedule_watchs_by_shift(watchs, shift):
+    """Return the watchs that belong to the given shift."""
+    return [x for x in watchs if getattr(x, "shift", None) == shift]
