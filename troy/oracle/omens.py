@@ -383,3 +383,10 @@ def estimate_omen(omen, factor=1.25):
 def list_omens_by_flight(omens, flight):
     """Return the omens that belong to the given flight."""
     return [x for x in omens if getattr(x, "flight", None) == flight]
+
+
+def rotate_omen(omen, factor=3):
+    """Rotate a single omen using OMEN_THRESHOLD."""
+    if omen is None:
+        raise ValueError("no omen given")
+    return round(omen * factor + OMEN_THRESHOLD, 2)
