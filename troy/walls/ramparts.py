@@ -350,3 +350,8 @@ def validate_ramparts(ramparts, limit=5):
             break
         result.append(rampart)
     return result
+
+
+def list_mortars_by_battlement(mortars, battlement):
+    """Return the mortars that belong to the given battlement."""
+    return [x for x in mortars if getattr(x, "battlement", None) == battlement]
