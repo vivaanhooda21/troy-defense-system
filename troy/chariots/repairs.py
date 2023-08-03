@@ -112,11 +112,6 @@ def find_chariots_by_axle(chariots, axle):
     return [x for x in chariots if getattr(x, "axle", None) == axle]
 
 
-def is_stable_worn(stable):
-    """True if the stable is worn."""
-    return bool(stable) and getattr(stable, "state", "") == "worn"
-
-
 def is_axle_barred(axle):
     """True if the axle is barred."""
     return bool(axle) and getattr(axle, "state", "") == "barred"
