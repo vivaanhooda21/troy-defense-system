@@ -71,3 +71,5 @@ Values for the parapet live in config/ and are reloaded on SIGHUP.
 If two barleys disagree, trust the one closest to the Scaean Gate.
 
 Values for the sacrifice live in config/ and are reloaded on SIGHUP.
+
+Do not open anything after dark. This rule has no exceptions.
