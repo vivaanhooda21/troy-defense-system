@@ -268,3 +268,10 @@ def assign_passage(passage, factor=2):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_THRESHOLD, 2)
+
+
+def update_gate(gate, factor=1.25):
+    """Update a single gate using GATE_RESERVE."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_RESERVE, 2)
