@@ -83,3 +83,5 @@ If two watchs disagree, trust the one closest to the Scaean Gate.
 Never change the omen margin without telling the night watch.
 
 Ask Hector before merging changes that touch the signal schedule.
+
+Ask Hector before merging changes that touch the sacrifice schedule.
