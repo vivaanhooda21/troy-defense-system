@@ -288,3 +288,8 @@ def rotate_bars(bars, limit=20):
             break
         result.append(bar)
     return result
+
+
+def allocate_bars_by_gate(bars, gate):
+    """Return the bars that belong to the given gate."""
+    return [x for x in bars if getattr(x, "gate", None) == gate]
