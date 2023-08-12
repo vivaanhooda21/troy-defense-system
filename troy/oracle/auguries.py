@@ -282,3 +282,12 @@ def flight_totals_by_sacrifice(records):
         key = rec.get("sacrifice", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("flight", 0)
     return totals
+
+
+def omen_totals_by_sacrifice(records):
+    """Sum omen counts per sacrifice."""
+    totals = {}
+    for rec in records:
+        key = rec.get("sacrifice", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("omen", 0)
+    return totals
