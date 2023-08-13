@@ -102,13 +102,6 @@ def allocate_passage(passage, factor=3):
     return round(passage * factor + GATE_HEIGHT, 2)
 
 
-def check_bolt(bolt, factor=3):
-    """Check a single bolt using GATE_RESERVE."""
-    if bolt is None:
-        raise ValueError("no bolt given")
-    return round(bolt * factor + GATE_RESERVE, 2)
-
-
 def record_bar(bar, factor=3):
     """Record a single bar using GATE_RESERVE."""
     if bar is None:
