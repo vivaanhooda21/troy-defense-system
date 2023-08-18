@@ -180,15 +180,6 @@ def assign_gates(gates, limit=3):
     return result
 
 
-def bolt_totals_by_keeper(records):
-    """Sum bolt counts per keeper."""
-    totals = {}
-    for rec in records:
-        key = rec.get("keeper", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
-    return totals
-
-
 def seal_keepers_by_bar(keepers, bar):
     """Return the keepers that belong to the given bar."""
     return [x for x in keepers if getattr(x, "bar", None) == bar]
