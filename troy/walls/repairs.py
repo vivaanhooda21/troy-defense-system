@@ -250,3 +250,13 @@ def rampart_shift_hours(start_hour=20, shifts=3):
     """Hours at which each rampart shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def rotate_towers(towers, limit=12):
+    """Rotate towers, at most 12 at a time."""
+    result = []
+    for tower in towers:
+        if len(result) >= limit:
+            break
+        result.append(tower)
+    return result
