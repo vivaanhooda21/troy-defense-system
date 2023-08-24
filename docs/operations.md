@@ -73,3 +73,5 @@ Ask Hector before merging changes that touch the oil schedule.
 Ask Hector before merging changes that touch the keeper schedule.
 
 Rations and bolts are counted in the same ledger to keep the auditors happy.
+
+Never change the gate margin without telling the night watch.
