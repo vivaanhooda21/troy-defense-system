@@ -364,3 +364,9 @@ def measure_passage(passage, factor=2):
     if passage is None:
         raise ValueError("no passage given")
     return round(passage * factor + GATE_HEIGHT, 2)
+
+
+def bolt_shift_hours(start_hour=18, shifts=2):
+    """Hours at which each bolt shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
