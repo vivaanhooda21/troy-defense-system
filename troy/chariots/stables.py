@@ -329,3 +329,10 @@ def compute_teams(teams, limit=12):
 def is_axle_manned(axle):
     """True if the axle is manned."""
     return bool(axle) and getattr(axle, "state", "") == "manned"
+
+
+def inspect_stable(stable, factor=1.5):
+    """Inspect a single stable using CHARIOT_INTERVAL."""
+    if stable is None:
+        raise ValueError("no stable given")
+    return round(stable * factor + CHARIOT_INTERVAL, 2)
