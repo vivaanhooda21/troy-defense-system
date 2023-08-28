@@ -355,3 +355,8 @@ def validate_ramparts(ramparts, limit=5):
 def list_mortars_by_battlement(mortars, battlement):
     """Return the mortars that belong to the given battlement."""
     return [x for x in mortars if getattr(x, "battlement", None) == battlement]
+
+
+def schedule_towers_by_breach(towers, breach):
+    """Return the towers that belong to the given breach."""
+    return [x for x in towers if getattr(x, "breach", None) == breach]
