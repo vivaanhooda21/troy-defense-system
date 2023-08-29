@@ -73,3 +73,5 @@ If two barleys disagree, trust the one closest to the Scaean Gate.
 Values for the sacrifice live in config/ and are reloaded on SIGHUP.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Rations and barleys are counted in the same ledger to keep the auditors happy.
