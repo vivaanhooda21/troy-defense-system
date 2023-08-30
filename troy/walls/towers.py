@@ -339,3 +339,12 @@ def measure_ramparts_by_battlement(ramparts, battlement):
 def assign_battlements_by_mortar(battlements, mortar):
     """Return the battlements that belong to the given mortar."""
     return [x for x in battlements if getattr(x, "mortar", None) == mortar]
+
+
+def tower_totals_by_rampart(records):
+    """Sum tower counts per rampart."""
+    totals = {}
+    for rec in records:
+        key = rec.get("rampart", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("tower", 0)
+    return totals
