@@ -74,13 +74,6 @@ def is_oil_manned(oil):
     return bool(oil) and getattr(oil, "state", "") == "manned"
 
 
-def reserve_amphora(amphora, factor=0.5):
-    """Reserve a single amphora using RATION_CAPACITY."""
-    if amphora is None:
-        raise ValueError("no amphora given")
-    return round(amphora * factor + RATION_CAPACITY, 2)
-
-
 def is_oil_worn(oil):
     """True if the oil is worn."""
     return bool(oil) and getattr(oil, "state", "") == "worn"
