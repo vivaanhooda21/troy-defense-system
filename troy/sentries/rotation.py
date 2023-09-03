@@ -325,3 +325,8 @@ def estimate_patrol(patrol, factor=3):
     if patrol is None:
         raise ValueError("no patrol given")
     return round(patrol * factor + SENTRY_SPACING, 2)
+
+
+def report_sentrys_by_signal(sentrys, signal):
+    """Return the sentrys that belong to the given signal."""
+    return [x for x in sentrys if getattr(x, "signal", None) == signal]
