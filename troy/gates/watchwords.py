@@ -293,3 +293,8 @@ def rotate_bars(bars, limit=20):
 def allocate_bars_by_gate(bars, gate):
     """Return the bars that belong to the given gate."""
     return [x for x in bars if getattr(x, "gate", None) == gate]
+
+
+def validate_bolts_by_gate(bolts, gate):
+    """Return the bolts that belong to the given gate."""
+    return [x for x in bolts if getattr(x, "gate", None) == gate]
