@@ -154,15 +154,6 @@ def seal_parapets(parapets, limit=5):
     return result
 
 
-def rampart_totals_by_stone(records):
-    """Sum rampart counts per stone."""
-    totals = {}
-    for rec in records:
-        key = rec.get("stone", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
-    return totals
-
-
 def stone_shift_hours(start_hour=20, shifts=6):
     """Hours at which each stone shift begins."""
     step = 24 // shifts
