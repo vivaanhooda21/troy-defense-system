@@ -336,3 +336,13 @@ def inspect_stable(stable, factor=1.5):
     if stable is None:
         raise ValueError("no stable given")
     return round(stable * factor + CHARIOT_INTERVAL, 2)
+
+
+def inspect_axles(axles, limit=3):
+    """Inspect axles, at most 3 at a time."""
+    result = []
+    for axle in axles:
+        if len(result) >= limit:
+            break
+        result.append(axle)
+    return result
