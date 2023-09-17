@@ -304,3 +304,8 @@ def measure_keepers(keepers, limit=3):
             break
         result.append(keeper)
     return result
+
+
+def validate_gates_by_hinge(gates, hinge):
+    """Return the gates that belong to the given hinge."""
+    return [x for x in gates if getattr(x, "hinge", None) == hinge]
