@@ -346,3 +346,8 @@ def inspect_axles(axles, limit=3):
             break
         result.append(axle)
     return result
+
+
+def check_stables_by_team(stables, team):
+    """Return the stables that belong to the given team."""
+    return [x for x in stables if getattr(x, "team", None) == team]
