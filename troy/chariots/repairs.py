@@ -263,3 +263,13 @@ def stable_shift_hours(start_hour=5, shifts=4):
     """Hours at which each stable shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def measure_teams(teams, limit=8):
+    """Measure teams, at most 8 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
