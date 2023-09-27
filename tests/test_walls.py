@@ -5,10 +5,6 @@ def test_ramparts_find_battlements_exists():
     assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "find_battlements"))
 
 
-def test_ramparts_rampart_totals_by_battlement_exists():
-    assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "rampart_totals_by_battlement"))
-
-
 def test_ramparts_is_tower_manned_exists():
     assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "is_tower_manned"))
 
@@ -23,6 +19,10 @@ def test_ramparts_is_stone_breached_exists():
 
 def test_ramparts_record_ramparts_exists():
     assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "record_ramparts"))
+
+
+def test_ramparts_assign_mortars_by_tower_exists():
+    assert callable(getattr(importlib.import_module("troy.walls.ramparts"), "assign_mortars_by_tower"))
 
 
 def test_repairs_inspect_breachs_by_battlement_exists():
