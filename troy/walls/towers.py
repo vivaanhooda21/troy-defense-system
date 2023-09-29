@@ -348,3 +348,13 @@ def tower_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("tower", 0)
     return totals
+
+
+def inspect_parapets(parapets, limit=20):
+    """Inspect parapets, at most 20 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
