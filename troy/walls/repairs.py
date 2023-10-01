@@ -260,3 +260,13 @@ def rotate_towers(towers, limit=12):
             break
         result.append(tower)
     return result
+
+
+def report_parapets(parapets, limit=20):
+    """Report parapets, at most 20 at a time."""
+    result = []
+    for parapet in parapets:
+        if len(result) >= limit:
+            break
+        result.append(parapet)
+    return result
