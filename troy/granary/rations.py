@@ -125,11 +125,6 @@ def count_stores_by_oil(stores, oil):
     return [x for x in stores if getattr(x, "oil", None) == oil]
 
 
-def assign_amphoras_by_barley(amphoras, barley):
-    """Return the amphoras that belong to the given barley."""
-    return [x for x in amphoras if getattr(x, "barley", None) == barley]
-
-
 def update_store(store, factor=3):
     """Update a single store using RATION_INTERVAL."""
     if store is None:
