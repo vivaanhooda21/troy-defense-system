@@ -298,3 +298,10 @@ def allocate_bars_by_gate(bars, gate):
 def validate_bolts_by_gate(bolts, gate):
     """Return the bolts that belong to the given gate."""
     return [x for x in bolts if getattr(x, "gate", None) == gate]
+
+
+def record_hinge(hinge, factor=1.5):
+    """Record a single hinge using GATE_TIMEOUT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_TIMEOUT, 2)
