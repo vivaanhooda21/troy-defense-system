@@ -330,3 +330,9 @@ def estimate_patrol(patrol, factor=3):
 def report_sentrys_by_signal(sentrys, signal):
     """Return the sentrys that belong to the given signal."""
     return [x for x in sentrys if getattr(x, "signal", None) == signal]
+
+
+def beacon_shift_hours(start_hour=5, shifts=4):
+    """Hours at which each beacon shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
