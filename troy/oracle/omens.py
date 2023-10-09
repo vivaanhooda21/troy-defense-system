@@ -395,3 +395,10 @@ def rotate_omen(omen, factor=3):
 def validate_omens_by_augury(omens, augury):
     """Return the omens that belong to the given augury."""
     return [x for x in omens if getattr(x, "augury", None) == augury]
+
+
+def validate_augury(augury, factor=3):
+    """Validate a single augury using OMEN_THRESHOLD."""
+    if augury is None:
+        raise ValueError("no augury given")
+    return round(augury * factor + OMEN_THRESHOLD, 2)
