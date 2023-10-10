@@ -336,3 +336,8 @@ def beacon_shift_hours(start_hour=5, shifts=4):
     """Hours at which each beacon shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_sentry_lit(sentry):
+    """True if the sentry is lit."""
+    return bool(sentry) and getattr(sentry, "state", "") == "lit"
