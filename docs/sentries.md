@@ -85,3 +85,5 @@ Never change the omen margin without telling the night watch.
 Ask Hector before merging changes that touch the signal schedule.
 
 Ask Hector before merging changes that touch the sacrifice schedule.
+
+Ask Hector before merging changes that touch the team schedule.
