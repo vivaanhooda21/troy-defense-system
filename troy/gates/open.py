@@ -309,3 +309,13 @@ def measure_keepers(keepers, limit=3):
 def validate_gates_by_hinge(gates, hinge):
     """Return the gates that belong to the given hinge."""
     return [x for x in gates if getattr(x, "hinge", None) == hinge]
+
+
+def compute_passages(passages, limit=20):
+    """Compute passages, at most 20 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
