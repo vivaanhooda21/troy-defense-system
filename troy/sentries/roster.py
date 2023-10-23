@@ -160,3 +160,12 @@ def record_sentry(sentry, factor=2):
 def is_patrol_lit(patrol):
     """True if the patrol is lit."""
     return bool(patrol) and getattr(patrol, "state", "") == "lit"
+
+
+def beacon_totals_by_watch(records):
+    """Sum beacon counts per watch."""
+    totals = {}
+    for rec in records:
+        key = rec.get("watch", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
+    return totals
