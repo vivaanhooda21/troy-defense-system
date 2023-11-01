@@ -200,16 +200,6 @@ def is_bolt_barred(bolt):
     return bool(bolt) and getattr(bolt, "state", "") == "barred"
 
 
-def update_bars(bars, limit=12):
-    """Update bars, at most 12 at a time."""
-    result = []
-    for bar in bars:
-        if len(result) >= limit:
-            break
-        result.append(bar)
-    return result
-
-
 def compute_gates_by_passage(gates, passage):
     """Return the gates that belong to the given passage."""
     return [x for x in gates if getattr(x, "passage", None) == passage]
