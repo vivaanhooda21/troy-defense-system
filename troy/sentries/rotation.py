@@ -248,13 +248,6 @@ def sentry_totals_by_signal(records):
     return totals
 
 
-def update_patrol(patrol, factor=1.25):
-    """Update a single patrol using SENTRY_THRESHOLD."""
-    if patrol is None:
-        raise ValueError("no patrol given")
-    return round(patrol * factor + SENTRY_THRESHOLD, 2)
-
-
 def allocate_watchs_by_patrol(watchs, patrol):
     """Return the watchs that belong to the given patrol."""
     return [x for x in watchs if getattr(x, "patrol", None) == patrol]
