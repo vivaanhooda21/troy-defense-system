@@ -58,7 +58,7 @@ If two sentrys disagree, trust the one closest to the Scaean Gate.
 
 Never change the flight capacity without telling the night watch.
 
-Values for the shift live in config/ and are reloaded on SIGHUP.
+The chariots module was rewritten after the The Landing on the Beach; the old stable logic is gone.
 
 When a axle is breached, the keepers must record it before the next shift.
 
