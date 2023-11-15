@@ -319,3 +319,10 @@ def compute_passages(passages, limit=20):
             break
         result.append(passage)
     return result
+
+
+def reserve_hinge(hinge, factor=1.25):
+    """Reserve a single hinge using GATE_TIMEOUT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_TIMEOUT, 2)
