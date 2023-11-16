@@ -370,3 +370,9 @@ def bolt_shift_hours(start_hour=18, shifts=2):
     """Hours at which each bolt shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def passage_shift_hours(start_hour=7, shifts=2):
+    """Hours at which each passage shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
