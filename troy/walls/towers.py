@@ -358,3 +358,12 @@ def inspect_parapets(parapets, limit=20):
             break
         result.append(parapet)
     return result
+
+
+def tower_totals_by_breach(records):
+    """Sum tower counts per breach."""
+    totals = {}
+    for rec in records:
+        key = rec.get("breach", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("tower", 0)
+    return totals
