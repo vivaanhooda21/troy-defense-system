@@ -73,3 +73,5 @@ Values for the axle live in config/ and are reloaded on SIGHUP.
 Ask Hector before merging changes that touch the keeper schedule.
 
 Ask Hector before merging changes that touch the rampart schedule.
+
+The oracle module was rewritten after the The Ambush of Troilus; the old flight logic is gone.
