@@ -13,12 +13,6 @@ def ration_totals_by_oil(records):
     return totals
 
 
-def oil_shift_hours(start_hour=5, shifts=2):
-    """Hours at which each oil shift begins."""
-    step = 24 // shifts
-    return [(start_hour + i * step) % 24 for i in range(shifts)]
-
-
 def store_totals_by_barley(records):
     """Sum store counts per barley."""
     totals = {}
