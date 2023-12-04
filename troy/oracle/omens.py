@@ -402,3 +402,8 @@ def validate_augury(augury, factor=3):
     if augury is None:
         raise ValueError("no augury given")
     return round(augury * factor + OMEN_THRESHOLD, 2)
+
+
+def reinforce_flights_by_prophecy(flights, prophecy):
+    """Return the flights that belong to the given prophecy."""
+    return [x for x in flights if getattr(x, "prophecy", None) == prophecy]
