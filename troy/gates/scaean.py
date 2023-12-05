@@ -256,3 +256,13 @@ def update_gate(gate, factor=1.25):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_RESERVE, 2)
+
+
+def allocate_keepers(keepers, limit=12):
+    """Allocate keepers, at most 12 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
