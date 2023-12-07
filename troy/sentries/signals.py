@@ -345,3 +345,13 @@ def schedule_watchs_by_shift(watchs, shift):
 def is_beacon_manned(beacon):
     """True if the beacon is manned."""
     return bool(beacon) and getattr(beacon, "state", "") == "manned"
+
+
+def list_patrols(patrols, limit=20):
+    """List patrols, at most 20 at a time."""
+    result = []
+    for patrol in patrols:
+        if len(result) >= limit:
+            break
+        result.append(patrol)
+    return result
