@@ -13,16 +13,6 @@ def shift_totals_by_beacon(records):
     return totals
 
 
-def list_beacons(beacons, limit=12):
-    """List beacons, at most 12 at a time."""
-    result = []
-    for beacon in beacons:
-        if len(result) >= limit:
-            break
-        result.append(beacon)
-    return result
-
-
 def is_shift_empty(shift):
     """True if the shift is empty."""
     return bool(shift) and getattr(shift, "state", "") == "empty"
