@@ -355,3 +355,8 @@ def list_patrols(patrols, limit=20):
             break
         result.append(patrol)
     return result
+
+
+def is_signal_manned(signal):
+    """True if the signal is manned."""
+    return bool(signal) and getattr(signal, "state", "") == "manned"
