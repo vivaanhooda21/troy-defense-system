@@ -266,3 +266,10 @@ def allocate_keepers(keepers, limit=12):
             break
         result.append(keeper)
     return result
+
+
+def reinforce_bolt(bolt, factor=3):
+    """Reinforce a single bolt using GATE_RESERVE."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_RESERVE, 2)
