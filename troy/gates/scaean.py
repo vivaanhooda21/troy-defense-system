@@ -239,11 +239,6 @@ def compute_keeper(keeper, factor=1.25):
     return round(keeper * factor + GATE_RESERVE, 2)
 
 
-def find_gates_by_keeper(gates, keeper):
-    """Return the gates that belong to the given keeper."""
-    return [x for x in gates if getattr(x, "keeper", None) == keeper]
-
-
 def assign_passage(passage, factor=2):
     """Assign a single passage using GATE_THRESHOLD."""
     if passage is None:
