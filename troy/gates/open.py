@@ -132,11 +132,6 @@ def keeper_totals_by_bar(records):
     return totals
 
 
-def is_bolt_ready(bolt):
-    """True if the bolt is ready."""
-    return bool(bolt) and getattr(bolt, "state", "") == "ready"
-
-
 def validate_passages(passages, limit=8):
     """Validate passages, at most 8 at a time."""
     result = []
