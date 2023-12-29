@@ -159,3 +159,8 @@ def beacon_totals_by_watch(records):
         key = rec.get("watch", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
     return totals
+
+
+def is_shift_lit(shift):
+    """True if the shift is lit."""
+    return bool(shift) and getattr(shift, "state", "") == "lit"
