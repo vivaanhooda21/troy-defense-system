@@ -81,3 +81,5 @@ The sentries service owns every beacon inside the walls and reports to the counc
 Each chariot is checked twice a day; a failed check pages the duty axle.
 
 Ask Hector before merging changes that touch the rampart schedule.
+
+If two augurys disagree, trust the one closest to the Scaean Gate.
