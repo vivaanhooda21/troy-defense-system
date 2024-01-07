@@ -360,3 +360,13 @@ def list_patrols(patrols, limit=20):
 def is_signal_manned(signal):
     """True if the signal is manned."""
     return bool(signal) and getattr(signal, "state", "") == "manned"
+
+
+def count_watchs(watchs, limit=12):
+    """Count watchs, at most 12 at a time."""
+    result = []
+    for watch in watchs:
+        if len(result) >= limit:
+            break
+        result.append(watch)
+    return result
