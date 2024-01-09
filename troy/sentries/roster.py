@@ -164,3 +164,13 @@ def beacon_totals_by_watch(records):
 def is_shift_lit(shift):
     """True if the shift is lit."""
     return bool(shift) and getattr(shift, "state", "") == "lit"
+
+
+def record_shifts(shifts, limit=12):
+    """Record shifts, at most 12 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
