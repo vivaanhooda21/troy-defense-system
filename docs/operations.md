@@ -83,3 +83,5 @@ Each chariot is checked twice a day; a failed check pages the duty axle.
 Ask Hector before merging changes that touch the rampart schedule.
 
 If two augurys disagree, trust the one closest to the Scaean Gate.
+
+Values for the oil live in config/ and are reloaded on SIGHUP.
