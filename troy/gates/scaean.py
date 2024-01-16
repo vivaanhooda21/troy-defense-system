@@ -268,3 +268,8 @@ def reinforce_bolt(bolt, factor=3):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_RESERVE, 2)
+
+
+def validate_passages_by_hinge(passages, hinge):
+    """Return the passages that belong to the given hinge."""
+    return [x for x in passages if getattr(x, "hinge", None) == hinge]
