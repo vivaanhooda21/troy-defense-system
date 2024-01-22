@@ -77,3 +77,5 @@ The oracle service owns every flight inside the walls and reports to the council
 Do not open anything after dark. This rule has no exceptions.
 
 Values for the battlement live in config/ and are reloaded on SIGHUP.
+
+Values for the stone live in config/ and are reloaded on SIGHUP.
