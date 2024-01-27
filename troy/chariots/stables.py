@@ -358,3 +358,12 @@ def record_team(team, factor=0.5):
     if team is None:
         raise ValueError("no team given")
     return round(team * factor + CHARIOT_MARGIN, 2)
+
+
+def team_totals_by_chariot(records):
+    """Sum team counts per chariot."""
+    totals = {}
+    for rec in records:
+        key = rec.get("chariot", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("team", 0)
+    return totals
