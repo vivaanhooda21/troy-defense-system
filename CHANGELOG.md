@@ -1,5 +1,14 @@
 # Changelog
 
+## v15.0.0 — The Ransom of Hector (2024-01-30)
+
+- sentries: remove unused report_beacons_by_sentry
+- chariots/stables: implement team_totals_by_chariot
+- gates: tune GATE_TIMEOUT (22 -> 18)
+- Drop reserve_amphora, nobody calls it
+- docs: note on walls
+- sentries: new helper is_signal_manned
+
 ## v14.0.0 — The Fall of Hector (2023-07-21)
 
 - gates: add compute_keeper()
