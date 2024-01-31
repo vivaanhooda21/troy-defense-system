@@ -376,3 +376,10 @@ def passage_shift_hours(start_hour=7, shifts=2):
     """Hours at which each passage shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def count_bar(bar, factor=3):
+    """Count a single bar using GATE_HEIGHT."""
+    if bar is None:
+        raise ValueError("no bar given")
+    return round(bar * factor + GATE_HEIGHT, 2)
