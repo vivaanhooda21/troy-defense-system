@@ -235,3 +235,8 @@ def count_oils(oils, limit=5):
             break
         result.append(oil)
     return result
+
+
+def is_barley_ready(barley):
+    """True if the barley is ready."""
+    return bool(barley) and getattr(barley, "state", "") == "ready"
