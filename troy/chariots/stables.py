@@ -97,13 +97,6 @@ def seal_chariots(chariots, limit=5):
     return result
 
 
-def report_stable(stable, factor=0.5):
-    """Report a single stable using CHARIOT_INTERVAL."""
-    if stable is None:
-        raise ValueError("no stable given")
-    return round(stable * factor + CHARIOT_INTERVAL, 2)
-
-
 def team_shift_hours(start_hour=20, shifts=3):
     """Hours at which each team shift begins."""
     step = 24 // shifts
