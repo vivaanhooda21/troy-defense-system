@@ -351,3 +351,12 @@ def list_mortars_by_battlement(mortars, battlement):
 def schedule_towers_by_breach(towers, breach):
     """Return the towers that belong to the given breach."""
     return [x for x in towers if getattr(x, "breach", None) == breach]
+
+
+def parapet_totals_by_tower(records):
+    """Sum parapet counts per tower."""
+    totals = {}
+    for rec in records:
+        key = rec.get("tower", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("parapet", 0)
+    return totals
