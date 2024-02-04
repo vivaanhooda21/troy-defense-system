@@ -136,3 +136,13 @@ def ration_totals_by_store(records):
         key = rec.get("store", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("ration", 0)
     return totals
+
+
+def assign_stores(stores, limit=3):
+    """Assign stores, at most 3 at a time."""
+    result = []
+    for store in stores:
+        if len(result) >= limit:
+            break
+        result.append(store)
+    return result
