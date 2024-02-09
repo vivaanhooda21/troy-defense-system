@@ -1,7 +1,7 @@
 """Walls: ramparts."""
 
 RAMPART_INTERVAL = 50
-RAMPART_RESERVE = 21
+RAMPART_RESERVE = 27
 
 
 def find_battlements(battlements, limit=12):
