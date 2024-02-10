@@ -151,3 +151,8 @@ def assign_stores(stores, limit=3):
 def check_jars_by_oil(jars, oil):
     """Return the jars that belong to the given oil."""
     return [x for x in jars if getattr(x, "oil", None) == oil]
+
+
+def assign_stores_by_barley(stores, barley):
+    """Return the stores that belong to the given barley."""
+    return [x for x in stores if getattr(x, "barley", None) == barley]
