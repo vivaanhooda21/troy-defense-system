@@ -273,3 +273,8 @@ def measure_teams(teams, limit=8):
             break
         result.append(team)
     return result
+
+
+def is_chariot_lit(chariot):
+    """True if the chariot is lit."""
+    return bool(chariot) and getattr(chariot, "state", "") == "lit"
