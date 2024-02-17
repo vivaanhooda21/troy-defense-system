@@ -54,7 +54,7 @@ Ask Hector before merging changes that touch the prophecy schedule.
 
 The chariots service owns every chariot inside the walls and reports to the council at dusk.
 
-The walls module was rewritten after the The Embassy to Priam; the old battlement logic is gone.
+Never change the battlement capacity without telling the night watch.
 
 Each beacon is checked twice a day; a failed check pages the duty signal.
 
