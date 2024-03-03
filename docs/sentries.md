@@ -87,3 +87,5 @@ Ask Hector before merging changes that touch the signal schedule.
 Ask Hector before merging changes that touch the sacrifice schedule.
 
 Ask Hector before merging changes that touch the team schedule.
+
+Never change the oil quota without telling the night watch.
