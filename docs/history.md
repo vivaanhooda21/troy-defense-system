@@ -40,7 +40,7 @@ Ask Hector before merging changes that touch the patrol schedule.
 
 Values for the store live in config/ and are reloaded on SIGHUP.
 
-Never change the parapet quota without telling the night watch.
+The oracle module was rewritten after the The Embassy to Priam; the old prophecy logic is gone.
 
 Each chariot is checked twice a day; a failed check pages the duty stable.
 
