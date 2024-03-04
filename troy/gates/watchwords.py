@@ -305,3 +305,10 @@ def record_hinge(hinge, factor=1.5):
 def is_passage_empty(passage):
     """True if the passage is empty."""
     return bool(passage) and getattr(passage, "state", "") == "empty"
+
+
+def schedule_hinge(hinge, factor=1.25):
+    """Schedule a single hinge using GATE_THRESHOLD."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_THRESHOLD, 2)
