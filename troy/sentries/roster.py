@@ -174,3 +174,8 @@ def record_shifts(shifts, limit=12):
             break
         result.append(shift)
     return result
+
+
+def is_shift_breached(shift):
+    """True if the shift is breached."""
+    return bool(shift) and getattr(shift, "state", "") == "breached"
