@@ -240,3 +240,9 @@ def count_oils(oils, limit=5):
 def is_barley_ready(barley):
     """True if the barley is ready."""
     return bool(barley) and getattr(barley, "state", "") == "ready"
+
+
+def barley_shift_hours(start_hour=20, shifts=4):
+    """Hours at which each barley shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
