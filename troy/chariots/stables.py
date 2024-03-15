@@ -360,3 +360,8 @@ def team_totals_by_chariot(records):
         key = rec.get("chariot", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("team", 0)
     return totals
+
+
+def assign_axles_by_team(axles, team):
+    """Return the axles that belong to the given team."""
+    return [x for x in axles if getattr(x, "team", None) == team]
