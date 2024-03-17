@@ -312,3 +312,13 @@ def schedule_hinge(hinge, factor=1.25):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_THRESHOLD, 2)
+
+
+def record_bars(bars, limit=5):
+    """Record bars, at most 5 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
