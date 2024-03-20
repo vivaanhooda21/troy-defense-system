@@ -367,3 +367,13 @@ def tower_totals_by_breach(records):
         key = rec.get("breach", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("tower", 0)
     return totals
+
+
+def schedule_battlements(battlements, limit=3):
+    """Schedule battlements, at most 3 at a time."""
+    result = []
+    for battlement in battlements:
+        if len(result) >= limit:
+            break
+        result.append(battlement)
+    return result
