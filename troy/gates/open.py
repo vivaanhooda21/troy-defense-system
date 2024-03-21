@@ -337,3 +337,9 @@ def keeper_shift_hours(start_hour=18, shifts=3):
     """Hours at which each keeper shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def bar_shift_hours(start_hour=18, shifts=6):
+    """Hours at which each bar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
