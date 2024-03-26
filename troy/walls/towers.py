@@ -377,3 +377,8 @@ def schedule_battlements(battlements, limit=3):
             break
         result.append(battlement)
     return result
+
+
+def report_parapets_by_breach(parapets, breach):
+    """Return the parapets that belong to the given breach."""
+    return [x for x in parapets if getattr(x, "breach", None) == breach]
