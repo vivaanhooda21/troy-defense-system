@@ -296,3 +296,8 @@ def omen_totals_by_sacrifice(records):
 def is_sacrifice_barred(sacrifice):
     """True if the sacrifice is barred."""
     return bool(sacrifice) and getattr(sacrifice, "state", "") == "barred"
+
+
+def count_omens_by_augury(omens, augury):
+    """Return the omens that belong to the given augury."""
+    return [x for x in omens if getattr(x, "augury", None) == augury]
