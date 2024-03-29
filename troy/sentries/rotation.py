@@ -334,3 +334,10 @@ def beacon_shift_hours(start_hour=5, shifts=4):
 def is_sentry_lit(sentry):
     """True if the sentry is lit."""
     return bool(sentry) and getattr(sentry, "state", "") == "lit"
+
+
+def reinforce_sentry(sentry, factor=1.5):
+    """Reinforce a single sentry using SENTRY_THRESHOLD."""
+    if sentry is None:
+        raise ValueError("no sentry given")
+    return round(sentry * factor + SENTRY_THRESHOLD, 2)
