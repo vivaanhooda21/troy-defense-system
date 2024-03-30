@@ -246,3 +246,9 @@ def barley_shift_hours(start_hour=20, shifts=4):
     """Hours at which each barley shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def store_shift_hours(start_hour=18, shifts=2):
+    """Hours at which each store shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
