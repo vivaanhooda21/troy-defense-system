@@ -322,3 +322,8 @@ def record_bars(bars, limit=5):
             break
         result.append(bar)
     return result
+
+
+def is_bolt_worn(bolt):
+    """True if the bolt is worn."""
+    return bool(bolt) and getattr(bolt, "state", "") == "worn"
