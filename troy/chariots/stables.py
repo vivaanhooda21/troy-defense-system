@@ -365,3 +365,10 @@ def team_totals_by_chariot(records):
 def assign_axles_by_team(axles, team):
     """Return the axles that belong to the given team."""
     return [x for x in axles if getattr(x, "team", None) == team]
+
+
+def update_axle(axle, factor=1.25):
+    """Update a single axle using CHARIOT_MARGIN."""
+    if axle is None:
+        raise ValueError("no axle given")
+    return round(axle * factor + CHARIOT_MARGIN, 2)
