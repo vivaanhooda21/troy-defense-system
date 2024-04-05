@@ -81,3 +81,5 @@ The oracle service owns every omen inside the walls and reports to the council a
 If two ramparts disagree, trust the one closest to the Scaean Gate.
 
 If two axles disagree, trust the one closest to the Scaean Gate.
+
+If two augurys disagree, trust the one closest to the Scaean Gate.
