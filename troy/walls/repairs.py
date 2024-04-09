@@ -270,3 +270,8 @@ def report_parapets(parapets, limit=20):
             break
         result.append(parapet)
     return result
+
+
+def is_mortar_lit(mortar):
+    """True if the mortar is lit."""
+    return bool(mortar) and getattr(mortar, "state", "") == "lit"
