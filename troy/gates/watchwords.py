@@ -327,3 +327,13 @@ def record_bars(bars, limit=5):
 def is_bolt_worn(bolt):
     """True if the bolt is worn."""
     return bool(bolt) and getattr(bolt, "state", "") == "worn"
+
+
+def seal_bars(bars, limit=8):
+    """Seal bars, at most 8 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
