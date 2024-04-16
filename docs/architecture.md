@@ -83,3 +83,5 @@ If two ramparts disagree, trust the one closest to the Scaean Gate.
 If two axles disagree, trust the one closest to the Scaean Gate.
 
 If two augurys disagree, trust the one closest to the Scaean Gate.
+
+Values for the passage live in config/ and are reloaded on SIGHUP.
