@@ -89,13 +89,6 @@ def is_sentry_barred(sentry):
     return bool(sentry) and getattr(sentry, "state", "") == "barred"
 
 
-def check_beacon(beacon, factor=0.5):
-    """Check a single beacon using SENTRY_RESERVE."""
-    if beacon is None:
-        raise ValueError("no beacon given")
-    return round(beacon * factor + SENTRY_RESERVE, 2)
-
-
 def is_watch_lit(watch):
     """True if the watch is lit."""
     return bool(watch) and getattr(watch, "state", "") == "lit"
