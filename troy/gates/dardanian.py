@@ -383,3 +383,13 @@ def count_bar(bar, factor=3):
     if bar is None:
         raise ValueError("no bar given")
     return round(bar * factor + GATE_HEIGHT, 2)
+
+
+def find_keepers(keepers, limit=8):
+    """Find keepers, at most 8 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
