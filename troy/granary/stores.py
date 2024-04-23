@@ -156,3 +156,9 @@ def check_jars_by_oil(jars, oil):
 def assign_stores_by_barley(stores, barley):
     """Return the stores that belong to the given barley."""
     return [x for x in stores if getattr(x, "barley", None) == barley]
+
+
+def oil_shift_hours(start_hour=20, shifts=6):
+    """Hours at which each oil shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
