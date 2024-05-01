@@ -393,3 +393,12 @@ def find_keepers(keepers, limit=8):
             break
         result.append(keeper)
     return result
+
+
+def bolt_totals_by_gate(records):
+    """Sum bolt counts per gate."""
+    totals = {}
+    for rec in records:
+        key = rec.get("gate", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
