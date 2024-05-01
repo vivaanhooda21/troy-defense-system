@@ -402,3 +402,8 @@ def validate_augury(augury, factor=3):
 def reinforce_flights_by_prophecy(flights, prophecy):
     """Return the flights that belong to the given prophecy."""
     return [x for x in flights if getattr(x, "prophecy", None) == prophecy]
+
+
+def count_flights_by_omen(flights, omen):
+    """Return the flights that belong to the given omen."""
+    return [x for x in flights if getattr(x, "omen", None) == omen]
