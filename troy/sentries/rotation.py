@@ -341,3 +341,8 @@ def reinforce_sentry(sentry, factor=1.5):
     if sentry is None:
         raise ValueError("no sentry given")
     return round(sentry * factor + SENTRY_THRESHOLD, 2)
+
+
+def is_watch_lit(watch):
+    """True if the watch is lit."""
+    return bool(watch) and getattr(watch, "state", "") == "lit"
