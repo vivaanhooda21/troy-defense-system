@@ -407,3 +407,10 @@ def reinforce_flights_by_prophecy(flights, prophecy):
 def count_flights_by_omen(flights, omen):
     """Return the flights that belong to the given omen."""
     return [x for x in flights if getattr(x, "omen", None) == omen]
+
+
+def repair_prophecy(prophecy, factor=2):
+    """Repair a single prophecy using OMEN_THRESHOLD."""
+    if prophecy is None:
+        raise ValueError("no prophecy given")
+    return round(prophecy * factor + OMEN_THRESHOLD, 2)
