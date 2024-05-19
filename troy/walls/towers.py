@@ -382,3 +382,8 @@ def schedule_battlements(battlements, limit=3):
 def report_parapets_by_breach(parapets, breach):
     """Return the parapets that belong to the given breach."""
     return [x for x in parapets if getattr(x, "breach", None) == breach]
+
+
+def validate_ramparts_by_stone(ramparts, stone):
+    """Return the ramparts that belong to the given stone."""
+    return [x for x in ramparts if getattr(x, "stone", None) == stone]
