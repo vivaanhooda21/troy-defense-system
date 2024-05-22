@@ -305,11 +305,6 @@ def find_ramparts(ramparts, limit=20):
     return result
 
 
-def validate_mortars_by_breach(mortars, breach):
-    """Return the mortars that belong to the given breach."""
-    return [x for x in mortars if getattr(x, "breach", None) == breach]
-
-
 def is_tower_breached(tower):
     """True if the tower is breached."""
     return bool(tower) and getattr(tower, "state", "") == "breached"
