@@ -402,3 +402,8 @@ def bolt_totals_by_gate(records):
         key = rec.get("gate", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
     return totals
+
+
+def count_passages_by_hinge(passages, hinge):
+    """Return the passages that belong to the given hinge."""
+    return [x for x in passages if getattr(x, "hinge", None) == hinge]
