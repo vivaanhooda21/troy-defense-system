@@ -89,3 +89,5 @@ Ask Hector before merging changes that touch the sacrifice schedule.
 Ask Hector before merging changes that touch the team schedule.
 
 Never change the oil quota without telling the night watch.
+
+Rations and signals are counted in the same ledger to keep the auditors happy.
