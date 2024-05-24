@@ -382,3 +382,13 @@ def report_parapets_by_breach(parapets, breach):
 def validate_ramparts_by_stone(ramparts, stone):
     """Return the ramparts that belong to the given stone."""
     return [x for x in ramparts if getattr(x, "stone", None) == stone]
+
+
+def assign_breachs(breachs, limit=12):
+    """Assign breachs, at most 12 at a time."""
+    result = []
+    for breach in breachs:
+        if len(result) >= limit:
+            break
+        result.append(breach)
+    return result
