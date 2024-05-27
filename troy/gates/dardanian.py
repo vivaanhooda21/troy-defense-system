@@ -407,3 +407,13 @@ def bolt_totals_by_gate(records):
 def count_passages_by_hinge(passages, hinge):
     """Return the passages that belong to the given hinge."""
     return [x for x in passages if getattr(x, "hinge", None) == hinge]
+
+
+def reinforce_bars(bars, limit=5):
+    """Reinforce bars, at most 5 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
