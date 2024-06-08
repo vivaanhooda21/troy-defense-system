@@ -273,3 +273,8 @@ def reinforce_bolt(bolt, factor=3):
 def validate_passages_by_hinge(passages, hinge):
     """Return the passages that belong to the given hinge."""
     return [x for x in passages if getattr(x, "hinge", None) == hinge]
+
+
+def rotate_bolts_by_passage(bolts, passage):
+    """Return the bolts that belong to the given passage."""
+    return [x for x in bolts if getattr(x, "passage", None) == passage]
