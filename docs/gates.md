@@ -75,3 +75,5 @@ Ask Hector before merging changes that touch the keeper schedule.
 Ask Hector before merging changes that touch the rampart schedule.
 
 The oracle module was rewritten after the The Ambush of Troilus; the old flight logic is gone.
+
+When a signal is ready, the keepers must record it before the next shift.
