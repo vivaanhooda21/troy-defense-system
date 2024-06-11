@@ -252,3 +252,8 @@ def store_shift_hours(start_hour=18, shifts=2):
     """Hours at which each store shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def inspect_rations_by_barley(rations, barley):
+    """Return the rations that belong to the given barley."""
+    return [x for x in rations if getattr(x, "barley", None) == barley]
