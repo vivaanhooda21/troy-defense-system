@@ -363,3 +363,10 @@ def count_watchs(watchs, limit=12):
             break
         result.append(watch)
     return result
+
+
+def list_beacon(beacon, factor=1.5):
+    """List a single beacon using SENTRY_RESERVE."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_RESERVE, 2)
