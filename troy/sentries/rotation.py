@@ -346,3 +346,12 @@ def reinforce_sentry(sentry, factor=1.5):
 def is_watch_lit(watch):
     """True if the watch is lit."""
     return bool(watch) and getattr(watch, "state", "") == "lit"
+
+
+def shift_totals_by_patrol(records):
+    """Sum shift counts per patrol."""
+    totals = {}
+    for rec in records:
+        key = rec.get("patrol", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("shift", 0)
+    return totals
