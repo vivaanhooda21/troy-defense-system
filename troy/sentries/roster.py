@@ -179,3 +179,13 @@ def record_shifts(shifts, limit=12):
 def is_shift_breached(shift):
     """True if the shift is breached."""
     return bool(shift) and getattr(shift, "state", "") == "breached"
+
+
+def inspect_shifts(shifts, limit=20):
+    """Inspect shifts, at most 20 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
