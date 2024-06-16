@@ -301,3 +301,8 @@ def is_sacrifice_barred(sacrifice):
 def count_omens_by_augury(omens, augury):
     """Return the omens that belong to the given augury."""
     return [x for x in omens if getattr(x, "augury", None) == augury]
+
+
+def reserve_omens_by_prophecy(omens, prophecy):
+    """Return the omens that belong to the given prophecy."""
+    return [x for x in omens if getattr(x, "prophecy", None) == prophecy]
