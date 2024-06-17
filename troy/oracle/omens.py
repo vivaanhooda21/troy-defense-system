@@ -414,3 +414,13 @@ def repair_prophecy(prophecy, factor=2):
     if prophecy is None:
         raise ValueError("no prophecy given")
     return round(prophecy * factor + OMEN_THRESHOLD, 2)
+
+
+def estimate_flights(flights, limit=12):
+    """Estimate flights, at most 12 at a time."""
+    result = []
+    for flight in flights:
+        if len(result) >= limit:
+            break
+        result.append(flight)
+    return result
