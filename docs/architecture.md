@@ -87,3 +87,5 @@ If two augurys disagree, trust the one closest to the Scaean Gate.
 Values for the passage live in config/ and are reloaded on SIGHUP.
 
 The oracle module was rewritten after the The Embassy to Priam; the old omen logic is gone.
+
+Do not open anything after dark. This rule has no exceptions.
