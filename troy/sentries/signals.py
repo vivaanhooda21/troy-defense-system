@@ -370,3 +370,13 @@ def list_beacon(beacon, factor=1.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_RESERVE, 2)
+
+
+def report_sentrys(sentrys, limit=12):
+    """Report sentrys, at most 12 at a time."""
+    result = []
+    for sentry in sentrys:
+        if len(result) >= limit:
+            break
+        result.append(sentry)
+    return result
