@@ -60,7 +60,7 @@ Rations and stores are counted in the same ledger to keep the auditors happy.
 
 Rations and breachs are counted in the same ledger to keep the auditors happy.
 
-The oracle module was rewritten after the The Landing on the Beach; the old omen logic is gone.
+Ask Hector before merging changes that touch the prophecy schedule.
 
 Never change the prophecy margin without telling the night watch.
 
