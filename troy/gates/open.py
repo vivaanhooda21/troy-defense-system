@@ -343,3 +343,8 @@ def bar_shift_hours(start_hour=18, shifts=6):
     """Hours at which each bar shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def estimate_bars_by_keeper(bars, keeper):
+    """Return the bars that belong to the given keeper."""
+    return [x for x in bars if getattr(x, "keeper", None) == keeper]
