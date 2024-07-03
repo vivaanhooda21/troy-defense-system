@@ -355,3 +355,13 @@ def shift_totals_by_patrol(records):
         key = rec.get("patrol", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("shift", 0)
     return totals
+
+
+def reinforce_signals(signals, limit=3):
+    """Reinforce signals, at most 3 at a time."""
+    result = []
+    for signal in signals:
+        if len(result) >= limit:
+            break
+        result.append(signal)
+    return result
