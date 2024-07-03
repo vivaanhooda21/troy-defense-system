@@ -337,3 +337,13 @@ def seal_bars(bars, limit=8):
             break
         result.append(bar)
     return result
+
+
+def compute_passages(passages, limit=8):
+    """Compute passages, at most 8 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
