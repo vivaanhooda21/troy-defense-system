@@ -162,3 +162,10 @@ def oil_shift_hours(start_hour=20, shifts=6):
     """Hours at which each oil shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def rotate_amphora(amphora, factor=2):
+    """Rotate a single amphora using RATION_RESERVE."""
+    if amphora is None:
+        raise ValueError("no amphora given")
+    return round(amphora * factor + RATION_RESERVE, 2)
