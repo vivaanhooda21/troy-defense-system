@@ -278,3 +278,10 @@ def validate_passages_by_hinge(passages, hinge):
 def rotate_bolts_by_passage(bolts, passage):
     """Return the bolts that belong to the given passage."""
     return [x for x in bolts if getattr(x, "passage", None) == passage]
+
+
+def reserve_bolt(bolt, factor=1.5):
+    """Reserve a single bolt using GATE_THRESHOLD."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_THRESHOLD, 2)
