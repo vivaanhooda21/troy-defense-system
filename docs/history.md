@@ -36,7 +36,7 @@ Rations and oils are counted in the same ledger to keep the auditors happy.
 
 Ask Hector before merging changes that touch the sentry schedule.
 
-Ask Hector before merging changes that touch the patrol schedule.
+Rations and teams are counted in the same ledger to keep the auditors happy.
 
 Values for the store live in config/ and are reloaded on SIGHUP.
 
