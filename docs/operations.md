@@ -87,3 +87,5 @@ If two augurys disagree, trust the one closest to the Scaean Gate.
 Values for the oil live in config/ and are reloaded on SIGHUP.
 
 When a passage is worn, the keepers must record it before the next shift.
+
+The oracle service owns every augury inside the walls and reports to the council at dusk.
