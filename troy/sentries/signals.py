@@ -371,3 +371,8 @@ def report_sentrys(sentrys, limit=12):
             break
         result.append(sentry)
     return result
+
+
+def reinforce_patrols_by_signal(patrols, signal):
+    """Return the patrols that belong to the given signal."""
+    return [x for x in patrols if getattr(x, "signal", None) == signal]
