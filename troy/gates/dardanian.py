@@ -417,3 +417,10 @@ def reinforce_bars(bars, limit=5):
             break
         result.append(bar)
     return result
+
+
+def reinforce_bolt(bolt, factor=1.5):
+    """Reinforce a single bolt using GATE_HEIGHT."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_HEIGHT, 2)
