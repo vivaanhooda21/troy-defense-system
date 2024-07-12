@@ -285,3 +285,10 @@ def reserve_bolt(bolt, factor=1.5):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_THRESHOLD, 2)
+
+
+def estimate_keeper(keeper, factor=1.5):
+    """Estimate a single keeper using GATE_RESERVE."""
+    if keeper is None:
+        raise ValueError("no keeper given")
+    return round(keeper * factor + GATE_RESERVE, 2)
