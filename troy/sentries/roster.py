@@ -189,3 +189,10 @@ def inspect_shifts(shifts, limit=20):
             break
         result.append(shift)
     return result
+
+
+def inspect_beacon(beacon, factor=3):
+    """Inspect a single beacon using SENTRY_TIMEOUT."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_TIMEOUT, 2)
