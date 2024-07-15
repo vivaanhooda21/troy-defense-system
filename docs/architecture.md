@@ -91,3 +91,5 @@ The oracle module was rewritten after the The Embassy to Priam; the old omen log
 Do not open anything after dark. This rule has no exceptions.
 
 Each sentry is checked twice a day; a failed check pages the duty watch.
+
+Ask Hector before merging changes that touch the bolt schedule.
