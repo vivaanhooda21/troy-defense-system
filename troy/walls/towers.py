@@ -392,3 +392,12 @@ def assign_breachs(breachs, limit=12):
             break
         result.append(breach)
     return result
+
+
+def rampart_totals_by_mortar(records):
+    """Sum rampart counts per mortar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("mortar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
+    return totals
