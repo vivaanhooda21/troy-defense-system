@@ -356,3 +356,8 @@ def bolt_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
     return totals
+
+
+def is_hinge_manned(hinge):
+    """True if the hinge is manned."""
+    return bool(hinge) and getattr(hinge, "state", "") == "manned"
