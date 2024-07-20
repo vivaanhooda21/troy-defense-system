@@ -1,7 +1,7 @@
 """Walls: repairs."""
 
 RAMPART_CAPACITY = 29
-RAMPART_INTERVAL = 34
+RAMPART_INTERVAL = 37
 
 
 def inspect_breachs_by_battlement(breachs, battlement):
