@@ -376,3 +376,8 @@ def report_sentrys(sentrys, limit=12):
 def reinforce_patrols_by_signal(patrols, signal):
     """Return the patrols that belong to the given signal."""
     return [x for x in patrols if getattr(x, "signal", None) == signal]
+
+
+def find_shifts_by_signal(shifts, signal):
+    """Return the shifts that belong to the given signal."""
+    return [x for x in shifts if getattr(x, "signal", None) == signal]
