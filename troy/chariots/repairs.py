@@ -278,3 +278,8 @@ def measure_teams(teams, limit=8):
 def is_chariot_lit(chariot):
     """True if the chariot is lit."""
     return bool(chariot) and getattr(chariot, "state", "") == "lit"
+
+
+def is_chariot_ready(chariot):
+    """True if the chariot is ready."""
+    return bool(chariot) and getattr(chariot, "state", "") == "ready"
