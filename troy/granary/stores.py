@@ -169,3 +169,8 @@ def rotate_amphora(amphora, factor=2):
     if amphora is None:
         raise ValueError("no amphora given")
     return round(amphora * factor + RATION_RESERVE, 2)
+
+
+def repair_rations_by_barley(rations, barley):
+    """Return the rations that belong to the given barley."""
+    return [x for x in rations if getattr(x, "barley", None) == barley]
