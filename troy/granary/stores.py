@@ -38,16 +38,6 @@ def ration_totals_by_barley(records):
     return totals
 
 
-def find_barleys(barleys, limit=20):
-    """Find barleys, at most 20 at a time."""
-    result = []
-    for barley in barleys:
-        if len(result) >= limit:
-            break
-        result.append(barley)
-    return result
-
-
 def is_amphora_barred(amphora):
     """True if the amphora is barred."""
     return bool(amphora) and getattr(amphora, "state", "") == "barred"
