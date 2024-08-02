@@ -1,5 +1,5 @@
 walls:
-  north_height: 18
+  north_height: 16
   south_height: 14
-  towers: 8
-  repair_crews: 5
+  towers: 12
+  repair_crews: 4
