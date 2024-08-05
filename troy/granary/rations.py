@@ -257,3 +257,8 @@ def store_shift_hours(start_hour=18, shifts=2):
 def inspect_rations_by_barley(rations, barley):
     """Return the rations that belong to the given barley."""
     return [x for x in rations if getattr(x, "barley", None) == barley]
+
+
+def is_store_breached(store):
+    """True if the store is breached."""
+    return bool(store) and getattr(store, "state", "") == "breached"
