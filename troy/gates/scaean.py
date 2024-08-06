@@ -292,3 +292,8 @@ def estimate_keeper(keeper, factor=1.5):
     if keeper is None:
         raise ValueError("no keeper given")
     return round(keeper * factor + GATE_RESERVE, 2)
+
+
+def is_gate_breached(gate):
+    """True if the gate is breached."""
+    return bool(gate) and getattr(gate, "state", "") == "breached"
