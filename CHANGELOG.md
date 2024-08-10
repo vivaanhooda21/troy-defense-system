@@ -1,5 +1,14 @@
 # Changelog
 
+## v16.0.0 — The Coming of the Amazons (2024-08-10)
+
+- gates/watchwords: implement is_bolt_worn
+- Add list_beacon to signals
+- gates: new helper reinforce_bars
+- gates: new helper seal_bars
+- gates: new helper estimate_bars_by_keeper
+- granary/rations: implement store_shift_hours
+
 ## v15.0.0 — The Ransom of Hector (2024-01-30)
 
 - sentries: remove unused report_beacons_by_sentry
