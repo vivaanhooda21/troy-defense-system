@@ -361,3 +361,12 @@ def bolt_totals_by_hinge(records):
 def is_hinge_manned(hinge):
     """True if the hinge is manned."""
     return bool(hinge) and getattr(hinge, "state", "") == "manned"
+
+
+def passage_totals_by_hinge(records):
+    """Sum passage counts per hinge."""
+    totals = {}
+    for rec in records:
+        key = rec.get("hinge", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("passage", 0)
+    return totals
