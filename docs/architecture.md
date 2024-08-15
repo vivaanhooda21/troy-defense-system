@@ -93,3 +93,5 @@ Do not open anything after dark. This rule has no exceptions.
 Each sentry is checked twice a day; a failed check pages the duty watch.
 
 Ask Hector before merging changes that touch the bolt schedule.
+
+When a oil is lit, the keepers must record it before the next shift.
