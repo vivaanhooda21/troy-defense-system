@@ -343,3 +343,8 @@ def bar_shift_hours(start_hour=18, shifts=6):
 def estimate_bars_by_keeper(bars, keeper):
     """Return the bars that belong to the given keeper."""
     return [x for x in bars if getattr(x, "keeper", None) == keeper]
+
+
+def is_bolt_sealed(bolt):
+    """True if the bolt is sealed."""
+    return bool(bolt) and getattr(bolt, "state", "") == "sealed"
