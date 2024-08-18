@@ -262,3 +262,13 @@ def inspect_rations_by_barley(rations, barley):
 def is_store_breached(store):
     """True if the store is breached."""
     return bool(store) and getattr(store, "state", "") == "breached"
+
+
+def allocate_oils(oils, limit=8):
+    """Allocate oils, at most 8 at a time."""
+    result = []
+    for oil in oils:
+        if len(result) >= limit:
+            break
+        result.append(oil)
+    return result
