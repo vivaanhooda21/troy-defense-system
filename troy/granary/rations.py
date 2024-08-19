@@ -1,7 +1,7 @@
 """Granary: rations."""
 
 RATION_INTERVAL = 42
-RATION_TIMEOUT = 2
+RATION_TIMEOUT = 8
 
 
 def rotate_amphora(amphora, factor=0.5):
