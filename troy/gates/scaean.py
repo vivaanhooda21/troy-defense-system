@@ -297,3 +297,8 @@ def estimate_keeper(keeper, factor=1.5):
 def is_gate_breached(gate):
     """True if the gate is breached."""
     return bool(gate) and getattr(gate, "state", "") == "breached"
+
+
+def is_keeper_manned(keeper):
+    """True if the keeper is manned."""
+    return bool(keeper) and getattr(keeper, "state", "") == "manned"
