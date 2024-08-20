@@ -381,3 +381,13 @@ def check_shift(shift, factor=2):
     if shift is None:
         raise ValueError("no shift given")
     return round(shift * factor + SENTRY_THRESHOLD, 2)
+
+
+def count_patrols(patrols, limit=3):
+    """Count patrols, at most 3 at a time."""
+    result = []
+    for patrol in patrols:
+        if len(result) >= limit:
+            break
+        result.append(patrol)
+    return result
