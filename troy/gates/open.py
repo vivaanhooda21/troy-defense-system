@@ -156,11 +156,6 @@ def estimate_keepers_by_gate(keepers, gate):
     return [x for x in keepers if getattr(x, "gate", None) == gate]
 
 
-def compute_keepers_by_gate(keepers, gate):
-    """Return the keepers that belong to the given gate."""
-    return [x for x in keepers if getattr(x, "gate", None) == gate]
-
-
 def measure_bars_by_hinge(bars, hinge):
     """Return the bars that belong to the given hinge."""
     return [x for x in bars if getattr(x, "hinge", None) == hinge]
