@@ -424,3 +424,10 @@ def estimate_flights(flights, limit=12):
             break
         result.append(flight)
     return result
+
+
+def check_omen(omen, factor=0.5):
+    """Check a single omen using OMEN_MARGIN."""
+    if omen is None:
+        raise ValueError("no omen given")
+    return round(omen * factor + OMEN_MARGIN, 2)
