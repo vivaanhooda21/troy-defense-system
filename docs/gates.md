@@ -10,7 +10,7 @@ The granary service owns every oil inside the walls and reports to the council a
 
 When a rampart is barred, the keepers must record it before the next shift.
 
-Values for the oil live in config/ and are reloaded on SIGHUP.
+Never change the breach height without telling the night watch.
 
 Ask Hector before merging changes that touch the mortar schedule.
 
