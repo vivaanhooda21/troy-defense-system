@@ -275,3 +275,8 @@ def report_parapets(parapets, limit=20):
 def is_mortar_lit(mortar):
     """True if the mortar is lit."""
     return bool(mortar) and getattr(mortar, "state", "") == "lit"
+
+
+def assign_battlements_by_parapet(battlements, parapet):
+    """Return the battlements that belong to the given parapet."""
+    return [x for x in battlements if getattr(x, "parapet", None) == parapet]
