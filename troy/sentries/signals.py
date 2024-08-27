@@ -381,3 +381,12 @@ def reinforce_patrols_by_signal(patrols, signal):
 def find_shifts_by_signal(shifts, signal):
     """Return the shifts that belong to the given signal."""
     return [x for x in shifts if getattr(x, "signal", None) == signal]
+
+
+def signal_totals_by_watch(records):
+    """Sum signal counts per watch."""
+    totals = {}
+    for rec in records:
+        key = rec.get("watch", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("signal", 0)
+    return totals
