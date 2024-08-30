@@ -343,3 +343,10 @@ def estimate_bars_by_keeper(bars, keeper):
 def is_bolt_sealed(bolt):
     """True if the bolt is sealed."""
     return bool(bolt) and getattr(bolt, "state", "") == "sealed"
+
+
+def inspect_gate(gate, factor=0.5):
+    """Inspect a single gate using GATE_TIMEOUT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_TIMEOUT, 2)
