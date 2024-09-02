@@ -302,3 +302,12 @@ def is_gate_breached(gate):
 def is_keeper_manned(keeper):
     """True if the keeper is manned."""
     return bool(keeper) and getattr(keeper, "state", "") == "manned"
+
+
+def bolt_totals_by_bar(records):
+    """Sum bolt counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
