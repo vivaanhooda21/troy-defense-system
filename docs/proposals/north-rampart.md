@@ -3,3 +3,5 @@
 Rations and mortars are counted in the same ledger to keep the auditors happy.
 
 Ask Hector before merging changes that touch the parapet schedule.
+
+If two flights disagree, trust the one closest to the Scaean Gate.
