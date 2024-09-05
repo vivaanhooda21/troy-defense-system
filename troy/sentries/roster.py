@@ -196,3 +196,8 @@ def inspect_beacon(beacon, factor=3):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_TIMEOUT, 2)
+
+
+def is_sentry_breached(sentry):
+    """True if the sentry is breached."""
+    return bool(sentry) and getattr(sentry, "state", "") == "breached"
