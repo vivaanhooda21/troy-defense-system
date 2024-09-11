@@ -95,3 +95,5 @@ Each sentry is checked twice a day; a failed check pages the duty watch.
 Ask Hector before merging changes that touch the bolt schedule.
 
 When a oil is lit, the keepers must record it before the next shift.
+
+The walls service owns every mortar inside the walls and reports to the council at dusk.
