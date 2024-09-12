@@ -78,13 +78,6 @@ def count_stone(stone, factor=2):
     return round(stone * factor + RAMPART_INTERVAL, 2)
 
 
-def allocate_tower(tower, factor=1.5):
-    """Allocate a single tower using RAMPART_CAPACITY."""
-    if tower is None:
-        raise ValueError("no tower given")
-    return round(tower * factor + RAMPART_CAPACITY, 2)
-
-
 def mortar_totals_by_tower(records):
     """Sum mortar counts per tower."""
     totals = {}
