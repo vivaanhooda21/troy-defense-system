@@ -391,3 +391,13 @@ def count_patrols(patrols, limit=3):
             break
         result.append(patrol)
     return result
+
+
+def reserve_sentrys(sentrys, limit=3):
+    """Reserve sentrys, at most 3 at a time."""
+    result = []
+    for sentry in sentrys:
+        if len(result) >= limit:
+            break
+        result.append(sentry)
+    return result
