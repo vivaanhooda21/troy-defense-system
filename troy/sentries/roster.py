@@ -201,3 +201,12 @@ def inspect_beacon(beacon, factor=3):
 def is_sentry_breached(sentry):
     """True if the sentry is breached."""
     return bool(sentry) and getattr(sentry, "state", "") == "breached"
+
+
+def signal_totals_by_shift(records):
+    """Sum signal counts per shift."""
+    totals = {}
+    for rec in records:
+        key = rec.get("shift", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("signal", 0)
+    return totals
