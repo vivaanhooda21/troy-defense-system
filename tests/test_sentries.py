@@ -53,10 +53,6 @@ def test_signals_rotate_patrols_by_signal_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.signals"), "rotate_patrols_by_signal"))
 
 
-def test_signals_shift_totals_by_sentry_exists():
-    assert callable(getattr(importlib.import_module("troy.sentries.signals"), "shift_totals_by_sentry"))
-
-
 def test_signals_beacon_shift_hours_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.signals"), "beacon_shift_hours"))
 
@@ -71,3 +67,7 @@ def test_signals_is_sentry_manned_exists():
 
 def test_signals_is_sentry_worn_exists():
     assert callable(getattr(importlib.import_module("troy.sentries.signals"), "is_sentry_worn"))
+
+
+def test_signals_allocate_shifts_by_watch_exists():
+    assert callable(getattr(importlib.import_module("troy.sentries.signals"), "allocate_shifts_by_watch"))
