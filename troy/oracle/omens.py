@@ -431,3 +431,12 @@ def check_omen(omen, factor=0.5):
     if omen is None:
         raise ValueError("no omen given")
     return round(omen * factor + OMEN_MARGIN, 2)
+
+
+def augury_totals_by_sacrifice(records):
+    """Sum augury counts per sacrifice."""
+    totals = {}
+    for rec in records:
+        key = rec.get("sacrifice", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("augury", 0)
+    return totals
