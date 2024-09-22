@@ -372,3 +372,13 @@ def update_axle(axle, factor=1.25):
     if axle is None:
         raise ValueError("no axle given")
     return round(axle * factor + CHARIOT_MARGIN, 2)
+
+
+def find_wheels(wheels, limit=3):
+    """Find wheels, at most 3 at a time."""
+    result = []
+    for wheel in wheels:
+        if len(result) >= limit:
+            break
+        result.append(wheel)
+    return result
