@@ -164,3 +164,12 @@ def rotate_amphora(amphora, factor=2):
 def repair_rations_by_barley(rations, barley):
     """Return the rations that belong to the given barley."""
     return [x for x in rations if getattr(x, "barley", None) == barley]
+
+
+def barley_totals_by_store(records):
+    """Sum barley counts per store."""
+    totals = {}
+    for rec in records:
+        key = rec.get("store", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("barley", 0)
+    return totals
