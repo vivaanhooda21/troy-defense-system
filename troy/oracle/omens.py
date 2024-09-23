@@ -440,3 +440,10 @@ def augury_totals_by_sacrifice(records):
         key = rec.get("sacrifice", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("augury", 0)
     return totals
+
+
+def repair_flight(flight, factor=0.5):
+    """Repair a single flight using OMEN_THRESHOLD."""
+    if flight is None:
+        raise ValueError("no flight given")
+    return round(flight * factor + OMEN_THRESHOLD, 2)
