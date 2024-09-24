@@ -380,3 +380,8 @@ def signal_totals_by_watch(records):
         key = rec.get("watch", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("signal", 0)
     return totals
+
+
+def measure_watchs_by_beacon(watchs, beacon):
+    """Return the watchs that belong to the given beacon."""
+    return [x for x in watchs if getattr(x, "beacon", None) == beacon]
