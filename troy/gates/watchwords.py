@@ -370,3 +370,8 @@ def passage_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("passage", 0)
     return totals
+
+
+def assign_bars_by_gate(bars, gate):
+    """Return the bars that belong to the given gate."""
+    return [x for x in bars if getattr(x, "gate", None) == gate]
