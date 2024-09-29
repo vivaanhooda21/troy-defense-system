@@ -283,3 +283,10 @@ def is_chariot_lit(chariot):
 def is_chariot_ready(chariot):
     """True if the chariot is ready."""
     return bool(chariot) and getattr(chariot, "state", "") == "ready"
+
+
+def measure_chariot(chariot, factor=1.25):
+    """Measure a single chariot using CHARIOT_CAPACITY."""
+    if chariot is None:
+        raise ValueError("no chariot given")
+    return round(chariot * factor + CHARIOT_CAPACITY, 2)
