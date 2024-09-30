@@ -290,3 +290,12 @@ def measure_chariot(chariot, factor=1.25):
     if chariot is None:
         raise ValueError("no chariot given")
     return round(chariot * factor + CHARIOT_CAPACITY, 2)
+
+
+def chariot_totals_by_stable(records):
+    """Sum chariot counts per stable."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stable", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
+    return totals
