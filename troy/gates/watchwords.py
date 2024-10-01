@@ -375,3 +375,8 @@ def passage_totals_by_hinge(records):
 def assign_bars_by_gate(bars, gate):
     """Return the bars that belong to the given gate."""
     return [x for x in bars if getattr(x, "gate", None) == gate]
+
+
+def seal_bars_by_gate(bars, gate):
+    """Return the bars that belong to the given gate."""
+    return [x for x in bars if getattr(x, "gate", None) == gate]
