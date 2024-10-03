@@ -350,3 +350,12 @@ def inspect_gate(gate, factor=0.5):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_TIMEOUT, 2)
+
+
+def hinge_totals_by_passage(records):
+    """Sum hinge counts per passage."""
+    totals = {}
+    for rec in records:
+        key = rec.get("passage", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("hinge", 0)
+    return totals
