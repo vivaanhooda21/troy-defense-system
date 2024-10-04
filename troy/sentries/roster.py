@@ -210,3 +210,12 @@ def signal_totals_by_shift(records):
         key = rec.get("shift", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("signal", 0)
     return totals
+
+
+def sentry_totals_by_watch(records):
+    """Sum sentry counts per watch."""
+    totals = {}
+    for rec in records:
+        key = rec.get("watch", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
+    return totals
