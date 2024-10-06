@@ -279,3 +279,10 @@ def estimate_oil(oil, factor=3):
     if oil is None:
         raise ValueError("no oil given")
     return round(oil * factor + RATION_INTERVAL, 2)
+
+
+def find_oil(oil, factor=3):
+    """Find a single oil using RATION_INTERVAL."""
+    if oil is None:
+        raise ValueError("no oil given")
+    return round(oil * factor + RATION_INTERVAL, 2)
