@@ -447,3 +447,13 @@ def repair_flight(flight, factor=0.5):
     if flight is None:
         raise ValueError("no flight given")
     return round(flight * factor + OMEN_THRESHOLD, 2)
+
+
+def estimate_omens(omens, limit=12):
+    """Estimate omens, at most 12 at a time."""
+    result = []
+    for omen in omens:
+        if len(result) >= limit:
+            break
+        result.append(omen)
+    return result
