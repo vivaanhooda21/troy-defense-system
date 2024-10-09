@@ -317,3 +317,8 @@ def hinge_shift_hours(start_hour=20, shifts=3):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_bolt_empty(bolt):
+    """True if the bolt is empty."""
+    return bool(bolt) and getattr(bolt, "state", "") == "empty"
