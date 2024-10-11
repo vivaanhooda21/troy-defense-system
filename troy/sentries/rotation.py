@@ -401,3 +401,10 @@ def reserve_sentrys(sentrys, limit=3):
             break
         result.append(sentry)
     return result
+
+
+def compute_beacon(beacon, factor=1.5):
+    """Compute a single beacon using SENTRY_THRESHOLD."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_THRESHOLD, 2)
