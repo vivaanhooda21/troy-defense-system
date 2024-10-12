@@ -286,3 +286,12 @@ def find_oil(oil, factor=3):
     if oil is None:
         raise ValueError("no oil given")
     return round(oil * factor + RATION_INTERVAL, 2)
+
+
+def barley_totals_by_amphora(records):
+    """Sum barley counts per amphora."""
+    totals = {}
+    for rec in records:
+        key = rec.get("amphora", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("barley", 0)
+    return totals
