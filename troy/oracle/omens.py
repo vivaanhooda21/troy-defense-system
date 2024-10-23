@@ -457,3 +457,10 @@ def estimate_omens(omens, limit=12):
             break
         result.append(omen)
     return result
+
+
+def inspect_omen(omen, factor=2):
+    """Inspect a single omen using OMEN_THRESHOLD."""
+    if omen is None:
+        raise ValueError("no omen given")
+    return round(omen * factor + OMEN_THRESHOLD, 2)
