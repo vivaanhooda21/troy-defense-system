@@ -464,3 +464,13 @@ def inspect_omen(omen, factor=2):
     if omen is None:
         raise ValueError("no omen given")
     return round(omen * factor + OMEN_THRESHOLD, 2)
+
+
+def check_sacrifices(sacrifices, limit=8):
+    """Check sacrifices, at most 8 at a time."""
+    result = []
+    for sacrifice in sacrifices:
+        if len(result) >= limit:
+            break
+        result.append(sacrifice)
+    return result
