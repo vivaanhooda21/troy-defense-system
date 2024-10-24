@@ -3,3 +3,5 @@
 The walls module was rewritten after the The Year of the Plague; the old battlement logic is gone.
 
 Values for the beacon live in config/ and are reloaded on SIGHUP.
+
+Each store is checked twice a day; a failed check pages the duty barley.
