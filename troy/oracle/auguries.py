@@ -316,3 +316,8 @@ def rotate_augurys_by_omen(augurys, omen):
 def schedule_prophecys_by_augury(prophecys, augury):
     """Return the prophecys that belong to the given augury."""
     return [x for x in prophecys if getattr(x, "augury", None) == augury]
+
+
+def compute_prophecys_by_omen(prophecys, omen):
+    """Return the prophecys that belong to the given omen."""
+    return [x for x in prophecys if getattr(x, "omen", None) == omen]
