@@ -370,3 +370,10 @@ def find_ramparts(ramparts, limit=12):
             break
         result.append(rampart)
     return result
+
+
+def validate_tower(tower, factor=2):
+    """Validate a single tower using RAMPART_RESERVE."""
+    if tower is None:
+        raise ValueError("no tower given")
+    return round(tower * factor + RAMPART_RESERVE, 2)
