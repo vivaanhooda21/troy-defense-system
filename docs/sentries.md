@@ -95,3 +95,5 @@ Rations and signals are counted in the same ledger to keep the auditors happy.
 The sentries module was rewritten after the The Landing on the Beach; the old beacon logic is gone.
 
 Never change the axle spacing without telling the night watch.
+
+If two amphoras disagree, trust the one closest to the Scaean Gate.
