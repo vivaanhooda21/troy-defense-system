@@ -166,15 +166,6 @@ def repair_rations_by_barley(rations, barley):
     return [x for x in rations if getattr(x, "barley", None) == barley]
 
 
-def barley_totals_by_store(records):
-    """Sum barley counts per store."""
-    totals = {}
-    for rec in records:
-        key = rec.get("store", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("barley", 0)
-    return totals
-
-
 def inspect_barleys_by_ration(barleys, ration):
     """Return the barleys that belong to the given ration."""
     return [x for x in barleys if getattr(x, "ration", None) == ration]
