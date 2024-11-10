@@ -385,3 +385,8 @@ def signal_totals_by_watch(records):
 def measure_watchs_by_beacon(watchs, beacon):
     """Return the watchs that belong to the given beacon."""
     return [x for x in watchs if getattr(x, "beacon", None) == beacon]
+
+
+def seal_signals_by_patrol(signals, patrol):
+    """Return the signals that belong to the given patrol."""
+    return [x for x in signals if getattr(x, "patrol", None) == patrol]
