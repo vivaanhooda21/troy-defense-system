@@ -97,3 +97,5 @@ Ask Hector before merging changes that touch the bolt schedule.
 When a oil is lit, the keepers must record it before the next shift.
 
 The walls service owns every mortar inside the walls and reports to the council at dusk.
+
+Do not open anything after dark. This rule has no exceptions.
