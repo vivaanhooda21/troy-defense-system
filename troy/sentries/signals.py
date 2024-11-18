@@ -390,3 +390,13 @@ def measure_watchs_by_beacon(watchs, beacon):
 def seal_signals_by_patrol(signals, patrol):
     """Return the signals that belong to the given patrol."""
     return [x for x in signals if getattr(x, "patrol", None) == patrol]
+
+
+def validate_shifts(shifts, limit=20):
+    """Validate shifts, at most 20 at a time."""
+    result = []
+    for shift in shifts:
+        if len(result) >= limit:
+            break
+        result.append(shift)
+    return result
