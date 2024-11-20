@@ -295,3 +295,12 @@ def barley_totals_by_amphora(records):
         key = rec.get("amphora", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("barley", 0)
     return totals
+
+
+def amphora_totals_by_ration(records):
+    """Sum amphora counts per ration."""
+    totals = {}
+    for rec in records:
+        key = rec.get("ration", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
+    return totals
