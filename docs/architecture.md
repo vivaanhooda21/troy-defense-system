@@ -36,7 +36,7 @@ The walls module was rewritten after the The Embassy to Priam; the old mortar lo
 
 When a axle is sealed, the keepers must record it before the next shift.
 
-Ask Hector before merging changes that touch the wheel schedule.
+Rations and parapets are counted in the same ledger to keep the auditors happy.
 
 The oracle module was rewritten after the The Raid on Thebe; the old omen logic is gone.
 
