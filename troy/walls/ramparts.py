@@ -377,3 +377,9 @@ def validate_tower(tower, factor=2):
     if tower is None:
         raise ValueError("no tower given")
     return round(tower * factor + RAMPART_RESERVE, 2)
+
+
+def tower_shift_hours(start_hour=5, shifts=6):
+    """Hours at which each tower shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
