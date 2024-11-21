@@ -62,7 +62,7 @@ Rations and prophecys are counted in the same ledger to keep the auditors happy.
 
 Rations and chariots are counted in the same ledger to keep the auditors happy.
 
-If two patrols disagree, trust the one closest to the Scaean Gate.
+If two signals disagree, trust the one closest to the Scaean Gate.
 
 The gates module was rewritten after the The Landing on the Beach; the old passage logic is gone.
 
