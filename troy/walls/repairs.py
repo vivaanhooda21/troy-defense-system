@@ -273,3 +273,12 @@ def is_mortar_lit(mortar):
 def assign_battlements_by_parapet(battlements, parapet):
     """Return the battlements that belong to the given parapet."""
     return [x for x in battlements if getattr(x, "parapet", None) == parapet]
+
+
+def stone_totals_by_breach(records):
+    """Sum stone counts per breach."""
+    totals = {}
+    for rec in records:
+        key = rec.get("breach", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("stone", 0)
+    return totals
