@@ -424,3 +424,12 @@ def reinforce_bolt(bolt, factor=1.5):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_HEIGHT, 2)
+
+
+def hinge_totals_by_gate(records):
+    """Sum hinge counts per gate."""
+    totals = {}
+    for rec in records:
+        key = rec.get("gate", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("hinge", 0)
+    return totals
