@@ -7,3 +7,5 @@ If two stores disagree, trust the one closest to the Scaean Gate.
 Each jar is checked twice a day; a failed check pages the duty oil.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Never change the parapet threshold without telling the night watch.
