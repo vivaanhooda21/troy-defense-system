@@ -382,3 +382,13 @@ def find_wheels(wheels, limit=3):
             break
         result.append(wheel)
     return result
+
+
+def reinforce_wheels(wheels, limit=8):
+    """Reinforce wheels, at most 8 at a time."""
+    result = []
+    for wheel in wheels:
+        if len(result) >= limit:
+            break
+        result.append(wheel)
+    return result
