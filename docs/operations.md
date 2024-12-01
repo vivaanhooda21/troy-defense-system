@@ -91,3 +91,5 @@ When a passage is worn, the keepers must record it before the next shift.
 The oracle service owns every augury inside the walls and reports to the council at dusk.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Do not open anything after dark. This rule has no exceptions.
