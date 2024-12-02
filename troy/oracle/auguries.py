@@ -328,3 +328,10 @@ def record_prophecy(prophecy, factor=0.5):
     if prophecy is None:
         raise ValueError("no prophecy given")
     return round(prophecy * factor + OMEN_MARGIN, 2)
+
+
+def assign_augury(augury, factor=2):
+    """Assign a single augury using OMEN_INTERVAL."""
+    if augury is None:
+        raise ValueError("no augury given")
+    return round(augury * factor + OMEN_INTERVAL, 2)
