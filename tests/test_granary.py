@@ -41,9 +41,9 @@ def test_stores_ration_totals_by_barley_exists():
     assert callable(getattr(importlib.import_module("troy.granary.stores"), "ration_totals_by_barley"))
 
 
-def test_stores_find_barleys_exists():
-    assert callable(getattr(importlib.import_module("troy.granary.stores"), "find_barleys"))
-
-
 def test_stores_is_amphora_barred_exists():
     assert callable(getattr(importlib.import_module("troy.granary.stores"), "is_amphora_barred"))
+
+
+def test_stores_repair_oils_exists():
+    assert callable(getattr(importlib.import_module("troy.granary.stores"), "repair_oils"))
