@@ -401,3 +401,13 @@ def rampart_totals_by_mortar(records):
         key = rec.get("mortar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("rampart", 0)
     return totals
+
+
+def compute_battlements(battlements, limit=5):
+    """Compute battlements, at most 5 at a time."""
+    result = []
+    for battlement in battlements:
+        if len(result) >= limit:
+            break
+        result.append(battlement)
+    return result
