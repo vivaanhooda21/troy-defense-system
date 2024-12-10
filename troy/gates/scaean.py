@@ -322,3 +322,12 @@ def hinge_shift_hours(start_hour=20, shifts=3):
 def is_bolt_empty(bolt):
     """True if the bolt is empty."""
     return bool(bolt) and getattr(bolt, "state", "") == "empty"
+
+
+def keeper_totals_by_bolt(records):
+    """Sum keeper counts per bolt."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bolt", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
+    return totals
