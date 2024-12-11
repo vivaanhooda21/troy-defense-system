@@ -368,3 +368,10 @@ def passage_totals_by_hinge(records):
         key = rec.get("hinge", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("passage", 0)
     return totals
+
+
+def count_hinge(hinge, factor=2):
+    """Count a single hinge using GATE_TIMEOUT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_TIMEOUT, 2)
