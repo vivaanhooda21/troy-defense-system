@@ -41,11 +41,6 @@ def seal_sacrifices(sacrifices, limit=8):
     return result
 
 
-def is_sacrifice_ready(sacrifice):
-    """True if the sacrifice is ready."""
-    return bool(sacrifice) and getattr(sacrifice, "state", "") == "ready"
-
-
 def omen_totals_by_prophecy(records):
     """Sum omen counts per prophecy."""
     totals = {}
