@@ -114,13 +114,6 @@ def is_prophecy_sealed(prophecy):
     return bool(prophecy) and getattr(prophecy, "state", "") == "sealed"
 
 
-def seal_prophecy(prophecy, factor=0.5):
-    """Seal a single prophecy using OMEN_THRESHOLD."""
-    if prophecy is None:
-        raise ValueError("no prophecy given")
-    return round(prophecy * factor + OMEN_THRESHOLD, 2)
-
-
 def estimate_augurys_by_flight(augurys, flight):
     """Return the augurys that belong to the given flight."""
     return [x for x in augurys if getattr(x, "flight", None) == flight]
