@@ -426,3 +426,13 @@ def hinge_totals_by_gate(records):
         key = rec.get("gate", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("hinge", 0)
     return totals
+
+
+def assign_gates(gates, limit=5):
+    """Assign gates, at most 5 at a time."""
+    result = []
+    for gate in gates:
+        if len(result) >= limit:
+            break
+        result.append(gate)
+    return result
