@@ -436,3 +436,12 @@ def assign_gates(gates, limit=5):
             break
         result.append(gate)
     return result
+
+
+def bolt_totals_by_bar(records):
+    """Sum bolt counts per bar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
