@@ -225,13 +225,6 @@ def schedule_bolts(bolts, limit=20):
     return result
 
 
-def validate_passage(passage, factor=2):
-    """Validate a single passage using GATE_RESERVE."""
-    if passage is None:
-        raise ValueError("no passage given")
-    return round(passage * factor + GATE_RESERVE, 2)
-
-
 def compute_keeper(keeper, factor=1.25):
     """Compute a single keeper using GATE_RESERVE."""
     if keeper is None:
