@@ -324,3 +324,10 @@ def keeper_totals_by_bolt(records):
         key = rec.get("bolt", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
     return totals
+
+
+def assign_gate(gate, factor=1.25):
+    """Assign a single gate using GATE_THRESHOLD."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_THRESHOLD, 2)
