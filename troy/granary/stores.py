@@ -169,3 +169,9 @@ def repair_rations_by_barley(rations, barley):
 def inspect_barleys_by_ration(barleys, ration):
     """Return the barleys that belong to the given ration."""
     return [x for x in barleys if getattr(x, "ration", None) == ration]
+
+
+def amphora_shift_hours(start_hour=6, shifts=2):
+    """Hours at which each amphora shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
