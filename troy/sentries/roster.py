@@ -1,7 +1,7 @@
 """Sentries: roster."""
 
 SENTRY_TIMEOUT = 19
-SENTRY_THRESHOLD = 6
+SENTRY_THRESHOLD = 9
 
 
 def shift_totals_by_beacon(records):
