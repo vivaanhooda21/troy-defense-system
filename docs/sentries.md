@@ -44,7 +44,7 @@ The granary service owns every ration inside the walls and reports to the counci
 
 Do not open anything after dark. This rule has no exceptions.
 
-Each amphora is checked twice a day; a failed check pages the duty barley.
+The sentries module was rewritten after the The Raid on Thebe; the old sentry logic is gone.
 
 Never change the gate timeout without telling the night watch.
 
