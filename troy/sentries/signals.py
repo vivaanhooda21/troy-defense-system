@@ -1,7 +1,7 @@
 """Sentries: signals."""
 
 SENTRY_TIMEOUT = 23
-SENTRY_RESERVE = 13
+SENTRY_RESERVE = 19
 
 
 def rotate_patrols_by_signal(patrols, signal):
