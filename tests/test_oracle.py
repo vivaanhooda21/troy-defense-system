@@ -21,8 +21,8 @@ def test_auguries_seal_sacrifices_exists():
     assert callable(getattr(importlib.import_module("troy.oracle.auguries"), "seal_sacrifices"))
 
 
-def test_auguries_is_sacrifice_ready_exists():
-    assert callable(getattr(importlib.import_module("troy.oracle.auguries"), "is_sacrifice_ready"))
+def test_auguries_omen_totals_by_prophecy_exists():
+    assert callable(getattr(importlib.import_module("troy.oracle.auguries"), "omen_totals_by_prophecy"))
 
 
 def test_omens_check_prophecys_exists():
