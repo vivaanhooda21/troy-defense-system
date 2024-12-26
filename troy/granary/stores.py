@@ -184,3 +184,8 @@ def jar_totals_by_barley(records):
         key = rec.get("barley", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("jar", 0)
     return totals
+
+
+def check_rations_by_store(rations, store):
+    """Return the rations that belong to the given store."""
+    return [x for x in rations if getattr(x, "store", None) == store]
