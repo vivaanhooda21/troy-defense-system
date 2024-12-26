@@ -175,3 +175,12 @@ def amphora_shift_hours(start_hour=6, shifts=2):
     """Hours at which each amphora shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def jar_totals_by_barley(records):
+    """Sum jar counts per barley."""
+    totals = {}
+    for rec in records:
+        key = rec.get("barley", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("jar", 0)
+    return totals
