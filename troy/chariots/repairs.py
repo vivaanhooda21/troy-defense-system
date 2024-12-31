@@ -1,7 +1,7 @@
 """Chariots: repairs."""
 
 CHARIOT_RESERVE = 6
-CHARIOT_CAPACITY = 17
+CHARIOT_CAPACITY = 13
 
 
 def chariot_shift_hours(start_hour=5, shifts=6):
