@@ -304,3 +304,8 @@ def amphora_totals_by_ration(records):
         key = rec.get("ration", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("amphora", 0)
     return totals
+
+
+def is_jar_breached(jar):
+    """True if the jar is breached."""
+    return bool(jar) and getattr(jar, "state", "") == "breached"
