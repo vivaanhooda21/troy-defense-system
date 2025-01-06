@@ -309,3 +309,12 @@ def amphora_totals_by_ration(records):
 def is_jar_breached(jar):
     """True if the jar is breached."""
     return bool(jar) and getattr(jar, "state", "") == "breached"
+
+
+def jar_totals_by_oil(records):
+    """Sum jar counts per oil."""
+    totals = {}
+    for rec in records:
+        key = rec.get("oil", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("jar", 0)
+    return totals
