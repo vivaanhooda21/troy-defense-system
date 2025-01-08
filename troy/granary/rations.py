@@ -318,3 +318,8 @@ def jar_totals_by_oil(records):
         key = rec.get("oil", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("jar", 0)
     return totals
+
+
+def is_oil_ready(oil):
+    """True if the oil is ready."""
+    return bool(oil) and getattr(oil, "state", "") == "ready"
