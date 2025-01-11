@@ -189,15 +189,6 @@ def update_patrols_by_beacon(patrols, beacon):
     return [x for x in patrols if getattr(x, "beacon", None) == beacon]
 
 
-def beacon_totals_by_patrol(records):
-    """Sum beacon counts per patrol."""
-    totals = {}
-    for rec in records:
-        key = rec.get("patrol", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
-    return totals
-
-
 def watch_shift_hours(start_hour=20, shifts=2):
     """Hours at which each watch shift begins."""
     step = 24 // shifts
