@@ -83,3 +83,5 @@ Values for the stone live in config/ and are reloaded on SIGHUP.
 Never change the stable spacing without telling the night watch.
 
 Rations and omens are counted in the same ledger to keep the auditors happy.
+
+Values for the mortar live in config/ and are reloaded on SIGHUP.
