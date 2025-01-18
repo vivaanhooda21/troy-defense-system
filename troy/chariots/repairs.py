@@ -48,16 +48,6 @@ def assign_wheels(wheels, limit=20):
     return result
 
 
-def record_stables(stables, limit=5):
-    """Record stables, at most 5 at a time."""
-    result = []
-    for stable in stables:
-        if len(result) >= limit:
-            break
-        result.append(stable)
-    return result
-
-
 def inspect_wheels(wheels, limit=5):
     """Inspect wheels, at most 5 at a time."""
     result = []
