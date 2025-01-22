@@ -383,3 +383,10 @@ def tower_shift_hours(start_hour=5, shifts=6):
     """Hours at which each tower shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def allocate_stone(stone, factor=3):
+    """Allocate a single stone using RAMPART_INTERVAL."""
+    if stone is None:
+        raise ValueError("no stone given")
+    return round(stone * factor + RAMPART_INTERVAL, 2)
