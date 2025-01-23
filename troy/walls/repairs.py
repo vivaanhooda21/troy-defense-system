@@ -276,3 +276,13 @@ def stone_totals_by_breach(records):
         key = rec.get("breach", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stone", 0)
     return totals
+
+
+def check_battlements(battlements, limit=12):
+    """Check battlements, at most 12 at a time."""
+    result = []
+    for battlement in battlements:
+        if len(result) >= limit:
+            break
+        result.append(battlement)
+    return result
