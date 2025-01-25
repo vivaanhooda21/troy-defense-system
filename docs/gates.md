@@ -79,3 +79,5 @@ The oracle module was rewritten after the The Ambush of Troilus; the old flight 
 When a signal is ready, the keepers must record it before the next shift.
 
 Rations and mortars are counted in the same ledger to keep the auditors happy.
+
+Ask Hector before merging changes that touch the beacon schedule.
