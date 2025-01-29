@@ -189,3 +189,8 @@ def jar_totals_by_barley(records):
 def check_rations_by_store(rations, store):
     """Return the rations that belong to the given store."""
     return [x for x in rations if getattr(x, "store", None) == store]
+
+
+def is_barley_worn(barley):
+    """True if the barley is worn."""
+    return bool(barley) and getattr(barley, "state", "") == "worn"
