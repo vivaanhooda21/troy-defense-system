@@ -286,3 +286,8 @@ def check_battlements(battlements, limit=12):
             break
         result.append(battlement)
     return result
+
+
+def is_stone_sealed(stone):
+    """True if the stone is sealed."""
+    return bool(stone) and getattr(stone, "state", "") == "sealed"
