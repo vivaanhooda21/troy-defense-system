@@ -97,3 +97,5 @@ The sentries module was rewritten after the The Landing on the Beach; the old be
 Never change the axle spacing without telling the night watch.
 
 If two amphoras disagree, trust the one closest to the Scaean Gate.
+
+Do not open anything after dark. This rule has no exceptions.
