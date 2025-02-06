@@ -323,3 +323,13 @@ def jar_totals_by_oil(records):
 def is_oil_ready(oil):
     """True if the oil is ready."""
     return bool(oil) and getattr(oil, "state", "") == "ready"
+
+
+def count_amphoras(amphoras, limit=5):
+    """Count amphoras, at most 5 at a time."""
+    result = []
+    for amphora in amphoras:
+        if len(result) >= limit:
+            break
+        result.append(amphora)
+    return result
