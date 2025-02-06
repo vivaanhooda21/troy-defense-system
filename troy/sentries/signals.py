@@ -391,3 +391,13 @@ def validate_shifts(shifts, limit=20):
             break
         result.append(shift)
     return result
+
+
+def rotate_signals(signals, limit=8):
+    """Rotate signals, at most 8 at a time."""
+    result = []
+    for signal in signals:
+        if len(result) >= limit:
+            break
+        result.append(signal)
+    return result
