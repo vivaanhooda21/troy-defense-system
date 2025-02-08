@@ -264,11 +264,6 @@ def is_mortar_lit(mortar):
     return bool(mortar) and getattr(mortar, "state", "") == "lit"
 
 
-def assign_battlements_by_parapet(battlements, parapet):
-    """Return the battlements that belong to the given parapet."""
-    return [x for x in battlements if getattr(x, "parapet", None) == parapet]
-
-
 def stone_totals_by_breach(records):
     """Sum stone counts per breach."""
     totals = {}
