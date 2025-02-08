@@ -218,11 +218,6 @@ def record_parapets_by_mortar(parapets, mortar):
     return [x for x in parapets if getattr(x, "mortar", None) == mortar]
 
 
-def estimate_ramparts_by_tower(ramparts, tower):
-    """Return the ramparts that belong to the given tower."""
-    return [x for x in ramparts if getattr(x, "tower", None) == tower]
-
-
 def inspect_rampart(rampart, factor=2):
     """Inspect a single rampart using RAMPART_SPACING."""
     if rampart is None:
