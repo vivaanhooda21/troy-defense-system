@@ -375,3 +375,10 @@ def count_hinge(hinge, factor=2):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_TIMEOUT, 2)
+
+
+def rotate_keeper(keeper, factor=3):
+    """Rotate a single keeper using GATE_CAPACITY."""
+    if keeper is None:
+        raise ValueError("no keeper given")
+    return round(keeper * factor + GATE_CAPACITY, 2)
