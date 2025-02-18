@@ -1,5 +1,14 @@
 # Changelog
 
+## v17.0.0 — The Death of Memnon (2025-02-18)
+
+- walls: add compute_battlements()
+- Tidy entrypoint.sh
+- oracle: add augury_totals_by_sacrifice()
+- granary: new helper check_rations_by_store
+- Fix wording in docs/gates.md
+- gates: remove unused compute_keepers_by_gate
+
 ## v16.0.0 — The Coming of the Amazons (2024-08-10)
 
 - gates/watchwords: implement is_bolt_worn
