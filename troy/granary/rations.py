@@ -333,3 +333,13 @@ def count_amphoras(amphoras, limit=5):
             break
         result.append(amphora)
     return result
+
+
+def list_stores(stores, limit=5):
+    """List stores, at most 5 at a time."""
+    result = []
+    for store in stores:
+        if len(result) >= limit:
+            break
+        result.append(store)
+    return result
