@@ -343,3 +343,8 @@ def list_stores(stores, limit=5):
             break
         result.append(store)
     return result
+
+
+def is_barley_barred(barley):
+    """True if the barley is barred."""
+    return bool(barley) and getattr(barley, "state", "") == "barred"
