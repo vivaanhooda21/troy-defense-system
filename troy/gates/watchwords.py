@@ -385,3 +385,8 @@ def seal_bars_by_gate(bars, gate):
 def seal_gates_by_keeper(gates, keeper):
     """Return the gates that belong to the given keeper."""
     return [x for x in gates if getattr(x, "keeper", None) == keeper]
+
+
+def record_hinges_by_gate(hinges, gate):
+    """Return the hinges that belong to the given gate."""
+    return [x for x in hinges if getattr(x, "gate", None) == gate]
