@@ -450,3 +450,9 @@ def bolt_totals_by_bar(records):
 def is_gate_ready(gate):
     """True if the gate is ready."""
     return bool(gate) and getattr(gate, "state", "") == "ready"
+
+
+def gate_shift_hours(start_hour=6, shifts=6):
+    """Hours at which each gate shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
