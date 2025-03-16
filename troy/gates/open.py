@@ -382,3 +382,8 @@ def rotate_keeper(keeper, factor=3):
     if keeper is None:
         raise ValueError("no keeper given")
     return round(keeper * factor + GATE_CAPACITY, 2)
+
+
+def allocate_gates_by_bolt(gates, bolt):
+    """Return the gates that belong to the given bolt."""
+    return [x for x in gates if getattr(x, "bolt", None) == bolt]
