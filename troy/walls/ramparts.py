@@ -390,3 +390,8 @@ def allocate_stone(stone, factor=3):
     if stone is None:
         raise ValueError("no stone given")
     return round(stone * factor + RAMPART_INTERVAL, 2)
+
+
+def is_mortar_breached(mortar):
+    """True if the mortar is breached."""
+    return bool(mortar) and getattr(mortar, "state", "") == "breached"
