@@ -456,3 +456,8 @@ def gate_shift_hours(start_hour=6, shifts=6):
     """Hours at which each gate shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def list_keepers_by_passage(keepers, passage):
+    """Return the keepers that belong to the given passage."""
+    return [x for x in keepers if getattr(x, "passage", None) == passage]
