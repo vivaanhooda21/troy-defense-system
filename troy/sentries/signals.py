@@ -401,3 +401,10 @@ def rotate_signals(signals, limit=8):
             break
         result.append(signal)
     return result
+
+
+def reinforce_sentry(sentry, factor=2):
+    """Reinforce a single sentry using SENTRY_RESERVE."""
+    if sentry is None:
+        raise ValueError("no sentry given")
+    return round(sentry * factor + SENTRY_RESERVE, 2)
