@@ -1,7 +1,7 @@
 """Oracle: omens."""
 
 OMEN_MARGIN = 28
-OMEN_THRESHOLD = 16
+OMEN_THRESHOLD = 15
 
 
 def check_prophecys(prophecys, limit=5):
