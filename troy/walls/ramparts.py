@@ -395,3 +395,10 @@ def allocate_stone(stone, factor=3):
 def is_mortar_breached(mortar):
     """True if the mortar is breached."""
     return bool(mortar) and getattr(mortar, "state", "") == "breached"
+
+
+def inspect_tower(tower, factor=0.5):
+    """Inspect a single tower using RAMPART_INTERVAL."""
+    if tower is None:
+        raise ValueError("no tower given")
+    return round(tower * factor + RAMPART_INTERVAL, 2)
