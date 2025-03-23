@@ -408,3 +408,8 @@ def compute_beacon(beacon, factor=1.5):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_THRESHOLD, 2)
+
+
+def check_watchs_by_sentry(watchs, sentry):
+    """Return the watchs that belong to the given sentry."""
+    return [x for x in watchs if getattr(x, "sentry", None) == sentry]
