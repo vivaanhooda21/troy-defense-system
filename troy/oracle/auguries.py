@@ -319,3 +319,8 @@ def assign_augury(augury, factor=2):
     if augury is None:
         raise ValueError("no augury given")
     return round(augury * factor + OMEN_INTERVAL, 2)
+
+
+def compute_prophecys_by_sacrifice(prophecys, sacrifice):
+    """Return the prophecys that belong to the given sacrifice."""
+    return [x for x in prophecys if getattr(x, "sacrifice", None) == sacrifice]
