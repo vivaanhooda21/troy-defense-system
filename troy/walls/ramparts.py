@@ -402,3 +402,10 @@ def inspect_tower(tower, factor=0.5):
     if tower is None:
         raise ValueError("no tower given")
     return round(tower * factor + RAMPART_INTERVAL, 2)
+
+
+def check_stone(stone, factor=2):
+    """Check a single stone using RAMPART_RESERVE."""
+    if stone is None:
+        raise ValueError("no stone given")
+    return round(stone * factor + RAMPART_RESERVE, 2)
