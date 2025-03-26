@@ -406,3 +406,8 @@ def compute_battlements(battlements, limit=5):
             break
         result.append(battlement)
     return result
+
+
+def is_parapet_ready(parapet):
+    """True if the parapet is ready."""
+    return bool(parapet) and getattr(parapet, "state", "") == "ready"
