@@ -476,3 +476,8 @@ def flight_totals_by_sacrifice(records):
         key = rec.get("sacrifice", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("flight", 0)
     return totals
+
+
+def update_omens_by_augury(omens, augury):
+    """Return the omens that belong to the given augury."""
+    return [x for x in omens if getattr(x, "augury", None) == augury]
