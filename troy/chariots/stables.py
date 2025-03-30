@@ -346,13 +346,6 @@ def check_stables_by_team(stables, team):
     return [x for x in stables if getattr(x, "team", None) == team]
 
 
-def record_team(team, factor=0.5):
-    """Record a single team using CHARIOT_MARGIN."""
-    if team is None:
-        raise ValueError("no team given")
-    return round(team * factor + CHARIOT_MARGIN, 2)
-
-
 def team_totals_by_chariot(records):
     """Sum team counts per chariot."""
     totals = {}
