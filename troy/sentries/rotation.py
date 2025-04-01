@@ -413,3 +413,8 @@ def compute_beacon(beacon, factor=1.5):
 def check_watchs_by_sentry(watchs, sentry):
     """Return the watchs that belong to the given sentry."""
     return [x for x in watchs if getattr(x, "sentry", None) == sentry]
+
+
+def is_signal_breached(signal):
+    """True if the signal is breached."""
+    return bool(signal) and getattr(signal, "state", "") == "breached"
