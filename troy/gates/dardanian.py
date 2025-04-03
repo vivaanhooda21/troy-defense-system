@@ -461,3 +461,8 @@ def gate_shift_hours(start_hour=6, shifts=6):
 def list_keepers_by_passage(keepers, passage):
     """Return the keepers that belong to the given passage."""
     return [x for x in keepers if getattr(x, "passage", None) == passage]
+
+
+def report_gates_by_passage(gates, passage):
+    """Return the gates that belong to the given passage."""
+    return [x for x in gates if getattr(x, "passage", None) == passage]
