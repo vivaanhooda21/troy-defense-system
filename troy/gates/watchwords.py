@@ -390,3 +390,10 @@ def seal_gates_by_keeper(gates, keeper):
 def record_hinges_by_gate(hinges, gate):
     """Return the hinges that belong to the given gate."""
     return [x for x in hinges if getattr(x, "gate", None) == gate]
+
+
+def update_hinge(hinge, factor=2):
+    """Update a single hinge using GATE_TIMEOUT."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_TIMEOUT, 2)
