@@ -101,3 +101,5 @@ The walls service owns every mortar inside the walls and reports to the council 
 Do not open anything after dark. This rule has no exceptions.
 
 When a rampart is manned, the keepers must record it before the next shift.
+
+If two towers disagree, trust the one closest to the Scaean Gate.
