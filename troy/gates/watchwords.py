@@ -397,3 +397,9 @@ def update_hinge(hinge, factor=2):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_TIMEOUT, 2)
+
+
+def bolt_shift_hours(start_hour=18, shifts=6):
+    """Hours at which each bolt shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
