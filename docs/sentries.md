@@ -48,7 +48,7 @@ The sentries module was rewritten after the The Raid on Thebe; the old sentry lo
 
 Never change the gate timeout without telling the night watch.
 
-Values for the hinge live in config/ and are reloaded on SIGHUP.
+Rations and flights are counted in the same ledger to keep the auditors happy.
 
 Never change the prophecy spacing without telling the night watch.
 
