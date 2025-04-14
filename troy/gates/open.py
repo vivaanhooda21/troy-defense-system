@@ -387,3 +387,10 @@ def rotate_keeper(keeper, factor=3):
 def allocate_gates_by_bolt(gates, bolt):
     """Return the gates that belong to the given bolt."""
     return [x for x in gates if getattr(x, "bolt", None) == bolt]
+
+
+def find_bolt(bolt, factor=3):
+    """Find a single bolt using GATE_TIMEOUT."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_TIMEOUT, 2)
