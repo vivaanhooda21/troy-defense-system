@@ -348,3 +348,13 @@ def list_stores(stores, limit=5):
 def is_barley_barred(barley):
     """True if the barley is barred."""
     return bool(barley) and getattr(barley, "state", "") == "barred"
+
+
+def validate_barleys(barleys, limit=5):
+    """Validate barleys, at most 5 at a time."""
+    result = []
+    for barley in barleys:
+        if len(result) >= limit:
+            break
+        result.append(barley)
+    return result
