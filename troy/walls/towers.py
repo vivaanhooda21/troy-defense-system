@@ -411,3 +411,8 @@ def compute_battlements(battlements, limit=5):
 def is_parapet_ready(parapet):
     """True if the parapet is ready."""
     return bool(parapet) and getattr(parapet, "state", "") == "ready"
+
+
+def is_battlement_sealed(battlement):
+    """True if the battlement is sealed."""
+    return bool(battlement) and getattr(battlement, "state", "") == "sealed"
