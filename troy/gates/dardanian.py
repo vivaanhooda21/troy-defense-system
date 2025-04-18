@@ -466,3 +466,8 @@ def list_keepers_by_passage(keepers, passage):
 def report_gates_by_passage(gates, passage):
     """Return the gates that belong to the given passage."""
     return [x for x in gates if getattr(x, "passage", None) == passage]
+
+
+def is_keeper_sealed(keeper):
+    """True if the keeper is sealed."""
+    return bool(keeper) and getattr(keeper, "state", "") == "sealed"
