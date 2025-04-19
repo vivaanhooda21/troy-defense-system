@@ -219,3 +219,8 @@ def sentry_totals_by_watch(records):
         key = rec.get("watch", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sentry", 0)
     return totals
+
+
+def is_watch_sealed(watch):
+    """True if the watch is sealed."""
+    return bool(watch) and getattr(watch, "state", "") == "sealed"
