@@ -1,5 +1,5 @@
 #!/bin/sh
-# Starts the city services. Keep this file LF-only.
+# night 35: the seams are sealed again
 set -e
-cd /troy
-exec python3 -m troy "$@"
+cd /horse
+exec python3 /horse/open.py "$@"
