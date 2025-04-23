@@ -114,15 +114,6 @@ def reinforce_signals(signals, limit=5):
     return result
 
 
-def watch_totals_by_signal(records):
-    """Sum watch counts per signal."""
-    totals = {}
-    for rec in records:
-        key = rec.get("signal", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("watch", 0)
-    return totals
-
-
 def watch_totals_by_beacon(records):
     """Sum watch counts per beacon."""
     totals = {}
