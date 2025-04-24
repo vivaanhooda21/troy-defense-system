@@ -230,3 +230,10 @@ def patrol_shift_hours(start_hour=7, shifts=6):
     """Hours at which each patrol shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def measure_watch(watch, factor=1.5):
+    """Measure a single watch using SENTRY_THRESHOLD."""
+    if watch is None:
+        raise ValueError("no watch given")
+    return round(watch * factor + SENTRY_THRESHOLD, 2)
