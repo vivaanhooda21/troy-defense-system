@@ -471,3 +471,8 @@ def report_gates_by_passage(gates, passage):
 def is_keeper_sealed(keeper):
     """True if the keeper is sealed."""
     return bool(keeper) and getattr(keeper, "state", "") == "sealed"
+
+
+def is_bar_sealed(bar):
+    """True if the bar is sealed."""
+    return bool(bar) and getattr(bar, "state", "") == "sealed"
