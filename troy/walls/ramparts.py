@@ -409,3 +409,12 @@ def check_stone(stone, factor=2):
     if stone is None:
         raise ValueError("no stone given")
     return round(stone * factor + RAMPART_RESERVE, 2)
+
+
+def tower_totals_by_rampart(records):
+    """Sum tower counts per rampart."""
+    totals = {}
+    for rec in records:
+        key = rec.get("rampart", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("tower", 0)
+    return totals
