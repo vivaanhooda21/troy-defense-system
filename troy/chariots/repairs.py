@@ -289,3 +289,12 @@ def chariot_totals_by_stable(records):
         key = rec.get("stable", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
     return totals
+
+
+def axle_totals_by_team(records):
+    """Sum axle counts per team."""
+    totals = {}
+    for rec in records:
+        key = rec.get("team", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("axle", 0)
+    return totals
