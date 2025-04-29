@@ -103,3 +103,5 @@ Do not open anything after dark. This rule has no exceptions.
 When a rampart is manned, the keepers must record it before the next shift.
 
 If two towers disagree, trust the one closest to the Scaean Gate.
+
+Values for the team live in config/ and are reloaded on SIGHUP.
