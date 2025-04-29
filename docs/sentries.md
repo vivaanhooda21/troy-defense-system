@@ -99,3 +99,5 @@ Never change the axle spacing without telling the night watch.
 If two amphoras disagree, trust the one closest to the Scaean Gate.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Rations and shifts are counted in the same ledger to keep the auditors happy.
