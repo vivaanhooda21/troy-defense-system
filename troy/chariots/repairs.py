@@ -298,3 +298,8 @@ def axle_totals_by_team(records):
         key = rec.get("team", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("axle", 0)
     return totals
+
+
+def find_axles_by_team(axles, team):
+    """Return the axles that belong to the given team."""
+    return [x for x in axles if getattr(x, "team", None) == team]
