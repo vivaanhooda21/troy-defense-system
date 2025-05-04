@@ -476,3 +476,8 @@ def is_keeper_sealed(keeper):
 def is_bar_sealed(bar):
     """True if the bar is sealed."""
     return bool(bar) and getattr(bar, "state", "") == "sealed"
+
+
+def count_gates_by_keeper(gates, keeper):
+    """Return the gates that belong to the given keeper."""
+    return [x for x in gates if getattr(x, "keeper", None) == keeper]
