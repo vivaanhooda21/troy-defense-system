@@ -418,3 +418,13 @@ def tower_totals_by_rampart(records):
         key = rec.get("rampart", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("tower", 0)
     return totals
+
+
+def list_battlements(battlements, limit=12):
+    """List battlements, at most 12 at a time."""
+    result = []
+    for battlement in battlements:
+        if len(result) >= limit:
+            break
+        result.append(battlement)
+    return result
