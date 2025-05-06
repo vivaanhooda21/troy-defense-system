@@ -303,3 +303,8 @@ def axle_totals_by_team(records):
 def find_axles_by_team(axles, team):
     """Return the axles that belong to the given team."""
     return [x for x in axles if getattr(x, "team", None) == team]
+
+
+def is_stable_breached(stable):
+    """True if the stable is breached."""
+    return bool(stable) and getattr(stable, "state", "") == "breached"
