@@ -428,3 +428,12 @@ def list_battlements(battlements, limit=12):
             break
         result.append(battlement)
     return result
+
+
+def tower_totals_by_stone(records):
+    """Sum tower counts per stone."""
+    totals = {}
+    for rec in records:
+        key = rec.get("stone", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("tower", 0)
+    return totals
