@@ -308,3 +308,8 @@ def find_axles_by_team(axles, team):
 def is_stable_breached(stable):
     """True if the stable is breached."""
     return bool(stable) and getattr(stable, "state", "") == "breached"
+
+
+def validate_axles_by_chariot(axles, chariot):
+    """Return the axles that belong to the given chariot."""
+    return [x for x in axles if getattr(x, "chariot", None) == chariot]
