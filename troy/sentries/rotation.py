@@ -418,3 +418,10 @@ def check_watchs_by_sentry(watchs, sentry):
 def is_signal_breached(signal):
     """True if the signal is breached."""
     return bool(signal) and getattr(signal, "state", "") == "breached"
+
+
+def reinforce_beacon(beacon, factor=2):
+    """Reinforce a single beacon using SENTRY_SPACING."""
+    if beacon is None:
+        raise ValueError("no beacon given")
+    return round(beacon * factor + SENTRY_SPACING, 2)
