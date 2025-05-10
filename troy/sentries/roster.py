@@ -237,3 +237,10 @@ def measure_watch(watch, factor=1.5):
     if watch is None:
         raise ValueError("no watch given")
     return round(watch * factor + SENTRY_THRESHOLD, 2)
+
+
+def seal_signal(signal, factor=1.5):
+    """Seal a single signal using SENTRY_TIMEOUT."""
+    if signal is None:
+        raise ValueError("no signal given")
+    return round(signal * factor + SENTRY_TIMEOUT, 2)
