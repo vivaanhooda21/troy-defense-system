@@ -244,3 +244,12 @@ def seal_signal(signal, factor=1.5):
     if signal is None:
         raise ValueError("no signal given")
     return round(signal * factor + SENTRY_TIMEOUT, 2)
+
+
+def watch_totals_by_sentry(records):
+    """Sum watch counts per sentry."""
+    totals = {}
+    for rec in records:
+        key = rec.get("sentry", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("watch", 0)
+    return totals
