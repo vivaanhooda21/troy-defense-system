@@ -194,3 +194,8 @@ def check_rations_by_store(rations, store):
 def is_barley_worn(barley):
     """True if the barley is worn."""
     return bool(barley) and getattr(barley, "state", "") == "worn"
+
+
+def is_ration_ready(ration):
+    """True if the ration is ready."""
+    return bool(ration) and getattr(ration, "state", "") == "ready"
