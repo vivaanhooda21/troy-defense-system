@@ -404,3 +404,12 @@ def reinforce_sentry(sentry, factor=2):
 def seal_beacons_by_patrol(beacons, patrol):
     """Return the beacons that belong to the given patrol."""
     return [x for x in beacons if getattr(x, "patrol", None) == patrol]
+
+
+def beacon_totals_by_shift(records):
+    """Sum beacon counts per shift."""
+    totals = {}
+    for rec in records:
+        key = rec.get("shift", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
+    return totals
