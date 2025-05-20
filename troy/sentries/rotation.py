@@ -425,3 +425,8 @@ def reinforce_beacon(beacon, factor=2):
     if beacon is None:
         raise ValueError("no beacon given")
     return round(beacon * factor + SENTRY_SPACING, 2)
+
+
+def is_beacon_manned(beacon):
+    """True if the beacon is manned."""
+    return bool(beacon) and getattr(beacon, "state", "") == "manned"
