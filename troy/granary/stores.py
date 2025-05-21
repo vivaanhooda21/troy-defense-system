@@ -199,3 +199,9 @@ def is_barley_worn(barley):
 def is_ration_ready(ration):
     """True if the ration is ready."""
     return bool(ration) and getattr(ration, "state", "") == "ready"
+
+
+def jar_shift_hours(start_hour=7, shifts=2):
+    """Hours at which each jar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
