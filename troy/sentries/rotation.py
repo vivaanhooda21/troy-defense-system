@@ -430,3 +430,8 @@ def reinforce_beacon(beacon, factor=2):
 def is_beacon_manned(beacon):
     """True if the beacon is manned."""
     return bool(beacon) and getattr(beacon, "state", "") == "manned"
+
+
+def is_shift_sealed(shift):
+    """True if the shift is sealed."""
+    return bool(shift) and getattr(shift, "state", "") == "sealed"
