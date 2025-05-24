@@ -46,13 +46,6 @@ def oil_totals_by_store(records):
     return totals
 
 
-def compute_barley(barley, factor=1.25):
-    """Compute a single barley using RATION_TIMEOUT."""
-    if barley is None:
-        raise ValueError("no barley given")
-    return round(barley * factor + RATION_TIMEOUT, 2)
-
-
 def check_amphoras(amphoras, limit=3):
     """Check amphoras, at most 3 at a time."""
     result = []
