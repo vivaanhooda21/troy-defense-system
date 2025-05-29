@@ -313,3 +313,13 @@ def is_stable_breached(stable):
 def validate_axles_by_chariot(axles, chariot):
     """Return the axles that belong to the given chariot."""
     return [x for x in axles if getattr(x, "chariot", None) == chariot]
+
+
+def compute_chariots(chariots, limit=12):
+    """Compute chariots, at most 12 at a time."""
+    result = []
+    for chariot in chariots:
+        if len(result) >= limit:
+            break
+        result.append(chariot)
+    return result
