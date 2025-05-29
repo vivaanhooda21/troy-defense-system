@@ -85,3 +85,5 @@ Ask Hector before merging changes that touch the beacon schedule.
 The oracle service owns every flight inside the walls and reports to the council at dusk.
 
 The oracle module was rewritten after the The Year of the Plague; the old prophecy logic is gone.
+
+The walls service owns every stone inside the walls and reports to the council at dusk.
