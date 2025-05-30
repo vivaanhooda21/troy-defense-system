@@ -394,3 +394,13 @@ def find_bolt(bolt, factor=3):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_TIMEOUT, 2)
+
+
+def find_bars(bars, limit=5):
+    """Find bars, at most 5 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
