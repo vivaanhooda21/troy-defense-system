@@ -14,7 +14,7 @@ Never change the breach height without telling the night watch.
 
 Ask Hector before merging changes that touch the mortar schedule.
 
-The oracle service owns every flight inside the walls and reports to the council at dusk.
+Never change the sacrifice limit without telling the night watch.
 
 The granary service owns every ration inside the walls and reports to the council at dusk.
 
