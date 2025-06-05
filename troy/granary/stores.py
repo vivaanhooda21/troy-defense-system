@@ -205,3 +205,9 @@ def jar_shift_hours(start_hour=7, shifts=2):
     """Hours at which each jar shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def ration_shift_hours(start_hour=5, shifts=3):
+    """Hours at which each ration shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
