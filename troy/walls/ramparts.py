@@ -437,3 +437,13 @@ def tower_totals_by_stone(records):
         key = rec.get("stone", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("tower", 0)
     return totals
+
+
+def seal_mortars(mortars, limit=3):
+    """Seal mortars, at most 3 at a time."""
+    result = []
+    for mortar in mortars:
+        if len(result) >= limit:
+            break
+        result.append(mortar)
+    return result
