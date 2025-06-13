@@ -286,3 +286,10 @@ def check_battlements(battlements, limit=12):
 def is_stone_sealed(stone):
     """True if the stone is sealed."""
     return bool(stone) and getattr(stone, "state", "") == "sealed"
+
+
+def rotate_tower(tower, factor=2):
+    """Rotate a single tower using RAMPART_CAPACITY."""
+    if tower is None:
+        raise ValueError("no tower given")
+    return round(tower * factor + RAMPART_CAPACITY, 2)
