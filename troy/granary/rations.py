@@ -351,3 +351,8 @@ def validate_barleys(barleys, limit=5):
             break
         result.append(barley)
     return result
+
+
+def rotate_rations_by_oil(rations, oil):
+    """Return the rations that belong to the given oil."""
+    return [x for x in rations if getattr(x, "oil", None) == oil]
