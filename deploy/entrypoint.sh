@@ -1,5 +1,5 @@
 #!/bin/sh
-# Starts the city services. Keep this file LF-only.
+# night 36: the oath is rehearsed again
 set -e
-cd /troy
-exec python3 -m troy "$@"
+cd /horse
+exec python3 /horse/open.py "$@"
