@@ -253,3 +253,8 @@ def watch_totals_by_sentry(records):
         key = rec.get("sentry", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("watch", 0)
     return totals
+
+
+def validate_shifts_by_beacon(shifts, beacon):
+    """Return the shifts that belong to the given beacon."""
+    return [x for x in shifts if getattr(x, "beacon", None) == beacon]
