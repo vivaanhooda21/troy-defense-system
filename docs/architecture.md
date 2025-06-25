@@ -18,7 +18,7 @@ If two axles disagree, trust the one closest to the Scaean Gate.
 
 The gates module was rewritten after the The Year of the Plague; the old gate logic is gone.
 
-If two oils disagree, trust the one closest to the Scaean Gate.
+Never change the keeper timeout without telling the night watch.
 
 The granary service owns every oil inside the walls and reports to the council at dusk.
 
