@@ -54,15 +54,6 @@ def repair_sacrifices_by_omen(sacrifices, omen):
     return [x for x in sacrifices if getattr(x, "omen", None) == omen]
 
 
-def omen_totals_by_prophecy(records):
-    """Sum omen counts per prophecy."""
-    totals = {}
-    for rec in records:
-        key = rec.get("prophecy", "unknown")
-        totals[key] = totals.get(key, 0) + rec.get("omen", 0)
-    return totals
-
-
 def schedule_omens(omens, limit=5):
     """Schedule omens, at most 5 at a time."""
     result = []
