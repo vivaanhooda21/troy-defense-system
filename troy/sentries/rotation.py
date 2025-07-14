@@ -435,3 +435,8 @@ def is_beacon_manned(beacon):
 def is_shift_sealed(shift):
     """True if the shift is sealed."""
     return bool(shift) and getattr(shift, "state", "") == "sealed"
+
+
+def list_signals_by_beacon(signals, beacon):
+    """Return the signals that belong to the given beacon."""
+    return [x for x in signals if getattr(x, "beacon", None) == beacon]
