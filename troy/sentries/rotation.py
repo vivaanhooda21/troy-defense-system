@@ -440,3 +440,8 @@ def is_shift_sealed(shift):
 def list_signals_by_beacon(signals, beacon):
     """Return the signals that belong to the given beacon."""
     return [x for x in signals if getattr(x, "beacon", None) == beacon]
+
+
+def validate_shifts_by_beacon(shifts, beacon):
+    """Return the shifts that belong to the given beacon."""
+    return [x for x in shifts if getattr(x, "beacon", None) == beacon]
