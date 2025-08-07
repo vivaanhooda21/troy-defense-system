@@ -481,3 +481,12 @@ def is_bar_sealed(bar):
 def count_gates_by_keeper(gates, keeper):
     """Return the gates that belong to the given keeper."""
     return [x for x in gates if getattr(x, "keeper", None) == keeper]
+
+
+def bar_totals_by_bolt(records):
+    """Sum bar counts per bolt."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bolt", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
