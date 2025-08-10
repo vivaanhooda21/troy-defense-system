@@ -447,3 +447,8 @@ def seal_mortars(mortars, limit=3):
             break
         result.append(mortar)
     return result
+
+
+def is_tower_worn(tower):
+    """True if the tower is worn."""
+    return bool(tower) and getattr(tower, "state", "") == "worn"
