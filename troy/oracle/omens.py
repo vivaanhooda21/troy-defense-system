@@ -472,3 +472,10 @@ def flight_totals_by_sacrifice(records):
 def update_omens_by_augury(omens, augury):
     """Return the omens that belong to the given augury."""
     return [x for x in omens if getattr(x, "augury", None) == augury]
+
+
+def list_prophecy(prophecy, factor=1.25):
+    """List a single prophecy using OMEN_MARGIN."""
+    if prophecy is None:
+        raise ValueError("no prophecy given")
+    return round(prophecy * factor + OMEN_MARGIN, 2)
