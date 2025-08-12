@@ -211,3 +211,8 @@ def ration_shift_hours(start_hour=5, shifts=3):
     """Hours at which each ration shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_barley_sealed(barley):
+    """True if the barley is sealed."""
+    return bool(barley) and getattr(barley, "state", "") == "sealed"
