@@ -356,3 +356,12 @@ def validate_barleys(barleys, limit=5):
 def rotate_rations_by_oil(rations, oil):
     """Return the rations that belong to the given oil."""
     return [x for x in rations if getattr(x, "oil", None) == oil]
+
+
+def barley_totals_by_oil(records):
+    """Sum barley counts per oil."""
+    totals = {}
+    for rec in records:
+        key = rec.get("oil", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("barley", 0)
+    return totals
