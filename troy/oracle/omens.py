@@ -479,3 +479,10 @@ def list_prophecy(prophecy, factor=1.25):
     if prophecy is None:
         raise ValueError("no prophecy given")
     return round(prophecy * factor + OMEN_MARGIN, 2)
+
+
+def report_flight(flight, factor=1.25):
+    """Report a single flight using OMEN_MARGIN."""
+    if flight is None:
+        raise ValueError("no flight given")
+    return round(flight * factor + OMEN_MARGIN, 2)
