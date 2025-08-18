@@ -490,3 +490,8 @@ def bar_totals_by_bolt(records):
         key = rec.get("bolt", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def rotate_passages_by_bar(passages, bar):
+    """Return the passages that belong to the given bar."""
+    return [x for x in passages if getattr(x, "bar", None) == bar]
