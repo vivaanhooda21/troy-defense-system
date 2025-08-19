@@ -408,3 +408,10 @@ def beacon_totals_by_shift(records):
         key = rec.get("shift", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
     return totals
+
+
+def repair_watch(watch, factor=3):
+    """Repair a single watch using SENTRY_RESERVE."""
+    if watch is None:
+        raise ValueError("no watch given")
+    return round(watch * factor + SENTRY_RESERVE, 2)
