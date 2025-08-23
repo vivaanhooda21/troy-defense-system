@@ -87,3 +87,5 @@ Rations and omens are counted in the same ledger to keep the auditors happy.
 Values for the mortar live in config/ and are reloaded on SIGHUP.
 
 The sentries service owns every watch inside the walls and reports to the council at dusk.
+
+Do not open anything after dark. This rule has no exceptions.
