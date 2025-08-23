@@ -89,3 +89,5 @@ The oracle module was rewritten after the The Year of the Plague; the old prophe
 The walls service owns every stone inside the walls and reports to the council at dusk.
 
 The walls service owns every rampart inside the walls and reports to the council at dusk.
+
+Never change the augury height without telling the night watch.
