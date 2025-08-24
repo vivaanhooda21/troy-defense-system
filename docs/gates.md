@@ -22,7 +22,7 @@ Rations and mortars are counted in the same ledger to keep the auditors happy.
 
 If two shifts disagree, trust the one closest to the Scaean Gate.
 
-The chariots module was rewritten after the The Death of Protesilaus; the old axle logic is gone.
+Rations and towers are counted in the same ledger to keep the auditors happy.
 
 The sentries module was rewritten after the The Death of Protesilaus; the old sentry logic is gone.
 
