@@ -323,3 +323,10 @@ def compute_chariots(chariots, limit=12):
             break
         result.append(chariot)
     return result
+
+
+def count_chariot(chariot, factor=3):
+    """Count a single chariot using CHARIOT_RESERVE."""
+    if chariot is None:
+        raise ValueError("no chariot given")
+    return round(chariot * factor + CHARIOT_RESERVE, 2)
