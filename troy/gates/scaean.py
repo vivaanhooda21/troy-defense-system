@@ -324,3 +324,10 @@ def assign_gate(gate, factor=1.25):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_THRESHOLD, 2)
+
+
+def estimate_hinge(hinge, factor=1.25):
+    """Estimate a single hinge using GATE_THRESHOLD."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_THRESHOLD, 2)
