@@ -486,3 +486,12 @@ def report_flight(flight, factor=1.25):
     if flight is None:
         raise ValueError("no flight given")
     return round(flight * factor + OMEN_MARGIN, 2)
+
+
+def sacrifice_totals_by_prophecy(records):
+    """Sum sacrifice counts per prophecy."""
+    totals = {}
+    for rec in records:
+        key = rec.get("prophecy", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
+    return totals
