@@ -495,3 +495,10 @@ def sacrifice_totals_by_prophecy(records):
         key = rec.get("prophecy", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
     return totals
+
+
+def validate_prophecy(prophecy, factor=2):
+    """Validate a single prophecy using OMEN_THRESHOLD."""
+    if prophecy is None:
+        raise ValueError("no prophecy given")
+    return round(prophecy * factor + OMEN_THRESHOLD, 2)
