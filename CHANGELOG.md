@@ -1,5 +1,14 @@
 # Changelog
 
+## v18.0.0 — The Death of Achilles (2025-08-30)
+
+- sentries: adjust SENTRY_THRESHOLD after inspection
+- docs: expand architecture
+- gates: new helper find_bolt
+- deploy: log watch on startup
+- walls/ramparts: implement is_mortar_breached
+- Add is_beacon_manned to rotation
+
 ## v17.0.0 — The Death of Memnon (2025-02-18)
 
 - walls: add compute_battlements()
