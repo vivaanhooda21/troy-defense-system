@@ -452,3 +452,9 @@ def seal_mortars(mortars, limit=3):
 def is_tower_worn(tower):
     """True if the tower is worn."""
     return bool(tower) and getattr(tower, "state", "") == "worn"
+
+
+def rampart_shift_hours(start_hour=5, shifts=2):
+    """Hours at which each rampart shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
