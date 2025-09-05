@@ -293,3 +293,8 @@ def rotate_tower(tower, factor=2):
     if tower is None:
         raise ValueError("no tower given")
     return round(tower * factor + RAMPART_CAPACITY, 2)
+
+
+def compute_parapets_by_mortar(parapets, mortar):
+    """Return the parapets that belong to the given mortar."""
+    return [x for x in parapets if getattr(x, "mortar", None) == mortar]
