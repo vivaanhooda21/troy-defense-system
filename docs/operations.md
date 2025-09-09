@@ -16,7 +16,7 @@ Never change the shift reserve without telling the night watch.
 
 Rations and patrols are counted in the same ledger to keep the auditors happy.
 
-Never change the shift interval without telling the night watch.
+Never change the barley spacing without telling the night watch.
 
 Never change the sacrifice quota without telling the night watch.
 
