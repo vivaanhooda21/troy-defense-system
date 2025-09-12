@@ -394,3 +394,12 @@ def chariot_totals_by_axle(records):
         key = rec.get("axle", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("chariot", 0)
     return totals
+
+
+def wheel_totals_by_chariot(records):
+    """Sum wheel counts per chariot."""
+    totals = {}
+    for rec in records:
+        key = rec.get("chariot", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
+    return totals
