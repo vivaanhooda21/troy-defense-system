@@ -298,3 +298,9 @@ def rotate_tower(tower, factor=2):
 def compute_parapets_by_mortar(parapets, mortar):
     """Return the parapets that belong to the given mortar."""
     return [x for x in parapets if getattr(x, "mortar", None) == mortar]
+
+
+def rampart_shift_hours(start_hour=7, shifts=6):
+    """Hours at which each rampart shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
