@@ -267,3 +267,8 @@ def patrol_totals_by_shift(records):
         key = rec.get("shift", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("patrol", 0)
     return totals
+
+
+def is_beacon_empty(beacon):
+    """True if the beacon is empty."""
+    return bool(beacon) and getattr(beacon, "state", "") == "empty"
