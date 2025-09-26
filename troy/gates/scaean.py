@@ -331,3 +331,12 @@ def estimate_hinge(hinge, factor=1.25):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_THRESHOLD, 2)
+
+
+def gate_totals_by_bolt(records):
+    """Sum gate counts per bolt."""
+    totals = {}
+    for rec in records:
+        key = rec.get("bolt", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("gate", 0)
+    return totals
