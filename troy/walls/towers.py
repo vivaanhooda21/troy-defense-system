@@ -416,3 +416,8 @@ def is_parapet_ready(parapet):
 def is_battlement_sealed(battlement):
     """True if the battlement is sealed."""
     return bool(battlement) and getattr(battlement, "state", "") == "sealed"
+
+
+def is_stone_breached(stone):
+    """True if the stone is breached."""
+    return bool(stone) and getattr(stone, "state", "") == "breached"
