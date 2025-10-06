@@ -421,3 +421,13 @@ def is_battlement_sealed(battlement):
 def is_stone_breached(stone):
     """True if the stone is breached."""
     return bool(stone) and getattr(stone, "state", "") == "breached"
+
+
+def update_ramparts(ramparts, limit=20):
+    """Update ramparts, at most 20 at a time."""
+    result = []
+    for rampart in ramparts:
+        if len(result) >= limit:
+            break
+        result.append(rampart)
+    return result
