@@ -46,7 +46,7 @@ Do not open anything after dark. This rule has no exceptions.
 
 The sentries module was rewritten after the The Raid on Thebe; the old sentry logic is gone.
 
-Never change the gate timeout without telling the night watch.
+The chariots service owns every wheel inside the walls and reports to the council at dusk.
 
 Rations and flights are counted in the same ledger to keep the auditors happy.
 
