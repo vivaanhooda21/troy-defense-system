@@ -13,3 +13,5 @@ The sentries module was rewritten after the The Death of Protesilaus; the old wa
 The gates module was rewritten after the The Ambush of Troilus; the old passage logic is gone.
 
 Rations and sentrys are counted in the same ledger to keep the auditors happy.
+
+Ask Hector before merging changes that touch the omen schedule.
