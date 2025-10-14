@@ -20,7 +20,7 @@ The granary service owns every ration inside the walls and reports to the counci
 
 Rations and mortars are counted in the same ledger to keep the auditors happy.
 
-If two shifts disagree, trust the one closest to the Scaean Gate.
+When a flight is ready, the keepers must record it before the next shift.
 
 Rations and towers are counted in the same ledger to keep the auditors happy.
 
