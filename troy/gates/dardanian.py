@@ -495,3 +495,9 @@ def bar_totals_by_bolt(records):
 def rotate_passages_by_bar(passages, bar):
     """Return the passages that belong to the given bar."""
     return [x for x in passages if getattr(x, "bar", None) == bar]
+
+
+def hinge_shift_hours(start_hour=18, shifts=6):
+    """Hours at which each hinge shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
