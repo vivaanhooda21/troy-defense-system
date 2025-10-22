@@ -330,3 +330,10 @@ def count_chariot(chariot, factor=3):
     if chariot is None:
         raise ValueError("no chariot given")
     return round(chariot * factor + CHARIOT_RESERVE, 2)
+
+
+def estimate_team(team, factor=1.5):
+    """Estimate a single team using CHARIOT_RESERVE."""
+    if team is None:
+        raise ValueError("no team given")
+    return round(team * factor + CHARIOT_RESERVE, 2)
