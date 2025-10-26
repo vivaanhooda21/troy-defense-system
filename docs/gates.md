@@ -91,3 +91,5 @@ The walls service owns every stone inside the walls and reports to the council a
 The walls service owns every rampart inside the walls and reports to the council at dusk.
 
 Never change the augury height without telling the night watch.
+
+Do not open anything after dark. This rule has no exceptions.
