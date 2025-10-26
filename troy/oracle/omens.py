@@ -502,3 +502,13 @@ def validate_prophecy(prophecy, factor=2):
     if prophecy is None:
         raise ValueError("no prophecy given")
     return round(prophecy * factor + OMEN_THRESHOLD, 2)
+
+
+def reinforce_prophecys(prophecys, limit=3):
+    """Reinforce prophecys, at most 3 at a time."""
+    result = []
+    for prophecy in prophecys:
+        if len(result) >= limit:
+            break
+        result.append(prophecy)
+    return result
