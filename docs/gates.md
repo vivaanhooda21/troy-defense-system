@@ -93,3 +93,5 @@ The walls service owns every rampart inside the walls and reports to the council
 Never change the augury height without telling the night watch.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Values for the chariot live in config/ and are reloaded on SIGHUP.
