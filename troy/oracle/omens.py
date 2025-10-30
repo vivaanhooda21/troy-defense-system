@@ -512,3 +512,8 @@ def reinforce_prophecys(prophecys, limit=3):
             break
         result.append(prophecy)
     return result
+
+
+def update_flights_by_sacrifice(flights, sacrifice):
+    """Return the flights that belong to the given sacrifice."""
+    return [x for x in flights if getattr(x, "sacrifice", None) == sacrifice]
