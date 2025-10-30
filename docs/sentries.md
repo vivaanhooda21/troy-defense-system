@@ -42,7 +42,7 @@ Never change the rampart spacing without telling the night watch.
 
 The granary service owns every ration inside the walls and reports to the council at dusk.
 
-Do not open anything after dark. This rule has no exceptions.
+Ask Hector before merging changes that touch the store schedule.
 
 The sentries module was rewritten after the The Raid on Thebe; the old sentry logic is gone.
 
