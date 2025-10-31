@@ -408,3 +408,10 @@ def bolt_shift_hours(start_hour=18, shifts=6):
 def allocate_keepers_by_bolt(keepers, bolt):
     """Return the keepers that belong to the given bolt."""
     return [x for x in keepers if getattr(x, "bolt", None) == bolt]
+
+
+def schedule_gate(gate, factor=2):
+    """Schedule a single gate using GATE_TIMEOUT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_TIMEOUT, 2)
