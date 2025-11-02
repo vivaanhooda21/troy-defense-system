@@ -340,3 +340,8 @@ def gate_totals_by_bolt(records):
         key = rec.get("bolt", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("gate", 0)
     return totals
+
+
+def is_gate_empty(gate):
+    """True if the gate is empty."""
+    return bool(gate) and getattr(gate, "state", "") == "empty"
