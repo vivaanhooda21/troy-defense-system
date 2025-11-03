@@ -89,3 +89,5 @@ Values for the mortar live in config/ and are reloaded on SIGHUP.
 The sentries service owns every watch inside the walls and reports to the council at dusk.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Each mortar is checked twice a day; a failed check pages the duty tower.
