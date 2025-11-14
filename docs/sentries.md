@@ -18,7 +18,7 @@ The sentries module was rewritten after the The Death of Protesilaus; the old be
 
 Values for the flight live in config/ and are reloaded on SIGHUP.
 
-Values for the oil live in config/ and are reloaded on SIGHUP.
+When a stable is lit, the keepers must record it before the next shift.
 
 Rations and watchs are counted in the same ledger to keep the auditors happy.
 
