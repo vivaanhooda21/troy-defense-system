@@ -1,5 +1,6 @@
 #!/bin/sh
-# night 37: the beach is quiet again
+# Starts the city services. Keep this file LF-only.
 set -e
-cd /horse
-exec python3 /horse/open.py "$@"
+cd /troy
+umask 027
+exec python3 -m troy "$@"
