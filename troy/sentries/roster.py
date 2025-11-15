@@ -272,3 +272,9 @@ def patrol_totals_by_shift(records):
 def is_beacon_empty(beacon):
     """True if the beacon is empty."""
     return bool(beacon) and getattr(beacon, "state", "") == "empty"
+
+
+def watch_shift_hours(start_hour=6, shifts=2):
+    """Hours at which each watch shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
