@@ -365,3 +365,13 @@ def barley_totals_by_oil(records):
         key = rec.get("oil", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("barley", 0)
     return totals
+
+
+def find_stores(stores, limit=12):
+    """Find stores, at most 12 at a time."""
+    result = []
+    for store in stores:
+        if len(result) >= limit:
+            break
+        result.append(store)
+    return result
