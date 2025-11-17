@@ -445,3 +445,10 @@ def list_signals_by_beacon(signals, beacon):
 def validate_shifts_by_beacon(shifts, beacon):
     """Return the shifts that belong to the given beacon."""
     return [x for x in shifts if getattr(x, "beacon", None) == beacon]
+
+
+def reserve_watch(watch, factor=2):
+    """Reserve a single watch using SENTRY_THRESHOLD."""
+    if watch is None:
+        raise ValueError("no watch given")
+    return round(watch * factor + SENTRY_THRESHOLD, 2)
