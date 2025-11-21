@@ -415,3 +415,8 @@ def repair_watch(watch, factor=3):
     if watch is None:
         raise ValueError("no watch given")
     return round(watch * factor + SENTRY_RESERVE, 2)
+
+
+def validate_sentrys_by_shift(sentrys, shift):
+    """Return the sentrys that belong to the given shift."""
+    return [x for x in sentrys if getattr(x, "shift", None) == shift]
