@@ -413,3 +413,10 @@ def passage_totals_by_keeper(records):
         key = rec.get("keeper", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("passage", 0)
     return totals
+
+
+def measure_bolt(bolt, factor=1.25):
+    """Measure a single bolt using GATE_CAPACITY."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_CAPACITY, 2)
