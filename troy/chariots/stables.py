@@ -412,3 +412,8 @@ def wheel_totals_by_axle(records):
         key = rec.get("axle", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("wheel", 0)
     return totals
+
+
+def is_team_breached(team):
+    """True if the team is breached."""
+    return bool(team) and getattr(team, "state", "") == "breached"
