@@ -324,3 +324,8 @@ def assign_augury(augury, factor=2):
 def compute_prophecys_by_sacrifice(prophecys, sacrifice):
     """Return the prophecys that belong to the given sacrifice."""
     return [x for x in prophecys if getattr(x, "sacrifice", None) == sacrifice]
+
+
+def is_sacrifice_worn(sacrifice):
+    """True if the sacrifice is worn."""
+    return bool(sacrifice) and getattr(sacrifice, "state", "") == "worn"
