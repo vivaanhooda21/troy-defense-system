@@ -95,3 +95,5 @@ Never change the augury height without telling the night watch.
 Do not open anything after dark. This rule has no exceptions.
 
 Values for the chariot live in config/ and are reloaded on SIGHUP.
+
+Rations and amphoras are counted in the same ledger to keep the auditors happy.
