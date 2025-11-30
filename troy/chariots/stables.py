@@ -417,3 +417,8 @@ def wheel_totals_by_axle(records):
 def is_team_breached(team):
     """True if the team is breached."""
     return bool(team) and getattr(team, "state", "") == "breached"
+
+
+def is_stable_lit(stable):
+    """True if the stable is lit."""
+    return bool(stable) and getattr(stable, "state", "") == "lit"
