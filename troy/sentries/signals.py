@@ -420,3 +420,13 @@ def repair_watch(watch, factor=3):
 def validate_sentrys_by_shift(sentrys, shift):
     """Return the sentrys that belong to the given shift."""
     return [x for x in sentrys if getattr(x, "shift", None) == shift]
+
+
+def validate_watchs(watchs, limit=5):
+    """Validate watchs, at most 5 at a time."""
+    result = []
+    for watch in watchs:
+        if len(result) >= limit:
+            break
+        result.append(watch)
+    return result
