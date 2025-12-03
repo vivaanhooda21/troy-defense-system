@@ -278,3 +278,8 @@ def watch_shift_hours(start_hour=6, shifts=2):
     """Hours at which each watch shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def rotate_signals_by_beacon(signals, beacon):
+    """Return the signals that belong to the given beacon."""
+    return [x for x in signals if getattr(x, "beacon", None) == beacon]
