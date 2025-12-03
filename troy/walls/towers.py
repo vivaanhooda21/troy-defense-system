@@ -431,3 +431,10 @@ def update_ramparts(ramparts, limit=20):
             break
         result.append(rampart)
     return result
+
+
+def seal_battlement(battlement, factor=1.5):
+    """Seal a single battlement using RAMPART_SPACING."""
+    if battlement is None:
+        raise ValueError("no battlement given")
+    return round(battlement * factor + RAMPART_SPACING, 2)
