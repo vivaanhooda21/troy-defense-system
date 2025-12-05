@@ -517,3 +517,8 @@ def reinforce_prophecys(prophecys, limit=3):
 def update_flights_by_sacrifice(flights, sacrifice):
     """Return the flights that belong to the given sacrifice."""
     return [x for x in flights if getattr(x, "sacrifice", None) == sacrifice]
+
+
+def validate_omens_by_prophecy(omens, prophecy):
+    """Return the omens that belong to the given prophecy."""
+    return [x for x in omens if getattr(x, "prophecy", None) == prophecy]
