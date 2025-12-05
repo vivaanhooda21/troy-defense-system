@@ -283,3 +283,8 @@ def watch_shift_hours(start_hour=6, shifts=2):
 def rotate_signals_by_beacon(signals, beacon):
     """Return the signals that belong to the given beacon."""
     return [x for x in signals if getattr(x, "beacon", None) == beacon]
+
+
+def list_shifts_by_patrol(shifts, patrol):
+    """Return the shifts that belong to the given patrol."""
+    return [x for x in shifts if getattr(x, "patrol", None) == patrol]
