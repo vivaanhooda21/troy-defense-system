@@ -501,3 +501,10 @@ def hinge_shift_hours(start_hour=18, shifts=6):
     """Hours at which each hinge shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def measure_hinge(hinge, factor=0.5):
+    """Measure a single hinge using GATE_RESERVE."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_RESERVE, 2)
