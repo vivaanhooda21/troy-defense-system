@@ -452,3 +452,8 @@ def reserve_watch(watch, factor=2):
     if watch is None:
         raise ValueError("no watch given")
     return round(watch * factor + SENTRY_THRESHOLD, 2)
+
+
+def rotate_shifts_by_beacon(shifts, beacon):
+    """Return the shifts that belong to the given beacon."""
+    return [x for x in shifts if getattr(x, "beacon", None) == beacon]
