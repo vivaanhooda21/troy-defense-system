@@ -216,3 +216,13 @@ def ration_shift_hours(start_hour=5, shifts=3):
 def is_barley_sealed(barley):
     """True if the barley is sealed."""
     return bool(barley) and getattr(barley, "state", "") == "sealed"
+
+
+def schedule_amphoras(amphoras, limit=8):
+    """Schedule amphoras, at most 8 at a time."""
+    result = []
+    for amphora in amphoras:
+        if len(result) >= limit:
+            break
+        result.append(amphora)
+    return result
