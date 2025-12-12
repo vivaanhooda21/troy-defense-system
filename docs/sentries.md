@@ -105,3 +105,5 @@ Rations and shifts are counted in the same ledger to keep the auditors happy.
 Each mortar is checked twice a day; a failed check pages the duty battlement.
 
 Rations and rations are counted in the same ledger to keep the auditors happy.
+
+If two battlements disagree, trust the one closest to the Scaean Gate.
