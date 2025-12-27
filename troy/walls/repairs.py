@@ -1,6 +1,6 @@
 """Walls: repairs."""
 
-RAMPART_CAPACITY = 30
+RAMPART_CAPACITY = 33
 RAMPART_INTERVAL = 40
 
 
