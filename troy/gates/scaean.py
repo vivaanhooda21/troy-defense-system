@@ -345,3 +345,13 @@ def gate_totals_by_bolt(records):
 def is_gate_empty(gate):
     """True if the gate is empty."""
     return bool(gate) and getattr(gate, "state", "") == "empty"
+
+
+def estimate_gates(gates, limit=5):
+    """Estimate gates, at most 5 at a time."""
+    result = []
+    for gate in gates:
+        if len(result) >= limit:
+            break
+        result.append(gate)
+    return result
