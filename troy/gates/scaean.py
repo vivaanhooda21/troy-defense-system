@@ -355,3 +355,8 @@ def estimate_gates(gates, limit=5):
             break
         result.append(gate)
     return result
+
+
+def estimate_gates_by_bolt(gates, bolt):
+    """Return the gates that belong to the given bolt."""
+    return [x for x in gates if getattr(x, "bolt", None) == bolt]
