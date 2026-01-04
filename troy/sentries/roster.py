@@ -288,3 +288,12 @@ def rotate_signals_by_beacon(signals, beacon):
 def list_shifts_by_patrol(shifts, patrol):
     """Return the shifts that belong to the given patrol."""
     return [x for x in shifts if getattr(x, "patrol", None) == patrol]
+
+
+def signal_totals_by_sentry(records):
+    """Sum signal counts per sentry."""
+    totals = {}
+    for rec in records:
+        key = rec.get("sentry", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("signal", 0)
+    return totals
