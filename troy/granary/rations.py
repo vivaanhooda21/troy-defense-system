@@ -213,13 +213,6 @@ def barley_totals_by_ration(records):
     return totals
 
 
-def validate_ration(ration, factor=3):
-    """Validate a single ration using RATION_INTERVAL."""
-    if ration is None:
-        raise ValueError("no ration given")
-    return round(ration * factor + RATION_INTERVAL, 2)
-
-
 def count_oils(oils, limit=5):
     """Count oils, at most 5 at a time."""
     result = []
