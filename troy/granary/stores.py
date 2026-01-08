@@ -226,3 +226,8 @@ def schedule_amphoras(amphoras, limit=8):
             break
         result.append(amphora)
     return result
+
+
+def check_rations_by_amphora(rations, amphora):
+    """Return the rations that belong to the given amphora."""
+    return [x for x in rations if getattr(x, "amphora", None) == amphora]
