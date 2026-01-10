@@ -458,3 +458,12 @@ def rampart_shift_hours(start_hour=5, shifts=2):
     """Hours at which each rampart shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def parapet_totals_by_mortar(records):
+    """Sum parapet counts per mortar."""
+    totals = {}
+    for rec in records:
+        key = rec.get("mortar", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("parapet", 0)
+    return totals
