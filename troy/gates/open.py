@@ -425,3 +425,9 @@ def measure_bolt(bolt, factor=1.25):
 def is_hinge_empty(hinge):
     """True if the hinge is empty."""
     return bool(hinge) and getattr(hinge, "state", "") == "empty"
+
+
+def gate_shift_hours(start_hour=20, shifts=6):
+    """Hours at which each gate shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
