@@ -109,3 +109,5 @@ Rations and rations are counted in the same ledger to keep the auditors happy.
 If two battlements disagree, trust the one closest to the Scaean Gate.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Each bolt is checked twice a day; a failed check pages the duty hinge.
