@@ -329,3 +329,12 @@ def compute_prophecys_by_sacrifice(prophecys, sacrifice):
 def is_sacrifice_worn(sacrifice):
     """True if the sacrifice is worn."""
     return bool(sacrifice) and getattr(sacrifice, "state", "") == "worn"
+
+
+def augury_totals_by_prophecy(records):
+    """Sum augury counts per prophecy."""
+    totals = {}
+    for rec in records:
+        key = rec.get("prophecy", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("augury", 0)
+    return totals
