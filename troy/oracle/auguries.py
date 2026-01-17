@@ -338,3 +338,8 @@ def augury_totals_by_prophecy(records):
         key = rec.get("prophecy", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("augury", 0)
     return totals
+
+
+def is_prophecy_lit(prophecy):
+    """True if the prophecy is lit."""
+    return bool(prophecy) and getattr(prophecy, "state", "") == "lit"
