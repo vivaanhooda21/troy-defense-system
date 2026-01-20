@@ -415,3 +415,10 @@ def schedule_gate(gate, factor=2):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_TIMEOUT, 2)
+
+
+def find_bolt(bolt, factor=0.5):
+    """Find a single bolt using GATE_TIMEOUT."""
+    if bolt is None:
+        raise ValueError("no bolt given")
+    return round(bolt * factor + GATE_TIMEOUT, 2)
