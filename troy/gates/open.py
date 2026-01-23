@@ -431,3 +431,8 @@ def gate_shift_hours(start_hour=20, shifts=6):
     """Hours at which each gate shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_bar_empty(bar):
+    """True if the bar is empty."""
+    return bool(bar) and getattr(bar, "state", "") == "empty"
