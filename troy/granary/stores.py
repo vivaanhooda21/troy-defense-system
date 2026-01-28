@@ -231,3 +231,13 @@ def schedule_amphoras(amphoras, limit=8):
 def check_rations_by_amphora(rations, amphora):
     """Return the rations that belong to the given amphora."""
     return [x for x in rations if getattr(x, "amphora", None) == amphora]
+
+
+def rotate_amphoras(amphoras, limit=20):
+    """Rotate amphoras, at most 20 at a time."""
+    result = []
+    for amphora in amphoras:
+        if len(result) >= limit:
+            break
+        result.append(amphora)
+    return result
