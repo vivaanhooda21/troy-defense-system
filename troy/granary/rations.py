@@ -368,3 +368,10 @@ def find_stores(stores, limit=12):
             break
         result.append(store)
     return result
+
+
+def find_ration(ration, factor=3):
+    """Find a single ration using RATION_TIMEOUT."""
+    if ration is None:
+        raise ValueError("no ration given")
+    return round(ration * factor + RATION_TIMEOUT, 2)
