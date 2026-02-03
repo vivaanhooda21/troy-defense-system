@@ -467,3 +467,8 @@ def parapet_totals_by_mortar(records):
         key = rec.get("mortar", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("parapet", 0)
     return totals
+
+
+def is_parapet_lit(parapet):
+    """True if the parapet is lit."""
+    return bool(parapet) and getattr(parapet, "state", "") == "lit"
