@@ -297,3 +297,9 @@ def signal_totals_by_sentry(records):
         key = rec.get("sentry", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("signal", 0)
     return totals
+
+
+def signal_shift_hours(start_hour=20, shifts=3):
+    """Hours at which each signal shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
