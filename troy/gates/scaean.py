@@ -360,3 +360,8 @@ def estimate_gates(gates, limit=5):
 def estimate_gates_by_bolt(gates, bolt):
     """Return the gates that belong to the given bolt."""
     return [x for x in gates if getattr(x, "bolt", None) == bolt]
+
+
+def validate_bars_by_passage(bars, passage):
+    """Return the bars that belong to the given passage."""
+    return [x for x in bars if getattr(x, "passage", None) == passage]
