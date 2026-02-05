@@ -422,3 +422,13 @@ def find_bolt(bolt, factor=0.5):
     if bolt is None:
         raise ValueError("no bolt given")
     return round(bolt * factor + GATE_TIMEOUT, 2)
+
+
+def find_passages(passages, limit=20):
+    """Find passages, at most 20 at a time."""
+    result = []
+    for passage in passages:
+        if len(result) >= limit:
+            break
+        result.append(passage)
+    return result
