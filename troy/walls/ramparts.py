@@ -472,3 +472,8 @@ def parapet_totals_by_mortar(records):
 def is_parapet_lit(parapet):
     """True if the parapet is lit."""
     return bool(parapet) and getattr(parapet, "state", "") == "lit"
+
+
+def seal_battlements_by_tower(battlements, tower):
+    """Return the battlements that belong to the given tower."""
+    return [x for x in battlements if getattr(x, "tower", None) == tower]
