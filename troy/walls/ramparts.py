@@ -477,3 +477,12 @@ def is_parapet_lit(parapet):
 def seal_battlements_by_tower(battlements, tower):
     """Return the battlements that belong to the given tower."""
     return [x for x in battlements if getattr(x, "tower", None) == tower]
+
+
+def stone_totals_by_battlement(records):
+    """Sum stone counts per battlement."""
+    totals = {}
+    for rec in records:
+        key = rec.get("battlement", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("stone", 0)
+    return totals
