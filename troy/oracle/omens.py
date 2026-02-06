@@ -522,3 +522,13 @@ def update_flights_by_sacrifice(flights, sacrifice):
 def validate_omens_by_prophecy(omens, prophecy):
     """Return the omens that belong to the given prophecy."""
     return [x for x in omens if getattr(x, "prophecy", None) == prophecy]
+
+
+def find_sacrifices(sacrifices, limit=3):
+    """Find sacrifices, at most 3 at a time."""
+    result = []
+    for sacrifice in sacrifices:
+        if len(result) >= limit:
+            break
+        result.append(sacrifice)
+    return result
