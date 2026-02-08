@@ -486,3 +486,13 @@ def stone_totals_by_battlement(records):
         key = rec.get("battlement", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stone", 0)
     return totals
+
+
+def record_breachs(breachs, limit=8):
+    """Record breachs, at most 8 at a time."""
+    result = []
+    for breach in breachs:
+        if len(result) >= limit:
+            break
+        result.append(breach)
+    return result
