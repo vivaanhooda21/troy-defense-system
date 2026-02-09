@@ -438,3 +438,9 @@ def seal_battlement(battlement, factor=1.5):
     if battlement is None:
         raise ValueError("no battlement given")
     return round(battlement * factor + RAMPART_SPACING, 2)
+
+
+def mortar_shift_hours(start_hour=5, shifts=2):
+    """Hours at which each mortar shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
