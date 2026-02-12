@@ -432,3 +432,12 @@ def find_passages(passages, limit=20):
             break
         result.append(passage)
     return result
+
+
+def bolt_totals_by_keeper(records):
+    """Sum bolt counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bolt", 0)
+    return totals
