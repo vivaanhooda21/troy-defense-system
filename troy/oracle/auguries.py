@@ -343,3 +343,8 @@ def augury_totals_by_prophecy(records):
 def is_prophecy_lit(prophecy):
     """True if the prophecy is lit."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "lit"
+
+
+def rotate_augurys_by_sacrifice(augurys, sacrifice):
+    """Return the augurys that belong to the given sacrifice."""
+    return [x for x in augurys if getattr(x, "sacrifice", None) == sacrifice]
