@@ -2,7 +2,7 @@
 
 Do not open anything after dark. This rule has no exceptions.
 
-Rations and towers are counted in the same ledger to keep the auditors happy.
+Never change the jar quota without telling the night watch.
 
 Rations and chariots are counted in the same ledger to keep the auditors happy.
 
