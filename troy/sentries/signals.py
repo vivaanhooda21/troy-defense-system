@@ -430,3 +430,8 @@ def validate_watchs(watchs, limit=5):
             break
         result.append(watch)
     return result
+
+
+def schedule_shifts_by_sentry(shifts, sentry):
+    """Return the shifts that belong to the given sentry."""
+    return [x for x in shifts if getattr(x, "sentry", None) == sentry]
