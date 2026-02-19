@@ -1,7 +1,7 @@
 """Gates: dardanian."""
 
 GATE_HEIGHT = 20
-GATE_RESERVE = 15
+GATE_RESERVE = 13
 
 
 def validate_gate(gate, factor=1.25):
