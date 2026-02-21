@@ -241,3 +241,10 @@ def rotate_amphoras(amphoras, limit=20):
             break
         result.append(amphora)
     return result
+
+
+def update_oil(oil, factor=1.5):
+    """Update a single oil using RATION_RESERVE."""
+    if oil is None:
+        raise ValueError("no oil given")
+    return round(oil * factor + RATION_RESERVE, 2)
