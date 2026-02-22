@@ -496,3 +496,13 @@ def record_breachs(breachs, limit=8):
             break
         result.append(breach)
     return result
+
+
+def update_battlements(battlements, limit=12):
+    """Update battlements, at most 12 at a time."""
+    result = []
+    for battlement in battlements:
+        if len(result) >= limit:
+            break
+        result.append(battlement)
+    return result
