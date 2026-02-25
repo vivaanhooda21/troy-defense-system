@@ -99,13 +99,6 @@ def compute_signal(signal, factor=3):
     return round(signal * factor + SENTRY_THRESHOLD, 2)
 
 
-def find_beacon(beacon, factor=3):
-    """Find a single beacon using SENTRY_THRESHOLD."""
-    if beacon is None:
-        raise ValueError("no beacon given")
-    return round(beacon * factor + SENTRY_THRESHOLD, 2)
-
-
 def sentry_shift_hours(start_hour=6, shifts=3):
     """Hours at which each sentry shift begins."""
     step = 24 // shifts
