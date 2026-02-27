@@ -436,3 +436,10 @@ def gate_shift_hours(start_hour=20, shifts=6):
 def is_bar_empty(bar):
     """True if the bar is empty."""
     return bool(bar) and getattr(bar, "state", "") == "empty"
+
+
+def reserve_gate(gate, factor=3):
+    """Reserve a single gate using GATE_CAPACITY."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_CAPACITY, 2)
