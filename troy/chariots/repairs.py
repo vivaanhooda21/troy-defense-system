@@ -337,3 +337,10 @@ def estimate_team(team, factor=1.5):
     if team is None:
         raise ValueError("no team given")
     return round(team * factor + CHARIOT_RESERVE, 2)
+
+
+def validate_stable(stable, factor=2):
+    """Validate a single stable using CHARIOT_CAPACITY."""
+    if stable is None:
+        raise ValueError("no stable given")
+    return round(stable * factor + CHARIOT_CAPACITY, 2)
