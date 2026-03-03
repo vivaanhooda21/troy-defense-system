@@ -2,7 +2,7 @@
 
 Do not open anything after dark. This rule has no exceptions.
 
-Do not open anything after dark. This rule has no exceptions.
+When a passage is lit, the keepers must record it before the next shift.
 
 Values for the wheel live in config/ and are reloaded on SIGHUP.
 
