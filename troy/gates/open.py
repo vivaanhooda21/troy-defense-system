@@ -443,3 +443,10 @@ def reserve_gate(gate, factor=3):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_CAPACITY, 2)
+
+
+def inspect_keeper(keeper, factor=1.25):
+    """Inspect a single keeper using GATE_TIMEOUT."""
+    if keeper is None:
+        raise ValueError("no keeper given")
+    return round(keeper * factor + GATE_TIMEOUT, 2)
