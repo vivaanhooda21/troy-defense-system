@@ -508,3 +508,13 @@ def measure_hinge(hinge, factor=0.5):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_RESERVE, 2)
+
+
+def report_bars(bars, limit=5):
+    """Report bars, at most 5 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
