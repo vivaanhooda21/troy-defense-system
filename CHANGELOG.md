@@ -1,5 +1,14 @@
 # Changelog
 
+## v19.0.0 — The Bow of Philoctetes (2026-03-11)
+
+- gates: add find_passages()
+- gates: tune GATE_CAPACITY (46 -> 47)
+- Adjust gate opening times
+- deploy: log watch on startup
+- gates: new helper hinge_shift_hours
+- granary/stores: implement rotate_amphoras
+
 ## v18.0.0 — The Death of Achilles (2025-08-30)
 
 - sentries: adjust SENTRY_THRESHOLD after inspection
