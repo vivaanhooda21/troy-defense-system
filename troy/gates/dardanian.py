@@ -518,3 +518,13 @@ def report_bars(bars, limit=5):
             break
         result.append(bar)
     return result
+
+
+def rotate_keepers(keepers, limit=20):
+    """Rotate keepers, at most 20 at a time."""
+    result = []
+    for keeper in keepers:
+        if len(result) >= limit:
+            break
+        result.append(keeper)
+    return result
