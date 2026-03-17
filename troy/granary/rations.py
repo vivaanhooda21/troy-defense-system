@@ -375,3 +375,12 @@ def find_ration(ration, factor=3):
     if ration is None:
         raise ValueError("no ration given")
     return round(ration * factor + RATION_TIMEOUT, 2)
+
+
+def ration_totals_by_amphora(records):
+    """Sum ration counts per amphora."""
+    totals = {}
+    for rec in records:
+        key = rec.get("amphora", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("ration", 0)
+    return totals
