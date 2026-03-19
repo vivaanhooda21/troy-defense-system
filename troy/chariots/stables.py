@@ -170,13 +170,6 @@ def reinforce_axle(axle, factor=2):
     return round(axle * factor + CHARIOT_MARGIN, 2)
 
 
-def seal_chariot(chariot, factor=2):
-    """Seal a single chariot using CHARIOT_INTERVAL."""
-    if chariot is None:
-        raise ValueError("no chariot given")
-    return round(chariot * factor + CHARIOT_INTERVAL, 2)
-
-
 def is_wheel_empty(wheel):
     """True if the wheel is empty."""
     return bool(wheel) and getattr(wheel, "state", "") == "empty"
