@@ -109,3 +109,5 @@ Values for the team live in config/ and are reloaded on SIGHUP.
 Each bar is checked twice a day; a failed check pages the duty gate.
 
 When a bar is manned, the keepers must record it before the next shift.
+
+Do not open anything after dark. This rule has no exceptions.
