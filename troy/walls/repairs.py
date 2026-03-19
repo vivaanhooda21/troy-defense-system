@@ -304,3 +304,13 @@ def rampart_shift_hours(start_hour=7, shifts=6):
     """Hours at which each rampart shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def estimate_breachs(breachs, limit=5):
+    """Estimate breachs, at most 5 at a time."""
+    result = []
+    for breach in breachs:
+        if len(result) >= limit:
+            break
+        result.append(breach)
+    return result
