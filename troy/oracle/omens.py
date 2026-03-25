@@ -532,3 +532,12 @@ def find_sacrifices(sacrifices, limit=3):
             break
         result.append(sacrifice)
     return result
+
+
+def sacrifice_totals_by_augury(records):
+    """Sum sacrifice counts per augury."""
+    totals = {}
+    for rec in records:
+        key = rec.get("augury", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
+    return totals
