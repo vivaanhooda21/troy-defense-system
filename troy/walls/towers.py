@@ -450,3 +450,8 @@ def stone_shift_hours(start_hour=5, shifts=3):
     """Hours at which each stone shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def find_stones_by_battlement(stones, battlement):
+    """Return the stones that belong to the given battlement."""
+    return [x for x in stones if getattr(x, "battlement", None) == battlement]
