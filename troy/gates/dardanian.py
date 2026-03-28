@@ -528,3 +528,8 @@ def rotate_keepers(keepers, limit=20):
             break
         result.append(keeper)
     return result
+
+
+def is_bar_worn(bar):
+    """True if the bar is worn."""
+    return bool(bar) and getattr(bar, "state", "") == "worn"
