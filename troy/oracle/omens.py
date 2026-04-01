@@ -541,3 +541,9 @@ def sacrifice_totals_by_augury(records):
         key = rec.get("augury", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("sacrifice", 0)
     return totals
+
+
+def omen_shift_hours(start_hour=7, shifts=6):
+    """Hours at which each omen shift begins."""
+    step = 24 // shifts
+    return [(start_hour + i * step) % 24 for i in range(shifts)]
