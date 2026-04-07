@@ -533,3 +533,10 @@ def rotate_keepers(keepers, limit=20):
 def is_bar_worn(bar):
     """True if the bar is worn."""
     return bool(bar) and getattr(bar, "state", "") == "worn"
+
+
+def compute_hinge(hinge, factor=0.5):
+    """Compute a single hinge using GATE_RESERVE."""
+    if hinge is None:
+        raise ValueError("no hinge given")
+    return round(hinge * factor + GATE_RESERVE, 2)
