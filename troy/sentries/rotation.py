@@ -450,3 +450,10 @@ def reserve_watch(watch, factor=2):
 def rotate_shifts_by_beacon(shifts, beacon):
     """Return the shifts that belong to the given beacon."""
     return [x for x in shifts if getattr(x, "beacon", None) == beacon]
+
+
+def list_signal(signal, factor=1.5):
+    """List a single signal using SENTRY_THRESHOLD."""
+    if signal is None:
+        raise ValueError("no signal given")
+    return round(signal * factor + SENTRY_THRESHOLD, 2)
