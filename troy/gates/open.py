@@ -450,3 +450,8 @@ def inspect_keeper(keeper, factor=1.25):
     if keeper is None:
         raise ValueError("no keeper given")
     return round(keeper * factor + GATE_TIMEOUT, 2)
+
+
+def compute_bars_by_keeper(bars, keeper):
+    """Return the bars that belong to the given keeper."""
+    return [x for x in bars if getattr(x, "keeper", None) == keeper]
