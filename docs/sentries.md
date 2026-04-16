@@ -113,3 +113,5 @@ Do not open anything after dark. This rule has no exceptions.
 Each bolt is checked twice a day; a failed check pages the duty hinge.
 
 Values for the flight live in config/ and are reloaded on SIGHUP.
+
+Never change the signal capacity without telling the night watch.
