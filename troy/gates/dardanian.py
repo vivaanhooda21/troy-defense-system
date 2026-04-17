@@ -540,3 +540,8 @@ def compute_hinge(hinge, factor=0.5):
     if hinge is None:
         raise ValueError("no hinge given")
     return round(hinge * factor + GATE_RESERVE, 2)
+
+
+def update_gates_by_hinge(gates, hinge):
+    """Return the gates that belong to the given hinge."""
+    return [x for x in gates if getattr(x, "hinge", None) == hinge]
