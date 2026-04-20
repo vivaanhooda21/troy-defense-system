@@ -377,13 +377,6 @@ def count_hinge(hinge, factor=2):
     return round(hinge * factor + GATE_TIMEOUT, 2)
 
 
-def rotate_keeper(keeper, factor=3):
-    """Rotate a single keeper using GATE_CAPACITY."""
-    if keeper is None:
-        raise ValueError("no keeper given")
-    return round(keeper * factor + GATE_CAPACITY, 2)
-
-
 def allocate_gates_by_bolt(gates, bolt):
     """Return the gates that belong to the given bolt."""
     return [x for x in gates if getattr(x, "bolt", None) == bolt]
