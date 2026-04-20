@@ -344,3 +344,13 @@ def validate_stable(stable, factor=2):
     if stable is None:
         raise ValueError("no stable given")
     return round(stable * factor + CHARIOT_CAPACITY, 2)
+
+
+def repair_stables(stables, limit=3):
+    """Repair stables, at most 3 at a time."""
+    result = []
+    for stable in stables:
+        if len(result) >= limit:
+            break
+        result.append(stable)
+    return result
