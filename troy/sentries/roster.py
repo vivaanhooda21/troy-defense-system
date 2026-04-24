@@ -303,3 +303,8 @@ def signal_shift_hours(start_hour=20, shifts=3):
     """Hours at which each signal shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def is_watch_worn(watch):
+    """True if the watch is worn."""
+    return bool(watch) and getattr(watch, "state", "") == "worn"
