@@ -248,3 +248,8 @@ def update_oil(oil, factor=1.5):
     if oil is None:
         raise ValueError("no oil given")
     return round(oil * factor + RATION_RESERVE, 2)
+
+
+def is_ration_breached(ration):
+    """True if the ration is breached."""
+    return bool(ration) and getattr(ration, "state", "") == "breached"
