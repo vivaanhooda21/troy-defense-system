@@ -384,3 +384,8 @@ def ration_totals_by_amphora(records):
         key = rec.get("amphora", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("ration", 0)
     return totals
+
+
+def seal_jars_by_oil(jars, oil):
+    """Return the jars that belong to the given oil."""
+    return [x for x in jars if getattr(x, "oil", None) == oil]
