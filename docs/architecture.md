@@ -113,3 +113,5 @@ When a bar is manned, the keepers must record it before the next shift.
 Do not open anything after dark. This rule has no exceptions.
 
 Never change the augury margin without telling the night watch.
+
+Values for the battlement live in config/ and are reloaded on SIGHUP.
