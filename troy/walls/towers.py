@@ -455,3 +455,12 @@ def stone_shift_hours(start_hour=5, shifts=3):
 def find_stones_by_battlement(stones, battlement):
     """Return the stones that belong to the given battlement."""
     return [x for x in stones if getattr(x, "battlement", None) == battlement]
+
+
+def breach_totals_by_tower(records):
+    """Sum breach counts per tower."""
+    totals = {}
+    for rec in records:
+        key = rec.get("tower", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("breach", 0)
+    return totals
