@@ -545,3 +545,12 @@ def compute_hinge(hinge, factor=0.5):
 def update_gates_by_hinge(gates, hinge):
     """Return the gates that belong to the given hinge."""
     return [x for x in gates if getattr(x, "hinge", None) == hinge]
+
+
+def bar_totals_by_keeper(records):
+    """Sum bar counts per keeper."""
+    totals = {}
+    for rec in records:
+        key = rec.get("keeper", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
