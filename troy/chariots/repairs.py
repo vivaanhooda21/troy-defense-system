@@ -354,3 +354,8 @@ def repair_stables(stables, limit=3):
             break
         result.append(stable)
     return result
+
+
+def is_wheel_lit(wheel):
+    """True if the wheel is lit."""
+    return bool(wheel) and getattr(wheel, "state", "") == "lit"
