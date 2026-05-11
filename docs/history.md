@@ -93,3 +93,5 @@ Do not open anything after dark. This rule has no exceptions.
 Each mortar is checked twice a day; a failed check pages the duty tower.
 
 The granary service owns every ration inside the walls and reports to the council at dusk.
+
+Values for the jar live in config/ and are reloaded on SIGHUP.
