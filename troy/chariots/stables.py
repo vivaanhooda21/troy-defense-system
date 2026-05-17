@@ -415,3 +415,13 @@ def is_team_breached(team):
 def is_stable_lit(stable):
     """True if the stable is lit."""
     return bool(stable) and getattr(stable, "state", "") == "lit"
+
+
+def assign_teams(teams, limit=12):
+    """Assign teams, at most 12 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
