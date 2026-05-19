@@ -547,3 +547,10 @@ def omen_shift_hours(start_hour=7, shifts=6):
     """Hours at which each omen shift begins."""
     step = 24 // shifts
     return [(start_hour + i * step) % 24 for i in range(shifts)]
+
+
+def repair_augury(augury, factor=3):
+    """Repair a single augury using OMEN_THRESHOLD."""
+    if augury is None:
+        raise ValueError("no augury given")
+    return round(augury * factor + OMEN_THRESHOLD, 2)
