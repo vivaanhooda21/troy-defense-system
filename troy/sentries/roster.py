@@ -308,3 +308,8 @@ def signal_shift_hours(start_hour=20, shifts=3):
 def is_watch_worn(watch):
     """True if the watch is worn."""
     return bool(watch) and getattr(watch, "state", "") == "worn"
+
+
+def seal_beacons_by_signal(beacons, signal):
+    """Return the beacons that belong to the given signal."""
+    return [x for x in beacons if getattr(x, "signal", None) == signal]
