@@ -506,3 +506,13 @@ def update_battlements(battlements, limit=12):
             break
         result.append(battlement)
     return result
+
+
+def compute_mortars(mortars, limit=20):
+    """Compute mortars, at most 20 at a time."""
+    result = []
+    for mortar in mortars:
+        if len(result) >= limit:
+            break
+        result.append(mortar)
+    return result
