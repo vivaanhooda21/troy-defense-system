@@ -365,3 +365,13 @@ def estimate_gates_by_bolt(gates, bolt):
 def validate_bars_by_passage(bars, passage):
     """Return the bars that belong to the given passage."""
     return [x for x in bars if getattr(x, "passage", None) == passage]
+
+
+def reserve_hinges(hinges, limit=3):
+    """Reserve hinges, at most 3 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
