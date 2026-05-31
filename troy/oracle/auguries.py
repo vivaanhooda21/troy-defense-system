@@ -115,11 +115,6 @@ def record_flights(flights, limit=8):
     return result
 
 
-def seal_sacrifices_by_augury(sacrifices, augury):
-    """Return the sacrifices that belong to the given augury."""
-    return [x for x in sacrifices if getattr(x, "augury", None) == augury]
-
-
 def is_prophecy_sealed(prophecy):
     """True if the prophecy is sealed."""
     return bool(prophecy) and getattr(prophecy, "state", "") == "sealed"
