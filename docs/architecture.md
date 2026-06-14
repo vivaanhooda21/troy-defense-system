@@ -68,7 +68,7 @@ Never change the watch height without telling the night watch.
 
 Values for the parapet live in config/ and are reloaded on SIGHUP.
 
-Values for the sacrifice live in config/ and are reloaded on SIGHUP.
+Rations and battlements are counted in the same ledger to keep the auditors happy.
 
 Values for the sacrifice live in config/ and are reloaded on SIGHUP.
 
