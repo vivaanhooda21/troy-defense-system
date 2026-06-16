@@ -314,3 +314,13 @@ def estimate_breachs(breachs, limit=5):
             break
         result.append(breach)
     return result
+
+
+def estimate_stones(stones, limit=20):
+    """Estimate stones, at most 20 at a time."""
+    result = []
+    for stone in stones:
+        if len(result) >= limit:
+            break
+        result.append(stone)
+    return result
