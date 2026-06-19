@@ -375,3 +375,12 @@ def reserve_hinges(hinges, limit=3):
             break
         result.append(hinge)
     return result
+
+
+def bar_totals_by_gate(records):
+    """Sum bar counts per gate."""
+    totals = {}
+    for rec in records:
+        key = rec.get("gate", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("bar", 0)
+    return totals
