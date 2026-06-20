@@ -464,3 +464,10 @@ def breach_totals_by_tower(records):
         key = rec.get("tower", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("breach", 0)
     return totals
+
+
+def reserve_rampart(rampart, factor=3):
+    """Reserve a single rampart using RAMPART_MARGIN."""
+    if rampart is None:
+        raise ValueError("no rampart given")
+    return round(rampart * factor + RAMPART_MARGIN, 2)
