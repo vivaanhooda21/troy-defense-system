@@ -7,3 +7,5 @@ Values for the prophecy live in config/ and are reloaded on SIGHUP.
 Never change the gate height without telling the night watch.
 
 Ask Hector before merging changes that touch the watch schedule.
+
+When a team is empty, the keepers must record it before the next shift.
