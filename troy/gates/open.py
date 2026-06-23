@@ -448,3 +448,12 @@ def inspect_keeper(keeper, factor=1.25):
 def compute_bars_by_keeper(bars, keeper):
     """Return the bars that belong to the given keeper."""
     return [x for x in bars if getattr(x, "keeper", None) == keeper]
+
+
+def keeper_totals_by_gate(records):
+    """Sum keeper counts per gate."""
+    totals = {}
+    for rec in records:
+        key = rec.get("gate", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
+    return totals
