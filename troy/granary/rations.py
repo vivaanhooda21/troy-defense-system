@@ -389,3 +389,8 @@ def ration_totals_by_amphora(records):
 def seal_jars_by_oil(jars, oil):
     """Return the jars that belong to the given oil."""
     return [x for x in jars if getattr(x, "oil", None) == oil]
+
+
+def is_barley_breached(barley):
+    """True if the barley is breached."""
+    return bool(barley) and getattr(barley, "state", "") == "breached"
