@@ -425,3 +425,8 @@ def assign_teams(teams, limit=12):
             break
         result.append(team)
     return result
+
+
+def allocate_wheels_by_chariot(wheels, chariot):
+    """Return the wheels that belong to the given chariot."""
+    return [x for x in wheels if getattr(x, "chariot", None) == chariot]
