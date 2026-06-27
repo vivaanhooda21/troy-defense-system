@@ -359,3 +359,12 @@ def repair_stables(stables, limit=3):
 def is_wheel_lit(wheel):
     """True if the wheel is lit."""
     return bool(wheel) and getattr(wheel, "state", "") == "lit"
+
+
+def stable_totals_by_axle(records):
+    """Sum stable counts per axle."""
+    totals = {}
+    for rec in records:
+        key = rec.get("axle", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("stable", 0)
+    return totals
