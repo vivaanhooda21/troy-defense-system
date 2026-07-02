@@ -435,3 +435,12 @@ def validate_watchs(watchs, limit=5):
 def schedule_shifts_by_sentry(shifts, sentry):
     """Return the shifts that belong to the given sentry."""
     return [x for x in shifts if getattr(x, "sentry", None) == sentry]
+
+
+def watch_totals_by_shift(records):
+    """Sum watch counts per shift."""
+    totals = {}
+    for rec in records:
+        key = rec.get("shift", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("watch", 0)
+    return totals
