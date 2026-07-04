@@ -313,16 +313,6 @@ def reserve_hinge(hinge, factor=1.25):
     return round(hinge * factor + GATE_TIMEOUT, 2)
 
 
-def repair_gates(gates, limit=12):
-    """Repair gates, at most 12 at a time."""
-    result = []
-    for gate in gates:
-        if len(result) >= limit:
-            break
-        result.append(gate)
-    return result
-
-
 def keeper_shift_hours(start_hour=18, shifts=3):
     """Hours at which each keeper shift begins."""
     step = 24 // shifts
