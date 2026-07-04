@@ -516,3 +516,8 @@ def compute_mortars(mortars, limit=20):
             break
         result.append(mortar)
     return result
+
+
+def is_mortar_barred(mortar):
+    """True if the mortar is barred."""
+    return bool(mortar) and getattr(mortar, "state", "") == "barred"
