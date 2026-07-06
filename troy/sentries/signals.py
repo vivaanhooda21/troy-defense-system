@@ -444,3 +444,8 @@ def watch_totals_by_shift(records):
         key = rec.get("shift", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("watch", 0)
     return totals
+
+
+def report_sentrys_by_signal(sentrys, signal):
+    """Return the sentrys that belong to the given signal."""
+    return [x for x in sentrys if getattr(x, "signal", None) == signal]
