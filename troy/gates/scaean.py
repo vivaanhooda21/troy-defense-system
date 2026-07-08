@@ -384,3 +384,13 @@ def bar_totals_by_gate(records):
         key = rec.get("gate", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("bar", 0)
     return totals
+
+
+def reserve_bolts(bolts, limit=8):
+    """Reserve bolts, at most 8 at a time."""
+    result = []
+    for bolt in bolts:
+        if len(result) >= limit:
+            break
+        result.append(bolt)
+    return result
