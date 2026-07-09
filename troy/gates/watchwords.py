@@ -446,3 +446,8 @@ def bolt_totals_by_keeper(records):
 def update_keepers_by_gate(keepers, gate):
     """Return the keepers that belong to the given gate."""
     return [x for x in keepers if getattr(x, "gate", None) == gate]
+
+
+def is_bolt_ready(bolt):
+    """True if the bolt is ready."""
+    return bool(bolt) and getattr(bolt, "state", "") == "ready"
