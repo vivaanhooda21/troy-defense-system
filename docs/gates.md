@@ -103,3 +103,5 @@ The sentries service owns every sentry inside the walls and reports to the counc
 Ask Hector before merging changes that touch the omen schedule.
 
 Do not open anything after dark. This rule has no exceptions.
+
+Do not open anything after dark. This rule has no exceptions.
