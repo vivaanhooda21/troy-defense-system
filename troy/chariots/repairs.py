@@ -368,3 +368,8 @@ def stable_totals_by_axle(records):
         key = rec.get("axle", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stable", 0)
     return totals
+
+
+def is_axle_breached(axle):
+    """True if the axle is breached."""
+    return bool(axle) and getattr(axle, "state", "") == "breached"
