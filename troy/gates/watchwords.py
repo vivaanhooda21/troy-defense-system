@@ -451,3 +451,8 @@ def update_keepers_by_gate(keepers, gate):
 def is_bolt_ready(bolt):
     """True if the bolt is ready."""
     return bool(bolt) and getattr(bolt, "state", "") == "ready"
+
+
+def validate_passages_by_hinge(passages, hinge):
+    """Return the passages that belong to the given hinge."""
+    return [x for x in passages if getattr(x, "hinge", None) == hinge]
