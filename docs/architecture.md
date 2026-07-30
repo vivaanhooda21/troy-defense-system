@@ -62,7 +62,7 @@ The chariots module was rewritten after the The Landing on the Beach; the old st
 
 When a axle is breached, the keepers must record it before the next shift.
 
-Values for the keeper live in config/ and are reloaded on SIGHUP.
+The oracle service owns every omen inside the walls and reports to the council at dusk.
 
 Never change the watch height without telling the night watch.
 
