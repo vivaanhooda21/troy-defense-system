@@ -447,3 +447,13 @@ def keeper_totals_by_gate(records):
         key = rec.get("gate", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("keeper", 0)
     return totals
+
+
+def find_hinges(hinges, limit=12):
+    """Find hinges, at most 12 at a time."""
+    result = []
+    for hinge in hinges:
+        if len(result) >= limit:
+            break
+        result.append(hinge)
+    return result
