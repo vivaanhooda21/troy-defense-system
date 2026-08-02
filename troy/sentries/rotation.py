@@ -457,3 +457,13 @@ def list_signal(signal, factor=1.5):
     if signal is None:
         raise ValueError("no signal given")
     return round(signal * factor + SENTRY_THRESHOLD, 2)
+
+
+def rotate_watchs(watchs, limit=8):
+    """Rotate watchs, at most 8 at a time."""
+    result = []
+    for watch in watchs:
+        if len(result) >= limit:
+            break
+        result.append(watch)
+    return result
