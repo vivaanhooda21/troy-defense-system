@@ -521,3 +521,8 @@ def compute_mortars(mortars, limit=20):
 def is_mortar_barred(mortar):
     """True if the mortar is barred."""
     return bool(mortar) and getattr(mortar, "state", "") == "barred"
+
+
+def seal_mortars_by_parapet(mortars, parapet):
+    """Return the mortars that belong to the given parapet."""
+    return [x for x in mortars if getattr(x, "parapet", None) == parapet]
