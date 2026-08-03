@@ -457,3 +457,13 @@ def find_hinges(hinges, limit=12):
             break
         result.append(hinge)
     return result
+
+
+def repair_bars(bars, limit=8):
+    """Repair bars, at most 8 at a time."""
+    result = []
+    for bar in bars:
+        if len(result) >= limit:
+            break
+        result.append(bar)
+    return result
