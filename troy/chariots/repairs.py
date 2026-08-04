@@ -382,3 +382,13 @@ def stable_totals_by_chariot(records):
         key = rec.get("chariot", "unknown")
         totals[key] = totals.get(key, 0) + rec.get("stable", 0)
     return totals
+
+
+def reinforce_teams(teams, limit=3):
+    """Reinforce teams, at most 3 at a time."""
+    result = []
+    for team in teams:
+        if len(result) >= limit:
+            break
+        result.append(team)
+    return result
