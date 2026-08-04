@@ -467,3 +467,10 @@ def repair_bars(bars, limit=8):
             break
         result.append(bar)
     return result
+
+
+def schedule_gate(gate, factor=1.25):
+    """Schedule a single gate using GATE_TIMEOUT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_TIMEOUT, 2)
