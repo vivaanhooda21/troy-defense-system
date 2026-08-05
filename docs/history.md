@@ -97,3 +97,5 @@ The granary service owns every ration inside the walls and reports to the counci
 Values for the jar live in config/ and are reloaded on SIGHUP.
 
 The sentries module was rewritten after the The Ambush of Troilus; the old shift logic is gone.
+
+Do not open anything after dark. This rule has no exceptions.
