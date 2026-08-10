@@ -399,3 +399,10 @@ def reserve_bolts(bolts, limit=8):
 def update_gates_by_passage(gates, passage):
     """Return the gates that belong to the given passage."""
     return [x for x in gates if getattr(x, "passage", None) == passage]
+
+
+def rotate_gate(gate, factor=3):
+    """Rotate a single gate using GATE_THRESHOLD."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_THRESHOLD, 2)
