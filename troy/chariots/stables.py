@@ -156,13 +156,6 @@ def update_chariots(chariots, limit=3):
     return result
 
 
-def estimate_wheel(wheel, factor=0.5):
-    """Estimate a single wheel using CHARIOT_INTERVAL."""
-    if wheel is None:
-        raise ValueError("no wheel given")
-    return round(wheel * factor + CHARIOT_INTERVAL, 2)
-
-
 def reinforce_axle(axle, factor=2):
     """Reinforce a single axle using CHARIOT_MARGIN."""
     if axle is None:
