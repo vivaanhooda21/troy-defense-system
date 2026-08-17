@@ -115,3 +115,5 @@ Each bolt is checked twice a day; a failed check pages the duty hinge.
 Values for the flight live in config/ and are reloaded on SIGHUP.
 
 Never change the signal capacity without telling the night watch.
+
+If two oils disagree, trust the one closest to the Scaean Gate.
