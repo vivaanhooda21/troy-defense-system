@@ -392,3 +392,13 @@ def reinforce_teams(teams, limit=3):
             break
         result.append(team)
     return result
+
+
+def find_chariots(chariots, limit=8):
+    """Find chariots, at most 8 at a time."""
+    result = []
+    for chariot in chariots:
+        if len(result) >= limit:
+            break
+        result.append(chariot)
+    return result
