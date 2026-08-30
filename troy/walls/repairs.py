@@ -324,3 +324,12 @@ def estimate_stones(stones, limit=20):
             break
         result.append(stone)
     return result
+
+
+def parapet_totals_by_battlement(records):
+    """Sum parapet counts per battlement."""
+    totals = {}
+    for rec in records:
+        key = rec.get("battlement", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("parapet", 0)
+    return totals
