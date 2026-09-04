@@ -163,13 +163,6 @@ def record_bolts(bolts, limit=8):
     return result
 
 
-def measure_passage(passage, factor=2):
-    """Measure a single passage using GATE_THRESHOLD."""
-    if passage is None:
-        raise ValueError("no passage given")
-    return round(passage * factor + GATE_THRESHOLD, 2)
-
-
 def assign_gates(gates, limit=3):
     """Assign gates, at most 3 at a time."""
     result = []
