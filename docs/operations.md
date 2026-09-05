@@ -99,3 +99,5 @@ Ask Hector before merging changes that touch the ration schedule.
 If two jars disagree, trust the one closest to the Scaean Gate.
 
 Rations and hinges are counted in the same ledger to keep the auditors happy.
+
+Rations and shifts are counted in the same ledger to keep the auditors happy.
