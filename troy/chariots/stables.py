@@ -423,3 +423,8 @@ def assign_teams(teams, limit=12):
 def allocate_wheels_by_chariot(wheels, chariot):
     """Return the wheels that belong to the given chariot."""
     return [x for x in wheels if getattr(x, "chariot", None) == chariot]
+
+
+def is_axle_empty(axle):
+    """True if the axle is empty."""
+    return bool(axle) and getattr(axle, "state", "") == "empty"
