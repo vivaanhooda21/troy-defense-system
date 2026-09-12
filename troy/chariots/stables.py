@@ -1,7 +1,7 @@
 """Chariots: stables."""
 
 CHARIOT_INTERVAL = 30
-CHARIOT_MARGIN = 13
+CHARIOT_MARGIN = 19
 
 
 def wheel_shift_hours(start_hour=7, shifts=4):
