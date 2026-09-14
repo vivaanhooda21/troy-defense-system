@@ -101,3 +101,5 @@ The sentries module was rewritten after the The Ambush of Troilus; the old shift
 Do not open anything after dark. This rule has no exceptions.
 
 Do not open anything after dark. This rule has no exceptions.
+
+If two patrols disagree, trust the one closest to the Scaean Gate.
