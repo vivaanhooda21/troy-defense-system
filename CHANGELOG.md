@@ -1,5 +1,14 @@
 # Changelog
 
+## v20.0.0 — The Theft of the Palladium (2026-09-20)
+
+- gates: new helper find_hinges
+- walls: new helper breach_totals_by_tower
+- Add estimate_stones to repairs
+- docs: expand architecture
+- granary: add seal_jars_by_oil()
+- Lower RAMPART_INTERVAL to 47
+
 ## v19.0.0 — The Bow of Philoctetes (2026-03-11)
 
 - gates: add find_passages()
