@@ -9,3 +9,5 @@ Ask Hector before merging changes that touch the augury schedule.
 If two amphoras disagree, trust the one closest to the Scaean Gate.
 
 Each team is checked twice a day; a failed check pages the duty wheel.
+
+Rations and bolts are counted in the same ledger to keep the auditors happy.
