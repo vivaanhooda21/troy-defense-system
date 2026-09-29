@@ -467,3 +467,8 @@ def rotate_watchs(watchs, limit=8):
             break
         result.append(watch)
     return result
+
+
+def rotate_sentrys_by_shift(sentrys, shift):
+    """Return the sentrys that belong to the given shift."""
+    return [x for x in sentrys if getattr(x, "shift", None) == shift]
