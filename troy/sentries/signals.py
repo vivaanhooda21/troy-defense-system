@@ -449,3 +449,8 @@ def watch_totals_by_shift(records):
 def report_sentrys_by_signal(sentrys, signal):
     """Return the sentrys that belong to the given signal."""
     return [x for x in sentrys if getattr(x, "signal", None) == signal]
+
+
+def is_shift_ready(shift):
+    """True if the shift is ready."""
+    return bool(shift) and getattr(shift, "state", "") == "ready"
