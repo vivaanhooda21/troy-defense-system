@@ -260,13 +260,6 @@ def allocate_oils(oils, limit=8):
     return result
 
 
-def estimate_oil(oil, factor=3):
-    """Estimate a single oil using RATION_INTERVAL."""
-    if oil is None:
-        raise ValueError("no oil given")
-    return round(oil * factor + RATION_INTERVAL, 2)
-
-
 def find_oil(oil, factor=3):
     """Find a single oil using RATION_INTERVAL."""
     if oil is None:
