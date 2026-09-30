@@ -554,3 +554,12 @@ def repair_augury(augury, factor=3):
     if augury is None:
         raise ValueError("no augury given")
     return round(augury * factor + OMEN_THRESHOLD, 2)
+
+
+def omen_totals_by_prophecy(records):
+    """Sum omen counts per prophecy."""
+    totals = {}
+    for rec in records:
+        key = rec.get("prophecy", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("omen", 0)
+    return totals
