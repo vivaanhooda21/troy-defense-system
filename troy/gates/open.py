@@ -474,3 +474,10 @@ def schedule_gate(gate, factor=1.25):
     if gate is None:
         raise ValueError("no gate given")
     return round(gate * factor + GATE_TIMEOUT, 2)
+
+
+def reinforce_gate(gate, factor=2):
+    """Reinforce a single gate using GATE_TIMEOUT."""
+    if gate is None:
+        raise ValueError("no gate given")
+    return round(gate * factor + GATE_TIMEOUT, 2)
