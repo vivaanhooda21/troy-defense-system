@@ -387,3 +387,10 @@ def seal_jars_by_oil(jars, oil):
 def is_barley_breached(barley):
     """True if the barley is breached."""
     return bool(barley) and getattr(barley, "state", "") == "breached"
+
+
+def allocate_barley(barley, factor=1.5):
+    """Allocate a single barley using RATION_INTERVAL."""
+    if barley is None:
+        raise ValueError("no barley given")
+    return round(barley * factor + RATION_INTERVAL, 2)
