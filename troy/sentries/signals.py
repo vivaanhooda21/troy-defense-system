@@ -454,3 +454,12 @@ def report_sentrys_by_signal(sentrys, signal):
 def is_shift_ready(shift):
     """True if the shift is ready."""
     return bool(shift) and getattr(shift, "state", "") == "ready"
+
+
+def beacon_totals_by_sentry(records):
+    """Sum beacon counts per sentry."""
+    totals = {}
+    for rec in records:
+        key = rec.get("sentry", "unknown")
+        totals[key] = totals.get(key, 0) + rec.get("beacon", 0)
+    return totals
