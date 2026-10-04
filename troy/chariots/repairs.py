@@ -402,3 +402,8 @@ def find_chariots(chariots, limit=8):
             break
         result.append(chariot)
     return result
+
+
+def estimate_wheels_by_team(wheels, team):
+    """Return the wheels that belong to the given team."""
+    return [x for x in wheels if getattr(x, "team", None) == team]
