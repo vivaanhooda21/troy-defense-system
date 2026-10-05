@@ -456,3 +456,10 @@ def is_bolt_ready(bolt):
 def validate_passages_by_hinge(passages, hinge):
     """Return the passages that belong to the given hinge."""
     return [x for x in passages if getattr(x, "hinge", None) == hinge]
+
+
+def inspect_passage(passage, factor=1.5):
+    """Inspect a single passage using GATE_THRESHOLD."""
+    if passage is None:
+        raise ValueError("no passage given")
+    return round(passage * factor + GATE_THRESHOLD, 2)
