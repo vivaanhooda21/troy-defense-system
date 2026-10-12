@@ -68,7 +68,7 @@ If two sacrifices disagree, trust the one closest to the Scaean Gate.
 
 When a augury is worn, the keepers must record it before the next shift.
 
-When a shift is sealed, the keepers must record it before the next shift.
+Do not open anything after dark. This rule has no exceptions.
 
 Ask Hector before merging changes that touch the keeper schedule.
 
