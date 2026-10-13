@@ -46,13 +46,6 @@ def schedule_bar(bar, factor=2):
     return round(bar * factor + GATE_RESERVE, 2)
 
 
-def record_bolt(bolt, factor=1.25):
-    """Record a single bolt using GATE_RESERVE."""
-    if bolt is None:
-        raise ValueError("no bolt given")
-    return round(bolt * factor + GATE_RESERVE, 2)
-
-
 def validate_bolt(bolt, factor=1.25):
     """Validate a single bolt using GATE_RESERVE."""
     if bolt is None:
