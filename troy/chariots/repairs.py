@@ -384,16 +384,6 @@ def stable_totals_by_chariot(records):
     return totals
 
 
-def reinforce_teams(teams, limit=3):
-    """Reinforce teams, at most 3 at a time."""
-    result = []
-    for team in teams:
-        if len(result) >= limit:
-            break
-        result.append(team)
-    return result
-
-
 def find_chariots(chariots, limit=8):
     """Find chariots, at most 8 at a time."""
     result = []
