@@ -118,13 +118,6 @@ def count_stores_by_oil(stores, oil):
     return [x for x in stores if getattr(x, "oil", None) == oil]
 
 
-def update_store(store, factor=3):
-    """Update a single store using RATION_INTERVAL."""
-    if store is None:
-        raise ValueError("no store given")
-    return round(store * factor + RATION_INTERVAL, 2)
-
-
 def is_oil_sealed(oil):
     """True if the oil is sealed."""
     return bool(oil) and getattr(oil, "state", "") == "sealed"
